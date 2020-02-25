@@ -11,50 +11,44 @@
  */
 
 
-package com.cervinodata.client.auth;
+package com.cervinodata.client.api;
 
-import com.cervinodata.client.Pair;
+import com.cervinodata.client.ApiException;
+import org.threeten.bp.LocalDate;
+import org.junit.Test;
+import org.junit.Ignore;
 
-import java.util.Map;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-02-25T16:40:06.356Z[GMT]")
-public class HttpBearerAuth implements Authentication {
-  private final String scheme;
-  private String bearerToken;
+/**
+ * API tests for CampaignGroupApi
+ */
+@Ignore
+public class CampaignGroupApiTest {
 
-  public HttpBearerAuth(String scheme) {
-    this.scheme = scheme;
-  }
+    private final CampaignGroupApi api = new CampaignGroupApi();
 
-  /**
-   * Gets the token, which together with the scheme, will be sent as the value of the Authorization header.
-   *
-   * @return The bearer token
-   */
-  public String getBearerToken() {
-    return bearerToken;
-  }
+    
+    /**
+     * Return campaign group analytics report per organisation per day
+     *
+     * Campaign group analytics report per organisation per day
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void getCampaignGroupAnalyticsReportPerOrganisationPerDayTest() throws ApiException {
+        List<String> organisationUuids = null;
+        LocalDate fromDate = null;
+        String dateFormat = null;
+        String format = null;
+        String response = api.getCampaignGroupAnalyticsReportPerOrganisationPerDay(organisationUuids, fromDate, dateFormat, format);
 
-  /**
-   * Sets the token, which together with the scheme, will be sent as the value of the Authorization header.
-   *
-   * @param bearerToken The bearer token to send in the Authorization header
-   */
-  public void setBearerToken(String bearerToken) {
-    this.bearerToken = bearerToken;
-  }
-
-  @Override
-  public void applyToParams(List<Pair> queryParams, Map<String, String> headerParams, Map<String, String> cookieParams) {
-    if(bearerToken == null) {
-      return;
+        // TODO: test validations
     }
-
-    headerParams.put("Authorization", (scheme != null ? upperCaseBearer(scheme) + " " : "") + bearerToken);
-  }
-
-  private static String upperCaseBearer(String scheme) {
-    return ("bearer".equalsIgnoreCase(scheme)) ? "Bearer" : scheme;
-  }
+    
 }
