@@ -18,7 +18,7 @@ import com.cervinodata.client.Pair;
 import java.util.Map;
 import java.util.List;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-06-18T08:30:20.739Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-08-05T10:25:07.491Z[GMT]")
 public class ApiKeyAuth implements Authentication {
   private final String location;
   private final String paramName;

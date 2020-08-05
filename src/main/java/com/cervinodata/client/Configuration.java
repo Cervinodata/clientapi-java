@@ -13,7 +13,7 @@
 
 package com.cervinodata.client;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-06-18T08:30:20.739Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-08-05T10:25:07.491Z[GMT]")
 public class Configuration {
     private static ApiClient defaultApiClient = new ApiClient();
 
