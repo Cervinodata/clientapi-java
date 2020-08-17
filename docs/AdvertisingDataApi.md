@@ -7,8 +7,11 @@ Method | HTTP request | Description
 [**getAdAccountReportPerOrganisationPerDay**](AdvertisingDataApi.md#getAdAccountReportPerOrganisationPerDay) | **GET** /data/ad-account-report-per-organisation-per-day/{organisationUuids} | Return ad account report per organisation per day
 [**getAdAccounts**](AdvertisingDataApi.md#getAdAccounts) | **GET** /data/ad-accounts/{organisationUuid} | Return ad accounts by organisation
 [**getAdCampaignReportPerDay**](AdvertisingDataApi.md#getAdCampaignReportPerDay) | **GET** /data/ad-campaign-report-per-day/{organisationUuid} | Return ad campaign report per day by organisation
+[**getAdCampaignReportPerOrganisationPerAccountPerCampaignPerDevicePerDay**](AdvertisingDataApi.md#getAdCampaignReportPerOrganisationPerAccountPerCampaignPerDevicePerDay) | **GET** /data/ad-campaign-report-per-organisation-per-account-per-campaign-per-device-per-day/{organisationUuids} | Return ad campaign report per organisation per account per campaign per device per day
 [**getAdCampaignReportPerOrganisationPerAccountPerDay**](AdvertisingDataApi.md#getAdCampaignReportPerOrganisationPerAccountPerDay) | **GET** /data/ad-campaign-report-per-organisation-per-account-per-day/{organisationUuids} | Return ad campaign report per organisation per account per day
 [**getAdCampaigns**](AdvertisingDataApi.md#getAdCampaigns) | **GET** /data/ad-campaigns/{organisationUuid} | Return ad campaigns by organisation
+[**getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDay**](AdvertisingDataApi.md#getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDay) | **GET** /data/facebook-ad-extended-report-per-organisation-per-account-per-campaign-per-device-per-day/{organisationUuids} | Return facebook ad extended report per organisation per account per campaign per device per day
+[**getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDay**](AdvertisingDataApi.md#getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDay) | **GET** /data/google-ads-report-per-organisation-per-account-per-campaign-per-device-per-day/{organisationUuids} | Return google ads report per organisation per account per campaign per device per day
 
 
 <a name="getAdAccountReportPerOrganisationPerDay"></a>
@@ -232,6 +235,81 @@ Name | Type | Description  | Notes
 **400** | Invalid Organisation uuid supplied |  -  |
 **404** | Organisation uuid not found |  -  |
 
+<a name="getAdCampaignReportPerOrganisationPerAccountPerCampaignPerDevicePerDay"></a>
+# **getAdCampaignReportPerOrganisationPerAccountPerCampaignPerDevicePerDay**
+> String getAdCampaignReportPerOrganisationPerAccountPerCampaignPerDevicePerDay(organisationUuids, fromDate, dateFormat, format)
+
+Return ad campaign report per organisation per account per campaign per device per day
+
+Ad campaign report per organisation per account per campaign per device per day
+
+### Example
+```java
+// Import classes:
+import com.cervinodata.client.ApiClient;
+import com.cervinodata.client.ApiException;
+import com.cervinodata.client.Configuration;
+import com.cervinodata.client.auth.*;
+import com.cervinodata.client.models.*;
+import com.cervinodata.client.api.AdvertisingDataApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://app.cervinodata.com/api/v1");
+    
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
+
+    AdvertisingDataApi apiInstance = new AdvertisingDataApi(defaultClient);
+    List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
+    LocalDate fromDate = new LocalDate(); // LocalDate | From date
+    String dateFormat = "dateFormat_example"; // String | Outputted date format
+    String format = "format_example"; // String | Output format (use csv for large result sets)
+    try {
+      String result = apiInstance.getAdCampaignReportPerOrganisationPerAccountPerCampaignPerDevicePerDay(organisationUuids, fromDate, dateFormat, format);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling AdvertisingDataApi#getAdCampaignReportPerOrganisationPerAccountPerCampaignPerDevicePerDay");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids |
+ **fromDate** | **LocalDate**| From date | [optional]
+ **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD]
+ **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json]
+
+### Return type
+
+**String**
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/csv, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  -  |
+**400** | Invalid Organisation uuids supplied |  -  |
+**404** | Organisation uuids not found |  -  |
+
 <a name="getAdCampaignReportPerOrganisationPerAccountPerDay"></a>
 # **getAdCampaignReportPerOrganisationPerAccountPerDay**
 > String getAdCampaignReportPerOrganisationPerAccountPerDay(organisationUuids, fromDate, dateFormat, format)
@@ -379,4 +457,154 @@ Name | Type | Description  | Notes
 **200** | successful operation |  -  |
 **400** | Invalid Organisation uuid supplied |  -  |
 **404** | Organisation uuid not found |  -  |
+
+<a name="getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDay"></a>
+# **getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDay**
+> String getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDay(organisationUuids, fromDate, dateFormat, format)
+
+Return facebook ad extended report per organisation per account per campaign per device per day
+
+Facebook ad extended report per organisation per account per campaign per device per day
+
+### Example
+```java
+// Import classes:
+import com.cervinodata.client.ApiClient;
+import com.cervinodata.client.ApiException;
+import com.cervinodata.client.Configuration;
+import com.cervinodata.client.auth.*;
+import com.cervinodata.client.models.*;
+import com.cervinodata.client.api.AdvertisingDataApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://app.cervinodata.com/api/v1");
+    
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
+
+    AdvertisingDataApi apiInstance = new AdvertisingDataApi(defaultClient);
+    List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
+    LocalDate fromDate = new LocalDate(); // LocalDate | From date
+    String dateFormat = "dateFormat_example"; // String | Outputted date format
+    String format = "format_example"; // String | Output format (use csv for large result sets)
+    try {
+      String result = apiInstance.getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDay(organisationUuids, fromDate, dateFormat, format);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling AdvertisingDataApi#getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDay");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids |
+ **fromDate** | **LocalDate**| From date | [optional]
+ **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD]
+ **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json]
+
+### Return type
+
+**String**
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/csv, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  -  |
+**400** | Invalid Organisation uuids supplied |  -  |
+**404** | Organisation uuids not found |  -  |
+
+<a name="getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDay"></a>
+# **getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDay**
+> String getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDay(organisationUuids, fromDate, dateFormat, format)
+
+Return google ads report per organisation per account per campaign per device per day
+
+Campaign group google ads report per organisation per account per campaign per device per day
+
+### Example
+```java
+// Import classes:
+import com.cervinodata.client.ApiClient;
+import com.cervinodata.client.ApiException;
+import com.cervinodata.client.Configuration;
+import com.cervinodata.client.auth.*;
+import com.cervinodata.client.models.*;
+import com.cervinodata.client.api.AdvertisingDataApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://app.cervinodata.com/api/v1");
+    
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
+
+    AdvertisingDataApi apiInstance = new AdvertisingDataApi(defaultClient);
+    List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
+    LocalDate fromDate = new LocalDate(); // LocalDate | From date
+    String dateFormat = "dateFormat_example"; // String | Outputted date format
+    String format = "format_example"; // String | Output format (use csv for large result sets)
+    try {
+      String result = apiInstance.getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDay(organisationUuids, fromDate, dateFormat, format);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling AdvertisingDataApi#getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDay");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids |
+ **fromDate** | **LocalDate**| From date | [optional]
+ **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD]
+ **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json]
+
+### Return type
+
+**String**
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/csv, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  -  |
+**400** | Invalid Organisation uuids supplied |  -  |
+**404** | Organisation uuids not found |  -  |
 
