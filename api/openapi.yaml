@@ -1,0 +1,1865 @@
+openapi: 3.0.0
+info:
+  contact:
+    email: support@cervinodata.com
+  description: |-
+    <div style='margin: 2em 0;'>
+     <p>
+     Before you get going with the Cervinodata API, set up Cervinodata (read the support page here: <a href='https://support.cervinodata.com/hc/en-nl/articles/360004363237' target='_blank'>How to set up the Cervinodata API</a>).
+     </p>
+    <h3>To use the Cervinodata API, you need all of the following:</h3>
+    <p>
+    <ol>
+    <li>An active Cervinodata account, you can start a free trial <a href='https://app.cervinodata.com/register' target='_blank'>here</a></li>
+    <li>At least one connection to a platform (check <a href='https://app.cervinodata.com/data-sources-connections' target='_blank'>here</a>)</li>
+    <li>At least one account switched ON (check <a href='https://app.cervinodata.com/accounts' target='_blank'>here</a>)</li>
+    <li>At least one data refresh executed (check <a href='https://app.cervinodata.com/manual-data-refresh' target='_blank'>here</a>)</li>
+    <li>An active API token (check <a href='https://app.cervinodata.com/settings#/api' target='_blank'>here</a>)</li>
+    </ol>
+    </p>
+    <p>
+    Note that limits apply for <a href='https://support.cervinodata.com/hc/en-nl/articles/360009250458-Limits-for-Free-plan-users' target='_blank'>Free plan users</a>.
+    </p>
+    <p>
+    If you wish to automate your Cervinodata API connection, check out the list of client API's at <a href='https://github.com/Cervinodata' target='_blank'>https://github.com/Cervinodata</a>.
+    </p>
+    </div>
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: https://www.cervinodata.com/privacy/
+  title: Cervinodata API documentation
+  version: 1.0.0
+servers:
+- description: API v1
+  url: '{host}/api/v1'
+  variables:
+    host:
+      default: https://app.cervinodata.com
+- description: API Beta
+  url: '{host}/api'
+  variables:
+    host:
+      default: https://app.cervinodata.com
+tags:
+- description: Operations to collect generic information, i.e. a list of organisations
+  name: generic data
+- description: Operations to collect advertising data, i.e. a list of accounts, a
+    list of campaigns, a campaign report per day by organisation
+  name: advertising data
+- description: Operations to collect analytics data, i.e. a list of views
+  name: analytics data
+- description: Operations to collect analytics data with default metrics, i.e. a report
+    per campaign per day by organisation
+  name: analytics data, default metrics
+- description: Operations to collect analytics data with goal metrics, i.e. a report
+    per campaign per day by organisation
+  name: analytics data, goals
+paths:
+  /data/organisations:
+    get:
+      description: organisations
+      operationId: getOrganisations
+      parameters:
+      - description: Output format
+        explode: true
+        in: query
+        name: format
+        required: false
+        schema:
+          enum:
+          - csv
+          - json
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/csv:
+              schema:
+                type: string
+            application/json:
+              schema:
+                items: {}
+                type: array
+          description: successful operation
+      security:
+      - bearerAuth: []
+      summary: Return organisations
+      tags:
+      - generic data
+      x-accepts: application/json
+  /data/campaign-groups:
+    get:
+      description: campaign groups
+      operationId: getCampaignGroups
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                items: {}
+                type: array
+          description: successful operation
+      security:
+      - bearerAuth: []
+      summary: Return campaign groups
+      tags:
+      - generic data
+      x-accepts: application/json
+  /data/ad-accounts/{organisationUuid}:
+    get:
+      description: Ad accounts by organisation
+      operationId: getAdAccounts
+      parameters:
+      - description: Organisation uuid
+        explode: false
+        in: path
+        name: organisationUuid
+        required: true
+        schema:
+          type: string
+        style: simple
+      - description: Output format
+        explode: true
+        in: query
+        name: format
+        required: false
+        schema:
+          enum:
+          - csv
+          - json
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/csv:
+              schema:
+                type: string
+            application/json:
+              schema:
+                items: {}
+                type: array
+          description: successful operation
+        "400":
+          description: Invalid Organisation uuid supplied
+        "404":
+          description: Organisation uuid not found
+      security:
+      - bearerAuth: []
+      summary: Return ad accounts by organisation
+      tags:
+      - advertising data
+      x-accepts: application/json
+  /data/ad-campaigns/{organisationUuid}:
+    get:
+      description: Ad campaigns by organisation
+      operationId: getAdCampaigns
+      parameters:
+      - description: Organisation uuid
+        explode: false
+        in: path
+        name: organisationUuid
+        required: true
+        schema:
+          type: string
+        style: simple
+      - description: From date
+        explode: true
+        in: query
+        name: from_date
+        required: false
+        schema:
+          format: date
+          type: string
+        style: form
+      - description: Output format
+        explode: true
+        in: query
+        name: format
+        required: false
+        schema:
+          enum:
+          - csv
+          - json
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/csv:
+              schema:
+                type: string
+            application/json:
+              schema:
+                items: {}
+                type: array
+          description: successful operation
+        "400":
+          description: Invalid Organisation uuid supplied
+        "404":
+          description: Organisation uuid not found
+      security:
+      - bearerAuth: []
+      summary: Return ad campaigns by organisation
+      tags:
+      - advertising data
+      x-accepts: application/json
+  /data/ad-campaign-report-per-day/{organisationUuid}:
+    get:
+      description: Ad campaign report per day by organisation
+      operationId: getAdCampaignReportPerDay
+      parameters:
+      - description: Organisation uuid
+        explode: false
+        in: path
+        name: organisationUuid
+        required: true
+        schema:
+          type: string
+        style: simple
+      - description: From date
+        explode: true
+        in: query
+        name: from_date
+        required: false
+        schema:
+          format: date
+          type: string
+        style: form
+      - description: Outputted date format
+        explode: true
+        in: query
+        name: date_format
+        required: false
+        schema:
+          enum:
+          - YYYY-MM-DD
+          - YYYYMMDD
+          type: string
+        style: form
+      - description: Output format (use csv for large result sets)
+        explode: true
+        in: query
+        name: format
+        required: false
+        schema:
+          enum:
+          - csv
+          - json
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/csv:
+              schema:
+                type: string
+            application/json:
+              schema:
+                items: {}
+                type: array
+          description: successful operation
+        "400":
+          description: Invalid Organisation uuid supplied
+        "404":
+          description: Organisation uuid not found
+      security:
+      - bearerAuth: []
+      summary: Return ad campaign report per day by organisation
+      tags:
+      - advertising data
+      x-accepts: application/json
+  /data/ad-campaign-report-per-organisation-per-account-per-day/{organisationUuids}:
+    get:
+      description: Ad campaign report per organisation per account per day
+      operationId: getAdCampaignReportPerOrganisationPerAccountPerDay
+      parameters:
+      - description: Organisation uuids
+        explode: false
+        in: path
+        name: organisationUuids
+        required: true
+        schema:
+          items:
+            type: string
+          type: array
+        style: simple
+      - description: From date
+        explode: true
+        in: query
+        name: from_date
+        required: false
+        schema:
+          format: date
+          type: string
+        style: form
+      - description: Outputted date format
+        explode: true
+        in: query
+        name: date_format
+        required: false
+        schema:
+          enum:
+          - YYYY-MM-DD
+          - YYYYMMDD
+          type: string
+        style: form
+      - description: Output format (use csv for large result sets)
+        explode: true
+        in: query
+        name: format
+        required: false
+        schema:
+          enum:
+          - csv
+          - json
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/csv:
+              schema:
+                type: string
+            application/json:
+              schema:
+                items: {}
+                type: array
+          description: successful operation
+        "400":
+          description: Invalid Organisation uuids supplied
+        "404":
+          description: Organisation uuids not found
+      security:
+      - bearerAuth: []
+      summary: Return ad campaign report per organisation per account per day
+      tags:
+      - advertising data
+      x-accepts: application/json
+  /data/ad-campaign-report-per-organisation-per-account-per-campaign-per-device-per-day/{organisationUuids}:
+    get:
+      description: Ad campaign report per organisation per account per campaign per
+        device per day
+      operationId: getAdCampaignReportPerOrganisationPerAccountPerCampaignPerDevicePerDay
+      parameters:
+      - description: Organisation uuids
+        explode: false
+        in: path
+        name: organisationUuids
+        required: true
+        schema:
+          items:
+            type: string
+          type: array
+        style: simple
+      - description: From date
+        explode: true
+        in: query
+        name: from_date
+        required: false
+        schema:
+          format: date
+          type: string
+        style: form
+      - description: Outputted date format
+        explode: true
+        in: query
+        name: date_format
+        required: false
+        schema:
+          enum:
+          - YYYY-MM-DD
+          - YYYYMMDD
+          type: string
+        style: form
+      - description: Output format (use csv for large result sets)
+        explode: true
+        in: query
+        name: format
+        required: false
+        schema:
+          enum:
+          - csv
+          - json
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/csv:
+              schema:
+                type: string
+            application/json:
+              schema:
+                items: {}
+                type: array
+          description: successful operation
+        "400":
+          description: Invalid Organisation uuids supplied
+        "404":
+          description: Organisation uuids not found
+      security:
+      - bearerAuth: []
+      summary: Return ad campaign report per organisation per account per campaign
+        per device per day
+      tags:
+      - advertising data
+      x-accepts: application/json
+  /data/ad-account-report-per-organisation-per-day/{organisationUuids}:
+    get:
+      description: Ad account report per organisation  per day
+      operationId: getAdAccountReportPerOrganisationPerDay
+      parameters:
+      - description: Organisation uuids
+        explode: false
+        in: path
+        name: organisationUuids
+        required: true
+        schema:
+          items:
+            type: string
+          type: array
+        style: simple
+      - description: From date
+        explode: true
+        in: query
+        name: from_date
+        required: false
+        schema:
+          format: date
+          type: string
+        style: form
+      - description: Outputted date format
+        explode: true
+        in: query
+        name: date_format
+        required: false
+        schema:
+          enum:
+          - YYYY-MM-DD
+          - YYYYMMDD
+          type: string
+        style: form
+      - description: Output format (use csv for large result sets)
+        explode: true
+        in: query
+        name: format
+        required: false
+        schema:
+          enum:
+          - csv
+          - json
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/csv:
+              schema:
+                type: string
+            application/json:
+              schema:
+                items: {}
+                type: array
+          description: successful operation
+        "400":
+          description: Invalid Organisation uuids supplied
+        "404":
+          description: Organisation uuids not found
+      security:
+      - bearerAuth: []
+      summary: Return ad account report per organisation per day
+      tags:
+      - advertising data
+      x-accepts: application/json
+  /data/views/{organisationUuid}:
+    get:
+      description: Views by organisation
+      operationId: getViews
+      parameters:
+      - description: Organisation uuid
+        explode: false
+        in: path
+        name: organisationUuid
+        required: true
+        schema:
+          type: string
+        style: simple
+      - description: Output format
+        explode: true
+        in: query
+        name: format
+        required: false
+        schema:
+          enum:
+          - csv
+          - json
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/csv:
+              schema:
+                type: string
+            application/json:
+              schema:
+                items: {}
+                type: array
+          description: successful operation
+        "400":
+          description: Invalid Organisation uuid supplied
+        "404":
+          description: Organisation uuid not found
+      security:
+      - bearerAuth: []
+      summary: Return views by organisation
+      tags:
+      - analytics data
+      x-accepts: application/json
+  /data/analytics-report-per-campaign-per-day/{organisationUuid}:
+    get:
+      description: Analytics report per campaign per day by organisation
+      operationId: getAnalyticsReportPerCampaignPerDay
+      parameters:
+      - description: Organisation uuid
+        explode: false
+        in: path
+        name: organisationUuid
+        required: true
+        schema:
+          type: string
+        style: simple
+      - description: From date
+        explode: true
+        in: query
+        name: from_date
+        required: false
+        schema:
+          format: date
+          type: string
+        style: form
+      - description: Outputted date format
+        explode: true
+        in: query
+        name: date_format
+        required: false
+        schema:
+          enum:
+          - YYYY-MM-DD
+          - YYYYMMDD
+          type: string
+        style: form
+      - description: Output format (use csv for large result sets)
+        explode: true
+        in: query
+        name: format
+        required: false
+        schema:
+          enum:
+          - csv
+          - json
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/csv:
+              schema:
+                type: string
+            application/json:
+              schema:
+                items: {}
+                type: array
+          description: successful operation
+        "400":
+          description: Invalid Organisation uuid supplied
+        "404":
+          description: Organisation uuid not found
+      security:
+      - bearerAuth: []
+      summary: Return analytics report per campaign per day by organisation
+      tags:
+      - analytics data, default metrics
+      x-accepts: application/json
+  /data/analytics-report-per-channel-group-per-day/{organisationUuid}:
+    get:
+      description: Analytics report per channel group per day by organisation
+      operationId: getAnalyticsReportPerChannelGroupPerDay
+      parameters:
+      - description: Organisation uuid
+        explode: false
+        in: path
+        name: organisationUuid
+        required: true
+        schema:
+          type: string
+        style: simple
+      - description: From date
+        explode: true
+        in: query
+        name: from_date
+        required: false
+        schema:
+          format: date
+          type: string
+        style: form
+      - description: Outputted date format
+        explode: true
+        in: query
+        name: date_format
+        required: false
+        schema:
+          enum:
+          - YYYY-MM-DD
+          - YYYYMMDD
+          type: string
+        style: form
+      - description: Output format (use csv for large result sets)
+        explode: true
+        in: query
+        name: format
+        required: false
+        schema:
+          enum:
+          - csv
+          - json
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/csv:
+              schema:
+                type: string
+            application/json:
+              schema:
+                items: {}
+                type: array
+          description: successful operation
+        "400":
+          description: Invalid Organisation uuid supplied
+        "404":
+          description: Organisation uuid not found
+      security:
+      - bearerAuth: []
+      summary: Return analytics report per channel group per day by organisation
+      tags:
+      - analytics data, default metrics
+      x-accepts: application/json
+  /data/analytics-report-per-device-per-day/{organisationUuid}:
+    get:
+      description: Analytics report per device per day by organisation
+      operationId: getAnalyticsReportPerDevicePerDay
+      parameters:
+      - description: Organisation uuid
+        explode: false
+        in: path
+        name: organisationUuid
+        required: true
+        schema:
+          type: string
+        style: simple
+      - description: From date
+        explode: true
+        in: query
+        name: from_date
+        required: false
+        schema:
+          format: date
+          type: string
+        style: form
+      - description: Outputted date format
+        explode: true
+        in: query
+        name: date_format
+        required: false
+        schema:
+          enum:
+          - YYYY-MM-DD
+          - YYYYMMDD
+          type: string
+        style: form
+      - description: Output format (use csv for large result sets)
+        explode: true
+        in: query
+        name: format
+        required: false
+        schema:
+          enum:
+          - csv
+          - json
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/csv:
+              schema:
+                type: string
+            application/json:
+              schema:
+                items: {}
+                type: array
+          description: successful operation
+        "400":
+          description: Invalid Organisation uuid supplied
+        "404":
+          description: Organisation uuid not found
+      security:
+      - bearerAuth: []
+      summary: Return analytics report per device per day by organisation
+      tags:
+      - analytics data, default metrics
+      x-accepts: application/json
+  /data/analytics-report-per-source-medium-per-day/{organisationUuid}:
+    get:
+      description: Analytics report per source medium per day by organisation
+      operationId: getAnalyticsReportPerSourceMediumPerDay
+      parameters:
+      - description: Organisation uuid
+        explode: false
+        in: path
+        name: organisationUuid
+        required: true
+        schema:
+          type: string
+        style: simple
+      - description: From date
+        explode: true
+        in: query
+        name: from_date
+        required: false
+        schema:
+          format: date
+          type: string
+        style: form
+      - description: Outputted date format
+        explode: true
+        in: query
+        name: date_format
+        required: false
+        schema:
+          enum:
+          - YYYY-MM-DD
+          - YYYYMMDD
+          type: string
+        style: form
+      - description: Output format (use csv for large result sets)
+        explode: true
+        in: query
+        name: format
+        required: false
+        schema:
+          enum:
+          - csv
+          - json
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/csv:
+              schema:
+                type: string
+            application/json:
+              schema:
+                items: {}
+                type: array
+          description: successful operation
+        "400":
+          description: Invalid Organisation uuid supplied
+        "404":
+          description: Organisation uuid not found
+      security:
+      - bearerAuth: []
+      summary: Return analytics report per source medium per day by organisation
+      tags:
+      - analytics data, default metrics
+      x-accepts: application/json
+  /data/analytics-report-per-device-per-channel-group-per-organisation-per-view-per-day/{organisationUuids}:
+    get:
+      description: Analytics report per device per channel group per organisation
+        per view per day
+      operationId: getAnalyticsReportPerDevicePerChannelGroupPerOrganisationPerViewPerDay
+      parameters:
+      - description: Organisation uuids
+        explode: false
+        in: path
+        name: organisationUuids
+        required: true
+        schema:
+          items:
+            type: string
+          type: array
+        style: simple
+      - description: From date
+        explode: true
+        in: query
+        name: from_date
+        required: false
+        schema:
+          format: date
+          type: string
+        style: form
+      - description: Outputted date format
+        explode: true
+        in: query
+        name: date_format
+        required: false
+        schema:
+          enum:
+          - YYYY-MM-DD
+          - YYYYMMDD
+          type: string
+        style: form
+      - description: Output format (use csv for large result sets)
+        explode: true
+        in: query
+        name: format
+        required: false
+        schema:
+          enum:
+          - csv
+          - json
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/csv:
+              schema:
+                type: string
+            application/json:
+              schema:
+                items: {}
+                type: array
+          description: successful operation
+        "400":
+          description: Invalid Organisation uuids supplied
+        "404":
+          description: Organisation uuids not found
+      security:
+      - bearerAuth: []
+      summary: Return analytics report per device per channel group per organisation
+        per view per day
+      tags:
+      - analytics data, default metrics
+      x-accepts: application/json
+  /data/analytics-goal-report-per-campaign-per-day/{organisationUuid}:
+    get:
+      description: Analytics goal report per campaign per day by organisation
+      operationId: getAnalyticsGoalReportPerCampaignPerDay
+      parameters:
+      - description: Organisation uuid
+        explode: false
+        in: path
+        name: organisationUuid
+        required: true
+        schema:
+          type: string
+        style: simple
+      - description: From date
+        explode: true
+        in: query
+        name: from_date
+        required: false
+        schema:
+          format: date
+          type: string
+        style: form
+      - description: Outputted date format
+        explode: true
+        in: query
+        name: date_format
+        required: false
+        schema:
+          enum:
+          - YYYY-MM-DD
+          - YYYYMMDD
+          type: string
+        style: form
+      - description: Output format (use csv for large result sets)
+        explode: true
+        in: query
+        name: format
+        required: false
+        schema:
+          enum:
+          - csv
+          - json
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/csv:
+              schema:
+                type: string
+            application/json:
+              schema:
+                items: {}
+                type: array
+          description: successful operation
+        "400":
+          description: Invalid Organisation uuid supplied
+        "404":
+          description: Organisation uuid not found
+      security:
+      - bearerAuth: []
+      summary: Return analytics goal report per campaign per day by organisation
+      tags:
+      - analytics data, goals
+      x-accepts: application/json
+  /data/analytics-goal-report-per-channel-group-per-day/{organisationUuid}:
+    get:
+      description: Analytics goal report per channel group per day by organisation
+      operationId: getAnalyticsGoalReportPerChannelGroupPerDay
+      parameters:
+      - description: Organisation uuid
+        explode: false
+        in: path
+        name: organisationUuid
+        required: true
+        schema:
+          type: string
+        style: simple
+      - description: From date
+        explode: true
+        in: query
+        name: from_date
+        required: false
+        schema:
+          format: date
+          type: string
+        style: form
+      - description: Outputted date format
+        explode: true
+        in: query
+        name: date_format
+        required: false
+        schema:
+          enum:
+          - YYYY-MM-DD
+          - YYYYMMDD
+          type: string
+        style: form
+      - description: Output format (use csv for large result sets)
+        explode: true
+        in: query
+        name: format
+        required: false
+        schema:
+          enum:
+          - csv
+          - json
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/csv:
+              schema:
+                type: string
+            application/json:
+              schema:
+                items: {}
+                type: array
+          description: successful operation
+        "400":
+          description: Invalid Organisation uuid supplied
+        "404":
+          description: Organisation uuid not found
+      security:
+      - bearerAuth: []
+      summary: Return analytics goal report per channel group per day by organisation
+      tags:
+      - analytics data, goals
+      x-accepts: application/json
+  /data/analytics-goal-report-per-device-per-day/{organisationUuid}:
+    get:
+      description: Analytics goal report per device per day by organisation
+      operationId: getAnalyticsGoalReportPerDevicePerDay
+      parameters:
+      - description: Organisation uuid
+        explode: false
+        in: path
+        name: organisationUuid
+        required: true
+        schema:
+          type: string
+        style: simple
+      - description: From date
+        explode: true
+        in: query
+        name: from_date
+        required: false
+        schema:
+          format: date
+          type: string
+        style: form
+      - description: Outputted date format
+        explode: true
+        in: query
+        name: date_format
+        required: false
+        schema:
+          enum:
+          - YYYY-MM-DD
+          - YYYYMMDD
+          type: string
+        style: form
+      - description: Output format (use csv for large result sets)
+        explode: true
+        in: query
+        name: format
+        required: false
+        schema:
+          enum:
+          - csv
+          - json
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/csv:
+              schema:
+                type: string
+            application/json:
+              schema:
+                items: {}
+                type: array
+          description: successful operation
+        "400":
+          description: Invalid Organisation uuid supplied
+        "404":
+          description: Organisation uuid not found
+      security:
+      - bearerAuth: []
+      summary: Return analytics goal report per device per day by organisation
+      tags:
+      - analytics data, goals
+      x-accepts: application/json
+  /data/analytics-goal-report-per-source-medium-per-day/{organisationUuid}:
+    get:
+      description: Analytics goal report per source medium per day by organisation
+      operationId: getAnalyticsGoalReportPerSourceMediumPerDay
+      parameters:
+      - description: Organisation uuid
+        explode: false
+        in: path
+        name: organisationUuid
+        required: true
+        schema:
+          type: string
+        style: simple
+      - description: From date
+        explode: true
+        in: query
+        name: from_date
+        required: false
+        schema:
+          format: date
+          type: string
+        style: form
+      - description: Outputted date format
+        explode: true
+        in: query
+        name: date_format
+        required: false
+        schema:
+          enum:
+          - YYYY-MM-DD
+          - YYYYMMDD
+          type: string
+        style: form
+      - description: Output format (use csv for large result sets)
+        explode: true
+        in: query
+        name: format
+        required: false
+        schema:
+          enum:
+          - csv
+          - json
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/csv:
+              schema:
+                type: string
+            application/json:
+              schema:
+                items: {}
+                type: array
+          description: successful operation
+        "400":
+          description: Invalid Organisation uuid supplied
+        "404":
+          description: Organisation uuid not found
+      security:
+      - bearerAuth: []
+      summary: Return analytics goal report per source medium per day by organisation
+      tags:
+      - analytics data, goals
+      x-accepts: application/json
+  /data/campaign-group-analytics-report-per-organisation-per-day/{organisationUuids}:
+    get:
+      description: Campaign group analytics report per organisation per day
+      operationId: getCampaignGroupAnalyticsReportPerOrganisationPerDay
+      parameters:
+      - description: Organisation uuids
+        explode: false
+        in: path
+        name: organisationUuids
+        required: true
+        schema:
+          items:
+            type: string
+          type: array
+        style: simple
+      - description: From date
+        explode: true
+        in: query
+        name: from_date
+        required: false
+        schema:
+          format: date
+          type: string
+        style: form
+      - description: Outputted date format
+        explode: true
+        in: query
+        name: date_format
+        required: false
+        schema:
+          enum:
+          - YYYY-MM-DD
+          - YYYYMMDD
+          type: string
+        style: form
+      - description: Output format (use csv for large result sets)
+        explode: true
+        in: query
+        name: format
+        required: false
+        schema:
+          enum:
+          - csv
+          - json
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/csv:
+              schema:
+                type: string
+            application/json:
+              schema:
+                items: {}
+                type: array
+          description: successful operation
+        "400":
+          description: Invalid Organisation uuids supplied
+        "404":
+          description: Organisation uuids not found
+      security:
+      - bearerAuth: []
+      summary: Return campaign group analytics report per organisation per day
+      tags:
+      - campaign group
+      x-accepts: application/json
+  /data/campaign-group-ad-report-per-organisation-per-day/{organisationUuids}:
+    get:
+      description: Campaign group ad report per organisation per day
+      operationId: getCampaignGroupAdReportPerOrganisationPerDay
+      parameters:
+      - description: Organisation uuids
+        explode: false
+        in: path
+        name: organisationUuids
+        required: true
+        schema:
+          items:
+            type: string
+          type: array
+        style: simple
+      - description: From date
+        explode: true
+        in: query
+        name: from_date
+        required: false
+        schema:
+          format: date
+          type: string
+        style: form
+      - description: Outputted date format
+        explode: true
+        in: query
+        name: date_format
+        required: false
+        schema:
+          enum:
+          - YYYY-MM-DD
+          - YYYYMMDD
+          type: string
+        style: form
+      - description: Output format (use csv for large result sets)
+        explode: true
+        in: query
+        name: format
+        required: false
+        schema:
+          enum:
+          - csv
+          - json
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/csv:
+              schema:
+                type: string
+            application/json:
+              schema:
+                items: {}
+                type: array
+          description: successful operation
+        "400":
+          description: Invalid Organisation uuids supplied
+        "404":
+          description: Organisation uuids not found
+      security:
+      - bearerAuth: []
+      summary: Return campaign group ad report per organisation per day
+      tags:
+      - campaign group
+      x-accepts: application/json
+  /data/campaign-group-report-per-organisation-per-day/{organisationUuids}:
+    get:
+      description: Campaign group report per organisation per day
+      operationId: getCampaignGroupReportPerOrganisationPerDay
+      parameters:
+      - description: Organisation uuids
+        explode: false
+        in: path
+        name: organisationUuids
+        required: true
+        schema:
+          items:
+            type: string
+          type: array
+        style: simple
+      - description: From date
+        explode: true
+        in: query
+        name: from_date
+        required: false
+        schema:
+          format: date
+          type: string
+        style: form
+      - description: Outputted date format
+        explode: true
+        in: query
+        name: date_format
+        required: false
+        schema:
+          enum:
+          - YYYY-MM-DD
+          - YYYYMMDD
+          type: string
+        style: form
+      - description: Output format (use csv for large result sets)
+        explode: true
+        in: query
+        name: format
+        required: false
+        schema:
+          enum:
+          - csv
+          - json
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/csv:
+              schema:
+                type: string
+            application/json:
+              schema:
+                items: {}
+                type: array
+          description: successful operation
+        "400":
+          description: Invalid Organisation uuids supplied
+        "404":
+          description: Organisation uuids not found
+      security:
+      - bearerAuth: []
+      summary: Return campaign group report per organisation per day
+      tags:
+      - campaign group
+      x-accepts: application/json
+  /data/campaign-group-ad-report-per-organisation-per-campaign-per-day/{organisationUuids}:
+    get:
+      description: Campaign group ad report per organisation per campaign per day
+      operationId: getCampaignGroupAdReportPerOrganisationPerCampaignPerDay
+      parameters:
+      - description: Organisation uuids
+        explode: false
+        in: path
+        name: organisationUuids
+        required: true
+        schema:
+          items:
+            type: string
+          type: array
+        style: simple
+      - description: From date
+        explode: true
+        in: query
+        name: from_date
+        required: false
+        schema:
+          format: date
+          type: string
+        style: form
+      - description: Outputted date format
+        explode: true
+        in: query
+        name: date_format
+        required: false
+        schema:
+          enum:
+          - YYYY-MM-DD
+          - YYYYMMDD
+          type: string
+        style: form
+      - description: Output format (use csv for large result sets)
+        explode: true
+        in: query
+        name: format
+        required: false
+        schema:
+          enum:
+          - csv
+          - json
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/csv:
+              schema:
+                type: string
+            application/json:
+              schema:
+                items: {}
+                type: array
+          description: successful operation
+        "400":
+          description: Invalid Organisation uuids supplied
+        "404":
+          description: Organisation uuids not found
+      security:
+      - bearerAuth: []
+      summary: Return campaign group ad report per organisation per campaign per day
+      tags:
+      - campaign group
+      x-accepts: application/json
+  /data/campaign-group-video-report-per-organisation-per-day/{organisationUuids}:
+    get:
+      description: Campaign group video report per organisation per day
+      operationId: getCampaignGroupVideoReportPerOrganisationPerDay
+      parameters:
+      - description: Organisation uuids
+        explode: false
+        in: path
+        name: organisationUuids
+        required: true
+        schema:
+          items:
+            type: string
+          type: array
+        style: simple
+      - description: From date
+        explode: true
+        in: query
+        name: from_date
+        required: false
+        schema:
+          format: date
+          type: string
+        style: form
+      - description: Outputted date format
+        explode: true
+        in: query
+        name: date_format
+        required: false
+        schema:
+          enum:
+          - YYYY-MM-DD
+          - YYYYMMDD
+          type: string
+        style: form
+      - description: Output format (use csv for large result sets)
+        explode: true
+        in: query
+        name: format
+        required: false
+        schema:
+          enum:
+          - csv
+          - json
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/csv:
+              schema:
+                type: string
+            application/json:
+              schema:
+                items: {}
+                type: array
+          description: successful operation
+        "400":
+          description: Invalid Organisation uuids supplied
+        "404":
+          description: Organisation uuids not found
+      security:
+      - bearerAuth: []
+      summary: Return campaign group video report per organisation per day
+      tags:
+      - campaign group
+      x-accepts: application/json
+  /data/campaign-group-video-report-per-organisation-per-campaign-per-day/{organisationUuids}:
+    get:
+      description: Campaign group video report per organisation per campaign per day
+      operationId: getCampaignGroupVideoReportPerOrganisationPerCampaignPerDay
+      parameters:
+      - description: Organisation uuids
+        explode: false
+        in: path
+        name: organisationUuids
+        required: true
+        schema:
+          items:
+            type: string
+          type: array
+        style: simple
+      - description: From date
+        explode: true
+        in: query
+        name: from_date
+        required: false
+        schema:
+          format: date
+          type: string
+        style: form
+      - description: Outputted date format
+        explode: true
+        in: query
+        name: date_format
+        required: false
+        schema:
+          enum:
+          - YYYY-MM-DD
+          - YYYYMMDD
+          type: string
+        style: form
+      - description: Output format (use csv for large result sets)
+        explode: true
+        in: query
+        name: format
+        required: false
+        schema:
+          enum:
+          - csv
+          - json
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/csv:
+              schema:
+                type: string
+            application/json:
+              schema:
+                items: {}
+                type: array
+          description: successful operation
+        "400":
+          description: Invalid Organisation uuids supplied
+        "404":
+          description: Organisation uuids not found
+      security:
+      - bearerAuth: []
+      summary: Return campaign group video report per organisation per campaign per
+        day
+      tags:
+      - campaign group
+      x-accepts: application/json
+  /data/campaign-group-facebook-ad-report-per-organisation-per-campaign-per-day/{organisationUuids}:
+    get:
+      description: Campaign group facebook ad report per organisation  per campaign
+        per day
+      operationId: getCampaignGroupFacebookAdReportPerOrganisationPerCampaignPerDay
+      parameters:
+      - description: Organisation uuids
+        explode: false
+        in: path
+        name: organisationUuids
+        required: true
+        schema:
+          items:
+            type: string
+          type: array
+        style: simple
+      - description: From date
+        explode: true
+        in: query
+        name: from_date
+        required: false
+        schema:
+          format: date
+          type: string
+        style: form
+      - description: Outputted date format
+        explode: true
+        in: query
+        name: date_format
+        required: false
+        schema:
+          enum:
+          - YYYY-MM-DD
+          - YYYYMMDD
+          type: string
+        style: form
+      - description: Output format (use csv for large result sets)
+        explode: true
+        in: query
+        name: format
+        required: false
+        schema:
+          enum:
+          - csv
+          - json
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/csv:
+              schema:
+                type: string
+            application/json:
+              schema:
+                items: {}
+                type: array
+          description: successful operation
+        "400":
+          description: Invalid Organisation uuids supplied
+        "404":
+          description: Organisation uuids not found
+      security:
+      - bearerAuth: []
+      summary: Return campaign group facebook ad report per organisation per campaign
+        per day
+      tags:
+      - campaign group
+      x-accepts: application/json
+  /data/campaign-group-facebook-ad-extended-report-per-organisation-per-campaign-per-day/{organisationUuids}:
+    get:
+      description: Campaign group facebook ad extended report per organisation per
+        campaign per day
+      operationId: getCampaignGroupFacebookAdExtendedReportPerOrganisationPerCampaignPerDay
+      parameters:
+      - description: Organisation uuids
+        explode: false
+        in: path
+        name: organisationUuids
+        required: true
+        schema:
+          items:
+            type: string
+          type: array
+        style: simple
+      - description: From date
+        explode: true
+        in: query
+        name: from_date
+        required: false
+        schema:
+          format: date
+          type: string
+        style: form
+      - description: Outputted date format
+        explode: true
+        in: query
+        name: date_format
+        required: false
+        schema:
+          enum:
+          - YYYY-MM-DD
+          - YYYYMMDD
+          type: string
+        style: form
+      - description: Output format (use csv for large result sets)
+        explode: true
+        in: query
+        name: format
+        required: false
+        schema:
+          enum:
+          - csv
+          - json
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/csv:
+              schema:
+                type: string
+            application/json:
+              schema:
+                items: {}
+                type: array
+          description: successful operation
+        "400":
+          description: Invalid Organisation uuids supplied
+        "404":
+          description: Organisation uuids not found
+      security:
+      - bearerAuth: []
+      summary: Return campaign group facebook ad extended report per organisation
+        per campaign per day
+      tags:
+      - campaign group
+      x-accepts: application/json
+  /data/facebook-ad-extended-report-per-organisation-per-account-per-campaign-per-device-per-day/{organisationUuids}:
+    get:
+      description: Facebook ad extended report per organisation per account per campaign
+        per device per day
+      operationId: getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDay
+      parameters:
+      - description: Organisation uuids
+        explode: false
+        in: path
+        name: organisationUuids
+        required: true
+        schema:
+          items:
+            type: string
+          type: array
+        style: simple
+      - description: From date
+        explode: true
+        in: query
+        name: from_date
+        required: false
+        schema:
+          format: date
+          type: string
+        style: form
+      - description: Outputted date format
+        explode: true
+        in: query
+        name: date_format
+        required: false
+        schema:
+          enum:
+          - YYYY-MM-DD
+          - YYYYMMDD
+          type: string
+        style: form
+      - description: Output format (use csv for large result sets)
+        explode: true
+        in: query
+        name: format
+        required: false
+        schema:
+          enum:
+          - csv
+          - json
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/csv:
+              schema:
+                type: string
+            application/json:
+              schema:
+                items: {}
+                type: array
+          description: successful operation
+        "400":
+          description: Invalid Organisation uuids supplied
+        "404":
+          description: Organisation uuids not found
+      security:
+      - bearerAuth: []
+      summary: Return facebook ad extended report per organisation per account per
+        campaign per device per day
+      tags:
+      - advertising data
+      x-accepts: application/json
+  /data/google-ads-report-per-organisation-per-account-per-campaign-per-device-per-day/{organisationUuids}:
+    get:
+      description: Campaign group google ads report per organisation per account per
+        campaign per device per day
+      operationId: getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDay
+      parameters:
+      - description: Organisation uuids
+        explode: false
+        in: path
+        name: organisationUuids
+        required: true
+        schema:
+          items:
+            type: string
+          type: array
+        style: simple
+      - description: From date
+        explode: true
+        in: query
+        name: from_date
+        required: false
+        schema:
+          format: date
+          type: string
+        style: form
+      - description: Outputted date format
+        explode: true
+        in: query
+        name: date_format
+        required: false
+        schema:
+          enum:
+          - YYYY-MM-DD
+          - YYYYMMDD
+          type: string
+        style: form
+      - description: Output format (use csv for large result sets)
+        explode: true
+        in: query
+        name: format
+        required: false
+        schema:
+          enum:
+          - csv
+          - json
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/csv:
+              schema:
+                type: string
+            application/json:
+              schema:
+                items: {}
+                type: array
+          description: successful operation
+        "400":
+          description: Invalid Organisation uuids supplied
+        "404":
+          description: Organisation uuids not found
+      security:
+      - bearerAuth: []
+      summary: Return google ads report per organisation per account per campaign
+        per device per day
+      tags:
+      - advertising data
+      x-accepts: application/json
+  /data/campaign-group-google-ads-report-per-organisation-per-campaign-per-day/{organisationUuids}:
+    get:
+      description: Campaign group google ads report per organisation  per campaign
+        per day
+      operationId: getCampaignGroupGoogleAdsReportPerOrganisationPerCampaignPerDay
+      parameters:
+      - description: Organisation uuids
+        explode: false
+        in: path
+        name: organisationUuids
+        required: true
+        schema:
+          items:
+            type: string
+          type: array
+        style: simple
+      - description: From date
+        explode: true
+        in: query
+        name: from_date
+        required: false
+        schema:
+          format: date
+          type: string
+        style: form
+      - description: Outputted date format
+        explode: true
+        in: query
+        name: date_format
+        required: false
+        schema:
+          enum:
+          - YYYY-MM-DD
+          - YYYYMMDD
+          type: string
+        style: form
+      - description: Output format (use csv for large result sets)
+        explode: true
+        in: query
+        name: format
+        required: false
+        schema:
+          enum:
+          - csv
+          - json
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/csv:
+              schema:
+                type: string
+            application/json:
+              schema:
+                items: {}
+                type: array
+          description: successful operation
+        "400":
+          description: Invalid Organisation uuids supplied
+        "404":
+          description: Organisation uuids not found
+      security:
+      - bearerAuth: []
+      summary: Return campaign group google ads report per organisation per campaign
+        per day
+      tags:
+      - campaign group
+      x-accepts: application/json
+components:
+  schemas: {}
+  securitySchemes:
+    bearerAuth:
+      scheme: bearer
+      type: http
+
