@@ -1603,4 +1603,290 @@ public class AdvertisingDataApi {
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
+    /**
+     * Build call for getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay
+     * @param organisationUuids Organisation uuids (required)
+     * @param fromDate From date (optional)
+     * @param dateFormat Outputted date format (optional)
+     * @param format Output format (use csv for large result sets) (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/data/snapchat-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids}"
+            .replaceAll("\\{" + "organisationUuids" + "\\}", localVarApiClient.escapeString(localVarApiClient.collectionPathParameterToString("csv", organisationUuids)));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        if (fromDate != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("from_date", fromDate));
+        }
+
+        if (dateFormat != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("date_format", dateFormat));
+        }
+
+        if (format != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("format", format));
+        }
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+        final String[] localVarAccepts = {
+            "text/csv", "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        String[] localVarAuthNames = new String[] { "bearerAuth" };
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'organisationUuids' is set
+        if (organisationUuids == null) {
+            throw new ApiException("Missing the required parameter 'organisationUuids' when calling getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(Async)");
+        }
+        
+
+        okhttp3.Call localVarCall = getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayCall(organisationUuids, fromDate, dateFormat, format, _callback);
+        return localVarCall;
+
+    }
+
+    /**
+     * Return snapchat ads extended report per organisation per account per campaign per day
+     * Snapchat ads extended report per organisation per account per campaign per day
+     * @param organisationUuids Organisation uuids (required)
+     * @param fromDate From date (optional)
+     * @param dateFormat Outputted date format (optional)
+     * @param format Output format (use csv for large result sets) (optional)
+     * @return String
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
+     </table>
+     */
+    public String getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+        ApiResponse<String> localVarResp = getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo(organisationUuids, fromDate, dateFormat, format);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Return snapchat ads extended report per organisation per account per campaign per day
+     * Snapchat ads extended report per organisation per account per campaign per day
+     * @param organisationUuids Organisation uuids (required)
+     * @param fromDate From date (optional)
+     * @param dateFormat Outputted date format (optional)
+     * @param format Output format (use csv for large result sets) (optional)
+     * @return ApiResponse&lt;String&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<String> getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+        okhttp3.Call localVarCall = getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, null);
+        Type localVarReturnType = new TypeToken<String>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Return snapchat ads extended report per organisation per account per campaign per day (asynchronously)
+     * Snapchat ads extended report per organisation per account per campaign per day
+     * @param organisationUuids Organisation uuids (required)
+     * @param fromDate From date (optional)
+     * @param dateFormat Outputted date format (optional)
+     * @param format Output format (use csv for large result sets) (optional)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayAsync(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, _callback);
+        Type localVarReturnType = new TypeToken<String>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for getTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay
+     * @param organisationUuids Organisation uuids (required)
+     * @param fromDate From date (optional)
+     * @param dateFormat Outputted date format (optional)
+     * @param format Output format (use csv for large result sets) (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/data/twitter-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids}"
+            .replaceAll("\\{" + "organisationUuids" + "\\}", localVarApiClient.escapeString(localVarApiClient.collectionPathParameterToString("csv", organisationUuids)));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        if (fromDate != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("from_date", fromDate));
+        }
+
+        if (dateFormat != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("date_format", dateFormat));
+        }
+
+        if (format != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("format", format));
+        }
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+        final String[] localVarAccepts = {
+            "text/csv", "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        String[] localVarAuthNames = new String[] { "bearerAuth" };
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call getTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'organisationUuids' is set
+        if (organisationUuids == null) {
+            throw new ApiException("Missing the required parameter 'organisationUuids' when calling getTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(Async)");
+        }
+        
+
+        okhttp3.Call localVarCall = getTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayCall(organisationUuids, fromDate, dateFormat, format, _callback);
+        return localVarCall;
+
+    }
+
+    /**
+     * Return twitter ads extended report per organisation per account per campaign per day
+     * Twitter ads extended report per organisation per account per campaign per day
+     * @param organisationUuids Organisation uuids (required)
+     * @param fromDate From date (optional)
+     * @param dateFormat Outputted date format (optional)
+     * @param format Output format (use csv for large result sets) (optional)
+     * @return String
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
+     </table>
+     */
+    public String getTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+        ApiResponse<String> localVarResp = getTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo(organisationUuids, fromDate, dateFormat, format);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Return twitter ads extended report per organisation per account per campaign per day
+     * Twitter ads extended report per organisation per account per campaign per day
+     * @param organisationUuids Organisation uuids (required)
+     * @param fromDate From date (optional)
+     * @param dateFormat Outputted date format (optional)
+     * @param format Output format (use csv for large result sets) (optional)
+     * @return ApiResponse&lt;String&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<String> getTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+        okhttp3.Call localVarCall = getTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, null);
+        Type localVarReturnType = new TypeToken<String>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Return twitter ads extended report per organisation per account per campaign per day (asynchronously)
+     * Twitter ads extended report per organisation per account per campaign per day
+     * @param organisationUuids Organisation uuids (required)
+     * @param fromDate From date (optional)
+     * @param dateFormat Outputted date format (optional)
+     * @param format Output format (use csv for large result sets) (optional)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayAsync(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = getTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, _callback);
+        Type localVarReturnType = new TypeToken<String>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
 }

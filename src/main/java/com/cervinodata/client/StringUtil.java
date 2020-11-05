@@ -16,7 +16,7 @@ package com.cervinodata.client;
 import java.util.Collection;
 import java.util.Iterator;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-10-08T12:06:48.569Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-11-05T15:00:05.026Z[GMT]")
 public class StringUtil {
   /**
    * Check if the given array contains the given value (with case-insensitive comparison).
