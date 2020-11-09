@@ -1994,6 +1994,75 @@ paths:
       tags:
       - advertising data
       x-accepts: application/json
+  /data/campaign-group-twitter-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids}:
+    get:
+      description: Campaign group twitter ads extended report per organisation per
+        account per campaign per day
+      operationId: getCampaignGroupTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay
+      parameters:
+      - description: Organisation uuids
+        explode: false
+        in: path
+        name: organisationUuids
+        required: true
+        schema:
+          items:
+            type: string
+          type: array
+        style: simple
+      - description: From date
+        explode: true
+        in: query
+        name: from_date
+        required: false
+        schema:
+          format: date
+          type: string
+        style: form
+      - description: Outputted date format
+        explode: true
+        in: query
+        name: date_format
+        required: false
+        schema:
+          enum:
+          - YYYY-MM-DD
+          - YYYYMMDD
+          type: string
+        style: form
+      - description: Output format (use csv for large result sets)
+        explode: true
+        in: query
+        name: format
+        required: false
+        schema:
+          enum:
+          - csv
+          - json
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/csv:
+              schema:
+                type: string
+            application/json:
+              schema:
+                items: {}
+                type: array
+          description: successful operation
+        "400":
+          description: Invalid Organisation uuids supplied
+        "404":
+          description: Organisation uuids not found
+      security:
+      - bearerAuth: []
+      summary: Return campaign group twitter ads extended report per organisation
+        per account per campaign per day
+      tags:
+      - campaign group
+      x-accepts: application/json
   /data/snapchat-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids}:
     get:
       description: Snapchat ads extended report per organisation per account per campaign
@@ -2062,6 +2131,75 @@ paths:
         campaign per day
       tags:
       - advertising data
+      x-accepts: application/json
+  /data/campaign-group-snapchat-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids}:
+    get:
+      description: Campaign group snapchat ads extended report per organisation per
+        account per campaign per day
+      operationId: getCampaignGroupSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay
+      parameters:
+      - description: Organisation uuids
+        explode: false
+        in: path
+        name: organisationUuids
+        required: true
+        schema:
+          items:
+            type: string
+          type: array
+        style: simple
+      - description: From date
+        explode: true
+        in: query
+        name: from_date
+        required: false
+        schema:
+          format: date
+          type: string
+        style: form
+      - description: Outputted date format
+        explode: true
+        in: query
+        name: date_format
+        required: false
+        schema:
+          enum:
+          - YYYY-MM-DD
+          - YYYYMMDD
+          type: string
+        style: form
+      - description: Output format (use csv for large result sets)
+        explode: true
+        in: query
+        name: format
+        required: false
+        schema:
+          enum:
+          - csv
+          - json
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/csv:
+              schema:
+                type: string
+            application/json:
+              schema:
+                items: {}
+                type: array
+          description: successful operation
+        "400":
+          description: Invalid Organisation uuids supplied
+        "404":
+          description: Organisation uuids not found
+      security:
+      - bearerAuth: []
+      summary: Return campaign group snapchat ads extended report per organisation
+        per account per campaign per day
+      tags:
+      - campaign group
       x-accepts: application/json
   /data/bing-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids}:
     get:
