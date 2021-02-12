@@ -18,7 +18,7 @@ info:
     </ol>
     </p>
     <p>
-    Note that limits apply for <a href='https://support.cervinodata.com/hc/en-nl/articles/360009250458-Limits-for-Free-plan-users' target='_blank'>Free plan users</a>.
+    Note that limits apply for <a href='https://support.cervinodata.com/hc/articles/360014265139' target='_blank'>Free plan users</a>.
     </p>
     <p>
     If you wish to automate your Cervinodata API connection, check out the list of client API's at <a href='https://github.com/Cervinodata' target='_blank'>https://github.com/Cervinodata</a>.
@@ -1373,6 +1373,73 @@ paths:
       security:
       - bearerAuth: []
       summary: Return campaign group ad report per organisation per campaign per day
+      tags:
+      - campaign group
+      x-accepts: application/json
+  /data/campaign-group-ad-report-per-organisation-per-campaign-per-week/{organisationUuids}:
+    get:
+      description: Campaign group ad report per organisation per campaign per week
+      operationId: getCampaignGroupAdReportPerOrganisationPerCampaignPerWeek
+      parameters:
+      - description: Organisation uuids
+        explode: false
+        in: path
+        name: organisationUuids
+        required: true
+        schema:
+          items:
+            type: string
+          type: array
+        style: simple
+      - description: From date
+        explode: true
+        in: query
+        name: from_date
+        required: false
+        schema:
+          format: date
+          type: string
+        style: form
+      - description: Outputted date format
+        explode: true
+        in: query
+        name: date_format
+        required: false
+        schema:
+          enum:
+          - YYYY-MM-DD
+          - YYYYMMDD
+          type: string
+        style: form
+      - description: Output format (use csv for large result sets)
+        explode: true
+        in: query
+        name: format
+        required: false
+        schema:
+          enum:
+          - csv
+          - json
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/csv:
+              schema:
+                type: string
+            application/json:
+              schema:
+                items: {}
+                type: array
+          description: successful operation
+        "400":
+          description: Invalid Organisation uuids supplied
+        "404":
+          description: Organisation uuids not found
+      security:
+      - bearerAuth: []
+      summary: Return campaign group ad report per organisation per campaign per week
       tags:
       - campaign group
       x-accepts: application/json
