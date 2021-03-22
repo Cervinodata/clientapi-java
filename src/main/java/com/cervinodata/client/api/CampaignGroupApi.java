@@ -1076,7 +1076,7 @@ public class CampaignGroupApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/data/campaign-group-facebook-ad-conversion-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids}"
+        String localVarPath = "/data/campaign-group-facebook-ad-custom-conversion-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids}"
             .replaceAll("\\{" + "organisationUuids" + "\\}", localVarApiClient.escapeString(localVarApiClient.collectionPathParameterToString("csv", organisationUuids)));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();

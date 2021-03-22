@@ -1854,7 +1854,7 @@ paths:
       tags:
       - campaign group
       x-accepts: application/json
-  /data/campaign-group-facebook-ad-conversion-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids}:
+  /data/campaign-group-facebook-ad-custom-conversion-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids}:
     get:
       description: Campaign group facebook ad custom conversion report per organisation
         per account per campaign per day
