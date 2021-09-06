@@ -409,7 +409,7 @@ paths:
       x-accepts: application/json
   /data/ad-account-report-per-organisation-per-day/{organisationUuids}:
     get:
-      description: Ad account report per organisation  per day
+      description: Ad account report per organisation per day
       operationId: getAdAccountReportPerOrganisationPerDay
       parameters:
       - description: Organisation uuids
@@ -1580,7 +1580,7 @@ paths:
       x-accepts: application/json
   /data/campaign-group-facebook-ad-report-per-organisation-per-campaign-per-day/{organisationUuids}:
     get:
-      description: Campaign group facebook ad report per organisation  per campaign
+      description: Campaign group facebook ad report per organisation per campaign
         per day
       operationId: getCampaignGroupFacebookAdReportPerOrganisationPerCampaignPerDay
       parameters:
@@ -3029,7 +3029,7 @@ paths:
       x-accepts: application/json
   /data/campaign-group-google-ads-report-per-organisation-per-campaign-per-day/{organisationUuids}:
     get:
-      description: Campaign group google ads report per organisation  per campaign
+      description: Campaign group google ads report per organisation per campaign
         per day
       operationId: getCampaignGroupGoogleAdsReportPerOrganisationPerCampaignPerDay
       parameters:
@@ -3098,7 +3098,7 @@ paths:
       x-accepts: application/json
   /data/campaign-group-adform-report-per-organisation-per-campaign-per-day/{organisationUuids}:
     get:
-      description: Campaign group adform report per organisation  per campaign per
+      description: Campaign group adform report per organisation per campaign per
         day
       operationId: getCampaignGroupAdformReportPerOrganisationPerCampaignPerDay
       parameters:
@@ -3162,6 +3162,75 @@ paths:
       - bearerAuth: []
       summary: Return campaign group adform report per organisation per campaign per
         day
+      tags:
+      - campaign group
+      x-accepts: application/json
+  /data/campaign-group-adform-report-per-organisation-per-campaign-per-line-item-per-day/{organisationUuids}:
+    get:
+      description: Campaign group adform report per organisation per campaign per
+        line-item per day
+      operationId: getCampaignGroupAdformReportPerOrganisationPerCampaignPerLineItemPerDay
+      parameters:
+      - description: Organisation uuids
+        explode: false
+        in: path
+        name: organisationUuids
+        required: true
+        schema:
+          items:
+            type: string
+          type: array
+        style: simple
+      - description: From date
+        explode: true
+        in: query
+        name: from_date
+        required: false
+        schema:
+          format: date
+          type: string
+        style: form
+      - description: Outputted date format
+        explode: true
+        in: query
+        name: date_format
+        required: false
+        schema:
+          enum:
+          - YYYY-MM-DD
+          - YYYYMMDD
+          type: string
+        style: form
+      - description: Output format (use csv for large result sets)
+        explode: true
+        in: query
+        name: format
+        required: false
+        schema:
+          enum:
+          - csv
+          - json
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/csv:
+              schema:
+                type: string
+            application/json:
+              schema:
+                items: {}
+                type: array
+          description: successful operation
+        "400":
+          description: Invalid Organisation uuids supplied
+        "404":
+          description: Organisation uuids not found
+      security:
+      - bearerAuth: []
+      summary: Return campaign group adform report per organisation per campaign per
+        line-item per day
       tags:
       - campaign group
       x-accepts: application/json

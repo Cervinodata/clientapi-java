@@ -28,7 +28,7 @@ Method | HTTP request | Description
 
 Return ad account report per organisation per day
 
-Ad account report per organisation  per day
+Ad account report per organisation per day
 
 ### Example
 ```java

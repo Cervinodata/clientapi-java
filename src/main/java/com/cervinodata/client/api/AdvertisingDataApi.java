@@ -129,7 +129,7 @@ public class AdvertisingDataApi {
 
     /**
      * Return ad account report per organisation per day
-     * Ad account report per organisation  per day
+     * Ad account report per organisation per day
      * @param organisationUuids Organisation uuids (required)
      * @param fromDate From date (optional)
      * @param dateFormat Outputted date format (optional)
@@ -151,7 +151,7 @@ public class AdvertisingDataApi {
 
     /**
      * Return ad account report per organisation per day
-     * Ad account report per organisation  per day
+     * Ad account report per organisation per day
      * @param organisationUuids Organisation uuids (required)
      * @param fromDate From date (optional)
      * @param dateFormat Outputted date format (optional)
@@ -174,7 +174,7 @@ public class AdvertisingDataApi {
 
     /**
      * Return ad account report per organisation per day (asynchronously)
-     * Ad account report per organisation  per day
+     * Ad account report per organisation per day
      * @param organisationUuids Organisation uuids (required)
      * @param fromDate From date (optional)
      * @param dateFormat Outputted date format (optional)
