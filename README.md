@@ -2,7 +2,7 @@
 
 Cervinodata API documentation
 - API version: 1.0.0
-  - Build date: 2021-09-06T13:51:43.053Z[GMT]
+  - Build date: 2021-10-12T14:09:17.148987Z[Etc/UTC]
 
 <div style='margin: 2em 0;'>
  <p>
@@ -111,9 +111,9 @@ public class Example {
 
     AdvertisingDataApi apiInstance = new AdvertisingDataApi(defaultClient);
     List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
-    LocalDate fromDate = new LocalDate(); // LocalDate | From date
-    String dateFormat = "dateFormat_example"; // String | Outputted date format
-    String format = "format_example"; // String | Output format (use csv for large result sets)
+    LocalDate fromDate = LocalDate.now(); // LocalDate | From date
+    String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
+    String format = "csv"; // String | Output format (use csv for large result sets)
     try {
       String result = apiInstance.getAdAccountReportPerOrganisationPerDay(organisationUuids, fromDate, dateFormat, format);
       System.out.println(result);
@@ -176,6 +176,7 @@ Class | Method | HTTP request | Description
 *CampaignGroupApi* | [**getCampaignGroupFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdPerDay**](docs/CampaignGroupApi.md#getCampaignGroupFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdPerDay) | **GET** /data/campaign-group-facebook-ad-extended-report-per-organisation-per-account-per-campaign-per-ad-per-day/{organisationUuids} | Return campaign group facebook ad extended report per organisation per account per campaign per ad per day
 *CampaignGroupApi* | [**getCampaignGroupFacebookAdExtendedReportPerOrganisationPerCampaignPerDay**](docs/CampaignGroupApi.md#getCampaignGroupFacebookAdExtendedReportPerOrganisationPerCampaignPerDay) | **GET** /data/campaign-group-facebook-ad-extended-report-per-organisation-per-campaign-per-day/{organisationUuids} | Return campaign group facebook ad extended report per organisation per campaign per day
 *CampaignGroupApi* | [**getCampaignGroupFacebookAdReportPerOrganisationPerCampaignPerDay**](docs/CampaignGroupApi.md#getCampaignGroupFacebookAdReportPerOrganisationPerCampaignPerDay) | **GET** /data/campaign-group-facebook-ad-report-per-organisation-per-campaign-per-day/{organisationUuids} | Return campaign group facebook ad report per organisation per campaign per day
+*CampaignGroupApi* | [**getCampaignGroupGoalReportPerOrganisationPerDay**](docs/CampaignGroupApi.md#getCampaignGroupGoalReportPerOrganisationPerDay) | **GET** /data/campaign-group-goal-report-per-organisation-per-day/{organisationUuids} | Return campaign group goal report per organisation per day
 *CampaignGroupApi* | [**getCampaignGroupGoogleAdsReportPerOrganisationPerCampaignPerDay**](docs/CampaignGroupApi.md#getCampaignGroupGoogleAdsReportPerOrganisationPerCampaignPerDay) | **GET** /data/campaign-group-google-ads-report-per-organisation-per-campaign-per-day/{organisationUuids} | Return campaign group google ads report per organisation per campaign per day
 *CampaignGroupApi* | [**getCampaignGroupLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay**](docs/CampaignGroupApi.md#getCampaignGroupLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/campaign-group-linkedin-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return campaign group linkedin ads extended report per organisation per account per campaign per day
 *CampaignGroupApi* | [**getCampaignGroupReportPerOrganisationPerDay**](docs/CampaignGroupApi.md#getCampaignGroupReportPerOrganisationPerDay) | **GET** /data/campaign-group-report-per-organisation-per-day/{organisationUuids} | Return campaign group report per organisation per day

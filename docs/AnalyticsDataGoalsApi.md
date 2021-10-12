@@ -39,9 +39,9 @@ public class Example {
 
     AnalyticsDataGoalsApi apiInstance = new AnalyticsDataGoalsApi(defaultClient);
     String organisationUuid = "organisationUuid_example"; // String | Organisation uuid
-    LocalDate fromDate = new LocalDate(); // LocalDate | From date
-    String dateFormat = "dateFormat_example"; // String | Outputted date format
-    String format = "format_example"; // String | Output format (use csv for large result sets)
+    LocalDate fromDate = LocalDate.now(); // LocalDate | From date
+    String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
+    String format = "csv"; // String | Output format (use csv for large result sets)
     try {
       String result = apiInstance.getAnalyticsGoalReportPerCampaignPerDay(organisationUuid, fromDate, dateFormat, format);
       System.out.println(result);
@@ -114,9 +114,9 @@ public class Example {
 
     AnalyticsDataGoalsApi apiInstance = new AnalyticsDataGoalsApi(defaultClient);
     String organisationUuid = "organisationUuid_example"; // String | Organisation uuid
-    LocalDate fromDate = new LocalDate(); // LocalDate | From date
-    String dateFormat = "dateFormat_example"; // String | Outputted date format
-    String format = "format_example"; // String | Output format (use csv for large result sets)
+    LocalDate fromDate = LocalDate.now(); // LocalDate | From date
+    String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
+    String format = "csv"; // String | Output format (use csv for large result sets)
     try {
       String result = apiInstance.getAnalyticsGoalReportPerChannelGroupPerDay(organisationUuid, fromDate, dateFormat, format);
       System.out.println(result);
@@ -189,9 +189,9 @@ public class Example {
 
     AnalyticsDataGoalsApi apiInstance = new AnalyticsDataGoalsApi(defaultClient);
     String organisationUuid = "organisationUuid_example"; // String | Organisation uuid
-    LocalDate fromDate = new LocalDate(); // LocalDate | From date
-    String dateFormat = "dateFormat_example"; // String | Outputted date format
-    String format = "format_example"; // String | Output format (use csv for large result sets)
+    LocalDate fromDate = LocalDate.now(); // LocalDate | From date
+    String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
+    String format = "csv"; // String | Output format (use csv for large result sets)
     try {
       String result = apiInstance.getAnalyticsGoalReportPerDevicePerDay(organisationUuid, fromDate, dateFormat, format);
       System.out.println(result);
@@ -264,9 +264,9 @@ public class Example {
 
     AnalyticsDataGoalsApi apiInstance = new AnalyticsDataGoalsApi(defaultClient);
     String organisationUuid = "organisationUuid_example"; // String | Organisation uuid
-    LocalDate fromDate = new LocalDate(); // LocalDate | From date
-    String dateFormat = "dateFormat_example"; // String | Outputted date format
-    String format = "format_example"; // String | Output format (use csv for large result sets)
+    LocalDate fromDate = LocalDate.now(); // LocalDate | From date
+    String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
+    String format = "csv"; // String | Output format (use csv for large result sets)
     try {
       String result = apiInstance.getAnalyticsGoalReportPerSourceMediumPerDay(organisationUuid, fromDate, dateFormat, format);
       System.out.println(result);

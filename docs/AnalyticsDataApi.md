@@ -36,7 +36,7 @@ public class Example {
 
     AnalyticsDataApi apiInstance = new AnalyticsDataApi(defaultClient);
     String organisationUuid = "organisationUuid_example"; // String | Organisation uuid
-    String format = "format_example"; // String | Output format
+    String format = "csv"; // String | Output format
     try {
       String result = apiInstance.getViews(organisationUuid, format);
       System.out.println(result);

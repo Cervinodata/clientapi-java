@@ -99,7 +99,7 @@ public class Example {
     bearerAuth.setBearerToken("BEARER TOKEN");
 
     GenericDataApi apiInstance = new GenericDataApi(defaultClient);
-    String format = "format_example"; // String | Output format
+    String format = "csv"; // String | Output format
     try {
       String result = apiInstance.getOrganisations(format);
       System.out.println(result);

@@ -40,9 +40,9 @@ public class Example {
 
     AnalyticsDataDefaultMetricsApi apiInstance = new AnalyticsDataDefaultMetricsApi(defaultClient);
     String organisationUuid = "organisationUuid_example"; // String | Organisation uuid
-    LocalDate fromDate = new LocalDate(); // LocalDate | From date
-    String dateFormat = "dateFormat_example"; // String | Outputted date format
-    String format = "format_example"; // String | Output format (use csv for large result sets)
+    LocalDate fromDate = LocalDate.now(); // LocalDate | From date
+    String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
+    String format = "csv"; // String | Output format (use csv for large result sets)
     try {
       String result = apiInstance.getAnalyticsReportPerCampaignPerDay(organisationUuid, fromDate, dateFormat, format);
       System.out.println(result);
@@ -115,9 +115,9 @@ public class Example {
 
     AnalyticsDataDefaultMetricsApi apiInstance = new AnalyticsDataDefaultMetricsApi(defaultClient);
     String organisationUuid = "organisationUuid_example"; // String | Organisation uuid
-    LocalDate fromDate = new LocalDate(); // LocalDate | From date
-    String dateFormat = "dateFormat_example"; // String | Outputted date format
-    String format = "format_example"; // String | Output format (use csv for large result sets)
+    LocalDate fromDate = LocalDate.now(); // LocalDate | From date
+    String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
+    String format = "csv"; // String | Output format (use csv for large result sets)
     try {
       String result = apiInstance.getAnalyticsReportPerChannelGroupPerDay(organisationUuid, fromDate, dateFormat, format);
       System.out.println(result);
@@ -190,9 +190,9 @@ public class Example {
 
     AnalyticsDataDefaultMetricsApi apiInstance = new AnalyticsDataDefaultMetricsApi(defaultClient);
     List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
-    LocalDate fromDate = new LocalDate(); // LocalDate | From date
-    String dateFormat = "dateFormat_example"; // String | Outputted date format
-    String format = "format_example"; // String | Output format (use csv for large result sets)
+    LocalDate fromDate = LocalDate.now(); // LocalDate | From date
+    String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
+    String format = "csv"; // String | Output format (use csv for large result sets)
     try {
       String result = apiInstance.getAnalyticsReportPerDevicePerChannelGroupPerOrganisationPerViewPerDay(organisationUuids, fromDate, dateFormat, format);
       System.out.println(result);
@@ -265,9 +265,9 @@ public class Example {
 
     AnalyticsDataDefaultMetricsApi apiInstance = new AnalyticsDataDefaultMetricsApi(defaultClient);
     String organisationUuid = "organisationUuid_example"; // String | Organisation uuid
-    LocalDate fromDate = new LocalDate(); // LocalDate | From date
-    String dateFormat = "dateFormat_example"; // String | Outputted date format
-    String format = "format_example"; // String | Output format (use csv for large result sets)
+    LocalDate fromDate = LocalDate.now(); // LocalDate | From date
+    String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
+    String format = "csv"; // String | Output format (use csv for large result sets)
     try {
       String result = apiInstance.getAnalyticsReportPerDevicePerDay(organisationUuid, fromDate, dateFormat, format);
       System.out.println(result);
@@ -340,9 +340,9 @@ public class Example {
 
     AnalyticsDataDefaultMetricsApi apiInstance = new AnalyticsDataDefaultMetricsApi(defaultClient);
     String organisationUuid = "organisationUuid_example"; // String | Organisation uuid
-    LocalDate fromDate = new LocalDate(); // LocalDate | From date
-    String dateFormat = "dateFormat_example"; // String | Outputted date format
-    String format = "format_example"; // String | Output format (use csv for large result sets)
+    LocalDate fromDate = LocalDate.now(); // LocalDate | From date
+    String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
+    String format = "csv"; // String | Output format (use csv for large result sets)
     try {
       String result = apiInstance.getAnalyticsReportPerSourceMediumPerDay(organisationUuid, fromDate, dateFormat, format);
       System.out.println(result);

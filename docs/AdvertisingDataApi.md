@@ -51,9 +51,9 @@ public class Example {
 
     AdvertisingDataApi apiInstance = new AdvertisingDataApi(defaultClient);
     List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
-    LocalDate fromDate = new LocalDate(); // LocalDate | From date
-    String dateFormat = "dateFormat_example"; // String | Outputted date format
-    String format = "format_example"; // String | Output format (use csv for large result sets)
+    LocalDate fromDate = LocalDate.now(); // LocalDate | From date
+    String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
+    String format = "csv"; // String | Output format (use csv for large result sets)
     try {
       String result = apiInstance.getAdAccountReportPerOrganisationPerDay(organisationUuids, fromDate, dateFormat, format);
       System.out.println(result);
@@ -126,7 +126,7 @@ public class Example {
 
     AdvertisingDataApi apiInstance = new AdvertisingDataApi(defaultClient);
     String organisationUuid = "organisationUuid_example"; // String | Organisation uuid
-    String format = "format_example"; // String | Output format
+    String format = "csv"; // String | Output format
     try {
       String result = apiInstance.getAdAccounts(organisationUuid, format);
       System.out.println(result);
@@ -197,9 +197,9 @@ public class Example {
 
     AdvertisingDataApi apiInstance = new AdvertisingDataApi(defaultClient);
     String organisationUuid = "organisationUuid_example"; // String | Organisation uuid
-    LocalDate fromDate = new LocalDate(); // LocalDate | From date
-    String dateFormat = "dateFormat_example"; // String | Outputted date format
-    String format = "format_example"; // String | Output format (use csv for large result sets)
+    LocalDate fromDate = LocalDate.now(); // LocalDate | From date
+    String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
+    String format = "csv"; // String | Output format (use csv for large result sets)
     try {
       String result = apiInstance.getAdCampaignReportPerDay(organisationUuid, fromDate, dateFormat, format);
       System.out.println(result);
@@ -272,9 +272,9 @@ public class Example {
 
     AdvertisingDataApi apiInstance = new AdvertisingDataApi(defaultClient);
     List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
-    LocalDate fromDate = new LocalDate(); // LocalDate | From date
-    String dateFormat = "dateFormat_example"; // String | Outputted date format
-    String format = "format_example"; // String | Output format (use csv for large result sets)
+    LocalDate fromDate = LocalDate.now(); // LocalDate | From date
+    String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
+    String format = "csv"; // String | Output format (use csv for large result sets)
     try {
       String result = apiInstance.getAdCampaignReportPerOrganisationPerAccountPerCampaignPerDevicePerDay(organisationUuids, fromDate, dateFormat, format);
       System.out.println(result);
@@ -347,9 +347,9 @@ public class Example {
 
     AdvertisingDataApi apiInstance = new AdvertisingDataApi(defaultClient);
     List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
-    LocalDate fromDate = new LocalDate(); // LocalDate | From date
-    String dateFormat = "dateFormat_example"; // String | Outputted date format
-    String format = "format_example"; // String | Output format (use csv for large result sets)
+    LocalDate fromDate = LocalDate.now(); // LocalDate | From date
+    String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
+    String format = "csv"; // String | Output format (use csv for large result sets)
     try {
       String result = apiInstance.getAdCampaignReportPerOrganisationPerAccountPerDay(organisationUuids, fromDate, dateFormat, format);
       System.out.println(result);
@@ -422,8 +422,8 @@ public class Example {
 
     AdvertisingDataApi apiInstance = new AdvertisingDataApi(defaultClient);
     String organisationUuid = "organisationUuid_example"; // String | Organisation uuid
-    LocalDate fromDate = new LocalDate(); // LocalDate | From date
-    String format = "format_example"; // String | Output format
+    LocalDate fromDate = LocalDate.now(); // LocalDate | From date
+    String format = "csv"; // String | Output format
     try {
       String result = apiInstance.getAdCampaigns(organisationUuid, fromDate, format);
       System.out.println(result);
@@ -495,9 +495,9 @@ public class Example {
 
     AdvertisingDataApi apiInstance = new AdvertisingDataApi(defaultClient);
     List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
-    LocalDate fromDate = new LocalDate(); // LocalDate | From date
-    String dateFormat = "dateFormat_example"; // String | Outputted date format
-    String format = "format_example"; // String | Output format (use csv for large result sets)
+    LocalDate fromDate = LocalDate.now(); // LocalDate | From date
+    String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
+    String format = "csv"; // String | Output format (use csv for large result sets)
     try {
       String result = apiInstance.getBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(organisationUuids, fromDate, dateFormat, format);
       System.out.println(result);
@@ -570,9 +570,9 @@ public class Example {
 
     AdvertisingDataApi apiInstance = new AdvertisingDataApi(defaultClient);
     List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
-    LocalDate fromDate = new LocalDate(); // LocalDate | From date
-    String dateFormat = "dateFormat_example"; // String | Outputted date format
-    String format = "format_example"; // String | Output format (use csv for large result sets)
+    LocalDate fromDate = LocalDate.now(); // LocalDate | From date
+    String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
+    String format = "csv"; // String | Output format (use csv for large result sets)
     try {
       String result = apiInstance.getFacebookAdCustomConversionReportPerOrganisationPerAccountPerCampaignPerDay(organisationUuids, fromDate, dateFormat, format);
       System.out.println(result);
@@ -645,9 +645,9 @@ public class Example {
 
     AdvertisingDataApi apiInstance = new AdvertisingDataApi(defaultClient);
     List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
-    LocalDate fromDate = new LocalDate(); // LocalDate | From date
-    String dateFormat = "dateFormat_example"; // String | Outputted date format
-    String format = "format_example"; // String | Output format (use csv for large result sets)
+    LocalDate fromDate = LocalDate.now(); // LocalDate | From date
+    String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
+    String format = "csv"; // String | Output format (use csv for large result sets)
     try {
       String result = apiInstance.getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDay(organisationUuids, fromDate, dateFormat, format);
       System.out.println(result);
@@ -720,9 +720,9 @@ public class Example {
 
     AdvertisingDataApi apiInstance = new AdvertisingDataApi(defaultClient);
     List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
-    LocalDate fromDate = new LocalDate(); // LocalDate | From date
-    String dateFormat = "dateFormat_example"; // String | Outputted date format
-    String format = "format_example"; // String | Output format (use csv for large result sets)
+    LocalDate fromDate = LocalDate.now(); // LocalDate | From date
+    String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
+    String format = "csv"; // String | Output format (use csv for large result sets)
     try {
       String result = apiInstance.getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdPerDay(organisationUuids, fromDate, dateFormat, format);
       System.out.println(result);
@@ -795,9 +795,9 @@ public class Example {
 
     AdvertisingDataApi apiInstance = new AdvertisingDataApi(defaultClient);
     List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
-    LocalDate fromDate = new LocalDate(); // LocalDate | From date
-    String dateFormat = "dateFormat_example"; // String | Outputted date format
-    String format = "format_example"; // String | Output format (use csv for large result sets)
+    LocalDate fromDate = LocalDate.now(); // LocalDate | From date
+    String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
+    String format = "csv"; // String | Output format (use csv for large result sets)
     try {
       String result = apiInstance.getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDay(organisationUuids, fromDate, dateFormat, format);
       System.out.println(result);
@@ -870,9 +870,9 @@ public class Example {
 
     AdvertisingDataApi apiInstance = new AdvertisingDataApi(defaultClient);
     List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
-    LocalDate fromDate = new LocalDate(); // LocalDate | From date
-    String dateFormat = "dateFormat_example"; // String | Outputted date format
-    String format = "format_example"; // String | Output format (use csv for large result sets)
+    LocalDate fromDate = LocalDate.now(); // LocalDate | From date
+    String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
+    String format = "csv"; // String | Output format (use csv for large result sets)
     try {
       String result = apiInstance.getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDay(organisationUuids, fromDate, dateFormat, format);
       System.out.println(result);
@@ -945,9 +945,9 @@ public class Example {
 
     AdvertisingDataApi apiInstance = new AdvertisingDataApi(defaultClient);
     List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
-    LocalDate fromDate = new LocalDate(); // LocalDate | From date
-    String dateFormat = "dateFormat_example"; // String | Outputted date format
-    String format = "format_example"; // String | Output format (use csv for large result sets)
+    LocalDate fromDate = LocalDate.now(); // LocalDate | From date
+    String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
+    String format = "csv"; // String | Output format (use csv for large result sets)
     try {
       String result = apiInstance.getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDay(organisationUuids, fromDate, dateFormat, format);
       System.out.println(result);
@@ -1020,9 +1020,9 @@ public class Example {
 
     AdvertisingDataApi apiInstance = new AdvertisingDataApi(defaultClient);
     List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
-    LocalDate fromDate = new LocalDate(); // LocalDate | From date
-    String dateFormat = "dateFormat_example"; // String | Outputted date format
-    String format = "format_example"; // String | Output format (use csv for large result sets)
+    LocalDate fromDate = LocalDate.now(); // LocalDate | From date
+    String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
+    String format = "csv"; // String | Output format (use csv for large result sets)
     try {
       String result = apiInstance.getLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(organisationUuids, fromDate, dateFormat, format);
       System.out.println(result);
@@ -1095,9 +1095,9 @@ public class Example {
 
     AdvertisingDataApi apiInstance = new AdvertisingDataApi(defaultClient);
     List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
-    LocalDate fromDate = new LocalDate(); // LocalDate | From date
-    String dateFormat = "dateFormat_example"; // String | Outputted date format
-    String format = "format_example"; // String | Output format (use csv for large result sets)
+    LocalDate fromDate = LocalDate.now(); // LocalDate | From date
+    String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
+    String format = "csv"; // String | Output format (use csv for large result sets)
     try {
       String result = apiInstance.getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(organisationUuids, fromDate, dateFormat, format);
       System.out.println(result);
@@ -1170,9 +1170,9 @@ public class Example {
 
     AdvertisingDataApi apiInstance = new AdvertisingDataApi(defaultClient);
     List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
-    LocalDate fromDate = new LocalDate(); // LocalDate | From date
-    String dateFormat = "dateFormat_example"; // String | Outputted date format
-    String format = "format_example"; // String | Output format (use csv for large result sets)
+    LocalDate fromDate = LocalDate.now(); // LocalDate | From date
+    String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
+    String format = "csv"; // String | Output format (use csv for large result sets)
     try {
       String result = apiInstance.getTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(organisationUuids, fromDate, dateFormat, format);
       System.out.println(result);
