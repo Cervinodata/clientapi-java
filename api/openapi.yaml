@@ -206,6 +206,60 @@ paths:
       tags:
       - advertising data
       x-accepts: application/json
+  /data/ad-groups/{organisationUuid}:
+    get:
+      description: Ad groups by organisation
+      operationId: getAdGroups
+      parameters:
+      - description: Organisation uuid
+        explode: false
+        in: path
+        name: organisationUuid
+        required: true
+        schema:
+          type: string
+        style: simple
+      - description: From date
+        explode: true
+        in: query
+        name: from_date
+        required: false
+        schema:
+          format: date
+          type: string
+        style: form
+      - description: Output format
+        explode: true
+        in: query
+        name: format
+        required: false
+        schema:
+          enum:
+          - csv
+          - json
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/csv:
+              schema:
+                type: string
+            application/json:
+              schema:
+                items: {}
+                type: array
+          description: successful operation
+        "400":
+          description: Invalid Organisation uuid supplied
+        "404":
+          description: Organisation uuid not found
+      security:
+      - bearerAuth: []
+      summary: Return ad groups by organisation
+      tags:
+      - advertising data
+      x-accepts: application/json
   /data/ad-campaign-report-per-day/{organisationUuid}:
     get:
       description: Ad campaign report per day by organisation
