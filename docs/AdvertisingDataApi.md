@@ -19,6 +19,7 @@ Method | HTTP request | Description
 [**getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDay**](AdvertisingDataApi.md#getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDay) | **GET** /data/facebook-ad-extended-report-per-organisation-per-account-per-campaign-per-device-per-day/{organisationUuids} | Return facebook ad extended report per organisation per account per campaign per device per day
 [**getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDay**](AdvertisingDataApi.md#getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDay) | **GET** /data/google-ads-report-per-organisation-per-account-per-campaign-per-device-per-day/{organisationUuids} | Return google ads report per organisation per account per campaign per device per day
 [**getLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay**](AdvertisingDataApi.md#getLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/linkedin-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return linkedin ads extended report per organisation per account per campaign per day
+[**getPinterestAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay**](AdvertisingDataApi.md#getPinterestAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/pinterest-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return pinterest ads extended report per organisation per account per campaign per day
 [**getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay**](AdvertisingDataApi.md#getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/snapchat-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return snapchat ads extended report per organisation per account per campaign per day
 [**getTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay**](AdvertisingDataApi.md#getTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/twitter-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return twitter ads extended report per organisation per account per campaign per day
 
@@ -1102,6 +1103,81 @@ public class Example {
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling AdvertisingDataApi#getLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids |
+ **fromDate** | **LocalDate**| From date | [optional]
+ **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD]
+ **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json]
+
+### Return type
+
+**String**
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/csv, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  -  |
+**400** | Invalid Organisation uuids supplied |  -  |
+**404** | Organisation uuids not found |  -  |
+
+<a name="getPinterestAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay"></a>
+# **getPinterestAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay**
+> String getPinterestAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(organisationUuids, fromDate, dateFormat, format)
+
+Return pinterest ads extended report per organisation per account per campaign per day
+
+Pinterest ads extended report per organisation per account per campaign per day
+
+### Example
+```java
+// Import classes:
+import com.cervinodata.client.ApiClient;
+import com.cervinodata.client.ApiException;
+import com.cervinodata.client.Configuration;
+import com.cervinodata.client.auth.*;
+import com.cervinodata.client.models.*;
+import com.cervinodata.client.api.AdvertisingDataApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://app.cervinodata.com/api/v1");
+    
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
+
+    AdvertisingDataApi apiInstance = new AdvertisingDataApi(defaultClient);
+    List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
+    LocalDate fromDate = LocalDate.now(); // LocalDate | From date
+    String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
+    String format = "csv"; // String | Output format (use csv for large result sets)
+    try {
+      String result = apiInstance.getPinterestAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(organisationUuids, fromDate, dateFormat, format);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling AdvertisingDataApi#getPinterestAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
