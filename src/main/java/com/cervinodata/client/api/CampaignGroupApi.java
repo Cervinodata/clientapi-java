@@ -1,6 +1,6 @@
 /*
  * Cervinodata API documentation
- * <div style='margin: 2em 0;'>  <p>  Before you get going with the Cervinodata API, set up Cervinodata (read the support page here: <a href='https://support.cervinodata.com/hc/en-nl/articles/360004363237' target='_blank'>How to set up the Cervinodata API</a>).  </p> <h3>To use the Cervinodata API, you need all of the following:</h3> <p> <ol> <li>An active Cervinodata account, you can start a free trial <a href='https://app.cervinodata.com/register' target='_blank'>here</a></li> <li>At least one connection to a platform (check <a href='https://app.cervinodata.com/data-sources-connections' target='_blank'>here</a>)</li> <li>At least one account switched ON (check <a href='https://app.cervinodata.com/accounts' target='_blank'>here</a>)</li> <li>At least one data refresh executed (check <a href='https://app.cervinodata.com/manual-data-refresh' target='_blank'>here</a>)</li> <li>An active API token (check <a href='https://app.cervinodata.com/settings#/api' target='_blank'>here</a>)</li> </ol> </p> <p> Note that limits apply for <a href='https://support.cervinodata.com/hc/articles/360014265139' target='_blank'>Free plan users</a>. </p> <p> If you wish to automate your Cervinodata API connection, check out the list of client API's at <a href='https://github.com/Cervinodata' target='_blank'>https://github.com/Cervinodata</a>. </p> </div>
+ * <div style='margin: 2em 0;'> <p> Before you get going with the Cervinodata API, set up Cervinodata (read the support page here: <a href='https://support.cervinodata.com/hc/en-nl/articles/360004363237' target='_blank'>How to set up the Cervinodata API</a>). </p> <h3>To use the Cervinodata API, you need all of the following:</h3> <p> <ol> <li>An active Cervinodata account, you can start a free trial <a href='https://app.cervinodata.com/register' target='_blank'>here</a></li> <li>At least one connection to a platform (check <a href='https://app.cervinodata.com/data-sources-connections' target='_blank'>here</a>)</li> <li>At least one account switched ON (check <a href='https://app.cervinodata.com/accounts' target='_blank'>here</a>)</li> <li>At least one data refresh executed (check <a href='https://app.cervinodata.com/manual-data-refresh' target='_blank'>here</a>)</li> <li>An active API token (check <a href='https://app.cervinodata.com/settings#/api' target='_blank'>here</a>)</li> </ol> </p> <p> Note that limits apply for <a href='https://support.cervinodata.com/hc/articles/360014265139' target='_blank'>Free plan users</a>. </p> <p> If you wish to automate your Cervinodata API connection, check out the list of client API's at <a href='https://github.com/Cervinodata' target='_blank'>https://github.com/Cervinodata</a>. </p> </div>
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@cervinodata.com
@@ -2359,6 +2359,150 @@ public class CampaignGroupApi {
         return localVarCall;
     }
     /**
+     * Build call for getCampaignGroupGoogleAdsExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDay
+     * @param organisationUuids Organisation uuids (required)
+     * @param fromDate From date (optional)
+     * @param dateFormat Outputted date format (optional)
+     * @param format Output format (use csv for large result sets) (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getCampaignGroupGoogleAdsExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/data/campaign-group-google-ads-extended-report-per-organisation-per-account-per-campaign-per-ad-group-per-day/{organisationUuids}"
+            .replaceAll("\\{" + "organisationUuids" + "\\}", localVarApiClient.escapeString(localVarApiClient.collectionPathParameterToString("csv", organisationUuids)));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        if (fromDate != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("from_date", fromDate));
+        }
+
+        if (dateFormat != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("date_format", dateFormat));
+        }
+
+        if (format != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("format", format));
+        }
+
+        final String[] localVarAccepts = {
+            "text/csv", "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        String[] localVarAuthNames = new String[] { "bearerAuth" };
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call getCampaignGroupGoogleAdsExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayValidateBeforeCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'organisationUuids' is set
+        if (organisationUuids == null) {
+            throw new ApiException("Missing the required parameter 'organisationUuids' when calling getCampaignGroupGoogleAdsExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDay(Async)");
+        }
+        
+
+        okhttp3.Call localVarCall = getCampaignGroupGoogleAdsExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayCall(organisationUuids, fromDate, dateFormat, format, _callback);
+        return localVarCall;
+
+    }
+
+    /**
+     * Return campaign group google ads extended report per organisation per account per campaign per ad group per day
+     * Campaign group google ads extended report per organisation per account per campaign per ad group per day
+     * @param organisationUuids Organisation uuids (required)
+     * @param fromDate From date (optional)
+     * @param dateFormat Outputted date format (optional)
+     * @param format Output format (use csv for large result sets) (optional)
+     * @return String
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
+     </table>
+     */
+    public String getCampaignGroupGoogleAdsExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDay(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+        ApiResponse<String> localVarResp = getCampaignGroupGoogleAdsExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayWithHttpInfo(organisationUuids, fromDate, dateFormat, format);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Return campaign group google ads extended report per organisation per account per campaign per ad group per day
+     * Campaign group google ads extended report per organisation per account per campaign per ad group per day
+     * @param organisationUuids Organisation uuids (required)
+     * @param fromDate From date (optional)
+     * @param dateFormat Outputted date format (optional)
+     * @param format Output format (use csv for large result sets) (optional)
+     * @return ApiResponse&lt;String&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<String> getCampaignGroupGoogleAdsExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayWithHttpInfo(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+        okhttp3.Call localVarCall = getCampaignGroupGoogleAdsExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, null);
+        Type localVarReturnType = new TypeToken<String>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Return campaign group google ads extended report per organisation per account per campaign per ad group per day (asynchronously)
+     * Campaign group google ads extended report per organisation per account per campaign per ad group per day
+     * @param organisationUuids Organisation uuids (required)
+     * @param fromDate From date (optional)
+     * @param dateFormat Outputted date format (optional)
+     * @param format Output format (use csv for large result sets) (optional)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getCampaignGroupGoogleAdsExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayAsync(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = getCampaignGroupGoogleAdsExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, _callback);
+        Type localVarReturnType = new TypeToken<String>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
      * Build call for getCampaignGroupGoogleAdsReportPerOrganisationPerCampaignPerDay
      * @param organisationUuids Organisation uuids (required)
      * @param fromDate From date (optional)
@@ -3074,6 +3218,150 @@ public class CampaignGroupApi {
     public okhttp3.Call getCampaignGroupSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayAsync(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getCampaignGroupSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, _callback);
+        Type localVarReturnType = new TypeToken<String>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for getCampaignGroupTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay
+     * @param organisationUuids Organisation uuids (required)
+     * @param fromDate From date (optional)
+     * @param dateFormat Outputted date format (optional)
+     * @param format Output format (use csv for large result sets) (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getCampaignGroupTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/data/campaign-group-tiktok-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids}"
+            .replaceAll("\\{" + "organisationUuids" + "\\}", localVarApiClient.escapeString(localVarApiClient.collectionPathParameterToString("csv", organisationUuids)));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        if (fromDate != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("from_date", fromDate));
+        }
+
+        if (dateFormat != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("date_format", dateFormat));
+        }
+
+        if (format != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("format", format));
+        }
+
+        final String[] localVarAccepts = {
+            "text/csv", "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        String[] localVarAuthNames = new String[] { "bearerAuth" };
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call getCampaignGroupTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'organisationUuids' is set
+        if (organisationUuids == null) {
+            throw new ApiException("Missing the required parameter 'organisationUuids' when calling getCampaignGroupTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(Async)");
+        }
+        
+
+        okhttp3.Call localVarCall = getCampaignGroupTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayCall(organisationUuids, fromDate, dateFormat, format, _callback);
+        return localVarCall;
+
+    }
+
+    /**
+     * Return campaign group tiktok ads extended report per organisation per account per campaign per day
+     * Campaign group tiktok ads extended report per organisation per account per campaign per day
+     * @param organisationUuids Organisation uuids (required)
+     * @param fromDate From date (optional)
+     * @param dateFormat Outputted date format (optional)
+     * @param format Output format (use csv for large result sets) (optional)
+     * @return String
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
+     </table>
+     */
+    public String getCampaignGroupTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+        ApiResponse<String> localVarResp = getCampaignGroupTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo(organisationUuids, fromDate, dateFormat, format);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Return campaign group tiktok ads extended report per organisation per account per campaign per day
+     * Campaign group tiktok ads extended report per organisation per account per campaign per day
+     * @param organisationUuids Organisation uuids (required)
+     * @param fromDate From date (optional)
+     * @param dateFormat Outputted date format (optional)
+     * @param format Output format (use csv for large result sets) (optional)
+     * @return ApiResponse&lt;String&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<String> getCampaignGroupTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+        okhttp3.Call localVarCall = getCampaignGroupTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, null);
+        Type localVarReturnType = new TypeToken<String>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Return campaign group tiktok ads extended report per organisation per account per campaign per day (asynchronously)
+     * Campaign group tiktok ads extended report per organisation per account per campaign per day
+     * @param organisationUuids Organisation uuids (required)
+     * @param fromDate From date (optional)
+     * @param dateFormat Outputted date format (optional)
+     * @param format Output format (use csv for large result sets) (optional)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getCampaignGroupTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayAsync(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = getCampaignGroupTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

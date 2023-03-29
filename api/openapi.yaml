@@ -4,9 +4,9 @@ info:
     email: support@cervinodata.com
   description: |-
     <div style='margin: 2em 0;'>
-     <p>
-     Before you get going with the Cervinodata API, set up Cervinodata (read the support page here: <a href='https://support.cervinodata.com/hc/en-nl/articles/360004363237' target='_blank'>How to set up the Cervinodata API</a>).
-     </p>
+    <p>
+    Before you get going with the Cervinodata API, set up Cervinodata (read the support page here: <a href='https://support.cervinodata.com/hc/en-nl/articles/360004363237' target='_blank'>How to set up the Cervinodata API</a>).
+    </p>
     <h3>To use the Cervinodata API, you need all of the following:</h3>
     <p>
     <ol>
@@ -1904,6 +1904,75 @@ paths:
       tags:
       - advertising data
       x-accepts: application/json
+  /data/facebook-ad-extended-report-per-organisation-per-account-per-campaign-per-day-plus/{organisationUuids}:
+    get:
+      description: Facebook ad extended report per organisation per account per campaign
+        per day plus
+      operationId: getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDayPlus
+      parameters:
+      - description: Organisation uuids
+        explode: false
+        in: path
+        name: organisationUuids
+        required: true
+        schema:
+          items:
+            type: string
+          type: array
+        style: simple
+      - description: From date
+        explode: true
+        in: query
+        name: from_date
+        required: false
+        schema:
+          format: date
+          type: string
+        style: form
+      - description: Outputted date format
+        explode: true
+        in: query
+        name: date_format
+        required: false
+        schema:
+          enum:
+          - YYYY-MM-DD
+          - YYYYMMDD
+          type: string
+        style: form
+      - description: Output format (use csv for large result sets)
+        explode: true
+        in: query
+        name: format
+        required: false
+        schema:
+          enum:
+          - csv
+          - json
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/csv:
+              schema:
+                type: string
+            application/json:
+              schema:
+                items: {}
+                type: array
+          description: successful operation
+        "400":
+          description: Invalid Organisation uuids supplied
+        "404":
+          description: Organisation uuids not found
+      security:
+      - bearerAuth: []
+      summary: Return facebook ad extended report per organisation per account per
+        campaign per day plus
+      tags:
+      - advertising data
+      x-accepts: application/json
   /data/facebook-ad-extended-report-per-organisation-per-account-per-campaign-per-ad-group-per-day/{organisationUuids}:
     get:
       description: Facebook ad extended report per organisation per account per campaign
@@ -1970,6 +2039,75 @@ paths:
       - bearerAuth: []
       summary: Return facebook ad extended report per organisation per account per
         campaign per ad group per day
+      tags:
+      - advertising data
+      x-accepts: application/json
+  /data/facebook-ad-extended-report-per-organisation-per-account-per-campaign-per-ad-group-per-day-plus/{organisationUuids}:
+    get:
+      description: Facebook ad extended report per organisation per account per campaign
+        per ad group per day plus
+      operationId: getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayPlus
+      parameters:
+      - description: Organisation uuids
+        explode: false
+        in: path
+        name: organisationUuids
+        required: true
+        schema:
+          items:
+            type: string
+          type: array
+        style: simple
+      - description: From date
+        explode: true
+        in: query
+        name: from_date
+        required: false
+        schema:
+          format: date
+          type: string
+        style: form
+      - description: Outputted date format
+        explode: true
+        in: query
+        name: date_format
+        required: false
+        schema:
+          enum:
+          - YYYY-MM-DD
+          - YYYYMMDD
+          type: string
+        style: form
+      - description: Output format (use csv for large result sets)
+        explode: true
+        in: query
+        name: format
+        required: false
+        schema:
+          enum:
+          - csv
+          - json
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/csv:
+              schema:
+                type: string
+            application/json:
+              schema:
+                items: {}
+                type: array
+          description: successful operation
+        "400":
+          description: Invalid Organisation uuids supplied
+        "404":
+          description: Organisation uuids not found
+      security:
+      - bearerAuth: []
+      summary: Return facebook ad extended report per organisation per account per
+        campaign per ad group per day plus
       tags:
       - advertising data
       x-accepts: application/json
@@ -3008,6 +3146,144 @@ paths:
       tags:
       - campaign group
       x-accepts: application/json
+  /data/tiktok-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids}:
+    get:
+      description: TikTok ads extended report per organisation per account per campaign
+        per day
+      operationId: getTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay
+      parameters:
+      - description: Organisation uuids
+        explode: false
+        in: path
+        name: organisationUuids
+        required: true
+        schema:
+          items:
+            type: string
+          type: array
+        style: simple
+      - description: From date
+        explode: true
+        in: query
+        name: from_date
+        required: false
+        schema:
+          format: date
+          type: string
+        style: form
+      - description: Outputted date format
+        explode: true
+        in: query
+        name: date_format
+        required: false
+        schema:
+          enum:
+          - YYYY-MM-DD
+          - YYYYMMDD
+          type: string
+        style: form
+      - description: Output format (use csv for large result sets)
+        explode: true
+        in: query
+        name: format
+        required: false
+        schema:
+          enum:
+          - csv
+          - json
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/csv:
+              schema:
+                type: string
+            application/json:
+              schema:
+                items: {}
+                type: array
+          description: successful operation
+        "400":
+          description: Invalid Organisation uuids supplied
+        "404":
+          description: Organisation uuids not found
+      security:
+      - bearerAuth: []
+      summary: Return tiktok ads extended report per organisation per account per
+        campaign per day
+      tags:
+      - advertising data
+      x-accepts: application/json
+  /data/campaign-group-tiktok-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids}:
+    get:
+      description: Campaign group tiktok ads extended report per organisation per
+        account per campaign per day
+      operationId: getCampaignGroupTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay
+      parameters:
+      - description: Organisation uuids
+        explode: false
+        in: path
+        name: organisationUuids
+        required: true
+        schema:
+          items:
+            type: string
+          type: array
+        style: simple
+      - description: From date
+        explode: true
+        in: query
+        name: from_date
+        required: false
+        schema:
+          format: date
+          type: string
+        style: form
+      - description: Outputted date format
+        explode: true
+        in: query
+        name: date_format
+        required: false
+        schema:
+          enum:
+          - YYYY-MM-DD
+          - YYYYMMDD
+          type: string
+        style: form
+      - description: Output format (use csv for large result sets)
+        explode: true
+        in: query
+        name: format
+        required: false
+        schema:
+          enum:
+          - csv
+          - json
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/csv:
+              schema:
+                type: string
+            application/json:
+              schema:
+                items: {}
+                type: array
+          description: successful operation
+        "400":
+          description: Invalid Organisation uuids supplied
+        "404":
+          description: Organisation uuids not found
+      security:
+      - bearerAuth: []
+      summary: Return campaign group tiktok ads extended report per organisation per
+        account per campaign per day
+      tags:
+      - campaign group
+      x-accepts: application/json
   /data/campaign-group-doubleclick-bid-manager-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids}:
     get:
       description: Campaign group doubleclick bid manager report per organisation
@@ -3488,6 +3764,75 @@ paths:
       - bearerAuth: []
       summary: Return campaign group google ads report per organisation per campaign
         per day
+      tags:
+      - campaign group
+      x-accepts: application/json
+  ? /data/campaign-group-google-ads-extended-report-per-organisation-per-account-per-campaign-per-ad-group-per-day/{organisationUuids}
+  : get:
+      description: Campaign group google ads extended report per organisation per
+        account per campaign per ad group per day
+      operationId: getCampaignGroupGoogleAdsExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDay
+      parameters:
+      - description: Organisation uuids
+        explode: false
+        in: path
+        name: organisationUuids
+        required: true
+        schema:
+          items:
+            type: string
+          type: array
+        style: simple
+      - description: From date
+        explode: true
+        in: query
+        name: from_date
+        required: false
+        schema:
+          format: date
+          type: string
+        style: form
+      - description: Outputted date format
+        explode: true
+        in: query
+        name: date_format
+        required: false
+        schema:
+          enum:
+          - YYYY-MM-DD
+          - YYYYMMDD
+          type: string
+        style: form
+      - description: Output format (use csv for large result sets)
+        explode: true
+        in: query
+        name: format
+        required: false
+        schema:
+          enum:
+          - csv
+          - json
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/csv:
+              schema:
+                type: string
+            application/json:
+              schema:
+                items: {}
+                type: array
+          description: successful operation
+        "400":
+          description: Invalid Organisation uuids supplied
+        "404":
+          description: Organisation uuids not found
+      security:
+      - bearerAuth: []
+      summary: Return campaign group google ads extended report per organisation per
+        account per campaign per ad group per day
       tags:
       - campaign group
       x-accepts: application/json
