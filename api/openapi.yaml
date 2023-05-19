@@ -969,6 +969,75 @@ paths:
       tags:
       - analytics data, default metrics
       x-accepts: application/json
+  /data/ga4-report-per-device-per-channel-group-per-organisation-per-property-per-day/{organisationUuids}:
+    get:
+      description: GA4 report per device per channel group per organisation per property
+        per day
+      operationId: getGA4ReportPerDevicePerChannelGroupPerOrganisationPerPropertyPerDay
+      parameters:
+      - description: Organisation uuids
+        explode: false
+        in: path
+        name: organisationUuids
+        required: true
+        schema:
+          items:
+            type: string
+          type: array
+        style: simple
+      - description: From date
+        explode: true
+        in: query
+        name: from_date
+        required: false
+        schema:
+          format: date
+          type: string
+        style: form
+      - description: Outputted date format
+        explode: true
+        in: query
+        name: date_format
+        required: false
+        schema:
+          enum:
+          - YYYY-MM-DD
+          - YYYYMMDD
+          type: string
+        style: form
+      - description: Output format (use csv for large result sets)
+        explode: true
+        in: query
+        name: format
+        required: false
+        schema:
+          enum:
+          - csv
+          - json
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/csv:
+              schema:
+                type: string
+            application/json:
+              schema:
+                items: {}
+                type: array
+          description: successful operation
+        "400":
+          description: Invalid Organisation uuids supplied
+        "404":
+          description: Organisation uuids not found
+      security:
+      - bearerAuth: []
+      summary: Return GA4 report per device per channel group per organisation per
+        property per day
+      tags:
+      - analytics data, default metrics
+      x-accepts: application/json
   /data/analytics-goal-report-per-campaign-per-day/{organisationUuid}:
     get:
       description: Analytics goal report per campaign per day by organisation

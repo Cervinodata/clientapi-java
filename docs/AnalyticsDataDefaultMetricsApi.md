@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**getAnalyticsReportPerDevicePerChannelGroupPerOrganisationPerViewPerDay**](AnalyticsDataDefaultMetricsApi.md#getAnalyticsReportPerDevicePerChannelGroupPerOrganisationPerViewPerDay) | **GET** /data/analytics-report-per-device-per-channel-group-per-organisation-per-view-per-day/{organisationUuids} | Return analytics report per device per channel group per organisation per view per day
 [**getAnalyticsReportPerDevicePerDay**](AnalyticsDataDefaultMetricsApi.md#getAnalyticsReportPerDevicePerDay) | **GET** /data/analytics-report-per-device-per-day/{organisationUuid} | Return analytics report per device per day by organisation
 [**getAnalyticsReportPerSourceMediumPerDay**](AnalyticsDataDefaultMetricsApi.md#getAnalyticsReportPerSourceMediumPerDay) | **GET** /data/analytics-report-per-source-medium-per-day/{organisationUuid} | Return analytics report per source medium per day by organisation
+[**getGA4ReportPerDevicePerChannelGroupPerOrganisationPerPropertyPerDay**](AnalyticsDataDefaultMetricsApi.md#getGA4ReportPerDevicePerChannelGroupPerOrganisationPerPropertyPerDay) | **GET** /data/ga4-report-per-device-per-channel-group-per-organisation-per-property-per-day/{organisationUuids} | Return GA4 report per device per channel group per organisation per property per day
 
 
 <a name="getAnalyticsReportPerCampaignPerDay"></a>
@@ -385,4 +386,79 @@ Name | Type | Description  | Notes
 **200** | successful operation |  -  |
 **400** | Invalid Organisation uuid supplied |  -  |
 **404** | Organisation uuid not found |  -  |
+
+<a name="getGA4ReportPerDevicePerChannelGroupPerOrganisationPerPropertyPerDay"></a>
+# **getGA4ReportPerDevicePerChannelGroupPerOrganisationPerPropertyPerDay**
+> String getGA4ReportPerDevicePerChannelGroupPerOrganisationPerPropertyPerDay(organisationUuids, fromDate, dateFormat, format)
+
+Return GA4 report per device per channel group per organisation per property per day
+
+GA4 report per device per channel group per organisation per property per day
+
+### Example
+```java
+// Import classes:
+import com.cervinodata.client.ApiClient;
+import com.cervinodata.client.ApiException;
+import com.cervinodata.client.Configuration;
+import com.cervinodata.client.auth.*;
+import com.cervinodata.client.models.*;
+import com.cervinodata.client.api.AnalyticsDataDefaultMetricsApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://app.cervinodata.com/api/v1");
+    
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
+
+    AnalyticsDataDefaultMetricsApi apiInstance = new AnalyticsDataDefaultMetricsApi(defaultClient);
+    List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
+    LocalDate fromDate = LocalDate.now(); // LocalDate | From date
+    String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
+    String format = "csv"; // String | Output format (use csv for large result sets)
+    try {
+      String result = apiInstance.getGA4ReportPerDevicePerChannelGroupPerOrganisationPerPropertyPerDay(organisationUuids, fromDate, dateFormat, format);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling AnalyticsDataDefaultMetricsApi#getGA4ReportPerDevicePerChannelGroupPerOrganisationPerPropertyPerDay");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids |
+ **fromDate** | **LocalDate**| From date | [optional]
+ **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD]
+ **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json]
+
+### Return type
+
+**String**
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/csv, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  -  |
+**400** | Invalid Organisation uuids supplied |  -  |
+**404** | Organisation uuids not found |  -  |
 
