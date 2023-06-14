@@ -11,9 +11,9 @@ Method | HTTP request | Description
 [**getAdCampaignReportPerOrganisationPerAccountPerDay**](AdvertisingDataApi.md#getAdCampaignReportPerOrganisationPerAccountPerDay) | **GET** /data/ad-campaign-report-per-organisation-per-account-per-day/{organisationUuids} | Return ad campaign report per organisation per account per day
 [**getAdCampaigns**](AdvertisingDataApi.md#getAdCampaigns) | **GET** /data/ad-campaigns/{organisationUuid} | Return ad campaigns by organisation
 [**getAdGroups**](AdvertisingDataApi.md#getAdGroups) | **GET** /data/ad-groups/{organisationUuid} | Return ad groups by organisation
+[**getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerCreativePerDay**](AdvertisingDataApi.md#getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerCreativePerDay) | **GET** /data/adform-extended-report-per-organisation-per-account-per-campaign-per-creative-per-day/{organisationUuids} | Return adform extended report per organisation per account per campaign per creative per day
 [**getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDay**](AdvertisingDataApi.md#getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/adform-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return adform extended report per organisation per account per campaign per day
-[**getAdformExtendedReportPerOrganisationPerCampaignPerCreativePerDay**](AdvertisingDataApi.md#getAdformExtendedReportPerOrganisationPerCampaignPerCreativePerDay) | **GET** /data/adform-extended-report-per-organisation-per-campaign-per-creative-per-day/{organisationUuids} | Return adform extended report per organisation per campaign per creative per day
-[**getAdformExtendedReportPerOrganisationPerCampaignPerLineItemPerDay**](AdvertisingDataApi.md#getAdformExtendedReportPerOrganisationPerCampaignPerLineItemPerDay) | **GET** /data/adform-extended-report-per-organisation-per-campaign-per-line-item-per-day/{organisationUuids} | Return adform extended report per organisation per campaign per line item per day
+[**getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerLineItemPerDay**](AdvertisingDataApi.md#getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerLineItemPerDay) | **GET** /data/adform-extended-report-per-organisation-per-account-per-campaign-per-line-item-per-day/{organisationUuids} | Return adform extended report per organisation per account per campaign per line item per day
 [**getBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay**](AdvertisingDataApi.md#getBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/bing-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return bing ads extended report per organisation per account per campaign per day
 [**getFacebookAdCustomConversionReportPerOrganisationPerAccountPerCampaignPerDay**](AdvertisingDataApi.md#getFacebookAdCustomConversionReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/facebook-ad-custom-conversion-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return facebook ad custom conversion report per organisation per account per campaign per day
 [**getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDay**](AdvertisingDataApi.md#getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDay) | **GET** /data/facebook-ad-extended-report-per-organisation-per-account-per-campaign-per-ad-group-per-day/{organisationUuids} | Return facebook ad extended report per organisation per account per campaign per ad group per day
@@ -548,6 +548,81 @@ Name | Type | Description  | Notes
 **400** | Invalid Organisation uuid supplied |  -  |
 **404** | Organisation uuid not found |  -  |
 
+<a name="getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerCreativePerDay"></a>
+# **getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerCreativePerDay**
+> String getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerCreativePerDay(organisationUuids, fromDate, dateFormat, format)
+
+Return adform extended report per organisation per account per campaign per creative per day
+
+Adform extended report per organisation per account per campaign per creative per day
+
+### Example
+```java
+// Import classes:
+import com.cervinodata.client.ApiClient;
+import com.cervinodata.client.ApiException;
+import com.cervinodata.client.Configuration;
+import com.cervinodata.client.auth.*;
+import com.cervinodata.client.models.*;
+import com.cervinodata.client.api.AdvertisingDataApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://app.cervinodata.com/api/v1");
+    
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
+
+    AdvertisingDataApi apiInstance = new AdvertisingDataApi(defaultClient);
+    List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
+    LocalDate fromDate = LocalDate.now(); // LocalDate | From date
+    String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
+    String format = "csv"; // String | Output format (use csv for large result sets)
+    try {
+      String result = apiInstance.getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerCreativePerDay(organisationUuids, fromDate, dateFormat, format);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling AdvertisingDataApi#getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerCreativePerDay");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids |
+ **fromDate** | **LocalDate**| From date | [optional]
+ **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD]
+ **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json]
+
+### Return type
+
+**String**
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/csv, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  -  |
+**400** | Invalid Organisation uuids supplied |  -  |
+**404** | Organisation uuids not found |  -  |
+
 <a name="getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDay"></a>
 # **getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDay**
 > String getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDay(organisationUuids, fromDate, dateFormat, format)
@@ -623,88 +698,13 @@ Name | Type | Description  | Notes
 **400** | Invalid Organisation uuids supplied |  -  |
 **404** | Organisation uuids not found |  -  |
 
-<a name="getAdformExtendedReportPerOrganisationPerCampaignPerCreativePerDay"></a>
-# **getAdformExtendedReportPerOrganisationPerCampaignPerCreativePerDay**
-> String getAdformExtendedReportPerOrganisationPerCampaignPerCreativePerDay(organisationUuids, fromDate, dateFormat, format)
+<a name="getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerLineItemPerDay"></a>
+# **getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerLineItemPerDay**
+> String getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerLineItemPerDay(organisationUuids, fromDate, dateFormat, format)
 
-Return adform extended report per organisation per campaign per creative per day
+Return adform extended report per organisation per account per campaign per line item per day
 
-Adform extended report per organisation per campaign per creative per day
-
-### Example
-```java
-// Import classes:
-import com.cervinodata.client.ApiClient;
-import com.cervinodata.client.ApiException;
-import com.cervinodata.client.Configuration;
-import com.cervinodata.client.auth.*;
-import com.cervinodata.client.models.*;
-import com.cervinodata.client.api.AdvertisingDataApi;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://app.cervinodata.com/api/v1");
-    
-    // Configure HTTP bearer authorization: bearerAuth
-    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
-    bearerAuth.setBearerToken("BEARER TOKEN");
-
-    AdvertisingDataApi apiInstance = new AdvertisingDataApi(defaultClient);
-    List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
-    LocalDate fromDate = LocalDate.now(); // LocalDate | From date
-    String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
-    String format = "csv"; // String | Output format (use csv for large result sets)
-    try {
-      String result = apiInstance.getAdformExtendedReportPerOrganisationPerCampaignPerCreativePerDay(organisationUuids, fromDate, dateFormat, format);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling AdvertisingDataApi#getAdformExtendedReportPerOrganisationPerCampaignPerCreativePerDay");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids |
- **fromDate** | **LocalDate**| From date | [optional]
- **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD]
- **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json]
-
-### Return type
-
-**String**
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/csv, application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | successful operation |  -  |
-**400** | Invalid Organisation uuids supplied |  -  |
-**404** | Organisation uuids not found |  -  |
-
-<a name="getAdformExtendedReportPerOrganisationPerCampaignPerLineItemPerDay"></a>
-# **getAdformExtendedReportPerOrganisationPerCampaignPerLineItemPerDay**
-> String getAdformExtendedReportPerOrganisationPerCampaignPerLineItemPerDay(organisationUuids, fromDate, dateFormat, format)
-
-Return adform extended report per organisation per campaign per line item per day
-
-Adform extended report per organisation per campaign per line item per day
+Adform extended report per organisation per account per campaign per line item per day
 
 ### Example
 ```java
@@ -731,10 +731,10 @@ public class Example {
     String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
     String format = "csv"; // String | Output format (use csv for large result sets)
     try {
-      String result = apiInstance.getAdformExtendedReportPerOrganisationPerCampaignPerLineItemPerDay(organisationUuids, fromDate, dateFormat, format);
+      String result = apiInstance.getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerLineItemPerDay(organisationUuids, fromDate, dateFormat, format);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling AdvertisingDataApi#getAdformExtendedReportPerOrganisationPerCampaignPerLineItemPerDay");
+      System.err.println("Exception when calling AdvertisingDataApi#getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerLineItemPerDay");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
