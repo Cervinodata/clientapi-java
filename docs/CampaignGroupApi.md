@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**getCampaignGroupAdReportPerOrganisationPerCampaignPerDay**](CampaignGroupApi.md#getCampaignGroupAdReportPerOrganisationPerCampaignPerDay) | **GET** /data/campaign-group-ad-report-per-organisation-per-campaign-per-day/{organisationUuids} | Return campaign group ad report per organisation per campaign per day
 [**getCampaignGroupAdReportPerOrganisationPerCampaignPerWeek**](CampaignGroupApi.md#getCampaignGroupAdReportPerOrganisationPerCampaignPerWeek) | **GET** /data/campaign-group-ad-report-per-organisation-per-campaign-per-week/{organisationUuids} | Return campaign group ad report per organisation per campaign per week
 [**getCampaignGroupAdReportPerOrganisationPerDay**](CampaignGroupApi.md#getCampaignGroupAdReportPerOrganisationPerDay) | **GET** /data/campaign-group-ad-report-per-organisation-per-day/{organisationUuids} | Return campaign group ad report per organisation per day
-[**getCampaignGroupAdformExtendedReportPerOrganisationPerCampaignPerDay**](CampaignGroupApi.md#getCampaignGroupAdformExtendedReportPerOrganisationPerCampaignPerDay) | **GET** /data/campaign-group-adform-extended-report-per-organisation-per-campaign-per-day/{organisationUuids} | Return campaign group adform extended report per organisation per campaign per day
+[**getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDay**](CampaignGroupApi.md#getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/campaign-group-adform-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return campaign group adform extended report per organisation per account per campaign per day
 [**getCampaignGroupAdformReportPerOrganisationPerCampaignPerDay**](CampaignGroupApi.md#getCampaignGroupAdformReportPerOrganisationPerCampaignPerDay) | **GET** /data/campaign-group-adform-report-per-organisation-per-campaign-per-day/{organisationUuids} | Return campaign group adform report per organisation per campaign per day
 [**getCampaignGroupAdformReportPerOrganisationPerCampaignPerLineItemPerDay**](CampaignGroupApi.md#getCampaignGroupAdformReportPerOrganisationPerCampaignPerLineItemPerDay) | **GET** /data/campaign-group-adform-report-per-organisation-per-campaign-per-line-item-per-day/{organisationUuids} | Return campaign group adform report per organisation per campaign per line-item per day
 [**getCampaignGroupAnalyticsReportPerOrganisationPerDay**](CampaignGroupApi.md#getCampaignGroupAnalyticsReportPerOrganisationPerDay) | **GET** /data/campaign-group-analytics-report-per-organisation-per-day/{organisationUuids} | Return campaign group analytics report per organisation per day
@@ -258,13 +258,13 @@ Name | Type | Description  | Notes
 **400** | Invalid Organisation uuids supplied |  -  |
 **404** | Organisation uuids not found |  -  |
 
-<a name="getCampaignGroupAdformExtendedReportPerOrganisationPerCampaignPerDay"></a>
-# **getCampaignGroupAdformExtendedReportPerOrganisationPerCampaignPerDay**
-> String getCampaignGroupAdformExtendedReportPerOrganisationPerCampaignPerDay(organisationUuids, fromDate, dateFormat, format)
+<a name="getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDay"></a>
+# **getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDay**
+> String getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDay(organisationUuids, fromDate, dateFormat, format)
 
-Return campaign group adform extended report per organisation per campaign per day
+Return campaign group adform extended report per organisation per account per campaign per day
 
-Campaign group adform extended report per organisation per campaign per day
+Campaign group adform extended report per organisation per account per campaign per day
 
 ### Example
 ```java
@@ -291,10 +291,10 @@ public class Example {
     String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
     String format = "csv"; // String | Output format (use csv for large result sets)
     try {
-      String result = apiInstance.getCampaignGroupAdformExtendedReportPerOrganisationPerCampaignPerDay(organisationUuids, fromDate, dateFormat, format);
+      String result = apiInstance.getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDay(organisationUuids, fromDate, dateFormat, format);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling CampaignGroupApi#getCampaignGroupAdformExtendedReportPerOrganisationPerCampaignPerDay");
+      System.err.println("Exception when calling CampaignGroupApi#getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDay");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());

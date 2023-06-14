@@ -487,7 +487,7 @@ public class CampaignGroupApi {
         return localVarCall;
     }
     /**
-     * Build call for getCampaignGroupAdformExtendedReportPerOrganisationPerCampaignPerDay
+     * Build call for getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDay
      * @param organisationUuids Organisation uuids (required)
      * @param fromDate From date (optional)
      * @param dateFormat Outputted date format (optional)
@@ -503,11 +503,11 @@ public class CampaignGroupApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCampaignGroupAdformExtendedReportPerOrganisationPerCampaignPerDayCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDayCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/data/campaign-group-adform-extended-report-per-organisation-per-campaign-per-day/{organisationUuids}"
+        String localVarPath = "/data/campaign-group-adform-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids}"
             .replaceAll("\\{" + "organisationUuids" + "\\}", localVarApiClient.escapeString(localVarApiClient.collectionPathParameterToString("csv", organisationUuids)));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -547,22 +547,22 @@ public class CampaignGroupApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getCampaignGroupAdformExtendedReportPerOrganisationPerCampaignPerDayValidateBeforeCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
-            throw new ApiException("Missing the required parameter 'organisationUuids' when calling getCampaignGroupAdformExtendedReportPerOrganisationPerCampaignPerDay(Async)");
+            throw new ApiException("Missing the required parameter 'organisationUuids' when calling getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDay(Async)");
         }
         
 
-        okhttp3.Call localVarCall = getCampaignGroupAdformExtendedReportPerOrganisationPerCampaignPerDayCall(organisationUuids, fromDate, dateFormat, format, _callback);
+        okhttp3.Call localVarCall = getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDayCall(organisationUuids, fromDate, dateFormat, format, _callback);
         return localVarCall;
 
     }
 
     /**
-     * Return campaign group adform extended report per organisation per campaign per day
-     * Campaign group adform extended report per organisation per campaign per day
+     * Return campaign group adform extended report per organisation per account per campaign per day
+     * Campaign group adform extended report per organisation per account per campaign per day
      * @param organisationUuids Organisation uuids (required)
      * @param fromDate From date (optional)
      * @param dateFormat Outputted date format (optional)
@@ -577,14 +577,14 @@ public class CampaignGroupApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public String getCampaignGroupAdformExtendedReportPerOrganisationPerCampaignPerDay(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format) throws ApiException {
-        ApiResponse<String> localVarResp = getCampaignGroupAdformExtendedReportPerOrganisationPerCampaignPerDayWithHttpInfo(organisationUuids, fromDate, dateFormat, format);
+    public String getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDay(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+        ApiResponse<String> localVarResp = getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo(organisationUuids, fromDate, dateFormat, format);
         return localVarResp.getData();
     }
 
     /**
-     * Return campaign group adform extended report per organisation per campaign per day
-     * Campaign group adform extended report per organisation per campaign per day
+     * Return campaign group adform extended report per organisation per account per campaign per day
+     * Campaign group adform extended report per organisation per account per campaign per day
      * @param organisationUuids Organisation uuids (required)
      * @param fromDate From date (optional)
      * @param dateFormat Outputted date format (optional)
@@ -599,15 +599,15 @@ public class CampaignGroupApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> getCampaignGroupAdformExtendedReportPerOrganisationPerCampaignPerDayWithHttpInfo(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format) throws ApiException {
-        okhttp3.Call localVarCall = getCampaignGroupAdformExtendedReportPerOrganisationPerCampaignPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, null);
+    public ApiResponse<String> getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+        okhttp3.Call localVarCall = getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     * Return campaign group adform extended report per organisation per campaign per day (asynchronously)
-     * Campaign group adform extended report per organisation per campaign per day
+     * Return campaign group adform extended report per organisation per account per campaign per day (asynchronously)
+     * Campaign group adform extended report per organisation per account per campaign per day
      * @param organisationUuids Organisation uuids (required)
      * @param fromDate From date (optional)
      * @param dateFormat Outputted date format (optional)
@@ -623,9 +623,9 @@ public class CampaignGroupApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCampaignGroupAdformExtendedReportPerOrganisationPerCampaignPerDayAsync(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDayAsync(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getCampaignGroupAdformExtendedReportPerOrganisationPerCampaignPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, _callback);
+        okhttp3.Call localVarCall = getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

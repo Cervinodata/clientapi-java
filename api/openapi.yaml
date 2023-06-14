@@ -2801,10 +2801,11 @@ paths:
       tags:
       - advertising data
       x-accepts: application/json
-  /data/adform-extended-report-per-organisation-per-campaign-per-day/{organisationUuids}:
+  /data/adform-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids}:
     get:
-      description: Adform extended report per organisation per campaign per day
-      operationId: getAdformExtendedReportPerOrganisationPerCampaignPerDay
+      description: Adform extended report per organisation per account per campaign
+        per day
+      operationId: getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDay
       parameters:
       - description: Organisation uuids
         explode: false
@@ -2864,7 +2865,8 @@ paths:
           description: Organisation uuids not found
       security:
       - bearerAuth: []
-      summary: Return adform extended report per organisation per campaign per day
+      summary: Return adform extended report per organisation per account per campaign
+        per day
       tags:
       - advertising data
       x-accepts: application/json
@@ -4179,11 +4181,11 @@ paths:
       tags:
       - campaign group
       x-accepts: application/json
-  /data/campaign-group-adform-extended-report-per-organisation-per-campaign-per-day/{organisationUuids}:
+  /data/campaign-group-adform-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids}:
     get:
-      description: Campaign group adform extended report per organisation per campaign
-        per day
-      operationId: getCampaignGroupAdformExtendedReportPerOrganisationPerCampaignPerDay
+      description: Campaign group adform extended report per organisation per account
+        per campaign per day
+      operationId: getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDay
       parameters:
       - description: Organisation uuids
         explode: false
@@ -4243,8 +4245,8 @@ paths:
           description: Organisation uuids not found
       security:
       - bearerAuth: []
-      summary: Return campaign group adform extended report per organisation per campaign
-        per day
+      summary: Return campaign group adform extended report per organisation per account
+        per campaign per day
       tags:
       - campaign group
       x-accepts: application/json
