@@ -2,7 +2,7 @@
 
 Cervinodata API documentation
 - API version: 1.0.0
-  - Build date: 2023-11-17T14:14:07.705383Z[Etc/UTC]
+  - Build date: 2023-11-17T14:45:55.598339Z[Etc/UTC]
 
 <div style='margin: 2em 0;'>
 <p>
@@ -118,7 +118,7 @@ public class Example {
 
     AdvertisingDataApi apiInstance = new AdvertisingDataApi(defaultClient);
     List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
-    LocalDate fromDate = LocalDate.now(); // LocalDate | From date
+    Date fromDate = new Date(); // Date | From date
     String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
     String format = "csv"; // String | Output format (use csv for large result sets)
     try {
