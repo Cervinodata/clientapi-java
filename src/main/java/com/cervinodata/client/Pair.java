@@ -13,7 +13,7 @@
 
 package com.cervinodata.client;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T11:53:33.194501Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T13:32:39.645833Z[Etc/UTC]")
 public class Pair {
     private String name = "";
     private String value = "";
