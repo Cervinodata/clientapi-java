@@ -39,7 +39,7 @@ public class Example {
 
     AnalyticsDataGoalsApi apiInstance = new AnalyticsDataGoalsApi(defaultClient);
     String organisationUuid = "organisationUuid_example"; // String | Organisation uuid
-    Date fromDate = new Date(); // Date | From date
+    java.time.LocalDate fromDate = new java.time.LocalDate(); // java.time.LocalDate | From date
     String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
     String format = "csv"; // String | Output format (use csv for large result sets)
     try {
@@ -61,7 +61,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **organisationUuid** | **String**| Organisation uuid | |
-| **fromDate** | **Date**| From date | [optional] |
+| **fromDate** | **java.time.LocalDate**| From date | [optional] |
 | **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
 | **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
@@ -114,7 +114,7 @@ public class Example {
 
     AnalyticsDataGoalsApi apiInstance = new AnalyticsDataGoalsApi(defaultClient);
     String organisationUuid = "organisationUuid_example"; // String | Organisation uuid
-    Date fromDate = new Date(); // Date | From date
+    java.time.LocalDate fromDate = new java.time.LocalDate(); // java.time.LocalDate | From date
     String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
     String format = "csv"; // String | Output format (use csv for large result sets)
     try {
@@ -136,7 +136,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **organisationUuid** | **String**| Organisation uuid | |
-| **fromDate** | **Date**| From date | [optional] |
+| **fromDate** | **java.time.LocalDate**| From date | [optional] |
 | **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
 | **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
@@ -189,7 +189,7 @@ public class Example {
 
     AnalyticsDataGoalsApi apiInstance = new AnalyticsDataGoalsApi(defaultClient);
     String organisationUuid = "organisationUuid_example"; // String | Organisation uuid
-    Date fromDate = new Date(); // Date | From date
+    java.time.LocalDate fromDate = new java.time.LocalDate(); // java.time.LocalDate | From date
     String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
     String format = "csv"; // String | Output format (use csv for large result sets)
     try {
@@ -211,7 +211,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **organisationUuid** | **String**| Organisation uuid | |
-| **fromDate** | **Date**| From date | [optional] |
+| **fromDate** | **java.time.LocalDate**| From date | [optional] |
 | **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
 | **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
@@ -264,7 +264,7 @@ public class Example {
 
     AnalyticsDataGoalsApi apiInstance = new AnalyticsDataGoalsApi(defaultClient);
     String organisationUuid = "organisationUuid_example"; // String | Organisation uuid
-    Date fromDate = new Date(); // Date | From date
+    java.time.LocalDate fromDate = new java.time.LocalDate(); // java.time.LocalDate | From date
     String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
     String format = "csv"; // String | Output format (use csv for large result sets)
     try {
@@ -286,7 +286,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **organisationUuid** | **String**| Organisation uuid | |
-| **fromDate** | **Date**| From date | [optional] |
+| **fromDate** | **java.time.LocalDate**| From date | [optional] |
 | **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
 | **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
