@@ -23,11 +23,6 @@ import com.google.gson.stream.JsonWriter;
 import com.google.gson.JsonElement;
 import io.gsonfire.GsonFireBuilder;
 import io.gsonfire.TypeSelector;
-import org.joda.time.DateTime;
-import org.joda.time.LocalDate;
-import org.joda.time.format.DateTimeFormatter;
-import org.joda.time.format.DateTimeFormatterBuilder;
-import org.joda.time.format.ISODateTimeFormat;
 
 import okio.ByteString;
 
@@ -56,8 +51,6 @@ public class JSON {
     private static boolean isLenientOnJson = false;
     private static DateTypeAdapter dateTypeAdapter = new DateTypeAdapter();
     private static SqlDateTypeAdapter sqlDateTypeAdapter = new SqlDateTypeAdapter();
-    private static DateTimeTypeAdapter dateTimeTypeAdapter = new DateTimeTypeAdapter();
-    private static LocalDateTypeAdapter localDateTypeAdapter = new LocalDateTypeAdapter();
     private static ByteArrayAdapter byteArrayAdapter = new ByteArrayAdapter();
 
     @SuppressWarnings("unchecked")
@@ -95,8 +88,6 @@ public class JSON {
         GsonBuilder gsonBuilder = createGson();
         gsonBuilder.registerTypeAdapter(Date.class, dateTypeAdapter);
         gsonBuilder.registerTypeAdapter(java.sql.Date.class, sqlDateTypeAdapter);
-        gsonBuilder.registerTypeAdapter(DateTime.class, dateTimeTypeAdapter);
-        gsonBuilder.registerTypeAdapter(LocalDate.class, localDateTypeAdapter);
         gsonBuilder.registerTypeAdapter(byte[].class, byteArrayAdapter);
         gson = gsonBuilder.create();
     }
@@ -189,98 +180,6 @@ public class JSON {
                     return byteString.toByteArray();
             }
         }
-    }
-
-    /**
-     * Gson TypeAdapter for Joda DateTime type
-     */
-    public static class DateTimeTypeAdapter extends TypeAdapter<DateTime> {
-
-        private DateTimeFormatter formatter;
-
-        public DateTimeTypeAdapter() {
-            this(new DateTimeFormatterBuilder()
-                .append(ISODateTimeFormat.dateTime().getPrinter(), ISODateTimeFormat.dateOptionalTimeParser().getParser())
-                .toFormatter());
-        }
-
-        public DateTimeTypeAdapter(DateTimeFormatter formatter) {
-            this.formatter = formatter;
-        }
-
-        public void setFormat(DateTimeFormatter dateFormat) {
-            this.formatter = dateFormat;
-        }
-
-        @Override
-        public void write(JsonWriter out, DateTime date) throws IOException {
-            if (date == null) {
-                out.nullValue();
-            } else {
-                out.value(formatter.print(date));
-            }
-        }
-
-        @Override
-        public DateTime read(JsonReader in) throws IOException {
-            switch (in.peek()) {
-                case NULL:
-                    in.nextNull();
-                    return null;
-                default:
-                    String date = in.nextString();
-                    return formatter.parseDateTime(date);
-            }
-        }
-    }
-
-    /**
-     * Gson TypeAdapter for Joda LocalDate type
-     */
-    public static class LocalDateTypeAdapter extends TypeAdapter<LocalDate> {
-
-        private DateTimeFormatter formatter;
-
-        public LocalDateTypeAdapter() {
-            this(ISODateTimeFormat.date());
-        }
-
-        public LocalDateTypeAdapter(DateTimeFormatter formatter) {
-            this.formatter = formatter;
-        }
-
-        public void setFormat(DateTimeFormatter dateFormat) {
-            this.formatter = dateFormat;
-        }
-
-        @Override
-        public void write(JsonWriter out, LocalDate date) throws IOException {
-            if (date == null) {
-                out.nullValue();
-            } else {
-                out.value(formatter.print(date));
-            }
-        }
-
-        @Override
-        public LocalDate read(JsonReader in) throws IOException {
-            switch (in.peek()) {
-                case NULL:
-                    in.nextNull();
-                    return null;
-                default:
-                    String date = in.nextString();
-                    return formatter.parseLocalDate(date);
-            }
-        }
-    }
-
-    public static void setDateTimeFormat(DateTimeFormatter dateFormat) {
-        dateTimeTypeAdapter.setFormat(dateFormat);
-    }
-
-    public static void setLocalDateFormat(DateTimeFormatter dateFormat) {
-        localDateTypeAdapter.setFormat(dateFormat);
     }
 
     /**
