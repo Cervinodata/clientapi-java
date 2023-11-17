@@ -62,7 +62,7 @@ public class Example {
 
     CampaignGroupApi apiInstance = new CampaignGroupApi(defaultClient);
     List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
-    DateTime fromDate = new DateTime(); // DateTime | From date
+    Date fromDate = new Date(); // Date | From date
     String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
     String format = "csv"; // String | Output format (use csv for large result sets)
     try {
@@ -84,7 +84,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
-| **fromDate** | **DateTime**| From date | [optional] |
+| **fromDate** | **Date**| From date | [optional] |
 | **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
 | **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
@@ -137,7 +137,7 @@ public class Example {
 
     CampaignGroupApi apiInstance = new CampaignGroupApi(defaultClient);
     List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
-    DateTime fromDate = new DateTime(); // DateTime | From date
+    Date fromDate = new Date(); // Date | From date
     String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
     String format = "csv"; // String | Output format (use csv for large result sets)
     try {
@@ -159,7 +159,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
-| **fromDate** | **DateTime**| From date | [optional] |
+| **fromDate** | **Date**| From date | [optional] |
 | **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
 | **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
@@ -212,7 +212,7 @@ public class Example {
 
     CampaignGroupApi apiInstance = new CampaignGroupApi(defaultClient);
     List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
-    DateTime fromDate = new DateTime(); // DateTime | From date
+    Date fromDate = new Date(); // Date | From date
     String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
     String format = "csv"; // String | Output format (use csv for large result sets)
     try {
@@ -234,7 +234,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
-| **fromDate** | **DateTime**| From date | [optional] |
+| **fromDate** | **Date**| From date | [optional] |
 | **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
 | **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
@@ -287,7 +287,7 @@ public class Example {
 
     CampaignGroupApi apiInstance = new CampaignGroupApi(defaultClient);
     List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
-    DateTime fromDate = new DateTime(); // DateTime | From date
+    Date fromDate = new Date(); // Date | From date
     String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
     String format = "csv"; // String | Output format (use csv for large result sets)
     try {
@@ -309,7 +309,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
-| **fromDate** | **DateTime**| From date | [optional] |
+| **fromDate** | **Date**| From date | [optional] |
 | **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
 | **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
@@ -362,7 +362,7 @@ public class Example {
 
     CampaignGroupApi apiInstance = new CampaignGroupApi(defaultClient);
     List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
-    DateTime fromDate = new DateTime(); // DateTime | From date
+    Date fromDate = new Date(); // Date | From date
     String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
     String format = "csv"; // String | Output format (use csv for large result sets)
     try {
@@ -384,7 +384,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
-| **fromDate** | **DateTime**| From date | [optional] |
+| **fromDate** | **Date**| From date | [optional] |
 | **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
 | **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
@@ -437,7 +437,7 @@ public class Example {
 
     CampaignGroupApi apiInstance = new CampaignGroupApi(defaultClient);
     List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
-    DateTime fromDate = new DateTime(); // DateTime | From date
+    Date fromDate = new Date(); // Date | From date
     String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
     String format = "csv"; // String | Output format (use csv for large result sets)
     try {
@@ -459,7 +459,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
-| **fromDate** | **DateTime**| From date | [optional] |
+| **fromDate** | **Date**| From date | [optional] |
 | **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
 | **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
@@ -512,7 +512,7 @@ public class Example {
 
     CampaignGroupApi apiInstance = new CampaignGroupApi(defaultClient);
     List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
-    DateTime fromDate = new DateTime(); // DateTime | From date
+    Date fromDate = new Date(); // Date | From date
     String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
     String format = "csv"; // String | Output format (use csv for large result sets)
     try {
@@ -534,7 +534,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
-| **fromDate** | **DateTime**| From date | [optional] |
+| **fromDate** | **Date**| From date | [optional] |
 | **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
 | **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
@@ -587,7 +587,7 @@ public class Example {
 
     CampaignGroupApi apiInstance = new CampaignGroupApi(defaultClient);
     List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
-    DateTime fromDate = new DateTime(); // DateTime | From date
+    Date fromDate = new Date(); // Date | From date
     String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
     String format = "csv"; // String | Output format (use csv for large result sets)
     try {
@@ -609,7 +609,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
-| **fromDate** | **DateTime**| From date | [optional] |
+| **fromDate** | **Date**| From date | [optional] |
 | **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
 | **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
@@ -662,7 +662,7 @@ public class Example {
 
     CampaignGroupApi apiInstance = new CampaignGroupApi(defaultClient);
     List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
-    DateTime fromDate = new DateTime(); // DateTime | From date
+    Date fromDate = new Date(); // Date | From date
     String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
     String format = "csv"; // String | Output format (use csv for large result sets)
     try {
@@ -684,7 +684,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
-| **fromDate** | **DateTime**| From date | [optional] |
+| **fromDate** | **Date**| From date | [optional] |
 | **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
 | **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
@@ -737,7 +737,7 @@ public class Example {
 
     CampaignGroupApi apiInstance = new CampaignGroupApi(defaultClient);
     List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
-    DateTime fromDate = new DateTime(); // DateTime | From date
+    Date fromDate = new Date(); // Date | From date
     String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
     String format = "csv"; // String | Output format (use csv for large result sets)
     try {
@@ -759,7 +759,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
-| **fromDate** | **DateTime**| From date | [optional] |
+| **fromDate** | **Date**| From date | [optional] |
 | **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
 | **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
@@ -812,7 +812,7 @@ public class Example {
 
     CampaignGroupApi apiInstance = new CampaignGroupApi(defaultClient);
     List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
-    DateTime fromDate = new DateTime(); // DateTime | From date
+    Date fromDate = new Date(); // Date | From date
     String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
     String format = "csv"; // String | Output format (use csv for large result sets)
     try {
@@ -834,7 +834,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
-| **fromDate** | **DateTime**| From date | [optional] |
+| **fromDate** | **Date**| From date | [optional] |
 | **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
 | **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
@@ -887,7 +887,7 @@ public class Example {
 
     CampaignGroupApi apiInstance = new CampaignGroupApi(defaultClient);
     List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
-    DateTime fromDate = new DateTime(); // DateTime | From date
+    Date fromDate = new Date(); // Date | From date
     String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
     String format = "csv"; // String | Output format (use csv for large result sets)
     try {
@@ -909,7 +909,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
-| **fromDate** | **DateTime**| From date | [optional] |
+| **fromDate** | **Date**| From date | [optional] |
 | **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
 | **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
@@ -962,7 +962,7 @@ public class Example {
 
     CampaignGroupApi apiInstance = new CampaignGroupApi(defaultClient);
     List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
-    DateTime fromDate = new DateTime(); // DateTime | From date
+    Date fromDate = new Date(); // Date | From date
     String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
     String format = "csv"; // String | Output format (use csv for large result sets)
     try {
@@ -984,7 +984,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
-| **fromDate** | **DateTime**| From date | [optional] |
+| **fromDate** | **Date**| From date | [optional] |
 | **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
 | **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
@@ -1037,7 +1037,7 @@ public class Example {
 
     CampaignGroupApi apiInstance = new CampaignGroupApi(defaultClient);
     List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
-    DateTime fromDate = new DateTime(); // DateTime | From date
+    Date fromDate = new Date(); // Date | From date
     String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
     String format = "csv"; // String | Output format (use csv for large result sets)
     try {
@@ -1059,7 +1059,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
-| **fromDate** | **DateTime**| From date | [optional] |
+| **fromDate** | **Date**| From date | [optional] |
 | **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
 | **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
@@ -1112,7 +1112,7 @@ public class Example {
 
     CampaignGroupApi apiInstance = new CampaignGroupApi(defaultClient);
     List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
-    DateTime fromDate = new DateTime(); // DateTime | From date
+    Date fromDate = new Date(); // Date | From date
     String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
     String format = "csv"; // String | Output format (use csv for large result sets)
     try {
@@ -1134,7 +1134,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
-| **fromDate** | **DateTime**| From date | [optional] |
+| **fromDate** | **Date**| From date | [optional] |
 | **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
 | **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
@@ -1187,7 +1187,7 @@ public class Example {
 
     CampaignGroupApi apiInstance = new CampaignGroupApi(defaultClient);
     List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
-    DateTime fromDate = new DateTime(); // DateTime | From date
+    Date fromDate = new Date(); // Date | From date
     String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
     String format = "csv"; // String | Output format (use csv for large result sets)
     try {
@@ -1209,7 +1209,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
-| **fromDate** | **DateTime**| From date | [optional] |
+| **fromDate** | **Date**| From date | [optional] |
 | **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
 | **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
@@ -1262,7 +1262,7 @@ public class Example {
 
     CampaignGroupApi apiInstance = new CampaignGroupApi(defaultClient);
     List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
-    DateTime fromDate = new DateTime(); // DateTime | From date
+    Date fromDate = new Date(); // Date | From date
     String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
     String format = "csv"; // String | Output format (use csv for large result sets)
     try {
@@ -1284,7 +1284,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
-| **fromDate** | **DateTime**| From date | [optional] |
+| **fromDate** | **Date**| From date | [optional] |
 | **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
 | **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
@@ -1337,7 +1337,7 @@ public class Example {
 
     CampaignGroupApi apiInstance = new CampaignGroupApi(defaultClient);
     List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
-    DateTime fromDate = new DateTime(); // DateTime | From date
+    Date fromDate = new Date(); // Date | From date
     String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
     String format = "csv"; // String | Output format (use csv for large result sets)
     try {
@@ -1359,7 +1359,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
-| **fromDate** | **DateTime**| From date | [optional] |
+| **fromDate** | **Date**| From date | [optional] |
 | **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
 | **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
@@ -1412,7 +1412,7 @@ public class Example {
 
     CampaignGroupApi apiInstance = new CampaignGroupApi(defaultClient);
     List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
-    DateTime fromDate = new DateTime(); // DateTime | From date
+    Date fromDate = new Date(); // Date | From date
     String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
     String format = "csv"; // String | Output format (use csv for large result sets)
     try {
@@ -1434,7 +1434,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
-| **fromDate** | **DateTime**| From date | [optional] |
+| **fromDate** | **Date**| From date | [optional] |
 | **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
 | **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
@@ -1487,7 +1487,7 @@ public class Example {
 
     CampaignGroupApi apiInstance = new CampaignGroupApi(defaultClient);
     List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
-    DateTime fromDate = new DateTime(); // DateTime | From date
+    Date fromDate = new Date(); // Date | From date
     String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
     String format = "csv"; // String | Output format (use csv for large result sets)
     try {
@@ -1509,7 +1509,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
-| **fromDate** | **DateTime**| From date | [optional] |
+| **fromDate** | **Date**| From date | [optional] |
 | **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
 | **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
@@ -1562,7 +1562,7 @@ public class Example {
 
     CampaignGroupApi apiInstance = new CampaignGroupApi(defaultClient);
     List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
-    DateTime fromDate = new DateTime(); // DateTime | From date
+    Date fromDate = new Date(); // Date | From date
     String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
     String format = "csv"; // String | Output format (use csv for large result sets)
     try {
@@ -1584,7 +1584,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
-| **fromDate** | **DateTime**| From date | [optional] |
+| **fromDate** | **Date**| From date | [optional] |
 | **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
 | **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
@@ -1637,7 +1637,7 @@ public class Example {
 
     CampaignGroupApi apiInstance = new CampaignGroupApi(defaultClient);
     List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
-    DateTime fromDate = new DateTime(); // DateTime | From date
+    Date fromDate = new Date(); // Date | From date
     String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
     String format = "csv"; // String | Output format (use csv for large result sets)
     try {
@@ -1659,7 +1659,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
-| **fromDate** | **DateTime**| From date | [optional] |
+| **fromDate** | **Date**| From date | [optional] |
 | **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
 | **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
@@ -1712,7 +1712,7 @@ public class Example {
 
     CampaignGroupApi apiInstance = new CampaignGroupApi(defaultClient);
     List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
-    DateTime fromDate = new DateTime(); // DateTime | From date
+    Date fromDate = new Date(); // Date | From date
     String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
     String format = "csv"; // String | Output format (use csv for large result sets)
     try {
@@ -1734,7 +1734,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
-| **fromDate** | **DateTime**| From date | [optional] |
+| **fromDate** | **Date**| From date | [optional] |
 | **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
 | **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
@@ -1787,7 +1787,7 @@ public class Example {
 
     CampaignGroupApi apiInstance = new CampaignGroupApi(defaultClient);
     List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
-    DateTime fromDate = new DateTime(); // DateTime | From date
+    Date fromDate = new Date(); // Date | From date
     String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
     String format = "csv"; // String | Output format (use csv for large result sets)
     try {
@@ -1809,7 +1809,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
-| **fromDate** | **DateTime**| From date | [optional] |
+| **fromDate** | **Date**| From date | [optional] |
 | **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
 | **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
@@ -1862,7 +1862,7 @@ public class Example {
 
     CampaignGroupApi apiInstance = new CampaignGroupApi(defaultClient);
     List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
-    DateTime fromDate = new DateTime(); // DateTime | From date
+    Date fromDate = new Date(); // Date | From date
     String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
     String format = "csv"; // String | Output format (use csv for large result sets)
     try {
@@ -1884,7 +1884,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
-| **fromDate** | **DateTime**| From date | [optional] |
+| **fromDate** | **Date**| From date | [optional] |
 | **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
 | **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
@@ -1937,7 +1937,7 @@ public class Example {
 
     CampaignGroupApi apiInstance = new CampaignGroupApi(defaultClient);
     List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
-    DateTime fromDate = new DateTime(); // DateTime | From date
+    Date fromDate = new Date(); // Date | From date
     String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
     String format = "csv"; // String | Output format (use csv for large result sets)
     try {
@@ -1959,7 +1959,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
-| **fromDate** | **DateTime**| From date | [optional] |
+| **fromDate** | **Date**| From date | [optional] |
 | **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
 | **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
@@ -2012,7 +2012,7 @@ public class Example {
 
     CampaignGroupApi apiInstance = new CampaignGroupApi(defaultClient);
     List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
-    DateTime fromDate = new DateTime(); // DateTime | From date
+    Date fromDate = new Date(); // Date | From date
     String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
     String format = "csv"; // String | Output format (use csv for large result sets)
     try {
@@ -2034,7 +2034,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
-| **fromDate** | **DateTime**| From date | [optional] |
+| **fromDate** | **Date**| From date | [optional] |
 | **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
 | **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
