@@ -259,7 +259,6 @@
 
     <dependencies>
         <!-- @Nullable annotation -->
-
 <dependency>
 	<groupId>org.threeten</groupId>
 	<artifactId>threetenbp</artifactId>
