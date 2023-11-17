@@ -27,7 +27,7 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import java.time.LocalDate;
+import java.util.Date;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -89,7 +89,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getAdAccountReportPerOrganisationPerDayCall(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getAdAccountReportPerOrganisationPerDayCall(List<String> organisationUuids, Date fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -148,7 +148,7 @@ public class AdvertisingDataApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getAdAccountReportPerOrganisationPerDayValidateBeforeCall(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getAdAccountReportPerOrganisationPerDayValidateBeforeCall(List<String> organisationUuids, Date fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getAdAccountReportPerOrganisationPerDay(Async)");
@@ -175,7 +175,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public String getAdAccountReportPerOrganisationPerDay(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public String getAdAccountReportPerOrganisationPerDay(List<String> organisationUuids, Date fromDate, String dateFormat, String format) throws ApiException {
         ApiResponse<String> localVarResp = getAdAccountReportPerOrganisationPerDayWithHttpInfo(organisationUuids, fromDate, dateFormat, format);
         return localVarResp.getData();
     }
@@ -197,7 +197,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> getAdAccountReportPerOrganisationPerDayWithHttpInfo(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public ApiResponse<String> getAdAccountReportPerOrganisationPerDayWithHttpInfo(List<String> organisationUuids, Date fromDate, String dateFormat, String format) throws ApiException {
         okhttp3.Call localVarCall = getAdAccountReportPerOrganisationPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -221,7 +221,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getAdAccountReportPerOrganisationPerDayAsync(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call getAdAccountReportPerOrganisationPerDayAsync(List<String> organisationUuids, Date fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getAdAccountReportPerOrganisationPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
@@ -385,7 +385,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuid not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getAdCampaignReportPerDayCall(String organisationUuid, java.time.LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getAdCampaignReportPerDayCall(String organisationUuid, Date fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -444,7 +444,7 @@ public class AdvertisingDataApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getAdCampaignReportPerDayValidateBeforeCall(String organisationUuid, java.time.LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getAdCampaignReportPerDayValidateBeforeCall(String organisationUuid, Date fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'organisationUuid' is set
         if (organisationUuid == null) {
             throw new ApiException("Missing the required parameter 'organisationUuid' when calling getAdCampaignReportPerDay(Async)");
@@ -471,7 +471,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuid not found </td><td>  -  </td></tr>
      </table>
      */
-    public String getAdCampaignReportPerDay(String organisationUuid, java.time.LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public String getAdCampaignReportPerDay(String organisationUuid, Date fromDate, String dateFormat, String format) throws ApiException {
         ApiResponse<String> localVarResp = getAdCampaignReportPerDayWithHttpInfo(organisationUuid, fromDate, dateFormat, format);
         return localVarResp.getData();
     }
@@ -493,7 +493,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuid not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> getAdCampaignReportPerDayWithHttpInfo(String organisationUuid, java.time.LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public ApiResponse<String> getAdCampaignReportPerDayWithHttpInfo(String organisationUuid, Date fromDate, String dateFormat, String format) throws ApiException {
         okhttp3.Call localVarCall = getAdCampaignReportPerDayValidateBeforeCall(organisationUuid, fromDate, dateFormat, format, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -517,7 +517,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuid not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getAdCampaignReportPerDayAsync(String organisationUuid, java.time.LocalDate fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call getAdCampaignReportPerDayAsync(String organisationUuid, Date fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getAdCampaignReportPerDayValidateBeforeCall(organisationUuid, fromDate, dateFormat, format, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
@@ -541,7 +541,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getAdCampaignReportPerOrganisationPerAccountPerCampaignPerDevicePerDayCall(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getAdCampaignReportPerOrganisationPerAccountPerCampaignPerDevicePerDayCall(List<String> organisationUuids, Date fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -600,7 +600,7 @@ public class AdvertisingDataApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getAdCampaignReportPerOrganisationPerAccountPerCampaignPerDevicePerDayValidateBeforeCall(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getAdCampaignReportPerOrganisationPerAccountPerCampaignPerDevicePerDayValidateBeforeCall(List<String> organisationUuids, Date fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getAdCampaignReportPerOrganisationPerAccountPerCampaignPerDevicePerDay(Async)");
@@ -627,7 +627,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public String getAdCampaignReportPerOrganisationPerAccountPerCampaignPerDevicePerDay(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public String getAdCampaignReportPerOrganisationPerAccountPerCampaignPerDevicePerDay(List<String> organisationUuids, Date fromDate, String dateFormat, String format) throws ApiException {
         ApiResponse<String> localVarResp = getAdCampaignReportPerOrganisationPerAccountPerCampaignPerDevicePerDayWithHttpInfo(organisationUuids, fromDate, dateFormat, format);
         return localVarResp.getData();
     }
@@ -649,7 +649,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> getAdCampaignReportPerOrganisationPerAccountPerCampaignPerDevicePerDayWithHttpInfo(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public ApiResponse<String> getAdCampaignReportPerOrganisationPerAccountPerCampaignPerDevicePerDayWithHttpInfo(List<String> organisationUuids, Date fromDate, String dateFormat, String format) throws ApiException {
         okhttp3.Call localVarCall = getAdCampaignReportPerOrganisationPerAccountPerCampaignPerDevicePerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -673,7 +673,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getAdCampaignReportPerOrganisationPerAccountPerCampaignPerDevicePerDayAsync(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call getAdCampaignReportPerOrganisationPerAccountPerCampaignPerDevicePerDayAsync(List<String> organisationUuids, Date fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getAdCampaignReportPerOrganisationPerAccountPerCampaignPerDevicePerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
@@ -697,7 +697,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getAdCampaignReportPerOrganisationPerAccountPerDayCall(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getAdCampaignReportPerOrganisationPerAccountPerDayCall(List<String> organisationUuids, Date fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -756,7 +756,7 @@ public class AdvertisingDataApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getAdCampaignReportPerOrganisationPerAccountPerDayValidateBeforeCall(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getAdCampaignReportPerOrganisationPerAccountPerDayValidateBeforeCall(List<String> organisationUuids, Date fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getAdCampaignReportPerOrganisationPerAccountPerDay(Async)");
@@ -783,7 +783,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public String getAdCampaignReportPerOrganisationPerAccountPerDay(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public String getAdCampaignReportPerOrganisationPerAccountPerDay(List<String> organisationUuids, Date fromDate, String dateFormat, String format) throws ApiException {
         ApiResponse<String> localVarResp = getAdCampaignReportPerOrganisationPerAccountPerDayWithHttpInfo(organisationUuids, fromDate, dateFormat, format);
         return localVarResp.getData();
     }
@@ -805,7 +805,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> getAdCampaignReportPerOrganisationPerAccountPerDayWithHttpInfo(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public ApiResponse<String> getAdCampaignReportPerOrganisationPerAccountPerDayWithHttpInfo(List<String> organisationUuids, Date fromDate, String dateFormat, String format) throws ApiException {
         okhttp3.Call localVarCall = getAdCampaignReportPerOrganisationPerAccountPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -829,7 +829,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getAdCampaignReportPerOrganisationPerAccountPerDayAsync(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call getAdCampaignReportPerOrganisationPerAccountPerDayAsync(List<String> organisationUuids, Date fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getAdCampaignReportPerOrganisationPerAccountPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
@@ -852,7 +852,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuid not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getAdCampaignsCall(String organisationUuid, java.time.LocalDate fromDate, String format, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getAdCampaignsCall(String organisationUuid, Date fromDate, String format, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -907,7 +907,7 @@ public class AdvertisingDataApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getAdCampaignsValidateBeforeCall(String organisationUuid, java.time.LocalDate fromDate, String format, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getAdCampaignsValidateBeforeCall(String organisationUuid, Date fromDate, String format, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'organisationUuid' is set
         if (organisationUuid == null) {
             throw new ApiException("Missing the required parameter 'organisationUuid' when calling getAdCampaigns(Async)");
@@ -933,7 +933,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuid not found </td><td>  -  </td></tr>
      </table>
      */
-    public String getAdCampaigns(String organisationUuid, java.time.LocalDate fromDate, String format) throws ApiException {
+    public String getAdCampaigns(String organisationUuid, Date fromDate, String format) throws ApiException {
         ApiResponse<String> localVarResp = getAdCampaignsWithHttpInfo(organisationUuid, fromDate, format);
         return localVarResp.getData();
     }
@@ -954,7 +954,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuid not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> getAdCampaignsWithHttpInfo(String organisationUuid, java.time.LocalDate fromDate, String format) throws ApiException {
+    public ApiResponse<String> getAdCampaignsWithHttpInfo(String organisationUuid, Date fromDate, String format) throws ApiException {
         okhttp3.Call localVarCall = getAdCampaignsValidateBeforeCall(organisationUuid, fromDate, format, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -977,7 +977,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuid not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getAdCampaignsAsync(String organisationUuid, java.time.LocalDate fromDate, String format, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call getAdCampaignsAsync(String organisationUuid, Date fromDate, String format, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getAdCampaignsValidateBeforeCall(organisationUuid, fromDate, format, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
@@ -1000,7 +1000,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuid not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getAdGroupsCall(String organisationUuid, java.time.LocalDate fromDate, String format, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getAdGroupsCall(String organisationUuid, Date fromDate, String format, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1055,7 +1055,7 @@ public class AdvertisingDataApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getAdGroupsValidateBeforeCall(String organisationUuid, java.time.LocalDate fromDate, String format, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getAdGroupsValidateBeforeCall(String organisationUuid, Date fromDate, String format, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'organisationUuid' is set
         if (organisationUuid == null) {
             throw new ApiException("Missing the required parameter 'organisationUuid' when calling getAdGroups(Async)");
@@ -1081,7 +1081,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuid not found </td><td>  -  </td></tr>
      </table>
      */
-    public String getAdGroups(String organisationUuid, java.time.LocalDate fromDate, String format) throws ApiException {
+    public String getAdGroups(String organisationUuid, Date fromDate, String format) throws ApiException {
         ApiResponse<String> localVarResp = getAdGroupsWithHttpInfo(organisationUuid, fromDate, format);
         return localVarResp.getData();
     }
@@ -1102,7 +1102,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuid not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> getAdGroupsWithHttpInfo(String organisationUuid, java.time.LocalDate fromDate, String format) throws ApiException {
+    public ApiResponse<String> getAdGroupsWithHttpInfo(String organisationUuid, Date fromDate, String format) throws ApiException {
         okhttp3.Call localVarCall = getAdGroupsValidateBeforeCall(organisationUuid, fromDate, format, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1125,7 +1125,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuid not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getAdGroupsAsync(String organisationUuid, java.time.LocalDate fromDate, String format, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call getAdGroupsAsync(String organisationUuid, Date fromDate, String format, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getAdGroupsValidateBeforeCall(organisationUuid, fromDate, format, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
@@ -1149,7 +1149,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerCreativePerDayCall(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerCreativePerDayCall(List<String> organisationUuids, Date fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1208,7 +1208,7 @@ public class AdvertisingDataApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerCreativePerDayValidateBeforeCall(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerCreativePerDayValidateBeforeCall(List<String> organisationUuids, Date fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerCreativePerDay(Async)");
@@ -1235,7 +1235,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public String getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerCreativePerDay(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public String getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerCreativePerDay(List<String> organisationUuids, Date fromDate, String dateFormat, String format) throws ApiException {
         ApiResponse<String> localVarResp = getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerCreativePerDayWithHttpInfo(organisationUuids, fromDate, dateFormat, format);
         return localVarResp.getData();
     }
@@ -1257,7 +1257,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerCreativePerDayWithHttpInfo(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public ApiResponse<String> getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerCreativePerDayWithHttpInfo(List<String> organisationUuids, Date fromDate, String dateFormat, String format) throws ApiException {
         okhttp3.Call localVarCall = getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerCreativePerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1281,7 +1281,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerCreativePerDayAsync(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerCreativePerDayAsync(List<String> organisationUuids, Date fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerCreativePerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
@@ -1305,7 +1305,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDayCall(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDayCall(List<String> organisationUuids, Date fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1364,7 +1364,7 @@ public class AdvertisingDataApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(List<String> organisationUuids, Date fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDay(Async)");
@@ -1391,7 +1391,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public String getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDay(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public String getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDay(List<String> organisationUuids, Date fromDate, String dateFormat, String format) throws ApiException {
         ApiResponse<String> localVarResp = getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo(organisationUuids, fromDate, dateFormat, format);
         return localVarResp.getData();
     }
@@ -1413,7 +1413,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public ApiResponse<String> getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo(List<String> organisationUuids, Date fromDate, String dateFormat, String format) throws ApiException {
         okhttp3.Call localVarCall = getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1437,7 +1437,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDayAsync(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDayAsync(List<String> organisationUuids, Date fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
@@ -1461,7 +1461,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerLineItemPerDayCall(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerLineItemPerDayCall(List<String> organisationUuids, Date fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1520,7 +1520,7 @@ public class AdvertisingDataApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerLineItemPerDayValidateBeforeCall(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerLineItemPerDayValidateBeforeCall(List<String> organisationUuids, Date fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerLineItemPerDay(Async)");
@@ -1547,7 +1547,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public String getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerLineItemPerDay(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public String getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerLineItemPerDay(List<String> organisationUuids, Date fromDate, String dateFormat, String format) throws ApiException {
         ApiResponse<String> localVarResp = getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerLineItemPerDayWithHttpInfo(organisationUuids, fromDate, dateFormat, format);
         return localVarResp.getData();
     }
@@ -1569,7 +1569,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerLineItemPerDayWithHttpInfo(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public ApiResponse<String> getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerLineItemPerDayWithHttpInfo(List<String> organisationUuids, Date fromDate, String dateFormat, String format) throws ApiException {
         okhttp3.Call localVarCall = getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerLineItemPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1593,7 +1593,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerLineItemPerDayAsync(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerLineItemPerDayAsync(List<String> organisationUuids, Date fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerLineItemPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
@@ -1617,7 +1617,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayCall(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayCall(List<String> organisationUuids, Date fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1676,7 +1676,7 @@ public class AdvertisingDataApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(List<String> organisationUuids, Date fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(Async)");
@@ -1703,7 +1703,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public String getBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public String getBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(List<String> organisationUuids, Date fromDate, String dateFormat, String format) throws ApiException {
         ApiResponse<String> localVarResp = getBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo(organisationUuids, fromDate, dateFormat, format);
         return localVarResp.getData();
     }
@@ -1725,7 +1725,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> getBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public ApiResponse<String> getBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo(List<String> organisationUuids, Date fromDate, String dateFormat, String format) throws ApiException {
         okhttp3.Call localVarCall = getBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1749,7 +1749,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayAsync(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call getBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayAsync(List<String> organisationUuids, Date fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
@@ -1773,7 +1773,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getFacebookAdCustomConversionReportPerOrganisationPerAccountPerCampaignPerDayCall(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getFacebookAdCustomConversionReportPerOrganisationPerAccountPerCampaignPerDayCall(List<String> organisationUuids, Date fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1832,7 +1832,7 @@ public class AdvertisingDataApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getFacebookAdCustomConversionReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getFacebookAdCustomConversionReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(List<String> organisationUuids, Date fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getFacebookAdCustomConversionReportPerOrganisationPerAccountPerCampaignPerDay(Async)");
@@ -1859,7 +1859,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public String getFacebookAdCustomConversionReportPerOrganisationPerAccountPerCampaignPerDay(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public String getFacebookAdCustomConversionReportPerOrganisationPerAccountPerCampaignPerDay(List<String> organisationUuids, Date fromDate, String dateFormat, String format) throws ApiException {
         ApiResponse<String> localVarResp = getFacebookAdCustomConversionReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo(organisationUuids, fromDate, dateFormat, format);
         return localVarResp.getData();
     }
@@ -1881,7 +1881,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> getFacebookAdCustomConversionReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public ApiResponse<String> getFacebookAdCustomConversionReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo(List<String> organisationUuids, Date fromDate, String dateFormat, String format) throws ApiException {
         okhttp3.Call localVarCall = getFacebookAdCustomConversionReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1905,7 +1905,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getFacebookAdCustomConversionReportPerOrganisationPerAccountPerCampaignPerDayAsync(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call getFacebookAdCustomConversionReportPerOrganisationPerAccountPerCampaignPerDayAsync(List<String> organisationUuids, Date fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getFacebookAdCustomConversionReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
@@ -1929,7 +1929,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayCall(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayCall(List<String> organisationUuids, Date fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1988,7 +1988,7 @@ public class AdvertisingDataApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayValidateBeforeCall(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayValidateBeforeCall(List<String> organisationUuids, Date fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDay(Async)");
@@ -2015,7 +2015,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public String getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDay(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public String getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDay(List<String> organisationUuids, Date fromDate, String dateFormat, String format) throws ApiException {
         ApiResponse<String> localVarResp = getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayWithHttpInfo(organisationUuids, fromDate, dateFormat, format);
         return localVarResp.getData();
     }
@@ -2037,7 +2037,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayWithHttpInfo(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public ApiResponse<String> getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayWithHttpInfo(List<String> organisationUuids, Date fromDate, String dateFormat, String format) throws ApiException {
         okhttp3.Call localVarCall = getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -2061,7 +2061,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayAsync(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayAsync(List<String> organisationUuids, Date fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
@@ -2085,7 +2085,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayPlusCall(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayPlusCall(List<String> organisationUuids, Date fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2144,7 +2144,7 @@ public class AdvertisingDataApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayPlusValidateBeforeCall(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayPlusValidateBeforeCall(List<String> organisationUuids, Date fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayPlus(Async)");
@@ -2171,7 +2171,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public String getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayPlus(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public String getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayPlus(List<String> organisationUuids, Date fromDate, String dateFormat, String format) throws ApiException {
         ApiResponse<String> localVarResp = getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayPlusWithHttpInfo(organisationUuids, fromDate, dateFormat, format);
         return localVarResp.getData();
     }
@@ -2193,7 +2193,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayPlusWithHttpInfo(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public ApiResponse<String> getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayPlusWithHttpInfo(List<String> organisationUuids, Date fromDate, String dateFormat, String format) throws ApiException {
         okhttp3.Call localVarCall = getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayPlusValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -2217,7 +2217,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayPlusAsync(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayPlusAsync(List<String> organisationUuids, Date fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayPlusValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
@@ -2241,7 +2241,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdPerDayCall(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdPerDayCall(List<String> organisationUuids, Date fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2300,7 +2300,7 @@ public class AdvertisingDataApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdPerDayValidateBeforeCall(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdPerDayValidateBeforeCall(List<String> organisationUuids, Date fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdPerDay(Async)");
@@ -2327,7 +2327,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public String getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdPerDay(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public String getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdPerDay(List<String> organisationUuids, Date fromDate, String dateFormat, String format) throws ApiException {
         ApiResponse<String> localVarResp = getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdPerDayWithHttpInfo(organisationUuids, fromDate, dateFormat, format);
         return localVarResp.getData();
     }
@@ -2349,7 +2349,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdPerDayWithHttpInfo(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public ApiResponse<String> getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdPerDayWithHttpInfo(List<String> organisationUuids, Date fromDate, String dateFormat, String format) throws ApiException {
         okhttp3.Call localVarCall = getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -2373,7 +2373,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdPerDayAsync(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdPerDayAsync(List<String> organisationUuids, Date fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
@@ -2397,7 +2397,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDayCall(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDayCall(List<String> organisationUuids, Date fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2456,7 +2456,7 @@ public class AdvertisingDataApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(List<String> organisationUuids, Date fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDay(Async)");
@@ -2483,7 +2483,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public String getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDay(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public String getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDay(List<String> organisationUuids, Date fromDate, String dateFormat, String format) throws ApiException {
         ApiResponse<String> localVarResp = getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo(organisationUuids, fromDate, dateFormat, format);
         return localVarResp.getData();
     }
@@ -2505,7 +2505,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public ApiResponse<String> getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo(List<String> organisationUuids, Date fromDate, String dateFormat, String format) throws ApiException {
         okhttp3.Call localVarCall = getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -2529,7 +2529,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDayAsync(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDayAsync(List<String> organisationUuids, Date fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
@@ -2553,7 +2553,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDayPlusCall(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDayPlusCall(List<String> organisationUuids, Date fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2612,7 +2612,7 @@ public class AdvertisingDataApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDayPlusValidateBeforeCall(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDayPlusValidateBeforeCall(List<String> organisationUuids, Date fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDayPlus(Async)");
@@ -2639,7 +2639,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public String getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDayPlus(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public String getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDayPlus(List<String> organisationUuids, Date fromDate, String dateFormat, String format) throws ApiException {
         ApiResponse<String> localVarResp = getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDayPlusWithHttpInfo(organisationUuids, fromDate, dateFormat, format);
         return localVarResp.getData();
     }
@@ -2661,7 +2661,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDayPlusWithHttpInfo(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public ApiResponse<String> getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDayPlusWithHttpInfo(List<String> organisationUuids, Date fromDate, String dateFormat, String format) throws ApiException {
         okhttp3.Call localVarCall = getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDayPlusValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -2685,7 +2685,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDayPlusAsync(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDayPlusAsync(List<String> organisationUuids, Date fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDayPlusValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
@@ -2709,7 +2709,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDayCall(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDayCall(List<String> organisationUuids, Date fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2768,7 +2768,7 @@ public class AdvertisingDataApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDayValidateBeforeCall(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDayValidateBeforeCall(List<String> organisationUuids, Date fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDay(Async)");
@@ -2795,7 +2795,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public String getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDay(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public String getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDay(List<String> organisationUuids, Date fromDate, String dateFormat, String format) throws ApiException {
         ApiResponse<String> localVarResp = getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDayWithHttpInfo(organisationUuids, fromDate, dateFormat, format);
         return localVarResp.getData();
     }
@@ -2817,7 +2817,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDayWithHttpInfo(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public ApiResponse<String> getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDayWithHttpInfo(List<String> organisationUuids, Date fromDate, String dateFormat, String format) throws ApiException {
         okhttp3.Call localVarCall = getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -2841,7 +2841,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDayAsync(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDayAsync(List<String> organisationUuids, Date fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
@@ -2865,7 +2865,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDayCall(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDayCall(List<String> organisationUuids, Date fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2924,7 +2924,7 @@ public class AdvertisingDataApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDayValidateBeforeCall(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDayValidateBeforeCall(List<String> organisationUuids, Date fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDay(Async)");
@@ -2951,7 +2951,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public String getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDay(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public String getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDay(List<String> organisationUuids, Date fromDate, String dateFormat, String format) throws ApiException {
         ApiResponse<String> localVarResp = getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDayWithHttpInfo(organisationUuids, fromDate, dateFormat, format);
         return localVarResp.getData();
     }
@@ -2973,7 +2973,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDayWithHttpInfo(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public ApiResponse<String> getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDayWithHttpInfo(List<String> organisationUuids, Date fromDate, String dateFormat, String format) throws ApiException {
         okhttp3.Call localVarCall = getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -2997,7 +2997,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDayAsync(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDayAsync(List<String> organisationUuids, Date fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
@@ -3021,7 +3021,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getHashedAdCampaignReportPerOrganisationPerAccountPerDayCall(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getHashedAdCampaignReportPerOrganisationPerAccountPerDayCall(List<String> organisationUuids, Date fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -3080,7 +3080,7 @@ public class AdvertisingDataApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getHashedAdCampaignReportPerOrganisationPerAccountPerDayValidateBeforeCall(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getHashedAdCampaignReportPerOrganisationPerAccountPerDayValidateBeforeCall(List<String> organisationUuids, Date fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getHashedAdCampaignReportPerOrganisationPerAccountPerDay(Async)");
@@ -3107,7 +3107,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public String getHashedAdCampaignReportPerOrganisationPerAccountPerDay(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public String getHashedAdCampaignReportPerOrganisationPerAccountPerDay(List<String> organisationUuids, Date fromDate, String dateFormat, String format) throws ApiException {
         ApiResponse<String> localVarResp = getHashedAdCampaignReportPerOrganisationPerAccountPerDayWithHttpInfo(organisationUuids, fromDate, dateFormat, format);
         return localVarResp.getData();
     }
@@ -3129,7 +3129,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> getHashedAdCampaignReportPerOrganisationPerAccountPerDayWithHttpInfo(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public ApiResponse<String> getHashedAdCampaignReportPerOrganisationPerAccountPerDayWithHttpInfo(List<String> organisationUuids, Date fromDate, String dateFormat, String format) throws ApiException {
         okhttp3.Call localVarCall = getHashedAdCampaignReportPerOrganisationPerAccountPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -3153,7 +3153,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getHashedAdCampaignReportPerOrganisationPerAccountPerDayAsync(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call getHashedAdCampaignReportPerOrganisationPerAccountPerDayAsync(List<String> organisationUuids, Date fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getHashedAdCampaignReportPerOrganisationPerAccountPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
@@ -3177,7 +3177,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayCall(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayCall(List<String> organisationUuids, Date fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -3236,7 +3236,7 @@ public class AdvertisingDataApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(List<String> organisationUuids, Date fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(Async)");
@@ -3263,7 +3263,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public String getLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public String getLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(List<String> organisationUuids, Date fromDate, String dateFormat, String format) throws ApiException {
         ApiResponse<String> localVarResp = getLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo(organisationUuids, fromDate, dateFormat, format);
         return localVarResp.getData();
     }
@@ -3285,7 +3285,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> getLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public ApiResponse<String> getLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo(List<String> organisationUuids, Date fromDate, String dateFormat, String format) throws ApiException {
         okhttp3.Call localVarCall = getLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -3309,7 +3309,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayAsync(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call getLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayAsync(List<String> organisationUuids, Date fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
@@ -3333,7 +3333,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getPinterestAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayCall(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getPinterestAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayCall(List<String> organisationUuids, Date fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -3392,7 +3392,7 @@ public class AdvertisingDataApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getPinterestAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getPinterestAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(List<String> organisationUuids, Date fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getPinterestAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(Async)");
@@ -3419,7 +3419,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public String getPinterestAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public String getPinterestAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(List<String> organisationUuids, Date fromDate, String dateFormat, String format) throws ApiException {
         ApiResponse<String> localVarResp = getPinterestAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo(organisationUuids, fromDate, dateFormat, format);
         return localVarResp.getData();
     }
@@ -3441,7 +3441,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> getPinterestAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public ApiResponse<String> getPinterestAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo(List<String> organisationUuids, Date fromDate, String dateFormat, String format) throws ApiException {
         okhttp3.Call localVarCall = getPinterestAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -3465,7 +3465,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getPinterestAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayAsync(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call getPinterestAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayAsync(List<String> organisationUuids, Date fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getPinterestAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
@@ -3489,7 +3489,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayCall(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayCall(List<String> organisationUuids, Date fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -3548,7 +3548,7 @@ public class AdvertisingDataApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(List<String> organisationUuids, Date fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(Async)");
@@ -3575,7 +3575,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public String getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public String getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(List<String> organisationUuids, Date fromDate, String dateFormat, String format) throws ApiException {
         ApiResponse<String> localVarResp = getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo(organisationUuids, fromDate, dateFormat, format);
         return localVarResp.getData();
     }
@@ -3597,7 +3597,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public ApiResponse<String> getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo(List<String> organisationUuids, Date fromDate, String dateFormat, String format) throws ApiException {
         okhttp3.Call localVarCall = getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -3621,7 +3621,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayAsync(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayAsync(List<String> organisationUuids, Date fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
@@ -3645,7 +3645,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayCall(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayCall(List<String> organisationUuids, Date fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -3704,7 +3704,7 @@ public class AdvertisingDataApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(List<String> organisationUuids, Date fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(Async)");
@@ -3731,7 +3731,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public String getTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public String getTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(List<String> organisationUuids, Date fromDate, String dateFormat, String format) throws ApiException {
         ApiResponse<String> localVarResp = getTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo(organisationUuids, fromDate, dateFormat, format);
         return localVarResp.getData();
     }
@@ -3753,7 +3753,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> getTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public ApiResponse<String> getTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo(List<String> organisationUuids, Date fromDate, String dateFormat, String format) throws ApiException {
         okhttp3.Call localVarCall = getTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -3777,7 +3777,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayAsync(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call getTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayAsync(List<String> organisationUuids, Date fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
@@ -3801,7 +3801,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayCall(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayCall(List<String> organisationUuids, Date fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -3860,7 +3860,7 @@ public class AdvertisingDataApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(List<String> organisationUuids, Date fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(Async)");
@@ -3887,7 +3887,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public String getTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public String getTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(List<String> organisationUuids, Date fromDate, String dateFormat, String format) throws ApiException {
         ApiResponse<String> localVarResp = getTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo(organisationUuids, fromDate, dateFormat, format);
         return localVarResp.getData();
     }
@@ -3909,7 +3909,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> getTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public ApiResponse<String> getTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo(List<String> organisationUuids, Date fromDate, String dateFormat, String format) throws ApiException {
         okhttp3.Call localVarCall = getTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -3933,7 +3933,7 @@ public class AdvertisingDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayAsync(List<String> organisationUuids, java.time.LocalDate fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call getTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayAsync(List<String> organisationUuids, Date fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
