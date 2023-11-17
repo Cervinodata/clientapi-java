@@ -2,36 +2,36 @@
 
 All URIs are relative to *https://app.cervinodata.com/api/v1*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**getAdAccountReportPerOrganisationPerDay**](AdvertisingDataApi.md#getAdAccountReportPerOrganisationPerDay) | **GET** /data/ad-account-report-per-organisation-per-day/{organisationUuids} | Return ad account report per organisation per day
-[**getAdAccounts**](AdvertisingDataApi.md#getAdAccounts) | **GET** /data/ad-accounts/{organisationUuid} | Return ad accounts by organisation
-[**getAdCampaignReportPerDay**](AdvertisingDataApi.md#getAdCampaignReportPerDay) | **GET** /data/ad-campaign-report-per-day/{organisationUuid} | Return ad campaign report per day by organisation
-[**getAdCampaignReportPerOrganisationPerAccountPerCampaignPerDevicePerDay**](AdvertisingDataApi.md#getAdCampaignReportPerOrganisationPerAccountPerCampaignPerDevicePerDay) | **GET** /data/ad-campaign-report-per-organisation-per-account-per-campaign-per-device-per-day/{organisationUuids} | Return ad campaign report per organisation per account per campaign per device per day
-[**getAdCampaignReportPerOrganisationPerAccountPerDay**](AdvertisingDataApi.md#getAdCampaignReportPerOrganisationPerAccountPerDay) | **GET** /data/ad-campaign-report-per-organisation-per-account-per-day/{organisationUuids} | Return ad campaign report per organisation per account per day
-[**getAdCampaigns**](AdvertisingDataApi.md#getAdCampaigns) | **GET** /data/ad-campaigns/{organisationUuid} | Return ad campaigns by organisation
-[**getAdGroups**](AdvertisingDataApi.md#getAdGroups) | **GET** /data/ad-groups/{organisationUuid} | Return ad groups by organisation
-[**getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerCreativePerDay**](AdvertisingDataApi.md#getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerCreativePerDay) | **GET** /data/adform-extended-report-per-organisation-per-account-per-campaign-per-creative-per-day/{organisationUuids} | Return adform extended report per organisation per account per campaign per creative per day
-[**getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDay**](AdvertisingDataApi.md#getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/adform-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return adform extended report per organisation per account per campaign per day
-[**getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerLineItemPerDay**](AdvertisingDataApi.md#getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerLineItemPerDay) | **GET** /data/adform-extended-report-per-organisation-per-account-per-campaign-per-line-item-per-day/{organisationUuids} | Return adform extended report per organisation per account per campaign per line item per day
-[**getBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay**](AdvertisingDataApi.md#getBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/bing-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return bing ads extended report per organisation per account per campaign per day
-[**getFacebookAdCustomConversionReportPerOrganisationPerAccountPerCampaignPerDay**](AdvertisingDataApi.md#getFacebookAdCustomConversionReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/facebook-ad-custom-conversion-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return facebook ad custom conversion report per organisation per account per campaign per day
-[**getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDay**](AdvertisingDataApi.md#getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDay) | **GET** /data/facebook-ad-extended-report-per-organisation-per-account-per-campaign-per-ad-group-per-day/{organisationUuids} | Return facebook ad extended report per organisation per account per campaign per ad group per day
-[**getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayPlus**](AdvertisingDataApi.md#getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayPlus) | **GET** /data/facebook-ad-extended-report-per-organisation-per-account-per-campaign-per-ad-group-per-day-plus/{organisationUuids} | Return facebook ad extended report per organisation per account per campaign per ad group per day plus
-[**getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdPerDay**](AdvertisingDataApi.md#getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdPerDay) | **GET** /data/facebook-ad-extended-report-per-organisation-per-account-per-campaign-per-ad-per-day/{organisationUuids} | Return facebook ad extended report per organisation per account per campaign per ad per day
-[**getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDay**](AdvertisingDataApi.md#getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/facebook-ad-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return facebook ad extended report per organisation per account per campaign per day
-[**getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDayPlus**](AdvertisingDataApi.md#getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDayPlus) | **GET** /data/facebook-ad-extended-report-per-organisation-per-account-per-campaign-per-day-plus/{organisationUuids} | Return facebook ad extended report per organisation per account per campaign per day plus
-[**getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDay**](AdvertisingDataApi.md#getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDay) | **GET** /data/facebook-ad-extended-report-per-organisation-per-account-per-campaign-per-device-per-day/{organisationUuids} | Return facebook ad extended report per organisation per account per campaign per device per day
-[**getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDay**](AdvertisingDataApi.md#getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDay) | **GET** /data/google-ads-report-per-organisation-per-account-per-campaign-per-device-per-day/{organisationUuids} | Return google ads report per organisation per account per campaign per device per day
-[**getHashedAdCampaignReportPerOrganisationPerAccountPerDay**](AdvertisingDataApi.md#getHashedAdCampaignReportPerOrganisationPerAccountPerDay) | **GET** /data/hashed-ad-campaign-report-per-organisation-per-account-per-day/{organisationUuids} | Return hashed ad campaign report per organisation per account per day
-[**getLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay**](AdvertisingDataApi.md#getLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/linkedin-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return linkedin ads extended report per organisation per account per campaign per day
-[**getPinterestAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay**](AdvertisingDataApi.md#getPinterestAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/pinterest-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return pinterest ads extended report per organisation per account per campaign per day
-[**getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay**](AdvertisingDataApi.md#getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/snapchat-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return snapchat ads extended report per organisation per account per campaign per day
-[**getTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay**](AdvertisingDataApi.md#getTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/tiktok-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return tiktok ads extended report per organisation per account per campaign per day
-[**getTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay**](AdvertisingDataApi.md#getTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/twitter-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return twitter ads extended report per organisation per account per campaign per day
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**getAdAccountReportPerOrganisationPerDay**](AdvertisingDataApi.md#getAdAccountReportPerOrganisationPerDay) | **GET** /data/ad-account-report-per-organisation-per-day/{organisationUuids} | Return ad account report per organisation per day |
+| [**getAdAccounts**](AdvertisingDataApi.md#getAdAccounts) | **GET** /data/ad-accounts/{organisationUuid} | Return ad accounts by organisation |
+| [**getAdCampaignReportPerDay**](AdvertisingDataApi.md#getAdCampaignReportPerDay) | **GET** /data/ad-campaign-report-per-day/{organisationUuid} | Return ad campaign report per day by organisation |
+| [**getAdCampaignReportPerOrganisationPerAccountPerCampaignPerDevicePerDay**](AdvertisingDataApi.md#getAdCampaignReportPerOrganisationPerAccountPerCampaignPerDevicePerDay) | **GET** /data/ad-campaign-report-per-organisation-per-account-per-campaign-per-device-per-day/{organisationUuids} | Return ad campaign report per organisation per account per campaign per device per day |
+| [**getAdCampaignReportPerOrganisationPerAccountPerDay**](AdvertisingDataApi.md#getAdCampaignReportPerOrganisationPerAccountPerDay) | **GET** /data/ad-campaign-report-per-organisation-per-account-per-day/{organisationUuids} | Return ad campaign report per organisation per account per day |
+| [**getAdCampaigns**](AdvertisingDataApi.md#getAdCampaigns) | **GET** /data/ad-campaigns/{organisationUuid} | Return ad campaigns by organisation |
+| [**getAdGroups**](AdvertisingDataApi.md#getAdGroups) | **GET** /data/ad-groups/{organisationUuid} | Return ad groups by organisation |
+| [**getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerCreativePerDay**](AdvertisingDataApi.md#getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerCreativePerDay) | **GET** /data/adform-extended-report-per-organisation-per-account-per-campaign-per-creative-per-day/{organisationUuids} | Return adform extended report per organisation per account per campaign per creative per day |
+| [**getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDay**](AdvertisingDataApi.md#getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/adform-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return adform extended report per organisation per account per campaign per day |
+| [**getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerLineItemPerDay**](AdvertisingDataApi.md#getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerLineItemPerDay) | **GET** /data/adform-extended-report-per-organisation-per-account-per-campaign-per-line-item-per-day/{organisationUuids} | Return adform extended report per organisation per account per campaign per line item per day |
+| [**getBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay**](AdvertisingDataApi.md#getBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/bing-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return bing ads extended report per organisation per account per campaign per day |
+| [**getFacebookAdCustomConversionReportPerOrganisationPerAccountPerCampaignPerDay**](AdvertisingDataApi.md#getFacebookAdCustomConversionReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/facebook-ad-custom-conversion-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return facebook ad custom conversion report per organisation per account per campaign per day |
+| [**getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDay**](AdvertisingDataApi.md#getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDay) | **GET** /data/facebook-ad-extended-report-per-organisation-per-account-per-campaign-per-ad-group-per-day/{organisationUuids} | Return facebook ad extended report per organisation per account per campaign per ad group per day |
+| [**getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayPlus**](AdvertisingDataApi.md#getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayPlus) | **GET** /data/facebook-ad-extended-report-per-organisation-per-account-per-campaign-per-ad-group-per-day-plus/{organisationUuids} | Return facebook ad extended report per organisation per account per campaign per ad group per day plus |
+| [**getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdPerDay**](AdvertisingDataApi.md#getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdPerDay) | **GET** /data/facebook-ad-extended-report-per-organisation-per-account-per-campaign-per-ad-per-day/{organisationUuids} | Return facebook ad extended report per organisation per account per campaign per ad per day |
+| [**getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDay**](AdvertisingDataApi.md#getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/facebook-ad-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return facebook ad extended report per organisation per account per campaign per day |
+| [**getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDayPlus**](AdvertisingDataApi.md#getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDayPlus) | **GET** /data/facebook-ad-extended-report-per-organisation-per-account-per-campaign-per-day-plus/{organisationUuids} | Return facebook ad extended report per organisation per account per campaign per day plus |
+| [**getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDay**](AdvertisingDataApi.md#getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDay) | **GET** /data/facebook-ad-extended-report-per-organisation-per-account-per-campaign-per-device-per-day/{organisationUuids} | Return facebook ad extended report per organisation per account per campaign per device per day |
+| [**getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDay**](AdvertisingDataApi.md#getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDay) | **GET** /data/google-ads-report-per-organisation-per-account-per-campaign-per-device-per-day/{organisationUuids} | Return google ads report per organisation per account per campaign per device per day |
+| [**getHashedAdCampaignReportPerOrganisationPerAccountPerDay**](AdvertisingDataApi.md#getHashedAdCampaignReportPerOrganisationPerAccountPerDay) | **GET** /data/hashed-ad-campaign-report-per-organisation-per-account-per-day/{organisationUuids} | Return hashed ad campaign report per organisation per account per day |
+| [**getLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay**](AdvertisingDataApi.md#getLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/linkedin-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return linkedin ads extended report per organisation per account per campaign per day |
+| [**getPinterestAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay**](AdvertisingDataApi.md#getPinterestAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/pinterest-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return pinterest ads extended report per organisation per account per campaign per day |
+| [**getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay**](AdvertisingDataApi.md#getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/snapchat-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return snapchat ads extended report per organisation per account per campaign per day |
+| [**getTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay**](AdvertisingDataApi.md#getTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/tiktok-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return tiktok ads extended report per organisation per account per campaign per day |
+| [**getTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay**](AdvertisingDataApi.md#getTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/twitter-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return twitter ads extended report per organisation per account per campaign per day |
 
 
-<a name="getAdAccountReportPerOrganisationPerDay"></a>
+<a id="getAdAccountReportPerOrganisationPerDay"></a>
 # **getAdAccountReportPerOrganisationPerDay**
 > String getAdAccountReportPerOrganisationPerDay(organisationUuids, fromDate, dateFormat, format)
 
@@ -79,12 +79,12 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids |
- **fromDate** | **LocalDate**| From date | [optional]
- **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD]
- **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
+| **fromDate** | **LocalDate**| From date | [optional] |
+| **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
+| **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
 ### Return type
 
@@ -102,11 +102,11 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | successful operation |  -  |
-**400** | Invalid Organisation uuids supplied |  -  |
-**404** | Organisation uuids not found |  -  |
+| **200** | successful operation |  -  |
+| **400** | Invalid Organisation uuids supplied |  -  |
+| **404** | Organisation uuids not found |  -  |
 
-<a name="getAdAccounts"></a>
+<a id="getAdAccounts"></a>
 # **getAdAccounts**
 > String getAdAccounts(organisationUuid, format)
 
@@ -152,10 +152,10 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisationUuid** | **String**| Organisation uuid |
- **format** | **String**| Output format | [optional] [enum: csv, json]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **organisationUuid** | **String**| Organisation uuid | |
+| **format** | **String**| Output format | [optional] [enum: csv, json] |
 
 ### Return type
 
@@ -173,11 +173,11 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | successful operation |  -  |
-**400** | Invalid Organisation uuid supplied |  -  |
-**404** | Organisation uuid not found |  -  |
+| **200** | successful operation |  -  |
+| **400** | Invalid Organisation uuid supplied |  -  |
+| **404** | Organisation uuid not found |  -  |
 
-<a name="getAdCampaignReportPerDay"></a>
+<a id="getAdCampaignReportPerDay"></a>
 # **getAdCampaignReportPerDay**
 > String getAdCampaignReportPerDay(organisationUuid, fromDate, dateFormat, format)
 
@@ -225,12 +225,12 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisationUuid** | **String**| Organisation uuid |
- **fromDate** | **LocalDate**| From date | [optional]
- **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD]
- **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **organisationUuid** | **String**| Organisation uuid | |
+| **fromDate** | **LocalDate**| From date | [optional] |
+| **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
+| **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
 ### Return type
 
@@ -248,11 +248,11 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | successful operation |  -  |
-**400** | Invalid Organisation uuid supplied |  -  |
-**404** | Organisation uuid not found |  -  |
+| **200** | successful operation |  -  |
+| **400** | Invalid Organisation uuid supplied |  -  |
+| **404** | Organisation uuid not found |  -  |
 
-<a name="getAdCampaignReportPerOrganisationPerAccountPerCampaignPerDevicePerDay"></a>
+<a id="getAdCampaignReportPerOrganisationPerAccountPerCampaignPerDevicePerDay"></a>
 # **getAdCampaignReportPerOrganisationPerAccountPerCampaignPerDevicePerDay**
 > String getAdCampaignReportPerOrganisationPerAccountPerCampaignPerDevicePerDay(organisationUuids, fromDate, dateFormat, format)
 
@@ -300,12 +300,12 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids |
- **fromDate** | **LocalDate**| From date | [optional]
- **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD]
- **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
+| **fromDate** | **LocalDate**| From date | [optional] |
+| **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
+| **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
 ### Return type
 
@@ -323,11 +323,11 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | successful operation |  -  |
-**400** | Invalid Organisation uuids supplied |  -  |
-**404** | Organisation uuids not found |  -  |
+| **200** | successful operation |  -  |
+| **400** | Invalid Organisation uuids supplied |  -  |
+| **404** | Organisation uuids not found |  -  |
 
-<a name="getAdCampaignReportPerOrganisationPerAccountPerDay"></a>
+<a id="getAdCampaignReportPerOrganisationPerAccountPerDay"></a>
 # **getAdCampaignReportPerOrganisationPerAccountPerDay**
 > String getAdCampaignReportPerOrganisationPerAccountPerDay(organisationUuids, fromDate, dateFormat, format)
 
@@ -375,12 +375,12 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids |
- **fromDate** | **LocalDate**| From date | [optional]
- **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD]
- **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
+| **fromDate** | **LocalDate**| From date | [optional] |
+| **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
+| **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
 ### Return type
 
@@ -398,11 +398,11 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | successful operation |  -  |
-**400** | Invalid Organisation uuids supplied |  -  |
-**404** | Organisation uuids not found |  -  |
+| **200** | successful operation |  -  |
+| **400** | Invalid Organisation uuids supplied |  -  |
+| **404** | Organisation uuids not found |  -  |
 
-<a name="getAdCampaigns"></a>
+<a id="getAdCampaigns"></a>
 # **getAdCampaigns**
 > String getAdCampaigns(organisationUuid, fromDate, format)
 
@@ -449,11 +449,11 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisationUuid** | **String**| Organisation uuid |
- **fromDate** | **LocalDate**| From date | [optional]
- **format** | **String**| Output format | [optional] [enum: csv, json]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **organisationUuid** | **String**| Organisation uuid | |
+| **fromDate** | **LocalDate**| From date | [optional] |
+| **format** | **String**| Output format | [optional] [enum: csv, json] |
 
 ### Return type
 
@@ -471,11 +471,11 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | successful operation |  -  |
-**400** | Invalid Organisation uuid supplied |  -  |
-**404** | Organisation uuid not found |  -  |
+| **200** | successful operation |  -  |
+| **400** | Invalid Organisation uuid supplied |  -  |
+| **404** | Organisation uuid not found |  -  |
 
-<a name="getAdGroups"></a>
+<a id="getAdGroups"></a>
 # **getAdGroups**
 > String getAdGroups(organisationUuid, fromDate, format)
 
@@ -522,11 +522,11 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisationUuid** | **String**| Organisation uuid |
- **fromDate** | **LocalDate**| From date | [optional]
- **format** | **String**| Output format | [optional] [enum: csv, json]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **organisationUuid** | **String**| Organisation uuid | |
+| **fromDate** | **LocalDate**| From date | [optional] |
+| **format** | **String**| Output format | [optional] [enum: csv, json] |
 
 ### Return type
 
@@ -544,11 +544,11 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | successful operation |  -  |
-**400** | Invalid Organisation uuid supplied |  -  |
-**404** | Organisation uuid not found |  -  |
+| **200** | successful operation |  -  |
+| **400** | Invalid Organisation uuid supplied |  -  |
+| **404** | Organisation uuid not found |  -  |
 
-<a name="getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerCreativePerDay"></a>
+<a id="getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerCreativePerDay"></a>
 # **getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerCreativePerDay**
 > String getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerCreativePerDay(organisationUuids, fromDate, dateFormat, format)
 
@@ -596,12 +596,12 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids |
- **fromDate** | **LocalDate**| From date | [optional]
- **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD]
- **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
+| **fromDate** | **LocalDate**| From date | [optional] |
+| **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
+| **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
 ### Return type
 
@@ -619,11 +619,11 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | successful operation |  -  |
-**400** | Invalid Organisation uuids supplied |  -  |
-**404** | Organisation uuids not found |  -  |
+| **200** | successful operation |  -  |
+| **400** | Invalid Organisation uuids supplied |  -  |
+| **404** | Organisation uuids not found |  -  |
 
-<a name="getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDay"></a>
+<a id="getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDay"></a>
 # **getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDay**
 > String getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDay(organisationUuids, fromDate, dateFormat, format)
 
@@ -671,12 +671,12 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids |
- **fromDate** | **LocalDate**| From date | [optional]
- **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD]
- **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
+| **fromDate** | **LocalDate**| From date | [optional] |
+| **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
+| **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
 ### Return type
 
@@ -694,11 +694,11 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | successful operation |  -  |
-**400** | Invalid Organisation uuids supplied |  -  |
-**404** | Organisation uuids not found |  -  |
+| **200** | successful operation |  -  |
+| **400** | Invalid Organisation uuids supplied |  -  |
+| **404** | Organisation uuids not found |  -  |
 
-<a name="getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerLineItemPerDay"></a>
+<a id="getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerLineItemPerDay"></a>
 # **getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerLineItemPerDay**
 > String getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerLineItemPerDay(organisationUuids, fromDate, dateFormat, format)
 
@@ -746,12 +746,12 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids |
- **fromDate** | **LocalDate**| From date | [optional]
- **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD]
- **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
+| **fromDate** | **LocalDate**| From date | [optional] |
+| **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
+| **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
 ### Return type
 
@@ -769,11 +769,11 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | successful operation |  -  |
-**400** | Invalid Organisation uuids supplied |  -  |
-**404** | Organisation uuids not found |  -  |
+| **200** | successful operation |  -  |
+| **400** | Invalid Organisation uuids supplied |  -  |
+| **404** | Organisation uuids not found |  -  |
 
-<a name="getBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay"></a>
+<a id="getBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay"></a>
 # **getBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay**
 > String getBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(organisationUuids, fromDate, dateFormat, format)
 
@@ -821,12 +821,12 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids |
- **fromDate** | **LocalDate**| From date | [optional]
- **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD]
- **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
+| **fromDate** | **LocalDate**| From date | [optional] |
+| **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
+| **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
 ### Return type
 
@@ -844,11 +844,11 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | successful operation |  -  |
-**400** | Invalid Organisation uuids supplied |  -  |
-**404** | Organisation uuids not found |  -  |
+| **200** | successful operation |  -  |
+| **400** | Invalid Organisation uuids supplied |  -  |
+| **404** | Organisation uuids not found |  -  |
 
-<a name="getFacebookAdCustomConversionReportPerOrganisationPerAccountPerCampaignPerDay"></a>
+<a id="getFacebookAdCustomConversionReportPerOrganisationPerAccountPerCampaignPerDay"></a>
 # **getFacebookAdCustomConversionReportPerOrganisationPerAccountPerCampaignPerDay**
 > String getFacebookAdCustomConversionReportPerOrganisationPerAccountPerCampaignPerDay(organisationUuids, fromDate, dateFormat, format)
 
@@ -896,12 +896,12 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids |
- **fromDate** | **LocalDate**| From date | [optional]
- **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD]
- **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
+| **fromDate** | **LocalDate**| From date | [optional] |
+| **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
+| **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
 ### Return type
 
@@ -919,11 +919,11 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | successful operation |  -  |
-**400** | Invalid Organisation uuids supplied |  -  |
-**404** | Organisation uuids not found |  -  |
+| **200** | successful operation |  -  |
+| **400** | Invalid Organisation uuids supplied |  -  |
+| **404** | Organisation uuids not found |  -  |
 
-<a name="getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDay"></a>
+<a id="getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDay"></a>
 # **getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDay**
 > String getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDay(organisationUuids, fromDate, dateFormat, format)
 
@@ -971,12 +971,12 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids |
- **fromDate** | **LocalDate**| From date | [optional]
- **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD]
- **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
+| **fromDate** | **LocalDate**| From date | [optional] |
+| **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
+| **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
 ### Return type
 
@@ -994,11 +994,11 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | successful operation |  -  |
-**400** | Invalid Organisation uuids supplied |  -  |
-**404** | Organisation uuids not found |  -  |
+| **200** | successful operation |  -  |
+| **400** | Invalid Organisation uuids supplied |  -  |
+| **404** | Organisation uuids not found |  -  |
 
-<a name="getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayPlus"></a>
+<a id="getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayPlus"></a>
 # **getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayPlus**
 > String getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayPlus(organisationUuids, fromDate, dateFormat, format)
 
@@ -1046,12 +1046,12 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids |
- **fromDate** | **LocalDate**| From date | [optional]
- **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD]
- **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
+| **fromDate** | **LocalDate**| From date | [optional] |
+| **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
+| **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
 ### Return type
 
@@ -1069,11 +1069,11 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | successful operation |  -  |
-**400** | Invalid Organisation uuids supplied |  -  |
-**404** | Organisation uuids not found |  -  |
+| **200** | successful operation |  -  |
+| **400** | Invalid Organisation uuids supplied |  -  |
+| **404** | Organisation uuids not found |  -  |
 
-<a name="getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdPerDay"></a>
+<a id="getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdPerDay"></a>
 # **getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdPerDay**
 > String getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdPerDay(organisationUuids, fromDate, dateFormat, format)
 
@@ -1121,12 +1121,12 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids |
- **fromDate** | **LocalDate**| From date | [optional]
- **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD]
- **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
+| **fromDate** | **LocalDate**| From date | [optional] |
+| **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
+| **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
 ### Return type
 
@@ -1144,11 +1144,11 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | successful operation |  -  |
-**400** | Invalid Organisation uuids supplied |  -  |
-**404** | Organisation uuids not found |  -  |
+| **200** | successful operation |  -  |
+| **400** | Invalid Organisation uuids supplied |  -  |
+| **404** | Organisation uuids not found |  -  |
 
-<a name="getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDay"></a>
+<a id="getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDay"></a>
 # **getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDay**
 > String getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDay(organisationUuids, fromDate, dateFormat, format)
 
@@ -1196,12 +1196,12 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids |
- **fromDate** | **LocalDate**| From date | [optional]
- **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD]
- **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
+| **fromDate** | **LocalDate**| From date | [optional] |
+| **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
+| **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
 ### Return type
 
@@ -1219,11 +1219,11 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | successful operation |  -  |
-**400** | Invalid Organisation uuids supplied |  -  |
-**404** | Organisation uuids not found |  -  |
+| **200** | successful operation |  -  |
+| **400** | Invalid Organisation uuids supplied |  -  |
+| **404** | Organisation uuids not found |  -  |
 
-<a name="getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDayPlus"></a>
+<a id="getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDayPlus"></a>
 # **getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDayPlus**
 > String getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDayPlus(organisationUuids, fromDate, dateFormat, format)
 
@@ -1271,12 +1271,12 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids |
- **fromDate** | **LocalDate**| From date | [optional]
- **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD]
- **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
+| **fromDate** | **LocalDate**| From date | [optional] |
+| **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
+| **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
 ### Return type
 
@@ -1294,11 +1294,11 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | successful operation |  -  |
-**400** | Invalid Organisation uuids supplied |  -  |
-**404** | Organisation uuids not found |  -  |
+| **200** | successful operation |  -  |
+| **400** | Invalid Organisation uuids supplied |  -  |
+| **404** | Organisation uuids not found |  -  |
 
-<a name="getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDay"></a>
+<a id="getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDay"></a>
 # **getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDay**
 > String getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDay(organisationUuids, fromDate, dateFormat, format)
 
@@ -1346,12 +1346,12 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids |
- **fromDate** | **LocalDate**| From date | [optional]
- **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD]
- **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
+| **fromDate** | **LocalDate**| From date | [optional] |
+| **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
+| **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
 ### Return type
 
@@ -1369,11 +1369,11 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | successful operation |  -  |
-**400** | Invalid Organisation uuids supplied |  -  |
-**404** | Organisation uuids not found |  -  |
+| **200** | successful operation |  -  |
+| **400** | Invalid Organisation uuids supplied |  -  |
+| **404** | Organisation uuids not found |  -  |
 
-<a name="getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDay"></a>
+<a id="getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDay"></a>
 # **getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDay**
 > String getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDay(organisationUuids, fromDate, dateFormat, format)
 
@@ -1421,12 +1421,12 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids |
- **fromDate** | **LocalDate**| From date | [optional]
- **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD]
- **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
+| **fromDate** | **LocalDate**| From date | [optional] |
+| **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
+| **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
 ### Return type
 
@@ -1444,11 +1444,11 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | successful operation |  -  |
-**400** | Invalid Organisation uuids supplied |  -  |
-**404** | Organisation uuids not found |  -  |
+| **200** | successful operation |  -  |
+| **400** | Invalid Organisation uuids supplied |  -  |
+| **404** | Organisation uuids not found |  -  |
 
-<a name="getHashedAdCampaignReportPerOrganisationPerAccountPerDay"></a>
+<a id="getHashedAdCampaignReportPerOrganisationPerAccountPerDay"></a>
 # **getHashedAdCampaignReportPerOrganisationPerAccountPerDay**
 > String getHashedAdCampaignReportPerOrganisationPerAccountPerDay(organisationUuids, fromDate, dateFormat, format)
 
@@ -1496,12 +1496,12 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids |
- **fromDate** | **LocalDate**| From date | [optional]
- **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD]
- **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
+| **fromDate** | **LocalDate**| From date | [optional] |
+| **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
+| **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
 ### Return type
 
@@ -1519,11 +1519,11 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | successful operation |  -  |
-**400** | Invalid Organisation uuids supplied |  -  |
-**404** | Organisation uuids not found |  -  |
+| **200** | successful operation |  -  |
+| **400** | Invalid Organisation uuids supplied |  -  |
+| **404** | Organisation uuids not found |  -  |
 
-<a name="getLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay"></a>
+<a id="getLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay"></a>
 # **getLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay**
 > String getLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(organisationUuids, fromDate, dateFormat, format)
 
@@ -1571,12 +1571,12 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids |
- **fromDate** | **LocalDate**| From date | [optional]
- **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD]
- **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
+| **fromDate** | **LocalDate**| From date | [optional] |
+| **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
+| **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
 ### Return type
 
@@ -1594,11 +1594,11 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | successful operation |  -  |
-**400** | Invalid Organisation uuids supplied |  -  |
-**404** | Organisation uuids not found |  -  |
+| **200** | successful operation |  -  |
+| **400** | Invalid Organisation uuids supplied |  -  |
+| **404** | Organisation uuids not found |  -  |
 
-<a name="getPinterestAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay"></a>
+<a id="getPinterestAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay"></a>
 # **getPinterestAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay**
 > String getPinterestAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(organisationUuids, fromDate, dateFormat, format)
 
@@ -1646,12 +1646,12 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids |
- **fromDate** | **LocalDate**| From date | [optional]
- **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD]
- **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
+| **fromDate** | **LocalDate**| From date | [optional] |
+| **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
+| **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
 ### Return type
 
@@ -1669,11 +1669,11 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | successful operation |  -  |
-**400** | Invalid Organisation uuids supplied |  -  |
-**404** | Organisation uuids not found |  -  |
+| **200** | successful operation |  -  |
+| **400** | Invalid Organisation uuids supplied |  -  |
+| **404** | Organisation uuids not found |  -  |
 
-<a name="getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay"></a>
+<a id="getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay"></a>
 # **getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay**
 > String getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(organisationUuids, fromDate, dateFormat, format)
 
@@ -1721,12 +1721,12 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids |
- **fromDate** | **LocalDate**| From date | [optional]
- **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD]
- **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
+| **fromDate** | **LocalDate**| From date | [optional] |
+| **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
+| **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
 ### Return type
 
@@ -1744,11 +1744,11 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | successful operation |  -  |
-**400** | Invalid Organisation uuids supplied |  -  |
-**404** | Organisation uuids not found |  -  |
+| **200** | successful operation |  -  |
+| **400** | Invalid Organisation uuids supplied |  -  |
+| **404** | Organisation uuids not found |  -  |
 
-<a name="getTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay"></a>
+<a id="getTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay"></a>
 # **getTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay**
 > String getTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(organisationUuids, fromDate, dateFormat, format)
 
@@ -1796,12 +1796,12 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids |
- **fromDate** | **LocalDate**| From date | [optional]
- **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD]
- **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
+| **fromDate** | **LocalDate**| From date | [optional] |
+| **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
+| **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
 ### Return type
 
@@ -1819,11 +1819,11 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | successful operation |  -  |
-**400** | Invalid Organisation uuids supplied |  -  |
-**404** | Organisation uuids not found |  -  |
+| **200** | successful operation |  -  |
+| **400** | Invalid Organisation uuids supplied |  -  |
+| **404** | Organisation uuids not found |  -  |
 
-<a name="getTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay"></a>
+<a id="getTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay"></a>
 # **getTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay**
 > String getTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(organisationUuids, fromDate, dateFormat, format)
 
@@ -1871,12 +1871,12 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids |
- **fromDate** | **LocalDate**| From date | [optional]
- **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD]
- **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
+| **fromDate** | **LocalDate**| From date | [optional] |
+| **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
+| **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
 ### Return type
 
@@ -1894,7 +1894,7 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | successful operation |  -  |
-**400** | Invalid Organisation uuids supplied |  -  |
-**404** | Organisation uuids not found |  -  |
+| **200** | successful operation |  -  |
+| **400** | Invalid Organisation uuids supplied |  -  |
+| **404** | Organisation uuids not found |  -  |
 

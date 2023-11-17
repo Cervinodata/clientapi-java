@@ -35,16 +35,16 @@ import java.util.List;
 import java.util.Map;
 import javax.ws.rs.core.GenericType;
 
-public class GenericDataApi {
+public class AnalyticsDataProductMetricsApi {
     private ApiClient localVarApiClient;
     private int localHostIndex;
     private String localCustomBaseUrl;
 
-    public GenericDataApi() {
+    public AnalyticsDataProductMetricsApi() {
         this(Configuration.getDefaultApiClient());
     }
 
-    public GenericDataApi(ApiClient apiClient) {
+    public AnalyticsDataProductMetricsApi(ApiClient apiClient) {
         this.localVarApiClient = apiClient;
     }
 
@@ -73,7 +73,8 @@ public class GenericDataApi {
     }
 
     /**
-     * Build call for getCampaignGroups
+     * Build call for getGA4ReportPerProductNamePerOrganisationPerPropertyPerWeek
+     * @param organisationUuids Organisation uuids (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -81,9 +82,11 @@ public class GenericDataApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCampaignGroupsCall(final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getGA4ReportPerProductNamePerOrganisationPerPropertyPerWeekCall(List<String> organisationUuids, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -100,7 +103,8 @@ public class GenericDataApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/data/campaign-groups";
+        String localVarPath = "/data/ga4-report-per-product-name-per-organisation-per-property-per-week/{organisationUuids}"
+            .replace("{" + "organisationUuids" + "}", localVarApiClient.escapeString(localVarApiClient.collectionPathParameterToString("csv", organisationUuids)));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -109,7 +113,7 @@ public class GenericDataApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/json"
+            "text/csv"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -128,169 +132,59 @@ public class GenericDataApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getCampaignGroupsValidateBeforeCall(final ApiCallback _callback) throws ApiException {
-        return getCampaignGroupsCall(_callback);
-
-    }
-
-    /**
-     * Return campaign groups
-     * campaign groups
-     * @return List&lt;Object&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
-     </table>
-     */
-    public List<Object> getCampaignGroups() throws ApiException {
-        ApiResponse<List<Object>> localVarResp = getCampaignGroupsWithHttpInfo();
-        return localVarResp.getData();
-    }
-
-    /**
-     * Return campaign groups
-     * campaign groups
-     * @return ApiResponse&lt;List&lt;Object&gt;&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
-     </table>
-     */
-    public ApiResponse<List<Object>> getCampaignGroupsWithHttpInfo() throws ApiException {
-        okhttp3.Call localVarCall = getCampaignGroupsValidateBeforeCall(null);
-        Type localVarReturnType = new TypeToken<List<Object>>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
-    }
-
-    /**
-     * Return campaign groups (asynchronously)
-     * campaign groups
-     * @param _callback The callback to be executed when the API call finishes
-     * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
-     </table>
-     */
-    public okhttp3.Call getCampaignGroupsAsync(final ApiCallback<List<Object>> _callback) throws ApiException {
-
-        okhttp3.Call localVarCall = getCampaignGroupsValidateBeforeCall(_callback);
-        Type localVarReturnType = new TypeToken<List<Object>>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
-        return localVarCall;
-    }
-    /**
-     * Build call for getOrganisations
-     * @param format Output format (optional)
-     * @param _callback Callback for upload/download progress
-     * @return Call to execute
-     * @throws ApiException If fail to serialize the request body object
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
-     </table>
-     */
-    public okhttp3.Call getOrganisationsCall(String format, final ApiCallback _callback) throws ApiException {
-        String basePath = null;
-        // Operation Servers
-        String[] localBasePaths = new String[] {  };
-
-        // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
-            basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
-            basePath = localBasePaths[localHostIndex];
-        } else {
-            basePath = null;
+    private okhttp3.Call getGA4ReportPerProductNamePerOrganisationPerPropertyPerWeekValidateBeforeCall(List<String> organisationUuids, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'organisationUuids' is set
+        if (organisationUuids == null) {
+            throw new ApiException("Missing the required parameter 'organisationUuids' when calling getGA4ReportPerProductNamePerOrganisationPerPropertyPerWeek(Async)");
         }
 
-        Object localVarPostBody = null;
-
-        // create path and map variables
-        String localVarPath = "/data/organisations";
-
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-        if (format != null) {
-            localVarQueryParams.addAll(localVarApiClient.parameterToPair("format", format));
-        }
-
-        final String[] localVarAccepts = {
-            "text/csv",
-            "application/json"
-        };
-        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
-        if (localVarAccept != null) {
-            localVarHeaderParams.put("Accept", localVarAccept);
-        }
-
-        final String[] localVarContentTypes = {
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarContentType != null) {
-            localVarHeaderParams.put("Content-Type", localVarContentType);
-        }
-
-        String[] localVarAuthNames = new String[] { "bearerAuth" };
-        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
-    }
-
-    @SuppressWarnings("rawtypes")
-    private okhttp3.Call getOrganisationsValidateBeforeCall(String format, final ApiCallback _callback) throws ApiException {
-        return getOrganisationsCall(format, _callback);
+        return getGA4ReportPerProductNamePerOrganisationPerPropertyPerWeekCall(organisationUuids, _callback);
 
     }
 
     /**
-     * Return organisations
-     * organisations
-     * @param format Output format (optional)
+     * Return GA4 report per product name per organisation per property per week
+     * GA4 report per product name per organisation per property per week
+     * @param organisationUuids Organisation uuids (required)
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public String getOrganisations(String format) throws ApiException {
-        ApiResponse<String> localVarResp = getOrganisationsWithHttpInfo(format);
+    public String getGA4ReportPerProductNamePerOrganisationPerPropertyPerWeek(List<String> organisationUuids) throws ApiException {
+        ApiResponse<String> localVarResp = getGA4ReportPerProductNamePerOrganisationPerPropertyPerWeekWithHttpInfo(organisationUuids);
         return localVarResp.getData();
     }
 
     /**
-     * Return organisations
-     * organisations
-     * @param format Output format (optional)
+     * Return GA4 report per product name per organisation per property per week
+     * GA4 report per product name per organisation per property per week
+     * @param organisationUuids Organisation uuids (required)
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> getOrganisationsWithHttpInfo(String format) throws ApiException {
-        okhttp3.Call localVarCall = getOrganisationsValidateBeforeCall(format, null);
+    public ApiResponse<String> getGA4ReportPerProductNamePerOrganisationPerPropertyPerWeekWithHttpInfo(List<String> organisationUuids) throws ApiException {
+        okhttp3.Call localVarCall = getGA4ReportPerProductNamePerOrganisationPerPropertyPerWeekValidateBeforeCall(organisationUuids, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     * Return organisations (asynchronously)
-     * organisations
-     * @param format Output format (optional)
+     * Return GA4 report per product name per organisation per property per week (asynchronously)
+     * GA4 report per product name per organisation per property per week
+     * @param organisationUuids Organisation uuids (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -298,11 +192,144 @@ public class GenericDataApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getOrganisationsAsync(String format, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call getGA4ReportPerProductNamePerOrganisationPerPropertyPerWeekAsync(List<String> organisationUuids, final ApiCallback<String> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getOrganisationsValidateBeforeCall(format, _callback);
+        okhttp3.Call localVarCall = getGA4ReportPerProductNamePerOrganisationPerPropertyPerWeekValidateBeforeCall(organisationUuids, _callback);
+        Type localVarReturnType = new TypeToken<String>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for getGA4ReportPerProductSkuPerOrganisationPerPropertyPerWeek
+     * @param organisationUuids Organisation uuids (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getGA4ReportPerProductSkuPerOrganisationPerPropertyPerWeekCall(List<String> organisationUuids, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/data/ga4-report-per-product-sku-per-organisation-per-property-per-week/{organisationUuids}"
+            .replace("{" + "organisationUuids" + "}", localVarApiClient.escapeString(localVarApiClient.collectionPathParameterToString("csv", organisationUuids)));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/csv"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "bearerAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call getGA4ReportPerProductSkuPerOrganisationPerPropertyPerWeekValidateBeforeCall(List<String> organisationUuids, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'organisationUuids' is set
+        if (organisationUuids == null) {
+            throw new ApiException("Missing the required parameter 'organisationUuids' when calling getGA4ReportPerProductSkuPerOrganisationPerPropertyPerWeek(Async)");
+        }
+
+        return getGA4ReportPerProductSkuPerOrganisationPerPropertyPerWeekCall(organisationUuids, _callback);
+
+    }
+
+    /**
+     * Return GA4 report per product sku per organisation per property per week
+     * GA4 report per product sku per organisation per property per week
+     * @param organisationUuids Organisation uuids (required)
+     * @return String
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
+     </table>
+     */
+    public String getGA4ReportPerProductSkuPerOrganisationPerPropertyPerWeek(List<String> organisationUuids) throws ApiException {
+        ApiResponse<String> localVarResp = getGA4ReportPerProductSkuPerOrganisationPerPropertyPerWeekWithHttpInfo(organisationUuids);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Return GA4 report per product sku per organisation per property per week
+     * GA4 report per product sku per organisation per property per week
+     * @param organisationUuids Organisation uuids (required)
+     * @return ApiResponse&lt;String&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<String> getGA4ReportPerProductSkuPerOrganisationPerPropertyPerWeekWithHttpInfo(List<String> organisationUuids) throws ApiException {
+        okhttp3.Call localVarCall = getGA4ReportPerProductSkuPerOrganisationPerPropertyPerWeekValidateBeforeCall(organisationUuids, null);
+        Type localVarReturnType = new TypeToken<String>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Return GA4 report per product sku per organisation per property per week (asynchronously)
+     * GA4 report per product sku per organisation per property per week
+     * @param organisationUuids Organisation uuids (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getGA4ReportPerProductSkuPerOrganisationPerPropertyPerWeekAsync(List<String> organisationUuids, final ApiCallback<String> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = getGA4ReportPerProductSkuPerOrganisationPerPropertyPerWeekValidateBeforeCall(organisationUuids, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

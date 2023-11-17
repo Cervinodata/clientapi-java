@@ -1,3 +1,4 @@
+.github/workflows/maven.yml
 .gitignore
 .travis.yml
 README.md
@@ -8,8 +9,11 @@ docs/AdvertisingDataApi.md
 docs/AnalyticsDataApi.md
 docs/AnalyticsDataDefaultMetricsApi.md
 docs/AnalyticsDataGoalsApi.md
+docs/AnalyticsDataProductMetricsApi.md
+docs/AnalyticsDataTransactionMetricsApi.md
 docs/CampaignGroupApi.md
 docs/GenericDataApi.md
+docs/ProductDataApi.md
 git_push.sh
 gradle.properties
 gradle/wrapper/gradle-wrapper.jar
@@ -36,9 +40,16 @@ src/main/java/com/cervinodata/client/api/AdvertisingDataApi.java
 src/main/java/com/cervinodata/client/api/AnalyticsDataApi.java
 src/main/java/com/cervinodata/client/api/AnalyticsDataDefaultMetricsApi.java
 src/main/java/com/cervinodata/client/api/AnalyticsDataGoalsApi.java
+src/main/java/com/cervinodata/client/api/AnalyticsDataProductMetricsApi.java
+src/main/java/com/cervinodata/client/api/AnalyticsDataTransactionMetricsApi.java
 src/main/java/com/cervinodata/client/api/CampaignGroupApi.java
 src/main/java/com/cervinodata/client/api/GenericDataApi.java
+src/main/java/com/cervinodata/client/api/ProductDataApi.java
 src/main/java/com/cervinodata/client/auth/ApiKeyAuth.java
 src/main/java/com/cervinodata/client/auth/Authentication.java
 src/main/java/com/cervinodata/client/auth/HttpBasicAuth.java
 src/main/java/com/cervinodata/client/auth/HttpBearerAuth.java
+src/main/java/com/cervinodata/client/model/AbstractOpenApiSchema.java
+src/test/java/com/cervinodata/client/api/AnalyticsDataProductMetricsApiTest.java
+src/test/java/com/cervinodata/client/api/AnalyticsDataTransactionMetricsApiTest.java
+src/test/java/com/cervinodata/client/api/ProductDataApiTest.java

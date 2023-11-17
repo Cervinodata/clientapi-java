@@ -11,53 +11,51 @@
  */
 
 
-package com.cervinodata.client.auth;
+package com.cervinodata.client.api;
 
 import com.cervinodata.client.ApiException;
-import com.cervinodata.client.Pair;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
-import java.net.URI;
-import java.util.Map;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-17T09:34:44.990683Z[Etc/UTC]")
-public class HttpBearerAuth implements Authentication {
-  private final String scheme;
-  private String bearerToken;
+/**
+ * API tests for AnalyticsDataTransactionMetricsApi
+ */
+@Disabled
+public class AnalyticsDataTransactionMetricsApiTest {
 
-  public HttpBearerAuth(String scheme) {
-    this.scheme = scheme;
-  }
+    private final AnalyticsDataTransactionMetricsApi api = new AnalyticsDataTransactionMetricsApi();
 
-  /**
-   * Gets the token, which together with the scheme, will be sent as the value of the Authorization header.
-   *
-   * @return The bearer token
-   */
-  public String getBearerToken() {
-    return bearerToken;
-  }
-
-  /**
-   * Sets the token, which together with the scheme, will be sent as the value of the Authorization header.
-   *
-   * @param bearerToken The bearer token to send in the Authorization header
-   */
-  public void setBearerToken(String bearerToken) {
-    this.bearerToken = bearerToken;
-  }
-
-  @Override
-  public void applyToParams(List<Pair> queryParams, Map<String, String> headerParams, Map<String, String> cookieParams,
-                            String payload, String method, URI uri) throws ApiException {
-    if (bearerToken == null) {
-      return;
+    /**
+     * Return GA4 report per campaign per organisation per property
+     *
+     * GA4 report per campaign per organisation per property
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void getGA4ReportPerCampaignPerOrganisationPerPropertyTest() throws ApiException {
+        List<String> organisationUuids = null;
+        String response = api.getGA4ReportPerCampaignPerOrganisationPerProperty(organisationUuids);
+        // TODO: test validations
     }
 
-    headerParams.put("Authorization", (scheme != null ? upperCaseBearer(scheme) + " " : "") + bearerToken);
-  }
+    /**
+     * Return GA4 report per campaign per organisation per property per month
+     *
+     * GA4 report per campaign per organisation per property per month
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void getGA4ReportPerCampaignPerOrganisationPerPropertyPerMonthTest() throws ApiException {
+        List<String> organisationUuids = null;
+        String response = api.getGA4ReportPerCampaignPerOrganisationPerPropertyPerMonth(organisationUuids);
+        // TODO: test validations
+    }
 
-  private static String upperCaseBearer(String scheme) {
-    return ("bearer".equalsIgnoreCase(scheme)) ? "Bearer" : scheme;
-  }
 }

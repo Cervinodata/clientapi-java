@@ -2,15 +2,15 @@
 
 All URIs are relative to *https://app.cervinodata.com/api/v1*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**getAnalyticsGoalReportPerCampaignPerDay**](AnalyticsDataGoalsApi.md#getAnalyticsGoalReportPerCampaignPerDay) | **GET** /data/analytics-goal-report-per-campaign-per-day/{organisationUuid} | Return analytics goal report per campaign per day by organisation
-[**getAnalyticsGoalReportPerChannelGroupPerDay**](AnalyticsDataGoalsApi.md#getAnalyticsGoalReportPerChannelGroupPerDay) | **GET** /data/analytics-goal-report-per-channel-group-per-day/{organisationUuid} | Return analytics goal report per channel group per day by organisation
-[**getAnalyticsGoalReportPerDevicePerDay**](AnalyticsDataGoalsApi.md#getAnalyticsGoalReportPerDevicePerDay) | **GET** /data/analytics-goal-report-per-device-per-day/{organisationUuid} | Return analytics goal report per device per day by organisation
-[**getAnalyticsGoalReportPerSourceMediumPerDay**](AnalyticsDataGoalsApi.md#getAnalyticsGoalReportPerSourceMediumPerDay) | **GET** /data/analytics-goal-report-per-source-medium-per-day/{organisationUuid} | Return analytics goal report per source medium per day by organisation
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**getAnalyticsGoalReportPerCampaignPerDay**](AnalyticsDataGoalsApi.md#getAnalyticsGoalReportPerCampaignPerDay) | **GET** /data/analytics-goal-report-per-campaign-per-day/{organisationUuid} | Return analytics goal report per campaign per day by organisation |
+| [**getAnalyticsGoalReportPerChannelGroupPerDay**](AnalyticsDataGoalsApi.md#getAnalyticsGoalReportPerChannelGroupPerDay) | **GET** /data/analytics-goal-report-per-channel-group-per-day/{organisationUuid} | Return analytics goal report per channel group per day by organisation |
+| [**getAnalyticsGoalReportPerDevicePerDay**](AnalyticsDataGoalsApi.md#getAnalyticsGoalReportPerDevicePerDay) | **GET** /data/analytics-goal-report-per-device-per-day/{organisationUuid} | Return analytics goal report per device per day by organisation |
+| [**getAnalyticsGoalReportPerSourceMediumPerDay**](AnalyticsDataGoalsApi.md#getAnalyticsGoalReportPerSourceMediumPerDay) | **GET** /data/analytics-goal-report-per-source-medium-per-day/{organisationUuid} | Return analytics goal report per source medium per day by organisation |
 
 
-<a name="getAnalyticsGoalReportPerCampaignPerDay"></a>
+<a id="getAnalyticsGoalReportPerCampaignPerDay"></a>
 # **getAnalyticsGoalReportPerCampaignPerDay**
 > String getAnalyticsGoalReportPerCampaignPerDay(organisationUuid, fromDate, dateFormat, format)
 
@@ -58,12 +58,12 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisationUuid** | **String**| Organisation uuid |
- **fromDate** | **LocalDate**| From date | [optional]
- **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD]
- **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **organisationUuid** | **String**| Organisation uuid | |
+| **fromDate** | **LocalDate**| From date | [optional] |
+| **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
+| **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
 ### Return type
 
@@ -81,11 +81,11 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | successful operation |  -  |
-**400** | Invalid Organisation uuid supplied |  -  |
-**404** | Organisation uuid not found |  -  |
+| **200** | successful operation |  -  |
+| **400** | Invalid Organisation uuid supplied |  -  |
+| **404** | Organisation uuid not found |  -  |
 
-<a name="getAnalyticsGoalReportPerChannelGroupPerDay"></a>
+<a id="getAnalyticsGoalReportPerChannelGroupPerDay"></a>
 # **getAnalyticsGoalReportPerChannelGroupPerDay**
 > String getAnalyticsGoalReportPerChannelGroupPerDay(organisationUuid, fromDate, dateFormat, format)
 
@@ -133,12 +133,12 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisationUuid** | **String**| Organisation uuid |
- **fromDate** | **LocalDate**| From date | [optional]
- **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD]
- **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **organisationUuid** | **String**| Organisation uuid | |
+| **fromDate** | **LocalDate**| From date | [optional] |
+| **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
+| **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
 ### Return type
 
@@ -156,11 +156,11 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | successful operation |  -  |
-**400** | Invalid Organisation uuid supplied |  -  |
-**404** | Organisation uuid not found |  -  |
+| **200** | successful operation |  -  |
+| **400** | Invalid Organisation uuid supplied |  -  |
+| **404** | Organisation uuid not found |  -  |
 
-<a name="getAnalyticsGoalReportPerDevicePerDay"></a>
+<a id="getAnalyticsGoalReportPerDevicePerDay"></a>
 # **getAnalyticsGoalReportPerDevicePerDay**
 > String getAnalyticsGoalReportPerDevicePerDay(organisationUuid, fromDate, dateFormat, format)
 
@@ -208,12 +208,12 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisationUuid** | **String**| Organisation uuid |
- **fromDate** | **LocalDate**| From date | [optional]
- **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD]
- **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **organisationUuid** | **String**| Organisation uuid | |
+| **fromDate** | **LocalDate**| From date | [optional] |
+| **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
+| **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
 ### Return type
 
@@ -231,11 +231,11 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | successful operation |  -  |
-**400** | Invalid Organisation uuid supplied |  -  |
-**404** | Organisation uuid not found |  -  |
+| **200** | successful operation |  -  |
+| **400** | Invalid Organisation uuid supplied |  -  |
+| **404** | Organisation uuid not found |  -  |
 
-<a name="getAnalyticsGoalReportPerSourceMediumPerDay"></a>
+<a id="getAnalyticsGoalReportPerSourceMediumPerDay"></a>
 # **getAnalyticsGoalReportPerSourceMediumPerDay**
 > String getAnalyticsGoalReportPerSourceMediumPerDay(organisationUuid, fromDate, dateFormat, format)
 
@@ -283,12 +283,12 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisationUuid** | **String**| Organisation uuid |
- **fromDate** | **LocalDate**| From date | [optional]
- **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD]
- **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **organisationUuid** | **String**| Organisation uuid | |
+| **fromDate** | **LocalDate**| From date | [optional] |
+| **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
+| **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
 ### Return type
 
@@ -306,7 +306,7 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | successful operation |  -  |
-**400** | Invalid Organisation uuid supplied |  -  |
-**404** | Organisation uuid not found |  -  |
+| **200** | successful operation |  -  |
+| **400** | Invalid Organisation uuid supplied |  -  |
+| **404** | Organisation uuid not found |  -  |
 

@@ -27,16 +27,19 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import org.threeten.bp.LocalDate;
+import java.time.LocalDate;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.ws.rs.core.GenericType;
 
 public class AdvertisingDataApi {
     private ApiClient localVarApiClient;
+    private int localHostIndex;
+    private String localCustomBaseUrl;
 
     public AdvertisingDataApi() {
         this(Configuration.getDefaultApiClient());
@@ -52,6 +55,22 @@ public class AdvertisingDataApi {
 
     public void setApiClient(ApiClient apiClient) {
         this.localVarApiClient = apiClient;
+    }
+
+    public int getHostIndex() {
+        return localHostIndex;
+    }
+
+    public void setHostIndex(int hostIndex) {
+        this.localHostIndex = hostIndex;
+    }
+
+    public String getCustomBaseUrl() {
+        return localCustomBaseUrl;
+    }
+
+    public void setCustomBaseUrl(String customBaseUrl) {
+        this.localCustomBaseUrl = customBaseUrl;
     }
 
     /**
@@ -72,11 +91,24 @@ public class AdvertisingDataApi {
      </table>
      */
     public okhttp3.Call getAdAccountReportPerOrganisationPerDayCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
         Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/data/ad-account-report-per-organisation-per-day/{organisationUuids}"
-            .replaceAll("\\{" + "organisationUuids" + "\\}", localVarApiClient.escapeString(localVarApiClient.collectionPathParameterToString("csv", organisationUuids)));
+            .replace("{" + "organisationUuids" + "}", localVarApiClient.escapeString(localVarApiClient.collectionPathParameterToString("csv", organisationUuids)));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -97,7 +129,8 @@ public class AdvertisingDataApi {
         }
 
         final String[] localVarAccepts = {
-            "text/csv", "application/json"
+            "text/csv",
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -105,26 +138,24 @@ public class AdvertisingDataApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
 
         String[] localVarAuthNames = new String[] { "bearerAuth" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call getAdAccountReportPerOrganisationPerDayValidateBeforeCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getAdAccountReportPerOrganisationPerDay(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = getAdAccountReportPerOrganisationPerDayCall(organisationUuids, fromDate, dateFormat, format, _callback);
-        return localVarCall;
+        return getAdAccountReportPerOrganisationPerDayCall(organisationUuids, fromDate, dateFormat, format, _callback);
 
     }
 
@@ -214,11 +245,24 @@ public class AdvertisingDataApi {
      </table>
      */
     public okhttp3.Call getAdAccountsCall(String organisationUuid, String format, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
         Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/data/ad-accounts/{organisationUuid}"
-            .replaceAll("\\{" + "organisationUuid" + "\\}", localVarApiClient.escapeString(organisationUuid.toString()));
+            .replace("{" + "organisationUuid" + "}", localVarApiClient.escapeString(organisationUuid.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -231,7 +275,8 @@ public class AdvertisingDataApi {
         }
 
         final String[] localVarAccepts = {
-            "text/csv", "application/json"
+            "text/csv",
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -239,26 +284,24 @@ public class AdvertisingDataApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
 
         String[] localVarAuthNames = new String[] { "bearerAuth" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call getAdAccountsValidateBeforeCall(String organisationUuid, String format, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'organisationUuid' is set
         if (organisationUuid == null) {
             throw new ApiException("Missing the required parameter 'organisationUuid' when calling getAdAccounts(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = getAdAccountsCall(organisationUuid, format, _callback);
-        return localVarCall;
+        return getAdAccountsCall(organisationUuid, format, _callback);
 
     }
 
@@ -344,11 +387,24 @@ public class AdvertisingDataApi {
      </table>
      */
     public okhttp3.Call getAdCampaignReportPerDayCall(String organisationUuid, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
         Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/data/ad-campaign-report-per-day/{organisationUuid}"
-            .replaceAll("\\{" + "organisationUuid" + "\\}", localVarApiClient.escapeString(organisationUuid.toString()));
+            .replace("{" + "organisationUuid" + "}", localVarApiClient.escapeString(organisationUuid.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -369,7 +425,8 @@ public class AdvertisingDataApi {
         }
 
         final String[] localVarAccepts = {
-            "text/csv", "application/json"
+            "text/csv",
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -377,26 +434,24 @@ public class AdvertisingDataApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
 
         String[] localVarAuthNames = new String[] { "bearerAuth" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call getAdCampaignReportPerDayValidateBeforeCall(String organisationUuid, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'organisationUuid' is set
         if (organisationUuid == null) {
             throw new ApiException("Missing the required parameter 'organisationUuid' when calling getAdCampaignReportPerDay(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = getAdCampaignReportPerDayCall(organisationUuid, fromDate, dateFormat, format, _callback);
-        return localVarCall;
+        return getAdCampaignReportPerDayCall(organisationUuid, fromDate, dateFormat, format, _callback);
 
     }
 
@@ -488,11 +543,24 @@ public class AdvertisingDataApi {
      </table>
      */
     public okhttp3.Call getAdCampaignReportPerOrganisationPerAccountPerCampaignPerDevicePerDayCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
         Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/data/ad-campaign-report-per-organisation-per-account-per-campaign-per-device-per-day/{organisationUuids}"
-            .replaceAll("\\{" + "organisationUuids" + "\\}", localVarApiClient.escapeString(localVarApiClient.collectionPathParameterToString("csv", organisationUuids)));
+            .replace("{" + "organisationUuids" + "}", localVarApiClient.escapeString(localVarApiClient.collectionPathParameterToString("csv", organisationUuids)));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -513,7 +581,8 @@ public class AdvertisingDataApi {
         }
 
         final String[] localVarAccepts = {
-            "text/csv", "application/json"
+            "text/csv",
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -521,26 +590,24 @@ public class AdvertisingDataApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
 
         String[] localVarAuthNames = new String[] { "bearerAuth" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call getAdCampaignReportPerOrganisationPerAccountPerCampaignPerDevicePerDayValidateBeforeCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getAdCampaignReportPerOrganisationPerAccountPerCampaignPerDevicePerDay(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = getAdCampaignReportPerOrganisationPerAccountPerCampaignPerDevicePerDayCall(organisationUuids, fromDate, dateFormat, format, _callback);
-        return localVarCall;
+        return getAdCampaignReportPerOrganisationPerAccountPerCampaignPerDevicePerDayCall(organisationUuids, fromDate, dateFormat, format, _callback);
 
     }
 
@@ -632,11 +699,24 @@ public class AdvertisingDataApi {
      </table>
      */
     public okhttp3.Call getAdCampaignReportPerOrganisationPerAccountPerDayCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
         Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/data/ad-campaign-report-per-organisation-per-account-per-day/{organisationUuids}"
-            .replaceAll("\\{" + "organisationUuids" + "\\}", localVarApiClient.escapeString(localVarApiClient.collectionPathParameterToString("csv", organisationUuids)));
+            .replace("{" + "organisationUuids" + "}", localVarApiClient.escapeString(localVarApiClient.collectionPathParameterToString("csv", organisationUuids)));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -657,7 +737,8 @@ public class AdvertisingDataApi {
         }
 
         final String[] localVarAccepts = {
-            "text/csv", "application/json"
+            "text/csv",
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -665,26 +746,24 @@ public class AdvertisingDataApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
 
         String[] localVarAuthNames = new String[] { "bearerAuth" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call getAdCampaignReportPerOrganisationPerAccountPerDayValidateBeforeCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getAdCampaignReportPerOrganisationPerAccountPerDay(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = getAdCampaignReportPerOrganisationPerAccountPerDayCall(organisationUuids, fromDate, dateFormat, format, _callback);
-        return localVarCall;
+        return getAdCampaignReportPerOrganisationPerAccountPerDayCall(organisationUuids, fromDate, dateFormat, format, _callback);
 
     }
 
@@ -775,11 +854,24 @@ public class AdvertisingDataApi {
      </table>
      */
     public okhttp3.Call getAdCampaignsCall(String organisationUuid, LocalDate fromDate, String format, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
         Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/data/ad-campaigns/{organisationUuid}"
-            .replaceAll("\\{" + "organisationUuid" + "\\}", localVarApiClient.escapeString(organisationUuid.toString()));
+            .replace("{" + "organisationUuid" + "}", localVarApiClient.escapeString(organisationUuid.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -796,7 +888,8 @@ public class AdvertisingDataApi {
         }
 
         final String[] localVarAccepts = {
-            "text/csv", "application/json"
+            "text/csv",
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -804,26 +897,24 @@ public class AdvertisingDataApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
 
         String[] localVarAuthNames = new String[] { "bearerAuth" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call getAdCampaignsValidateBeforeCall(String organisationUuid, LocalDate fromDate, String format, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'organisationUuid' is set
         if (organisationUuid == null) {
             throw new ApiException("Missing the required parameter 'organisationUuid' when calling getAdCampaigns(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = getAdCampaignsCall(organisationUuid, fromDate, format, _callback);
-        return localVarCall;
+        return getAdCampaignsCall(organisationUuid, fromDate, format, _callback);
 
     }
 
@@ -911,11 +1002,24 @@ public class AdvertisingDataApi {
      </table>
      */
     public okhttp3.Call getAdGroupsCall(String organisationUuid, LocalDate fromDate, String format, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
         Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/data/ad-groups/{organisationUuid}"
-            .replaceAll("\\{" + "organisationUuid" + "\\}", localVarApiClient.escapeString(organisationUuid.toString()));
+            .replace("{" + "organisationUuid" + "}", localVarApiClient.escapeString(organisationUuid.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -932,7 +1036,8 @@ public class AdvertisingDataApi {
         }
 
         final String[] localVarAccepts = {
-            "text/csv", "application/json"
+            "text/csv",
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -940,26 +1045,24 @@ public class AdvertisingDataApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
 
         String[] localVarAuthNames = new String[] { "bearerAuth" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call getAdGroupsValidateBeforeCall(String organisationUuid, LocalDate fromDate, String format, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'organisationUuid' is set
         if (organisationUuid == null) {
             throw new ApiException("Missing the required parameter 'organisationUuid' when calling getAdGroups(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = getAdGroupsCall(organisationUuid, fromDate, format, _callback);
-        return localVarCall;
+        return getAdGroupsCall(organisationUuid, fromDate, format, _callback);
 
     }
 
@@ -1048,11 +1151,24 @@ public class AdvertisingDataApi {
      </table>
      */
     public okhttp3.Call getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerCreativePerDayCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
         Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/data/adform-extended-report-per-organisation-per-account-per-campaign-per-creative-per-day/{organisationUuids}"
-            .replaceAll("\\{" + "organisationUuids" + "\\}", localVarApiClient.escapeString(localVarApiClient.collectionPathParameterToString("csv", organisationUuids)));
+            .replace("{" + "organisationUuids" + "}", localVarApiClient.escapeString(localVarApiClient.collectionPathParameterToString("csv", organisationUuids)));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1073,7 +1189,8 @@ public class AdvertisingDataApi {
         }
 
         final String[] localVarAccepts = {
-            "text/csv", "application/json"
+            "text/csv",
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -1081,26 +1198,24 @@ public class AdvertisingDataApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
 
         String[] localVarAuthNames = new String[] { "bearerAuth" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerCreativePerDayValidateBeforeCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerCreativePerDay(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerCreativePerDayCall(organisationUuids, fromDate, dateFormat, format, _callback);
-        return localVarCall;
+        return getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerCreativePerDayCall(organisationUuids, fromDate, dateFormat, format, _callback);
 
     }
 
@@ -1192,11 +1307,24 @@ public class AdvertisingDataApi {
      </table>
      */
     public okhttp3.Call getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDayCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
         Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/data/adform-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids}"
-            .replaceAll("\\{" + "organisationUuids" + "\\}", localVarApiClient.escapeString(localVarApiClient.collectionPathParameterToString("csv", organisationUuids)));
+            .replace("{" + "organisationUuids" + "}", localVarApiClient.escapeString(localVarApiClient.collectionPathParameterToString("csv", organisationUuids)));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1217,7 +1345,8 @@ public class AdvertisingDataApi {
         }
 
         final String[] localVarAccepts = {
-            "text/csv", "application/json"
+            "text/csv",
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -1225,26 +1354,24 @@ public class AdvertisingDataApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
 
         String[] localVarAuthNames = new String[] { "bearerAuth" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDay(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDayCall(organisationUuids, fromDate, dateFormat, format, _callback);
-        return localVarCall;
+        return getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDayCall(organisationUuids, fromDate, dateFormat, format, _callback);
 
     }
 
@@ -1336,11 +1463,24 @@ public class AdvertisingDataApi {
      </table>
      */
     public okhttp3.Call getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerLineItemPerDayCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
         Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/data/adform-extended-report-per-organisation-per-account-per-campaign-per-line-item-per-day/{organisationUuids}"
-            .replaceAll("\\{" + "organisationUuids" + "\\}", localVarApiClient.escapeString(localVarApiClient.collectionPathParameterToString("csv", organisationUuids)));
+            .replace("{" + "organisationUuids" + "}", localVarApiClient.escapeString(localVarApiClient.collectionPathParameterToString("csv", organisationUuids)));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1361,7 +1501,8 @@ public class AdvertisingDataApi {
         }
 
         final String[] localVarAccepts = {
-            "text/csv", "application/json"
+            "text/csv",
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -1369,26 +1510,24 @@ public class AdvertisingDataApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
 
         String[] localVarAuthNames = new String[] { "bearerAuth" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerLineItemPerDayValidateBeforeCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerLineItemPerDay(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerLineItemPerDayCall(organisationUuids, fromDate, dateFormat, format, _callback);
-        return localVarCall;
+        return getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerLineItemPerDayCall(organisationUuids, fromDate, dateFormat, format, _callback);
 
     }
 
@@ -1480,11 +1619,24 @@ public class AdvertisingDataApi {
      </table>
      */
     public okhttp3.Call getBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
         Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/data/bing-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids}"
-            .replaceAll("\\{" + "organisationUuids" + "\\}", localVarApiClient.escapeString(localVarApiClient.collectionPathParameterToString("csv", organisationUuids)));
+            .replace("{" + "organisationUuids" + "}", localVarApiClient.escapeString(localVarApiClient.collectionPathParameterToString("csv", organisationUuids)));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1505,7 +1657,8 @@ public class AdvertisingDataApi {
         }
 
         final String[] localVarAccepts = {
-            "text/csv", "application/json"
+            "text/csv",
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -1513,26 +1666,24 @@ public class AdvertisingDataApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
 
         String[] localVarAuthNames = new String[] { "bearerAuth" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call getBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = getBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayCall(organisationUuids, fromDate, dateFormat, format, _callback);
-        return localVarCall;
+        return getBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayCall(organisationUuids, fromDate, dateFormat, format, _callback);
 
     }
 
@@ -1624,11 +1775,24 @@ public class AdvertisingDataApi {
      </table>
      */
     public okhttp3.Call getFacebookAdCustomConversionReportPerOrganisationPerAccountPerCampaignPerDayCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
         Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/data/facebook-ad-custom-conversion-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids}"
-            .replaceAll("\\{" + "organisationUuids" + "\\}", localVarApiClient.escapeString(localVarApiClient.collectionPathParameterToString("csv", organisationUuids)));
+            .replace("{" + "organisationUuids" + "}", localVarApiClient.escapeString(localVarApiClient.collectionPathParameterToString("csv", organisationUuids)));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1649,7 +1813,8 @@ public class AdvertisingDataApi {
         }
 
         final String[] localVarAccepts = {
-            "text/csv", "application/json"
+            "text/csv",
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -1657,26 +1822,24 @@ public class AdvertisingDataApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
 
         String[] localVarAuthNames = new String[] { "bearerAuth" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call getFacebookAdCustomConversionReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getFacebookAdCustomConversionReportPerOrganisationPerAccountPerCampaignPerDay(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = getFacebookAdCustomConversionReportPerOrganisationPerAccountPerCampaignPerDayCall(organisationUuids, fromDate, dateFormat, format, _callback);
-        return localVarCall;
+        return getFacebookAdCustomConversionReportPerOrganisationPerAccountPerCampaignPerDayCall(organisationUuids, fromDate, dateFormat, format, _callback);
 
     }
 
@@ -1768,11 +1931,24 @@ public class AdvertisingDataApi {
      </table>
      */
     public okhttp3.Call getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
         Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/data/facebook-ad-extended-report-per-organisation-per-account-per-campaign-per-ad-group-per-day/{organisationUuids}"
-            .replaceAll("\\{" + "organisationUuids" + "\\}", localVarApiClient.escapeString(localVarApiClient.collectionPathParameterToString("csv", organisationUuids)));
+            .replace("{" + "organisationUuids" + "}", localVarApiClient.escapeString(localVarApiClient.collectionPathParameterToString("csv", organisationUuids)));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1793,7 +1969,8 @@ public class AdvertisingDataApi {
         }
 
         final String[] localVarAccepts = {
-            "text/csv", "application/json"
+            "text/csv",
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -1801,26 +1978,24 @@ public class AdvertisingDataApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
 
         String[] localVarAuthNames = new String[] { "bearerAuth" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayValidateBeforeCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDay(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayCall(organisationUuids, fromDate, dateFormat, format, _callback);
-        return localVarCall;
+        return getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayCall(organisationUuids, fromDate, dateFormat, format, _callback);
 
     }
 
@@ -1912,11 +2087,24 @@ public class AdvertisingDataApi {
      </table>
      */
     public okhttp3.Call getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayPlusCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
         Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/data/facebook-ad-extended-report-per-organisation-per-account-per-campaign-per-ad-group-per-day-plus/{organisationUuids}"
-            .replaceAll("\\{" + "organisationUuids" + "\\}", localVarApiClient.escapeString(localVarApiClient.collectionPathParameterToString("csv", organisationUuids)));
+            .replace("{" + "organisationUuids" + "}", localVarApiClient.escapeString(localVarApiClient.collectionPathParameterToString("csv", organisationUuids)));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1937,7 +2125,8 @@ public class AdvertisingDataApi {
         }
 
         final String[] localVarAccepts = {
-            "text/csv", "application/json"
+            "text/csv",
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -1945,26 +2134,24 @@ public class AdvertisingDataApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
 
         String[] localVarAuthNames = new String[] { "bearerAuth" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayPlusValidateBeforeCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayPlus(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayPlusCall(organisationUuids, fromDate, dateFormat, format, _callback);
-        return localVarCall;
+        return getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayPlusCall(organisationUuids, fromDate, dateFormat, format, _callback);
 
     }
 
@@ -2056,11 +2243,24 @@ public class AdvertisingDataApi {
      </table>
      */
     public okhttp3.Call getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdPerDayCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
         Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/data/facebook-ad-extended-report-per-organisation-per-account-per-campaign-per-ad-per-day/{organisationUuids}"
-            .replaceAll("\\{" + "organisationUuids" + "\\}", localVarApiClient.escapeString(localVarApiClient.collectionPathParameterToString("csv", organisationUuids)));
+            .replace("{" + "organisationUuids" + "}", localVarApiClient.escapeString(localVarApiClient.collectionPathParameterToString("csv", organisationUuids)));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -2081,7 +2281,8 @@ public class AdvertisingDataApi {
         }
 
         final String[] localVarAccepts = {
-            "text/csv", "application/json"
+            "text/csv",
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -2089,26 +2290,24 @@ public class AdvertisingDataApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
 
         String[] localVarAuthNames = new String[] { "bearerAuth" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdPerDayValidateBeforeCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdPerDay(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdPerDayCall(organisationUuids, fromDate, dateFormat, format, _callback);
-        return localVarCall;
+        return getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdPerDayCall(organisationUuids, fromDate, dateFormat, format, _callback);
 
     }
 
@@ -2200,11 +2399,24 @@ public class AdvertisingDataApi {
      </table>
      */
     public okhttp3.Call getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDayCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
         Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/data/facebook-ad-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids}"
-            .replaceAll("\\{" + "organisationUuids" + "\\}", localVarApiClient.escapeString(localVarApiClient.collectionPathParameterToString("csv", organisationUuids)));
+            .replace("{" + "organisationUuids" + "}", localVarApiClient.escapeString(localVarApiClient.collectionPathParameterToString("csv", organisationUuids)));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -2225,7 +2437,8 @@ public class AdvertisingDataApi {
         }
 
         final String[] localVarAccepts = {
-            "text/csv", "application/json"
+            "text/csv",
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -2233,26 +2446,24 @@ public class AdvertisingDataApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
 
         String[] localVarAuthNames = new String[] { "bearerAuth" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDay(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDayCall(organisationUuids, fromDate, dateFormat, format, _callback);
-        return localVarCall;
+        return getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDayCall(organisationUuids, fromDate, dateFormat, format, _callback);
 
     }
 
@@ -2344,11 +2555,24 @@ public class AdvertisingDataApi {
      </table>
      */
     public okhttp3.Call getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDayPlusCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
         Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/data/facebook-ad-extended-report-per-organisation-per-account-per-campaign-per-day-plus/{organisationUuids}"
-            .replaceAll("\\{" + "organisationUuids" + "\\}", localVarApiClient.escapeString(localVarApiClient.collectionPathParameterToString("csv", organisationUuids)));
+            .replace("{" + "organisationUuids" + "}", localVarApiClient.escapeString(localVarApiClient.collectionPathParameterToString("csv", organisationUuids)));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -2369,7 +2593,8 @@ public class AdvertisingDataApi {
         }
 
         final String[] localVarAccepts = {
-            "text/csv", "application/json"
+            "text/csv",
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -2377,26 +2602,24 @@ public class AdvertisingDataApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
 
         String[] localVarAuthNames = new String[] { "bearerAuth" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDayPlusValidateBeforeCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDayPlus(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDayPlusCall(organisationUuids, fromDate, dateFormat, format, _callback);
-        return localVarCall;
+        return getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDayPlusCall(organisationUuids, fromDate, dateFormat, format, _callback);
 
     }
 
@@ -2488,11 +2711,24 @@ public class AdvertisingDataApi {
      </table>
      */
     public okhttp3.Call getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDayCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
         Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/data/facebook-ad-extended-report-per-organisation-per-account-per-campaign-per-device-per-day/{organisationUuids}"
-            .replaceAll("\\{" + "organisationUuids" + "\\}", localVarApiClient.escapeString(localVarApiClient.collectionPathParameterToString("csv", organisationUuids)));
+            .replace("{" + "organisationUuids" + "}", localVarApiClient.escapeString(localVarApiClient.collectionPathParameterToString("csv", organisationUuids)));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -2513,7 +2749,8 @@ public class AdvertisingDataApi {
         }
 
         final String[] localVarAccepts = {
-            "text/csv", "application/json"
+            "text/csv",
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -2521,26 +2758,24 @@ public class AdvertisingDataApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
 
         String[] localVarAuthNames = new String[] { "bearerAuth" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDayValidateBeforeCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDay(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDayCall(organisationUuids, fromDate, dateFormat, format, _callback);
-        return localVarCall;
+        return getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDayCall(organisationUuids, fromDate, dateFormat, format, _callback);
 
     }
 
@@ -2632,11 +2867,24 @@ public class AdvertisingDataApi {
      </table>
      */
     public okhttp3.Call getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDayCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
         Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/data/google-ads-report-per-organisation-per-account-per-campaign-per-device-per-day/{organisationUuids}"
-            .replaceAll("\\{" + "organisationUuids" + "\\}", localVarApiClient.escapeString(localVarApiClient.collectionPathParameterToString("csv", organisationUuids)));
+            .replace("{" + "organisationUuids" + "}", localVarApiClient.escapeString(localVarApiClient.collectionPathParameterToString("csv", organisationUuids)));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -2657,7 +2905,8 @@ public class AdvertisingDataApi {
         }
 
         final String[] localVarAccepts = {
-            "text/csv", "application/json"
+            "text/csv",
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -2665,26 +2914,24 @@ public class AdvertisingDataApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
 
         String[] localVarAuthNames = new String[] { "bearerAuth" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDayValidateBeforeCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDay(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDayCall(organisationUuids, fromDate, dateFormat, format, _callback);
-        return localVarCall;
+        return getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDayCall(organisationUuids, fromDate, dateFormat, format, _callback);
 
     }
 
@@ -2776,11 +3023,24 @@ public class AdvertisingDataApi {
      </table>
      */
     public okhttp3.Call getHashedAdCampaignReportPerOrganisationPerAccountPerDayCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
         Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/data/hashed-ad-campaign-report-per-organisation-per-account-per-day/{organisationUuids}"
-            .replaceAll("\\{" + "organisationUuids" + "\\}", localVarApiClient.escapeString(localVarApiClient.collectionPathParameterToString("csv", organisationUuids)));
+            .replace("{" + "organisationUuids" + "}", localVarApiClient.escapeString(localVarApiClient.collectionPathParameterToString("csv", organisationUuids)));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -2801,7 +3061,8 @@ public class AdvertisingDataApi {
         }
 
         final String[] localVarAccepts = {
-            "text/csv", "application/json"
+            "text/csv",
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -2809,26 +3070,24 @@ public class AdvertisingDataApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
 
         String[] localVarAuthNames = new String[] { "bearerAuth" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call getHashedAdCampaignReportPerOrganisationPerAccountPerDayValidateBeforeCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getHashedAdCampaignReportPerOrganisationPerAccountPerDay(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = getHashedAdCampaignReportPerOrganisationPerAccountPerDayCall(organisationUuids, fromDate, dateFormat, format, _callback);
-        return localVarCall;
+        return getHashedAdCampaignReportPerOrganisationPerAccountPerDayCall(organisationUuids, fromDate, dateFormat, format, _callback);
 
     }
 
@@ -2920,11 +3179,24 @@ public class AdvertisingDataApi {
      </table>
      */
     public okhttp3.Call getLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
         Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/data/linkedin-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids}"
-            .replaceAll("\\{" + "organisationUuids" + "\\}", localVarApiClient.escapeString(localVarApiClient.collectionPathParameterToString("csv", organisationUuids)));
+            .replace("{" + "organisationUuids" + "}", localVarApiClient.escapeString(localVarApiClient.collectionPathParameterToString("csv", organisationUuids)));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -2945,7 +3217,8 @@ public class AdvertisingDataApi {
         }
 
         final String[] localVarAccepts = {
-            "text/csv", "application/json"
+            "text/csv",
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -2953,26 +3226,24 @@ public class AdvertisingDataApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
 
         String[] localVarAuthNames = new String[] { "bearerAuth" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call getLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = getLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayCall(organisationUuids, fromDate, dateFormat, format, _callback);
-        return localVarCall;
+        return getLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayCall(organisationUuids, fromDate, dateFormat, format, _callback);
 
     }
 
@@ -3064,11 +3335,24 @@ public class AdvertisingDataApi {
      </table>
      */
     public okhttp3.Call getPinterestAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
         Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/data/pinterest-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids}"
-            .replaceAll("\\{" + "organisationUuids" + "\\}", localVarApiClient.escapeString(localVarApiClient.collectionPathParameterToString("csv", organisationUuids)));
+            .replace("{" + "organisationUuids" + "}", localVarApiClient.escapeString(localVarApiClient.collectionPathParameterToString("csv", organisationUuids)));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -3089,7 +3373,8 @@ public class AdvertisingDataApi {
         }
 
         final String[] localVarAccepts = {
-            "text/csv", "application/json"
+            "text/csv",
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -3097,26 +3382,24 @@ public class AdvertisingDataApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
 
         String[] localVarAuthNames = new String[] { "bearerAuth" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call getPinterestAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getPinterestAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = getPinterestAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayCall(organisationUuids, fromDate, dateFormat, format, _callback);
-        return localVarCall;
+        return getPinterestAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayCall(organisationUuids, fromDate, dateFormat, format, _callback);
 
     }
 
@@ -3208,11 +3491,24 @@ public class AdvertisingDataApi {
      </table>
      */
     public okhttp3.Call getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
         Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/data/snapchat-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids}"
-            .replaceAll("\\{" + "organisationUuids" + "\\}", localVarApiClient.escapeString(localVarApiClient.collectionPathParameterToString("csv", organisationUuids)));
+            .replace("{" + "organisationUuids" + "}", localVarApiClient.escapeString(localVarApiClient.collectionPathParameterToString("csv", organisationUuids)));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -3233,7 +3529,8 @@ public class AdvertisingDataApi {
         }
 
         final String[] localVarAccepts = {
-            "text/csv", "application/json"
+            "text/csv",
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -3241,26 +3538,24 @@ public class AdvertisingDataApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
 
         String[] localVarAuthNames = new String[] { "bearerAuth" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayCall(organisationUuids, fromDate, dateFormat, format, _callback);
-        return localVarCall;
+        return getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayCall(organisationUuids, fromDate, dateFormat, format, _callback);
 
     }
 
@@ -3352,11 +3647,24 @@ public class AdvertisingDataApi {
      </table>
      */
     public okhttp3.Call getTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
         Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/data/tiktok-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids}"
-            .replaceAll("\\{" + "organisationUuids" + "\\}", localVarApiClient.escapeString(localVarApiClient.collectionPathParameterToString("csv", organisationUuids)));
+            .replace("{" + "organisationUuids" + "}", localVarApiClient.escapeString(localVarApiClient.collectionPathParameterToString("csv", organisationUuids)));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -3377,7 +3685,8 @@ public class AdvertisingDataApi {
         }
 
         final String[] localVarAccepts = {
-            "text/csv", "application/json"
+            "text/csv",
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -3385,26 +3694,24 @@ public class AdvertisingDataApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
 
         String[] localVarAuthNames = new String[] { "bearerAuth" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call getTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = getTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayCall(organisationUuids, fromDate, dateFormat, format, _callback);
-        return localVarCall;
+        return getTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayCall(organisationUuids, fromDate, dateFormat, format, _callback);
 
     }
 
@@ -3496,11 +3803,24 @@ public class AdvertisingDataApi {
      </table>
      */
     public okhttp3.Call getTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
         Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/data/twitter-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids}"
-            .replaceAll("\\{" + "organisationUuids" + "\\}", localVarApiClient.escapeString(localVarApiClient.collectionPathParameterToString("csv", organisationUuids)));
+            .replace("{" + "organisationUuids" + "}", localVarApiClient.escapeString(localVarApiClient.collectionPathParameterToString("csv", organisationUuids)));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -3521,7 +3841,8 @@ public class AdvertisingDataApi {
         }
 
         final String[] localVarAccepts = {
-            "text/csv", "application/json"
+            "text/csv",
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -3529,26 +3850,24 @@ public class AdvertisingDataApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
 
         String[] localVarAuthNames = new String[] { "bearerAuth" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call getTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = getTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayCall(organisationUuids, fromDate, dateFormat, format, _callback);
-        return localVarCall;
+        return getTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayCall(organisationUuids, fromDate, dateFormat, format, _callback);
 
     }
 

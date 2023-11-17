@@ -2,13 +2,13 @@
 
 All URIs are relative to *https://app.cervinodata.com/api/v1*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**getCampaignGroups**](GenericDataApi.md#getCampaignGroups) | **GET** /data/campaign-groups | Return campaign groups
-[**getOrganisations**](GenericDataApi.md#getOrganisations) | **GET** /data/organisations | Return organisations
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**getCampaignGroups**](GenericDataApi.md#getCampaignGroups) | **GET** /data/campaign-groups | Return campaign groups |
+| [**getOrganisations**](GenericDataApi.md#getOrganisations) | **GET** /data/organisations | Return organisations |
 
 
-<a name="getCampaignGroups"></a>
+<a id="getCampaignGroups"></a>
 # **getCampaignGroups**
 > List&lt;Object&gt; getCampaignGroups()
 
@@ -69,9 +69,9 @@ This endpoint does not need any parameter.
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | successful operation |  -  |
+| **200** | successful operation |  -  |
 
-<a name="getOrganisations"></a>
+<a id="getOrganisations"></a>
 # **getOrganisations**
 > String getOrganisations(format)
 
@@ -116,9 +116,9 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **format** | **String**| Output format | [optional] [enum: csv, json]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **format** | **String**| Output format | [optional] [enum: csv, json] |
 
 ### Return type
 
@@ -136,5 +136,5 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | successful operation |  -  |
+| **200** | successful operation |  -  |
 

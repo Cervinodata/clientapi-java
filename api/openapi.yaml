@@ -32,29 +32,29 @@ info:
   version: 1.0.0
 servers:
 - description: API v1
-  url: '{host}/api/v1'
+  url: "{host}/api/v1"
   variables:
     host:
       default: https://app.cervinodata.com
 - description: API Beta
-  url: '{host}/api'
+  url: "{host}/api"
   variables:
     host:
       default: https://app.cervinodata.com
 tags:
-- description: Operations to collect generic information, i.e. a list of organisations
+- description: "Operations to collect generic information, i.e. a list of organisations"
   name: generic data
-- description: Operations to collect advertising data, i.e. a list of accounts, a
-    list of campaigns, a campaign report per day by organisation
+- description: "Operations to collect advertising data, i.e. a list of accounts, a\
+    \ list of campaigns, a campaign report per day by organisation"
   name: advertising data
-- description: Operations to collect analytics data, i.e. a list of views
+- description: "Operations to collect analytics data, i.e. a list of views"
   name: analytics data
-- description: Operations to collect analytics data with default metrics, i.e. a report
-    per campaign per day by organisation
-  name: analytics data, default metrics
-- description: Operations to collect analytics data with goal metrics, i.e. a report
-    per campaign per day by organisation
-  name: analytics data, goals
+- description: "Operations to collect analytics data with default metrics, i.e. a\
+    \ report per campaign per day by organisation"
+  name: "analytics data, default metrics"
+- description: "Operations to collect analytics data with goal metrics, i.e. a report\
+    \ per campaign per day by organisation"
+  name: "analytics data, goals"
 paths:
   /data/organisations:
     get:
@@ -703,7 +703,7 @@ paths:
       - bearerAuth: []
       summary: Return analytics report per campaign per day by organisation
       tags:
-      - analytics data, default metrics
+      - "analytics data, default metrics"
       x-accepts: application/json
   /data/analytics-report-per-channel-group-per-day/{organisationUuid}:
     get:
@@ -768,7 +768,7 @@ paths:
       - bearerAuth: []
       summary: Return analytics report per channel group per day by organisation
       tags:
-      - analytics data, default metrics
+      - "analytics data, default metrics"
       x-accepts: application/json
   /data/analytics-report-per-device-per-day/{organisationUuid}:
     get:
@@ -833,7 +833,7 @@ paths:
       - bearerAuth: []
       summary: Return analytics report per device per day by organisation
       tags:
-      - analytics data, default metrics
+      - "analytics data, default metrics"
       x-accepts: application/json
   /data/analytics-report-per-source-medium-per-day/{organisationUuid}:
     get:
@@ -898,7 +898,7 @@ paths:
       - bearerAuth: []
       summary: Return analytics report per source medium per day by organisation
       tags:
-      - analytics data, default metrics
+      - "analytics data, default metrics"
       x-accepts: application/json
   /data/analytics-report-per-device-per-channel-group-per-organisation-per-view-per-day/{organisationUuids}:
     get:
@@ -967,7 +967,7 @@ paths:
       summary: Return analytics report per device per channel group per organisation
         per view per day
       tags:
-      - analytics data, default metrics
+      - "analytics data, default metrics"
       x-accepts: application/json
   /data/ga4-report-per-device-per-channel-group-per-organisation-per-property-per-day/{organisationUuids}:
     get:
@@ -1036,7 +1036,7 @@ paths:
       summary: Return GA4 report per device per channel group per organisation per
         property per day
       tags:
-      - analytics data, default metrics
+      - "analytics data, default metrics"
       x-accepts: application/json
   /data/analytics-goal-report-per-campaign-per-day/{organisationUuid}:
     get:
@@ -1101,7 +1101,7 @@ paths:
       - bearerAuth: []
       summary: Return analytics goal report per campaign per day by organisation
       tags:
-      - analytics data, goals
+      - "analytics data, goals"
       x-accepts: application/json
   /data/analytics-goal-report-per-channel-group-per-day/{organisationUuid}:
     get:
@@ -1166,7 +1166,7 @@ paths:
       - bearerAuth: []
       summary: Return analytics goal report per channel group per day by organisation
       tags:
-      - analytics data, goals
+      - "analytics data, goals"
       x-accepts: application/json
   /data/analytics-goal-report-per-device-per-day/{organisationUuid}:
     get:
@@ -1231,7 +1231,7 @@ paths:
       - bearerAuth: []
       summary: Return analytics goal report per device per day by organisation
       tags:
-      - analytics data, goals
+      - "analytics data, goals"
       x-accepts: application/json
   /data/analytics-goal-report-per-source-medium-per-day/{organisationUuid}:
     get:
@@ -1296,7 +1296,7 @@ paths:
       - bearerAuth: []
       summary: Return analytics goal report per source medium per day by organisation
       tags:
-      - analytics data, goals
+      - "analytics data, goals"
       x-accepts: application/json
   /data/campaign-group-analytics-report-per-organisation-per-day/{organisationUuids}:
     get:
@@ -4319,6 +4319,271 @@ paths:
       tags:
       - campaign group
       x-accepts: application/json
+  /data/ga4-report-per-campaign-per-organisation-per-property/{organisationUuids}:
+    get:
+      description: GA4 report per campaign per organisation per property
+      operationId: getGA4ReportPerCampaignPerOrganisationPerProperty
+      parameters:
+      - description: Organisation uuids
+        explode: false
+        in: path
+        name: organisationUuids
+        required: true
+        schema:
+          items:
+            type: string
+          type: array
+        style: simple
+      responses:
+        "200":
+          content:
+            text/csv:
+              schema:
+                type: string
+          description: successful operation
+        "400":
+          description: Invalid Organisation uuids supplied
+        "404":
+          description: Organisation uuids not found
+      security:
+      - bearerAuth: []
+      summary: Return GA4 report per campaign per organisation per property
+      tags:
+      - "analytics data, transaction metrics"
+      x-accepts: text/csv
+  /data/ga4-report-per-campaign-per-organisation-per-property-per-month/{organisationUuids}:
+    get:
+      description: GA4 report per campaign per organisation per property per month
+      operationId: getGA4ReportPerCampaignPerOrganisationPerPropertyPerMonth
+      parameters:
+      - description: Organisation uuids
+        explode: false
+        in: path
+        name: organisationUuids
+        required: true
+        schema:
+          items:
+            type: string
+          type: array
+        style: simple
+      responses:
+        "200":
+          content:
+            text/csv:
+              schema:
+                type: string
+          description: successful operation
+        "400":
+          description: Invalid Organisation uuids supplied
+        "404":
+          description: Organisation uuids not found
+      security:
+      - bearerAuth: []
+      summary: Return GA4 report per campaign per organisation per property per month
+      tags:
+      - "analytics data, transaction metrics"
+      x-accepts: text/csv
+  /data/ga4-report-per-product-sku-per-organisation-per-property-per-week/{organisationUuids}:
+    get:
+      description: GA4 report per product sku per organisation per property per week
+      operationId: getGA4ReportPerProductSkuPerOrganisationPerPropertyPerWeek
+      parameters:
+      - description: Organisation uuids
+        explode: false
+        in: path
+        name: organisationUuids
+        required: true
+        schema:
+          items:
+            type: string
+          type: array
+        style: simple
+      responses:
+        "200":
+          content:
+            text/csv:
+              schema:
+                type: string
+          description: successful operation
+        "400":
+          description: Invalid Organisation uuids supplied
+        "404":
+          description: Organisation uuids not found
+      security:
+      - bearerAuth: []
+      summary: Return GA4 report per product sku per organisation per property per
+        week
+      tags:
+      - "analytics data, product metrics"
+      x-accepts: text/csv
+  /data/ga4-report-per-product-name-per-organisation-per-property-per-week/{organisationUuids}:
+    get:
+      description: GA4 report per product name per organisation per property per week
+      operationId: getGA4ReportPerProductNamePerOrganisationPerPropertyPerWeek
+      parameters:
+      - description: Organisation uuids
+        explode: false
+        in: path
+        name: organisationUuids
+        required: true
+        schema:
+          items:
+            type: string
+          type: array
+        style: simple
+      responses:
+        "200":
+          content:
+            text/csv:
+              schema:
+                type: string
+          description: successful operation
+        "400":
+          description: Invalid Organisation uuids supplied
+        "404":
+          description: Organisation uuids not found
+      security:
+      - bearerAuth: []
+      summary: Return GA4 report per product name per organisation per property per
+        week
+      tags:
+      - "analytics data, product metrics"
+      x-accepts: text/csv
+  /data/ga4-report-per-channel-group-per-organisation-per-property/{organisationUuids}:
+    get:
+      description: GA4 report per channel group per organisation per property
+      operationId: getGA4ReportPerChannelGroupPerOrganisationPerProperty
+      parameters:
+      - description: Organisation uuids
+        explode: false
+        in: path
+        name: organisationUuids
+        required: true
+        schema:
+          items:
+            type: string
+          type: array
+        style: simple
+      responses:
+        "200":
+          content:
+            text/csv:
+              schema:
+                type: string
+          description: successful operation
+        "400":
+          description: Invalid Organisation uuids supplied
+        "404":
+          description: Organisation uuids not found
+      security:
+      - bearerAuth: []
+      summary: Return GA4 report per channel group per organisation per property
+      tags:
+      - analytics data
+      x-accepts: text/csv
+  /data/ga4-report-per-channel-group-per-organisation-per-property-per-month/{organisationUuids}:
+    get:
+      description: GA4 report per channel group per organisation per property per
+        month
+      operationId: getGA4ReportPerChannelGroupPerOrganisationPerPropertyPerMonth
+      parameters:
+      - description: Organisation uuids
+        explode: false
+        in: path
+        name: organisationUuids
+        required: true
+        schema:
+          items:
+            type: string
+          type: array
+        style: simple
+      responses:
+        "200":
+          content:
+            text/csv:
+              schema:
+                type: string
+          description: successful operation
+        "400":
+          description: Invalid Organisation uuids supplied
+        "404":
+          description: Organisation uuids not found
+      security:
+      - bearerAuth: []
+      summary: Return GA4 report per channel group per organisation per property per
+        month
+      tags:
+      - analytics data
+      x-accepts: text/csv
+  /data/ga4-report-per-channel-group-per-source-medium-per-organisation-per-property-per-month/{organisationUuids}:
+    get:
+      description: GA4 report per channel group per source medium per organisation
+        per property per month
+      operationId: getGA4ReportPerChannelGroupPerSourceMediumPerOrganisationPerPropertyPerMonth
+      parameters:
+      - description: Organisation uuids
+        explode: false
+        in: path
+        name: organisationUuids
+        required: true
+        schema:
+          items:
+            type: string
+          type: array
+        style: simple
+      responses:
+        "200":
+          content:
+            text/csv:
+              schema:
+                type: string
+          description: successful operation
+        "400":
+          description: Invalid Organisation uuids supplied
+        "404":
+          description: Organisation uuids not found
+      security:
+      - bearerAuth: []
+      summary: Return GA4 report per channel group per source medium per organisation
+        per property per month
+      tags:
+      - analytics data
+      x-accepts: text/csv
+  /data/ga4-report-per-channel-group-per-product-name-per-organisation-per-property-per-month/{organisationUuids}:
+    get:
+      description: GA4 report per channel group per product name per organisation
+        per property per month
+      operationId: getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth
+      parameters:
+      - description: Organisation uuids
+        explode: false
+        in: path
+        name: organisationUuids
+        required: true
+        schema:
+          items:
+            type: string
+          type: array
+        style: simple
+      responses:
+        "200":
+          content:
+            text/csv:
+              schema:
+                type: string
+          description: successful operation
+        "400":
+          description: Invalid Organisation uuids supplied
+        "404":
+          description: Organisation uuids not found
+      security:
+      - bearerAuth: []
+      summary: Return GA4 report per channel group per product name per organisation
+        per property per month
+      tags:
+      - analytics data
+      - product data
+      x-accepts: text/csv
 components:
   schemas: {}
   securitySchemes:

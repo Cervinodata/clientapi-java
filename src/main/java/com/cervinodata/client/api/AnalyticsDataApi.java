@@ -33,9 +33,12 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.ws.rs.core.GenericType;
 
 public class AnalyticsDataApi {
     private ApiClient localVarApiClient;
+    private int localHostIndex;
+    private String localCustomBaseUrl;
 
     public AnalyticsDataApi() {
         this(Configuration.getDefaultApiClient());
@@ -53,6 +56,546 @@ public class AnalyticsDataApi {
         this.localVarApiClient = apiClient;
     }
 
+    public int getHostIndex() {
+        return localHostIndex;
+    }
+
+    public void setHostIndex(int hostIndex) {
+        this.localHostIndex = hostIndex;
+    }
+
+    public String getCustomBaseUrl() {
+        return localCustomBaseUrl;
+    }
+
+    public void setCustomBaseUrl(String customBaseUrl) {
+        this.localCustomBaseUrl = customBaseUrl;
+    }
+
+    /**
+     * Build call for getGA4ReportPerChannelGroupPerOrganisationPerProperty
+     * @param organisationUuids Organisation uuids (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getGA4ReportPerChannelGroupPerOrganisationPerPropertyCall(List<String> organisationUuids, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/data/ga4-report-per-channel-group-per-organisation-per-property/{organisationUuids}"
+            .replace("{" + "organisationUuids" + "}", localVarApiClient.escapeString(localVarApiClient.collectionPathParameterToString("csv", organisationUuids)));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/csv"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "bearerAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call getGA4ReportPerChannelGroupPerOrganisationPerPropertyValidateBeforeCall(List<String> organisationUuids, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'organisationUuids' is set
+        if (organisationUuids == null) {
+            throw new ApiException("Missing the required parameter 'organisationUuids' when calling getGA4ReportPerChannelGroupPerOrganisationPerProperty(Async)");
+        }
+
+        return getGA4ReportPerChannelGroupPerOrganisationPerPropertyCall(organisationUuids, _callback);
+
+    }
+
+    /**
+     * Return GA4 report per channel group per organisation per property
+     * GA4 report per channel group per organisation per property
+     * @param organisationUuids Organisation uuids (required)
+     * @return String
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
+     </table>
+     */
+    public String getGA4ReportPerChannelGroupPerOrganisationPerProperty(List<String> organisationUuids) throws ApiException {
+        ApiResponse<String> localVarResp = getGA4ReportPerChannelGroupPerOrganisationPerPropertyWithHttpInfo(organisationUuids);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Return GA4 report per channel group per organisation per property
+     * GA4 report per channel group per organisation per property
+     * @param organisationUuids Organisation uuids (required)
+     * @return ApiResponse&lt;String&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<String> getGA4ReportPerChannelGroupPerOrganisationPerPropertyWithHttpInfo(List<String> organisationUuids) throws ApiException {
+        okhttp3.Call localVarCall = getGA4ReportPerChannelGroupPerOrganisationPerPropertyValidateBeforeCall(organisationUuids, null);
+        Type localVarReturnType = new TypeToken<String>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Return GA4 report per channel group per organisation per property (asynchronously)
+     * GA4 report per channel group per organisation per property
+     * @param organisationUuids Organisation uuids (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getGA4ReportPerChannelGroupPerOrganisationPerPropertyAsync(List<String> organisationUuids, final ApiCallback<String> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = getGA4ReportPerChannelGroupPerOrganisationPerPropertyValidateBeforeCall(organisationUuids, _callback);
+        Type localVarReturnType = new TypeToken<String>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for getGA4ReportPerChannelGroupPerOrganisationPerPropertyPerMonth
+     * @param organisationUuids Organisation uuids (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getGA4ReportPerChannelGroupPerOrganisationPerPropertyPerMonthCall(List<String> organisationUuids, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/data/ga4-report-per-channel-group-per-organisation-per-property-per-month/{organisationUuids}"
+            .replace("{" + "organisationUuids" + "}", localVarApiClient.escapeString(localVarApiClient.collectionPathParameterToString("csv", organisationUuids)));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/csv"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "bearerAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call getGA4ReportPerChannelGroupPerOrganisationPerPropertyPerMonthValidateBeforeCall(List<String> organisationUuids, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'organisationUuids' is set
+        if (organisationUuids == null) {
+            throw new ApiException("Missing the required parameter 'organisationUuids' when calling getGA4ReportPerChannelGroupPerOrganisationPerPropertyPerMonth(Async)");
+        }
+
+        return getGA4ReportPerChannelGroupPerOrganisationPerPropertyPerMonthCall(organisationUuids, _callback);
+
+    }
+
+    /**
+     * Return GA4 report per channel group per organisation per property per month
+     * GA4 report per channel group per organisation per property per month
+     * @param organisationUuids Organisation uuids (required)
+     * @return String
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
+     </table>
+     */
+    public String getGA4ReportPerChannelGroupPerOrganisationPerPropertyPerMonth(List<String> organisationUuids) throws ApiException {
+        ApiResponse<String> localVarResp = getGA4ReportPerChannelGroupPerOrganisationPerPropertyPerMonthWithHttpInfo(organisationUuids);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Return GA4 report per channel group per organisation per property per month
+     * GA4 report per channel group per organisation per property per month
+     * @param organisationUuids Organisation uuids (required)
+     * @return ApiResponse&lt;String&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<String> getGA4ReportPerChannelGroupPerOrganisationPerPropertyPerMonthWithHttpInfo(List<String> organisationUuids) throws ApiException {
+        okhttp3.Call localVarCall = getGA4ReportPerChannelGroupPerOrganisationPerPropertyPerMonthValidateBeforeCall(organisationUuids, null);
+        Type localVarReturnType = new TypeToken<String>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Return GA4 report per channel group per organisation per property per month (asynchronously)
+     * GA4 report per channel group per organisation per property per month
+     * @param organisationUuids Organisation uuids (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getGA4ReportPerChannelGroupPerOrganisationPerPropertyPerMonthAsync(List<String> organisationUuids, final ApiCallback<String> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = getGA4ReportPerChannelGroupPerOrganisationPerPropertyPerMonthValidateBeforeCall(organisationUuids, _callback);
+        Type localVarReturnType = new TypeToken<String>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth
+     * @param organisationUuids Organisation uuids (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonthCall(List<String> organisationUuids, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/data/ga4-report-per-channel-group-per-product-name-per-organisation-per-property-per-month/{organisationUuids}"
+            .replace("{" + "organisationUuids" + "}", localVarApiClient.escapeString(localVarApiClient.collectionPathParameterToString("csv", organisationUuids)));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/csv"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "bearerAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonthValidateBeforeCall(List<String> organisationUuids, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'organisationUuids' is set
+        if (organisationUuids == null) {
+            throw new ApiException("Missing the required parameter 'organisationUuids' when calling getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth(Async)");
+        }
+
+        return getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonthCall(organisationUuids, _callback);
+
+    }
+
+    /**
+     * Return GA4 report per channel group per product name per organisation per property per month
+     * GA4 report per channel group per product name per organisation per property per month
+     * @param organisationUuids Organisation uuids (required)
+     * @return String
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
+     </table>
+     */
+    public String getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth(List<String> organisationUuids) throws ApiException {
+        ApiResponse<String> localVarResp = getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonthWithHttpInfo(organisationUuids);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Return GA4 report per channel group per product name per organisation per property per month
+     * GA4 report per channel group per product name per organisation per property per month
+     * @param organisationUuids Organisation uuids (required)
+     * @return ApiResponse&lt;String&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<String> getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonthWithHttpInfo(List<String> organisationUuids) throws ApiException {
+        okhttp3.Call localVarCall = getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonthValidateBeforeCall(organisationUuids, null);
+        Type localVarReturnType = new TypeToken<String>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Return GA4 report per channel group per product name per organisation per property per month (asynchronously)
+     * GA4 report per channel group per product name per organisation per property per month
+     * @param organisationUuids Organisation uuids (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonthAsync(List<String> organisationUuids, final ApiCallback<String> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonthValidateBeforeCall(organisationUuids, _callback);
+        Type localVarReturnType = new TypeToken<String>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for getGA4ReportPerChannelGroupPerSourceMediumPerOrganisationPerPropertyPerMonth
+     * @param organisationUuids Organisation uuids (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getGA4ReportPerChannelGroupPerSourceMediumPerOrganisationPerPropertyPerMonthCall(List<String> organisationUuids, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/data/ga4-report-per-channel-group-per-source-medium-per-organisation-per-property-per-month/{organisationUuids}"
+            .replace("{" + "organisationUuids" + "}", localVarApiClient.escapeString(localVarApiClient.collectionPathParameterToString("csv", organisationUuids)));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/csv"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "bearerAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call getGA4ReportPerChannelGroupPerSourceMediumPerOrganisationPerPropertyPerMonthValidateBeforeCall(List<String> organisationUuids, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'organisationUuids' is set
+        if (organisationUuids == null) {
+            throw new ApiException("Missing the required parameter 'organisationUuids' when calling getGA4ReportPerChannelGroupPerSourceMediumPerOrganisationPerPropertyPerMonth(Async)");
+        }
+
+        return getGA4ReportPerChannelGroupPerSourceMediumPerOrganisationPerPropertyPerMonthCall(organisationUuids, _callback);
+
+    }
+
+    /**
+     * Return GA4 report per channel group per source medium per organisation per property per month
+     * GA4 report per channel group per source medium per organisation per property per month
+     * @param organisationUuids Organisation uuids (required)
+     * @return String
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
+     </table>
+     */
+    public String getGA4ReportPerChannelGroupPerSourceMediumPerOrganisationPerPropertyPerMonth(List<String> organisationUuids) throws ApiException {
+        ApiResponse<String> localVarResp = getGA4ReportPerChannelGroupPerSourceMediumPerOrganisationPerPropertyPerMonthWithHttpInfo(organisationUuids);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Return GA4 report per channel group per source medium per organisation per property per month
+     * GA4 report per channel group per source medium per organisation per property per month
+     * @param organisationUuids Organisation uuids (required)
+     * @return ApiResponse&lt;String&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<String> getGA4ReportPerChannelGroupPerSourceMediumPerOrganisationPerPropertyPerMonthWithHttpInfo(List<String> organisationUuids) throws ApiException {
+        okhttp3.Call localVarCall = getGA4ReportPerChannelGroupPerSourceMediumPerOrganisationPerPropertyPerMonthValidateBeforeCall(organisationUuids, null);
+        Type localVarReturnType = new TypeToken<String>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Return GA4 report per channel group per source medium per organisation per property per month (asynchronously)
+     * GA4 report per channel group per source medium per organisation per property per month
+     * @param organisationUuids Organisation uuids (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getGA4ReportPerChannelGroupPerSourceMediumPerOrganisationPerPropertyPerMonthAsync(List<String> organisationUuids, final ApiCallback<String> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = getGA4ReportPerChannelGroupPerSourceMediumPerOrganisationPerPropertyPerMonthValidateBeforeCall(organisationUuids, _callback);
+        Type localVarReturnType = new TypeToken<String>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
     /**
      * Build call for getViews
      * @param organisationUuid Organisation uuid (required)
@@ -69,11 +612,24 @@ public class AnalyticsDataApi {
      </table>
      */
     public okhttp3.Call getViewsCall(String organisationUuid, String format, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
         Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/data/views/{organisationUuid}"
-            .replaceAll("\\{" + "organisationUuid" + "\\}", localVarApiClient.escapeString(organisationUuid.toString()));
+            .replace("{" + "organisationUuid" + "}", localVarApiClient.escapeString(organisationUuid.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -86,7 +642,8 @@ public class AnalyticsDataApi {
         }
 
         final String[] localVarAccepts = {
-            "text/csv", "application/json"
+            "text/csv",
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -94,26 +651,24 @@ public class AnalyticsDataApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
 
         String[] localVarAuthNames = new String[] { "bearerAuth" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call getViewsValidateBeforeCall(String organisationUuid, String format, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'organisationUuid' is set
         if (organisationUuid == null) {
             throw new ApiException("Missing the required parameter 'organisationUuid' when calling getViews(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = getViewsCall(organisationUuid, format, _callback);
-        return localVarCall;
+        return getViewsCall(organisationUuid, format, _callback);
 
     }
 

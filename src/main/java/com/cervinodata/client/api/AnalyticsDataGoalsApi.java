@@ -27,16 +27,19 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import org.threeten.bp.LocalDate;
+import java.time.LocalDate;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.ws.rs.core.GenericType;
 
 public class AnalyticsDataGoalsApi {
     private ApiClient localVarApiClient;
+    private int localHostIndex;
+    private String localCustomBaseUrl;
 
     public AnalyticsDataGoalsApi() {
         this(Configuration.getDefaultApiClient());
@@ -52,6 +55,22 @@ public class AnalyticsDataGoalsApi {
 
     public void setApiClient(ApiClient apiClient) {
         this.localVarApiClient = apiClient;
+    }
+
+    public int getHostIndex() {
+        return localHostIndex;
+    }
+
+    public void setHostIndex(int hostIndex) {
+        this.localHostIndex = hostIndex;
+    }
+
+    public String getCustomBaseUrl() {
+        return localCustomBaseUrl;
+    }
+
+    public void setCustomBaseUrl(String customBaseUrl) {
+        this.localCustomBaseUrl = customBaseUrl;
     }
 
     /**
@@ -72,11 +91,24 @@ public class AnalyticsDataGoalsApi {
      </table>
      */
     public okhttp3.Call getAnalyticsGoalReportPerCampaignPerDayCall(String organisationUuid, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
         Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/data/analytics-goal-report-per-campaign-per-day/{organisationUuid}"
-            .replaceAll("\\{" + "organisationUuid" + "\\}", localVarApiClient.escapeString(organisationUuid.toString()));
+            .replace("{" + "organisationUuid" + "}", localVarApiClient.escapeString(organisationUuid.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -97,7 +129,8 @@ public class AnalyticsDataGoalsApi {
         }
 
         final String[] localVarAccepts = {
-            "text/csv", "application/json"
+            "text/csv",
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -105,26 +138,24 @@ public class AnalyticsDataGoalsApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
 
         String[] localVarAuthNames = new String[] { "bearerAuth" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call getAnalyticsGoalReportPerCampaignPerDayValidateBeforeCall(String organisationUuid, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'organisationUuid' is set
         if (organisationUuid == null) {
             throw new ApiException("Missing the required parameter 'organisationUuid' when calling getAnalyticsGoalReportPerCampaignPerDay(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = getAnalyticsGoalReportPerCampaignPerDayCall(organisationUuid, fromDate, dateFormat, format, _callback);
-        return localVarCall;
+        return getAnalyticsGoalReportPerCampaignPerDayCall(organisationUuid, fromDate, dateFormat, format, _callback);
 
     }
 
@@ -216,11 +247,24 @@ public class AnalyticsDataGoalsApi {
      </table>
      */
     public okhttp3.Call getAnalyticsGoalReportPerChannelGroupPerDayCall(String organisationUuid, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
         Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/data/analytics-goal-report-per-channel-group-per-day/{organisationUuid}"
-            .replaceAll("\\{" + "organisationUuid" + "\\}", localVarApiClient.escapeString(organisationUuid.toString()));
+            .replace("{" + "organisationUuid" + "}", localVarApiClient.escapeString(organisationUuid.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -241,7 +285,8 @@ public class AnalyticsDataGoalsApi {
         }
 
         final String[] localVarAccepts = {
-            "text/csv", "application/json"
+            "text/csv",
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -249,26 +294,24 @@ public class AnalyticsDataGoalsApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
 
         String[] localVarAuthNames = new String[] { "bearerAuth" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call getAnalyticsGoalReportPerChannelGroupPerDayValidateBeforeCall(String organisationUuid, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'organisationUuid' is set
         if (organisationUuid == null) {
             throw new ApiException("Missing the required parameter 'organisationUuid' when calling getAnalyticsGoalReportPerChannelGroupPerDay(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = getAnalyticsGoalReportPerChannelGroupPerDayCall(organisationUuid, fromDate, dateFormat, format, _callback);
-        return localVarCall;
+        return getAnalyticsGoalReportPerChannelGroupPerDayCall(organisationUuid, fromDate, dateFormat, format, _callback);
 
     }
 
@@ -360,11 +403,24 @@ public class AnalyticsDataGoalsApi {
      </table>
      */
     public okhttp3.Call getAnalyticsGoalReportPerDevicePerDayCall(String organisationUuid, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
         Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/data/analytics-goal-report-per-device-per-day/{organisationUuid}"
-            .replaceAll("\\{" + "organisationUuid" + "\\}", localVarApiClient.escapeString(organisationUuid.toString()));
+            .replace("{" + "organisationUuid" + "}", localVarApiClient.escapeString(organisationUuid.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -385,7 +441,8 @@ public class AnalyticsDataGoalsApi {
         }
 
         final String[] localVarAccepts = {
-            "text/csv", "application/json"
+            "text/csv",
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -393,26 +450,24 @@ public class AnalyticsDataGoalsApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
 
         String[] localVarAuthNames = new String[] { "bearerAuth" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call getAnalyticsGoalReportPerDevicePerDayValidateBeforeCall(String organisationUuid, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'organisationUuid' is set
         if (organisationUuid == null) {
             throw new ApiException("Missing the required parameter 'organisationUuid' when calling getAnalyticsGoalReportPerDevicePerDay(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = getAnalyticsGoalReportPerDevicePerDayCall(organisationUuid, fromDate, dateFormat, format, _callback);
-        return localVarCall;
+        return getAnalyticsGoalReportPerDevicePerDayCall(organisationUuid, fromDate, dateFormat, format, _callback);
 
     }
 
@@ -504,11 +559,24 @@ public class AnalyticsDataGoalsApi {
      </table>
      */
     public okhttp3.Call getAnalyticsGoalReportPerSourceMediumPerDayCall(String organisationUuid, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
         Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/data/analytics-goal-report-per-source-medium-per-day/{organisationUuid}"
-            .replaceAll("\\{" + "organisationUuid" + "\\}", localVarApiClient.escapeString(organisationUuid.toString()));
+            .replace("{" + "organisationUuid" + "}", localVarApiClient.escapeString(organisationUuid.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -529,7 +597,8 @@ public class AnalyticsDataGoalsApi {
         }
 
         final String[] localVarAccepts = {
-            "text/csv", "application/json"
+            "text/csv",
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -537,26 +606,24 @@ public class AnalyticsDataGoalsApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
 
         String[] localVarAuthNames = new String[] { "bearerAuth" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call getAnalyticsGoalReportPerSourceMediumPerDayValidateBeforeCall(String organisationUuid, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'organisationUuid' is set
         if (organisationUuid == null) {
             throw new ApiException("Missing the required parameter 'organisationUuid' when calling getAnalyticsGoalReportPerSourceMediumPerDay(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = getAnalyticsGoalReportPerSourceMediumPerDayCall(organisationUuid, fromDate, dateFormat, format, _callback);
-        return localVarCall;
+        return getAnalyticsGoalReportPerSourceMediumPerDayCall(organisationUuid, fromDate, dateFormat, format, _callback);
 
     }
 
