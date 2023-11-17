@@ -27,7 +27,7 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import java.time.LocalDate;
+import java.util.Date;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -89,7 +89,7 @@ public class AnalyticsDataGoalsApi {
         <tr><td> 404 </td><td> Organisation uuid not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getAnalyticsGoalReportPerCampaignPerDayCall(String organisationUuid, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getAnalyticsGoalReportPerCampaignPerDayCall(String organisationUuid, Date fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -148,7 +148,7 @@ public class AnalyticsDataGoalsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getAnalyticsGoalReportPerCampaignPerDayValidateBeforeCall(String organisationUuid, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getAnalyticsGoalReportPerCampaignPerDayValidateBeforeCall(String organisationUuid, Date fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'organisationUuid' is set
         if (organisationUuid == null) {
             throw new ApiException("Missing the required parameter 'organisationUuid' when calling getAnalyticsGoalReportPerCampaignPerDay(Async)");
@@ -175,7 +175,7 @@ public class AnalyticsDataGoalsApi {
         <tr><td> 404 </td><td> Organisation uuid not found </td><td>  -  </td></tr>
      </table>
      */
-    public String getAnalyticsGoalReportPerCampaignPerDay(String organisationUuid, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public String getAnalyticsGoalReportPerCampaignPerDay(String organisationUuid, Date fromDate, String dateFormat, String format) throws ApiException {
         ApiResponse<String> localVarResp = getAnalyticsGoalReportPerCampaignPerDayWithHttpInfo(organisationUuid, fromDate, dateFormat, format);
         return localVarResp.getData();
     }
@@ -197,7 +197,7 @@ public class AnalyticsDataGoalsApi {
         <tr><td> 404 </td><td> Organisation uuid not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> getAnalyticsGoalReportPerCampaignPerDayWithHttpInfo(String organisationUuid, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public ApiResponse<String> getAnalyticsGoalReportPerCampaignPerDayWithHttpInfo(String organisationUuid, Date fromDate, String dateFormat, String format) throws ApiException {
         okhttp3.Call localVarCall = getAnalyticsGoalReportPerCampaignPerDayValidateBeforeCall(organisationUuid, fromDate, dateFormat, format, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -221,7 +221,7 @@ public class AnalyticsDataGoalsApi {
         <tr><td> 404 </td><td> Organisation uuid not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getAnalyticsGoalReportPerCampaignPerDayAsync(String organisationUuid, LocalDate fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call getAnalyticsGoalReportPerCampaignPerDayAsync(String organisationUuid, Date fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getAnalyticsGoalReportPerCampaignPerDayValidateBeforeCall(organisationUuid, fromDate, dateFormat, format, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
@@ -245,7 +245,7 @@ public class AnalyticsDataGoalsApi {
         <tr><td> 404 </td><td> Organisation uuid not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getAnalyticsGoalReportPerChannelGroupPerDayCall(String organisationUuid, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getAnalyticsGoalReportPerChannelGroupPerDayCall(String organisationUuid, Date fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -304,7 +304,7 @@ public class AnalyticsDataGoalsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getAnalyticsGoalReportPerChannelGroupPerDayValidateBeforeCall(String organisationUuid, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getAnalyticsGoalReportPerChannelGroupPerDayValidateBeforeCall(String organisationUuid, Date fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'organisationUuid' is set
         if (organisationUuid == null) {
             throw new ApiException("Missing the required parameter 'organisationUuid' when calling getAnalyticsGoalReportPerChannelGroupPerDay(Async)");
@@ -331,7 +331,7 @@ public class AnalyticsDataGoalsApi {
         <tr><td> 404 </td><td> Organisation uuid not found </td><td>  -  </td></tr>
      </table>
      */
-    public String getAnalyticsGoalReportPerChannelGroupPerDay(String organisationUuid, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public String getAnalyticsGoalReportPerChannelGroupPerDay(String organisationUuid, Date fromDate, String dateFormat, String format) throws ApiException {
         ApiResponse<String> localVarResp = getAnalyticsGoalReportPerChannelGroupPerDayWithHttpInfo(organisationUuid, fromDate, dateFormat, format);
         return localVarResp.getData();
     }
@@ -353,7 +353,7 @@ public class AnalyticsDataGoalsApi {
         <tr><td> 404 </td><td> Organisation uuid not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> getAnalyticsGoalReportPerChannelGroupPerDayWithHttpInfo(String organisationUuid, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public ApiResponse<String> getAnalyticsGoalReportPerChannelGroupPerDayWithHttpInfo(String organisationUuid, Date fromDate, String dateFormat, String format) throws ApiException {
         okhttp3.Call localVarCall = getAnalyticsGoalReportPerChannelGroupPerDayValidateBeforeCall(organisationUuid, fromDate, dateFormat, format, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -377,7 +377,7 @@ public class AnalyticsDataGoalsApi {
         <tr><td> 404 </td><td> Organisation uuid not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getAnalyticsGoalReportPerChannelGroupPerDayAsync(String organisationUuid, LocalDate fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call getAnalyticsGoalReportPerChannelGroupPerDayAsync(String organisationUuid, Date fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getAnalyticsGoalReportPerChannelGroupPerDayValidateBeforeCall(organisationUuid, fromDate, dateFormat, format, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
@@ -401,7 +401,7 @@ public class AnalyticsDataGoalsApi {
         <tr><td> 404 </td><td> Organisation uuid not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getAnalyticsGoalReportPerDevicePerDayCall(String organisationUuid, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getAnalyticsGoalReportPerDevicePerDayCall(String organisationUuid, Date fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -460,7 +460,7 @@ public class AnalyticsDataGoalsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getAnalyticsGoalReportPerDevicePerDayValidateBeforeCall(String organisationUuid, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getAnalyticsGoalReportPerDevicePerDayValidateBeforeCall(String organisationUuid, Date fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'organisationUuid' is set
         if (organisationUuid == null) {
             throw new ApiException("Missing the required parameter 'organisationUuid' when calling getAnalyticsGoalReportPerDevicePerDay(Async)");
@@ -487,7 +487,7 @@ public class AnalyticsDataGoalsApi {
         <tr><td> 404 </td><td> Organisation uuid not found </td><td>  -  </td></tr>
      </table>
      */
-    public String getAnalyticsGoalReportPerDevicePerDay(String organisationUuid, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public String getAnalyticsGoalReportPerDevicePerDay(String organisationUuid, Date fromDate, String dateFormat, String format) throws ApiException {
         ApiResponse<String> localVarResp = getAnalyticsGoalReportPerDevicePerDayWithHttpInfo(organisationUuid, fromDate, dateFormat, format);
         return localVarResp.getData();
     }
@@ -509,7 +509,7 @@ public class AnalyticsDataGoalsApi {
         <tr><td> 404 </td><td> Organisation uuid not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> getAnalyticsGoalReportPerDevicePerDayWithHttpInfo(String organisationUuid, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public ApiResponse<String> getAnalyticsGoalReportPerDevicePerDayWithHttpInfo(String organisationUuid, Date fromDate, String dateFormat, String format) throws ApiException {
         okhttp3.Call localVarCall = getAnalyticsGoalReportPerDevicePerDayValidateBeforeCall(organisationUuid, fromDate, dateFormat, format, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -533,7 +533,7 @@ public class AnalyticsDataGoalsApi {
         <tr><td> 404 </td><td> Organisation uuid not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getAnalyticsGoalReportPerDevicePerDayAsync(String organisationUuid, LocalDate fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call getAnalyticsGoalReportPerDevicePerDayAsync(String organisationUuid, Date fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getAnalyticsGoalReportPerDevicePerDayValidateBeforeCall(organisationUuid, fromDate, dateFormat, format, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
@@ -557,7 +557,7 @@ public class AnalyticsDataGoalsApi {
         <tr><td> 404 </td><td> Organisation uuid not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getAnalyticsGoalReportPerSourceMediumPerDayCall(String organisationUuid, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getAnalyticsGoalReportPerSourceMediumPerDayCall(String organisationUuid, Date fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -616,7 +616,7 @@ public class AnalyticsDataGoalsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getAnalyticsGoalReportPerSourceMediumPerDayValidateBeforeCall(String organisationUuid, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getAnalyticsGoalReportPerSourceMediumPerDayValidateBeforeCall(String organisationUuid, Date fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'organisationUuid' is set
         if (organisationUuid == null) {
             throw new ApiException("Missing the required parameter 'organisationUuid' when calling getAnalyticsGoalReportPerSourceMediumPerDay(Async)");
@@ -643,7 +643,7 @@ public class AnalyticsDataGoalsApi {
         <tr><td> 404 </td><td> Organisation uuid not found </td><td>  -  </td></tr>
      </table>
      */
-    public String getAnalyticsGoalReportPerSourceMediumPerDay(String organisationUuid, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public String getAnalyticsGoalReportPerSourceMediumPerDay(String organisationUuid, Date fromDate, String dateFormat, String format) throws ApiException {
         ApiResponse<String> localVarResp = getAnalyticsGoalReportPerSourceMediumPerDayWithHttpInfo(organisationUuid, fromDate, dateFormat, format);
         return localVarResp.getData();
     }
@@ -665,7 +665,7 @@ public class AnalyticsDataGoalsApi {
         <tr><td> 404 </td><td> Organisation uuid not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> getAnalyticsGoalReportPerSourceMediumPerDayWithHttpInfo(String organisationUuid, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public ApiResponse<String> getAnalyticsGoalReportPerSourceMediumPerDayWithHttpInfo(String organisationUuid, Date fromDate, String dateFormat, String format) throws ApiException {
         okhttp3.Call localVarCall = getAnalyticsGoalReportPerSourceMediumPerDayValidateBeforeCall(organisationUuid, fromDate, dateFormat, format, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -689,7 +689,7 @@ public class AnalyticsDataGoalsApi {
         <tr><td> 404 </td><td> Organisation uuid not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getAnalyticsGoalReportPerSourceMediumPerDayAsync(String organisationUuid, LocalDate fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call getAnalyticsGoalReportPerSourceMediumPerDayAsync(String organisationUuid, Date fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getAnalyticsGoalReportPerSourceMediumPerDayValidateBeforeCall(organisationUuid, fromDate, dateFormat, format, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
