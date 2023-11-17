@@ -21,6 +21,9 @@ import okhttp3.logging.HttpLoggingInterceptor.Level;
 import okio.Buffer;
 import okio.BufferedSink;
 import okio.Okio;
+import org.joda.time.DateTime;
+import org.joda.time.LocalDate;
+import org.joda.time.format.DateTimeFormatter;
 
 import javax.net.ssl.*;
 import java.io.File;
@@ -351,6 +354,16 @@ public class ApiClient {
         return this;
     }
 
+    public ApiClient setDateTimeFormat(DateTimeFormatter dateFormat) {
+        JSON.setDateTimeFormat(dateFormat);
+        return this;
+    }
+
+    public ApiClient setLocalDateFormat(DateTimeFormatter dateFormat) {
+        JSON.setLocalDateFormat(dateFormat);
+        return this;
+    }
+
     /**
      * <p>Set LenientOnJson.</p>
      *
@@ -642,7 +655,7 @@ public class ApiClient {
     public String parameterToString(Object param) {
         if (param == null) {
             return "";
-        } else if (param instanceof Date ) {
+        } else if (param instanceof Date || param instanceof DateTime || param instanceof LocalDate) {
             //Serialize to json string and remove the " enclosing characters
             String jsonStr = JSON.serialize(param);
             return jsonStr.substring(1, jsonStr.length() - 1);
