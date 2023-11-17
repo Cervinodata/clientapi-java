@@ -2,7 +2,7 @@
 
 Cervinodata API documentation
 - API version: 1.0.0
-  - Build date: 2023-11-17T16:07:56.967305Z[Etc/UTC]
+  - Build date: 2023-11-17T16:11:55.437164Z[Etc/UTC]
 
 <div style='margin: 2em 0;'>
 <p>
