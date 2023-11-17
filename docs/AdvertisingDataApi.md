@@ -60,7 +60,7 @@ public class Example {
 
     AdvertisingDataApi apiInstance = new AdvertisingDataApi(defaultClient);
     List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
-    Date fromDate = new Date(); // Date | From date
+    LocalDate fromDate = LocalDate.now(); // LocalDate | From date
     String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
     String format = "csv"; // String | Output format (use csv for large result sets)
     try {
@@ -82,7 +82,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
-| **fromDate** | **Date**| From date | [optional] |
+| **fromDate** | **LocalDate**| From date | [optional] |
 | **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
 | **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
@@ -206,7 +206,7 @@ public class Example {
 
     AdvertisingDataApi apiInstance = new AdvertisingDataApi(defaultClient);
     String organisationUuid = "organisationUuid_example"; // String | Organisation uuid
-    Date fromDate = new Date(); // Date | From date
+    LocalDate fromDate = LocalDate.now(); // LocalDate | From date
     String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
     String format = "csv"; // String | Output format (use csv for large result sets)
     try {
@@ -228,7 +228,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **organisationUuid** | **String**| Organisation uuid | |
-| **fromDate** | **Date**| From date | [optional] |
+| **fromDate** | **LocalDate**| From date | [optional] |
 | **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
 | **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
@@ -281,7 +281,7 @@ public class Example {
 
     AdvertisingDataApi apiInstance = new AdvertisingDataApi(defaultClient);
     List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
-    Date fromDate = new Date(); // Date | From date
+    LocalDate fromDate = LocalDate.now(); // LocalDate | From date
     String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
     String format = "csv"; // String | Output format (use csv for large result sets)
     try {
@@ -303,7 +303,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
-| **fromDate** | **Date**| From date | [optional] |
+| **fromDate** | **LocalDate**| From date | [optional] |
 | **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
 | **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
@@ -356,7 +356,7 @@ public class Example {
 
     AdvertisingDataApi apiInstance = new AdvertisingDataApi(defaultClient);
     List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
-    Date fromDate = new Date(); // Date | From date
+    LocalDate fromDate = LocalDate.now(); // LocalDate | From date
     String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
     String format = "csv"; // String | Output format (use csv for large result sets)
     try {
@@ -378,7 +378,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
-| **fromDate** | **Date**| From date | [optional] |
+| **fromDate** | **LocalDate**| From date | [optional] |
 | **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
 | **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
@@ -431,7 +431,7 @@ public class Example {
 
     AdvertisingDataApi apiInstance = new AdvertisingDataApi(defaultClient);
     String organisationUuid = "organisationUuid_example"; // String | Organisation uuid
-    Date fromDate = new Date(); // Date | From date
+    LocalDate fromDate = LocalDate.now(); // LocalDate | From date
     String format = "csv"; // String | Output format
     try {
       String result = apiInstance.getAdCampaigns(organisationUuid, fromDate, format);
@@ -452,7 +452,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **organisationUuid** | **String**| Organisation uuid | |
-| **fromDate** | **Date**| From date | [optional] |
+| **fromDate** | **LocalDate**| From date | [optional] |
 | **format** | **String**| Output format | [optional] [enum: csv, json] |
 
 ### Return type
@@ -504,7 +504,7 @@ public class Example {
 
     AdvertisingDataApi apiInstance = new AdvertisingDataApi(defaultClient);
     String organisationUuid = "organisationUuid_example"; // String | Organisation uuid
-    Date fromDate = new Date(); // Date | From date
+    LocalDate fromDate = LocalDate.now(); // LocalDate | From date
     String format = "csv"; // String | Output format
     try {
       String result = apiInstance.getAdGroups(organisationUuid, fromDate, format);
@@ -525,7 +525,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **organisationUuid** | **String**| Organisation uuid | |
-| **fromDate** | **Date**| From date | [optional] |
+| **fromDate** | **LocalDate**| From date | [optional] |
 | **format** | **String**| Output format | [optional] [enum: csv, json] |
 
 ### Return type
@@ -577,7 +577,7 @@ public class Example {
 
     AdvertisingDataApi apiInstance = new AdvertisingDataApi(defaultClient);
     List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
-    Date fromDate = new Date(); // Date | From date
+    LocalDate fromDate = LocalDate.now(); // LocalDate | From date
     String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
     String format = "csv"; // String | Output format (use csv for large result sets)
     try {
@@ -599,7 +599,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
-| **fromDate** | **Date**| From date | [optional] |
+| **fromDate** | **LocalDate**| From date | [optional] |
 | **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
 | **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
@@ -652,7 +652,7 @@ public class Example {
 
     AdvertisingDataApi apiInstance = new AdvertisingDataApi(defaultClient);
     List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
-    Date fromDate = new Date(); // Date | From date
+    LocalDate fromDate = LocalDate.now(); // LocalDate | From date
     String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
     String format = "csv"; // String | Output format (use csv for large result sets)
     try {
@@ -674,7 +674,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
-| **fromDate** | **Date**| From date | [optional] |
+| **fromDate** | **LocalDate**| From date | [optional] |
 | **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
 | **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
@@ -727,7 +727,7 @@ public class Example {
 
     AdvertisingDataApi apiInstance = new AdvertisingDataApi(defaultClient);
     List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
-    Date fromDate = new Date(); // Date | From date
+    LocalDate fromDate = LocalDate.now(); // LocalDate | From date
     String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
     String format = "csv"; // String | Output format (use csv for large result sets)
     try {
@@ -749,7 +749,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
-| **fromDate** | **Date**| From date | [optional] |
+| **fromDate** | **LocalDate**| From date | [optional] |
 | **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
 | **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
@@ -802,7 +802,7 @@ public class Example {
 
     AdvertisingDataApi apiInstance = new AdvertisingDataApi(defaultClient);
     List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
-    Date fromDate = new Date(); // Date | From date
+    LocalDate fromDate = LocalDate.now(); // LocalDate | From date
     String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
     String format = "csv"; // String | Output format (use csv for large result sets)
     try {
@@ -824,7 +824,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
-| **fromDate** | **Date**| From date | [optional] |
+| **fromDate** | **LocalDate**| From date | [optional] |
 | **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
 | **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
@@ -877,7 +877,7 @@ public class Example {
 
     AdvertisingDataApi apiInstance = new AdvertisingDataApi(defaultClient);
     List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
-    Date fromDate = new Date(); // Date | From date
+    LocalDate fromDate = LocalDate.now(); // LocalDate | From date
     String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
     String format = "csv"; // String | Output format (use csv for large result sets)
     try {
@@ -899,7 +899,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
-| **fromDate** | **Date**| From date | [optional] |
+| **fromDate** | **LocalDate**| From date | [optional] |
 | **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
 | **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
@@ -952,7 +952,7 @@ public class Example {
 
     AdvertisingDataApi apiInstance = new AdvertisingDataApi(defaultClient);
     List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
-    Date fromDate = new Date(); // Date | From date
+    LocalDate fromDate = LocalDate.now(); // LocalDate | From date
     String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
     String format = "csv"; // String | Output format (use csv for large result sets)
     try {
@@ -974,7 +974,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
-| **fromDate** | **Date**| From date | [optional] |
+| **fromDate** | **LocalDate**| From date | [optional] |
 | **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
 | **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
@@ -1027,7 +1027,7 @@ public class Example {
 
     AdvertisingDataApi apiInstance = new AdvertisingDataApi(defaultClient);
     List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
-    Date fromDate = new Date(); // Date | From date
+    LocalDate fromDate = LocalDate.now(); // LocalDate | From date
     String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
     String format = "csv"; // String | Output format (use csv for large result sets)
     try {
@@ -1049,7 +1049,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
-| **fromDate** | **Date**| From date | [optional] |
+| **fromDate** | **LocalDate**| From date | [optional] |
 | **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
 | **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
@@ -1102,7 +1102,7 @@ public class Example {
 
     AdvertisingDataApi apiInstance = new AdvertisingDataApi(defaultClient);
     List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
-    Date fromDate = new Date(); // Date | From date
+    LocalDate fromDate = LocalDate.now(); // LocalDate | From date
     String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
     String format = "csv"; // String | Output format (use csv for large result sets)
     try {
@@ -1124,7 +1124,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
-| **fromDate** | **Date**| From date | [optional] |
+| **fromDate** | **LocalDate**| From date | [optional] |
 | **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
 | **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
@@ -1177,7 +1177,7 @@ public class Example {
 
     AdvertisingDataApi apiInstance = new AdvertisingDataApi(defaultClient);
     List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
-    Date fromDate = new Date(); // Date | From date
+    LocalDate fromDate = LocalDate.now(); // LocalDate | From date
     String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
     String format = "csv"; // String | Output format (use csv for large result sets)
     try {
@@ -1199,7 +1199,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
-| **fromDate** | **Date**| From date | [optional] |
+| **fromDate** | **LocalDate**| From date | [optional] |
 | **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
 | **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
@@ -1252,7 +1252,7 @@ public class Example {
 
     AdvertisingDataApi apiInstance = new AdvertisingDataApi(defaultClient);
     List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
-    Date fromDate = new Date(); // Date | From date
+    LocalDate fromDate = LocalDate.now(); // LocalDate | From date
     String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
     String format = "csv"; // String | Output format (use csv for large result sets)
     try {
@@ -1274,7 +1274,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
-| **fromDate** | **Date**| From date | [optional] |
+| **fromDate** | **LocalDate**| From date | [optional] |
 | **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
 | **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
@@ -1327,7 +1327,7 @@ public class Example {
 
     AdvertisingDataApi apiInstance = new AdvertisingDataApi(defaultClient);
     List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
-    Date fromDate = new Date(); // Date | From date
+    LocalDate fromDate = LocalDate.now(); // LocalDate | From date
     String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
     String format = "csv"; // String | Output format (use csv for large result sets)
     try {
@@ -1349,7 +1349,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
-| **fromDate** | **Date**| From date | [optional] |
+| **fromDate** | **LocalDate**| From date | [optional] |
 | **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
 | **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
@@ -1402,7 +1402,7 @@ public class Example {
 
     AdvertisingDataApi apiInstance = new AdvertisingDataApi(defaultClient);
     List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
-    Date fromDate = new Date(); // Date | From date
+    LocalDate fromDate = LocalDate.now(); // LocalDate | From date
     String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
     String format = "csv"; // String | Output format (use csv for large result sets)
     try {
@@ -1424,7 +1424,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
-| **fromDate** | **Date**| From date | [optional] |
+| **fromDate** | **LocalDate**| From date | [optional] |
 | **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
 | **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
@@ -1477,7 +1477,7 @@ public class Example {
 
     AdvertisingDataApi apiInstance = new AdvertisingDataApi(defaultClient);
     List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
-    Date fromDate = new Date(); // Date | From date
+    LocalDate fromDate = LocalDate.now(); // LocalDate | From date
     String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
     String format = "csv"; // String | Output format (use csv for large result sets)
     try {
@@ -1499,7 +1499,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
-| **fromDate** | **Date**| From date | [optional] |
+| **fromDate** | **LocalDate**| From date | [optional] |
 | **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
 | **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
@@ -1552,7 +1552,7 @@ public class Example {
 
     AdvertisingDataApi apiInstance = new AdvertisingDataApi(defaultClient);
     List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
-    Date fromDate = new Date(); // Date | From date
+    LocalDate fromDate = LocalDate.now(); // LocalDate | From date
     String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
     String format = "csv"; // String | Output format (use csv for large result sets)
     try {
@@ -1574,7 +1574,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
-| **fromDate** | **Date**| From date | [optional] |
+| **fromDate** | **LocalDate**| From date | [optional] |
 | **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
 | **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
@@ -1627,7 +1627,7 @@ public class Example {
 
     AdvertisingDataApi apiInstance = new AdvertisingDataApi(defaultClient);
     List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
-    Date fromDate = new Date(); // Date | From date
+    LocalDate fromDate = LocalDate.now(); // LocalDate | From date
     String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
     String format = "csv"; // String | Output format (use csv for large result sets)
     try {
@@ -1649,7 +1649,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
-| **fromDate** | **Date**| From date | [optional] |
+| **fromDate** | **LocalDate**| From date | [optional] |
 | **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
 | **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
@@ -1702,7 +1702,7 @@ public class Example {
 
     AdvertisingDataApi apiInstance = new AdvertisingDataApi(defaultClient);
     List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
-    Date fromDate = new Date(); // Date | From date
+    LocalDate fromDate = LocalDate.now(); // LocalDate | From date
     String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
     String format = "csv"; // String | Output format (use csv for large result sets)
     try {
@@ -1724,7 +1724,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
-| **fromDate** | **Date**| From date | [optional] |
+| **fromDate** | **LocalDate**| From date | [optional] |
 | **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
 | **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
@@ -1777,7 +1777,7 @@ public class Example {
 
     AdvertisingDataApi apiInstance = new AdvertisingDataApi(defaultClient);
     List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
-    Date fromDate = new Date(); // Date | From date
+    LocalDate fromDate = LocalDate.now(); // LocalDate | From date
     String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
     String format = "csv"; // String | Output format (use csv for large result sets)
     try {
@@ -1799,7 +1799,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
-| **fromDate** | **Date**| From date | [optional] |
+| **fromDate** | **LocalDate**| From date | [optional] |
 | **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
 | **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
@@ -1852,7 +1852,7 @@ public class Example {
 
     AdvertisingDataApi apiInstance = new AdvertisingDataApi(defaultClient);
     List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
-    Date fromDate = new Date(); // Date | From date
+    LocalDate fromDate = LocalDate.now(); // LocalDate | From date
     String dateFormat = "YYYY-MM-DD"; // String | Outputted date format
     String format = "csv"; // String | Output format (use csv for large result sets)
     try {
@@ -1874,7 +1874,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **organisationUuids** | [**List&lt;String&gt;**](String.md)| Organisation uuids | |
-| **fromDate** | **Date**| From date | [optional] |
+| **fromDate** | **LocalDate**| From date | [optional] |
 | **dateFormat** | **String**| Outputted date format | [optional] [enum: YYYY-MM-DD, YYYYMMDD] |
 | **format** | **String**| Output format (use csv for large result sets) | [optional] [enum: csv, json] |
 
