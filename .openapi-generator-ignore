@@ -24,3 +24,4 @@
 
 # Recursively exclude directories named Api
 # You can't negate files below this directory.
+src/test/*

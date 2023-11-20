@@ -1,6 +1,6 @@
 /*
  * Cervinodata API documentation
- * <div style='margin: 2em 0;'><p>Before you get going with the Cervinodata API, set up Cervinodata (read the support page here: <a href='https://support.cervinodata.com/hc/en-nl/articles/360004363237' target='_blank'>How to set up the Cervinodata API</a>).</p> <h3>To use the Cervinodata API, you need all of the following:</h3> <p> <ol> <li>An active Cervinodata account, you can start a free trial <a href='https://app.cervinodata.com/register' target='_blank'>here</a></li> <li>At least one connection to a platform (check <a href='https://app.cervinodata.com/pages/data-sources/connections' target='_blank'>here</a>)</li> <li>At least one account switched ON (check <a href='https://app.cervinodata.com/pages/data-sources/accounts' target='_blank'>here</a>)</li> <li>At least one data refresh executed (check <a href='https://app.cervinodata.com/pages/data-destinations-api/data-collection' target='_blank'>here</a>)</li> <li>An active API token (check <a href='https://app.cervinodata.com/settings#/api' target='_blank'>here</a>)</li> </ol> </p> <p> If you wish to automate your Cervinodata API connection, check out the list of client API's at <a href='https://github.com/Cervinodata' target='_blank'>https://github.com/Cervinodata</a>. </p> </div>
+ * <div style='margin: 2em 0;'> <p> Before you get going with the Cervinodata API, set up Cervinodata (read the support page here: <a href='https://support.cervinodata.com/hc/en-nl/articles/360004363237' target='_blank'>How to set up the Cervinodata API</a>). </p> <h3>To use the Cervinodata API, you need all of the following:</h3> <p> <ol> <li>An active Cervinodata account, you can start a free trial <a href='https://app.cervinodata.com/register' target='_blank'>here</a></li> <li>At least one connection to a platform (check <a href='https://app.cervinodata.com/data-sources-connections' target='_blank'>here</a>)</li> <li>At least one account switched ON (check <a href='https://app.cervinodata.com/accounts' target='_blank'>here</a>)</li> <li>At least one data refresh executed (check <a href='https://app.cervinodata.com/manual-data-refresh' target='_blank'>here</a>)</li> <li>An active API token (check <a href='https://app.cervinodata.com/settings#/api' target='_blank'>here</a>)</li> </ol> </p> <p> Note that limits apply for <a href='https://support.cervinodata.com/hc/articles/360014265139' target='_blank'>Free plan users</a>. </p> <p> If you wish to automate your Cervinodata API connection, check out the list of client API's at <a href='https://github.com/Cervinodata' target='_blank'>https://github.com/Cervinodata</a>. </p> </div>
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@cervinodata.com
@@ -14,9 +14,9 @@
 package com.cervinodata.client.api;
 
 import com.cervinodata.client.ApiException;
-import org.threeten.bp.LocalDate;
-import org.junit.Test;
-import org.junit.Ignore;
+import java.time.LocalDate;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -26,19 +26,17 @@ import java.util.Map;
 /**
  * API tests for AnalyticsDataDefaultMetricsApi
  */
-@Ignore
+@Disabled
 public class AnalyticsDataDefaultMetricsApiTest {
 
     private final AnalyticsDataDefaultMetricsApi api = new AnalyticsDataDefaultMetricsApi();
 
-    
     /**
      * Return analytics report per campaign per day by organisation
      *
      * Analytics report per campaign per day by organisation
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void getAnalyticsReportPerCampaignPerDayTest() throws ApiException {
@@ -47,17 +45,15 @@ public class AnalyticsDataDefaultMetricsApiTest {
         String dateFormat = null;
         String format = null;
         String response = api.getAnalyticsReportPerCampaignPerDay(organisationUuid, fromDate, dateFormat, format);
-
         // TODO: test validations
     }
-    
+
     /**
      * Return analytics report per channel group per day by organisation
      *
      * Analytics report per channel group per day by organisation
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void getAnalyticsReportPerChannelGroupPerDayTest() throws ApiException {
@@ -66,17 +62,15 @@ public class AnalyticsDataDefaultMetricsApiTest {
         String dateFormat = null;
         String format = null;
         String response = api.getAnalyticsReportPerChannelGroupPerDay(organisationUuid, fromDate, dateFormat, format);
-
         // TODO: test validations
     }
-    
+
     /**
      * Return analytics report per device per channel group per organisation per view per day
      *
      * Analytics report per device per channel group per organisation per view per day
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void getAnalyticsReportPerDevicePerChannelGroupPerOrganisationPerViewPerDayTest() throws ApiException {
@@ -85,17 +79,15 @@ public class AnalyticsDataDefaultMetricsApiTest {
         String dateFormat = null;
         String format = null;
         String response = api.getAnalyticsReportPerDevicePerChannelGroupPerOrganisationPerViewPerDay(organisationUuids, fromDate, dateFormat, format);
-
         // TODO: test validations
     }
-    
+
     /**
      * Return analytics report per device per day by organisation
      *
      * Analytics report per device per day by organisation
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void getAnalyticsReportPerDevicePerDayTest() throws ApiException {
@@ -104,17 +96,15 @@ public class AnalyticsDataDefaultMetricsApiTest {
         String dateFormat = null;
         String format = null;
         String response = api.getAnalyticsReportPerDevicePerDay(organisationUuid, fromDate, dateFormat, format);
-
         // TODO: test validations
     }
-    
+
     /**
      * Return analytics report per source medium per day by organisation
      *
      * Analytics report per source medium per day by organisation
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void getAnalyticsReportPerSourceMediumPerDayTest() throws ApiException {
@@ -123,8 +113,24 @@ public class AnalyticsDataDefaultMetricsApiTest {
         String dateFormat = null;
         String format = null;
         String response = api.getAnalyticsReportPerSourceMediumPerDay(organisationUuid, fromDate, dateFormat, format);
-
         // TODO: test validations
     }
-    
+
+    /**
+     * Return GA4 report per device per channel group per organisation per property per day
+     *
+     * GA4 report per device per channel group per organisation per property per day
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void getGA4ReportPerDevicePerChannelGroupPerOrganisationPerPropertyPerDayTest() throws ApiException {
+        List<String> organisationUuids = null;
+        LocalDate fromDate = null;
+        String dateFormat = null;
+        String format = null;
+        String response = api.getGA4ReportPerDevicePerChannelGroupPerOrganisationPerPropertyPerDay(organisationUuids, fromDate, dateFormat, format);
+        // TODO: test validations
+    }
+
 }

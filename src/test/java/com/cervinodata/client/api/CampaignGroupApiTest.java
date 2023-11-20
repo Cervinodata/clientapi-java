@@ -1,6 +1,6 @@
 /*
  * Cervinodata API documentation
- * <div style='margin: 2em 0;'><p>Before you get going with the Cervinodata API, set up Cervinodata (read the support page here: <a href='https://support.cervinodata.com/hc/en-nl/articles/360004363237' target='_blank'>How to set up the Cervinodata API</a>).</p> <h3>To use the Cervinodata API, you need all of the following:</h3> <p> <ol> <li>An active Cervinodata account, you can start a free trial <a href='https://app.cervinodata.com/register' target='_blank'>here</a></li> <li>At least one connection to a platform (check <a href='https://app.cervinodata.com/data-sources-connections' target='_blank'>here</a>)</li> <li>At least one account switched ON (check <a href='https://app.cervinodata.com/accounts' target='_blank'>here</a>)</li> <li>At least one data refresh executed (check <a href='https://app.cervinodata.com/data-destinations-api-data-collection' target='_blank'>here</a>)</li> <li>An active API token (check <a href='https://app.cervinodata.com/settings#/api' target='_blank'>here</a>)</li> </ol> </p> <p> If you wish to automate your Cervinodata API connection, check out the list of client API's at <a href='https://github.com/Cervinodata' target='_blank'>https://github.com/Cervinodata</a>. </p> </div>
+ * <div style='margin: 2em 0;'> <p> Before you get going with the Cervinodata API, set up Cervinodata (read the support page here: <a href='https://support.cervinodata.com/hc/en-nl/articles/360004363237' target='_blank'>How to set up the Cervinodata API</a>). </p> <h3>To use the Cervinodata API, you need all of the following:</h3> <p> <ol> <li>An active Cervinodata account, you can start a free trial <a href='https://app.cervinodata.com/register' target='_blank'>here</a></li> <li>At least one connection to a platform (check <a href='https://app.cervinodata.com/data-sources-connections' target='_blank'>here</a>)</li> <li>At least one account switched ON (check <a href='https://app.cervinodata.com/accounts' target='_blank'>here</a>)</li> <li>At least one data refresh executed (check <a href='https://app.cervinodata.com/manual-data-refresh' target='_blank'>here</a>)</li> <li>An active API token (check <a href='https://app.cervinodata.com/settings#/api' target='_blank'>here</a>)</li> </ol> </p> <p> Note that limits apply for <a href='https://support.cervinodata.com/hc/articles/360014265139' target='_blank'>Free plan users</a>. </p> <p> If you wish to automate your Cervinodata API connection, check out the list of client API's at <a href='https://github.com/Cervinodata' target='_blank'>https://github.com/Cervinodata</a>. </p> </div>
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@cervinodata.com
@@ -14,9 +14,9 @@
 package com.cervinodata.client.api;
 
 import com.cervinodata.client.ApiException;
-import org.threeten.bp.LocalDate;
-import org.junit.Test;
-import org.junit.Ignore;
+import java.time.LocalDate;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -26,19 +26,119 @@ import java.util.Map;
 /**
  * API tests for CampaignGroupApi
  */
-@Ignore
+@Disabled
 public class CampaignGroupApiTest {
 
     private final CampaignGroupApi api = new CampaignGroupApi();
 
-    
+    /**
+     * Return campaign group ad report per organisation per campaign per day
+     *
+     * Campaign group ad report per organisation per campaign per day
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void getCampaignGroupAdReportPerOrganisationPerCampaignPerDayTest() throws ApiException {
+        List<String> organisationUuids = null;
+        LocalDate fromDate = null;
+        String dateFormat = null;
+        String format = null;
+        String response = api.getCampaignGroupAdReportPerOrganisationPerCampaignPerDay(organisationUuids, fromDate, dateFormat, format);
+        // TODO: test validations
+    }
+
+    /**
+     * Return campaign group ad report per organisation per campaign per week
+     *
+     * Campaign group ad report per organisation per campaign per week
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void getCampaignGroupAdReportPerOrganisationPerCampaignPerWeekTest() throws ApiException {
+        List<String> organisationUuids = null;
+        LocalDate fromDate = null;
+        String dateFormat = null;
+        String format = null;
+        String response = api.getCampaignGroupAdReportPerOrganisationPerCampaignPerWeek(organisationUuids, fromDate, dateFormat, format);
+        // TODO: test validations
+    }
+
+    /**
+     * Return campaign group ad report per organisation per day
+     *
+     * Campaign group ad report per organisation per day
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void getCampaignGroupAdReportPerOrganisationPerDayTest() throws ApiException {
+        List<String> organisationUuids = null;
+        LocalDate fromDate = null;
+        String dateFormat = null;
+        String format = null;
+        String response = api.getCampaignGroupAdReportPerOrganisationPerDay(organisationUuids, fromDate, dateFormat, format);
+        // TODO: test validations
+    }
+
+    /**
+     * Return campaign group adform extended report per organisation per account per campaign per day
+     *
+     * Campaign group adform extended report per organisation per account per campaign per day
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDayTest() throws ApiException {
+        List<String> organisationUuids = null;
+        LocalDate fromDate = null;
+        String dateFormat = null;
+        String format = null;
+        String response = api.getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDay(organisationUuids, fromDate, dateFormat, format);
+        // TODO: test validations
+    }
+
+    /**
+     * Return campaign group adform report per organisation per campaign per day
+     *
+     * Campaign group adform report per organisation per campaign per day
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void getCampaignGroupAdformReportPerOrganisationPerCampaignPerDayTest() throws ApiException {
+        List<String> organisationUuids = null;
+        LocalDate fromDate = null;
+        String dateFormat = null;
+        String format = null;
+        String response = api.getCampaignGroupAdformReportPerOrganisationPerCampaignPerDay(organisationUuids, fromDate, dateFormat, format);
+        // TODO: test validations
+    }
+
+    /**
+     * Return campaign group adform report per organisation per campaign per line-item per day
+     *
+     * Campaign group adform report per organisation per campaign per line-item per day
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void getCampaignGroupAdformReportPerOrganisationPerCampaignPerLineItemPerDayTest() throws ApiException {
+        List<String> organisationUuids = null;
+        LocalDate fromDate = null;
+        String dateFormat = null;
+        String format = null;
+        String response = api.getCampaignGroupAdformReportPerOrganisationPerCampaignPerLineItemPerDay(organisationUuids, fromDate, dateFormat, format);
+        // TODO: test validations
+    }
+
     /**
      * Return campaign group analytics report per organisation per day
      *
      * Campaign group analytics report per organisation per day
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void getCampaignGroupAnalyticsReportPerOrganisationPerDayTest() throws ApiException {
@@ -47,8 +147,347 @@ public class CampaignGroupApiTest {
         String dateFormat = null;
         String format = null;
         String response = api.getCampaignGroupAnalyticsReportPerOrganisationPerDay(organisationUuids, fromDate, dateFormat, format);
-
         // TODO: test validations
     }
-    
+
+    /**
+     * Return campaign group bing ads extended report per organisation per account per campaign per day
+     *
+     * Campaign group bing ads extended report per organisation per account per campaign per day
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void getCampaignGroupBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayTest() throws ApiException {
+        List<String> organisationUuids = null;
+        LocalDate fromDate = null;
+        String dateFormat = null;
+        String format = null;
+        String response = api.getCampaignGroupBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(organisationUuids, fromDate, dateFormat, format);
+        // TODO: test validations
+    }
+
+    /**
+     * Return campaign group doubleclick bid manager report per organisation per account per campaign per creative per day
+     *
+     * Campaign group doubleclick bid manager report per organisation per account per campaign per creative per day
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void getCampaignGroupDoubleClickBidManagerReportPerOrganisationPerAccountPerCampaignPerCreativePerDayTest() throws ApiException {
+        List<String> organisationUuids = null;
+        LocalDate fromDate = null;
+        String dateFormat = null;
+        String format = null;
+        String response = api.getCampaignGroupDoubleClickBidManagerReportPerOrganisationPerAccountPerCampaignPerCreativePerDay(organisationUuids, fromDate, dateFormat, format);
+        // TODO: test validations
+    }
+
+    /**
+     * Return campaign group doubleclick bid manager report per organisation per account per campaign per day
+     *
+     * Campaign group doubleclick bid manager report per organisation per account per campaign per day
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void getCampaignGroupDoubleClickBidManagerReportPerOrganisationPerAccountPerCampaignPerDayTest() throws ApiException {
+        List<String> organisationUuids = null;
+        LocalDate fromDate = null;
+        String dateFormat = null;
+        String format = null;
+        String response = api.getCampaignGroupDoubleClickBidManagerReportPerOrganisationPerAccountPerCampaignPerDay(organisationUuids, fromDate, dateFormat, format);
+        // TODO: test validations
+    }
+
+    /**
+     * Return campaign group doubleclick campaign manager report per organisation per account per campaign per day
+     *
+     * Campaign group doubleclick campaign manager report per organisation per account per campaign per day
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void getCampaignGroupDoubleClickCampaignManagerReportPerOrganisationPerAccountPerCampaignPerDayTest() throws ApiException {
+        List<String> organisationUuids = null;
+        LocalDate fromDate = null;
+        String dateFormat = null;
+        String format = null;
+        String response = api.getCampaignGroupDoubleClickCampaignManagerReportPerOrganisationPerAccountPerCampaignPerDay(organisationUuids, fromDate, dateFormat, format);
+        // TODO: test validations
+    }
+
+    /**
+     * Return campaign group facebook ad custom conversion report per organisation per account per campaign per day
+     *
+     * Campaign group facebook ad custom conversion report per organisation per account per campaign per day
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void getCampaignGroupFacebookAdCustomConversionReportPerOrganisationPerAccountPerCampaignPerDayTest() throws ApiException {
+        List<String> organisationUuids = null;
+        LocalDate fromDate = null;
+        String dateFormat = null;
+        String format = null;
+        String response = api.getCampaignGroupFacebookAdCustomConversionReportPerOrganisationPerAccountPerCampaignPerDay(organisationUuids, fromDate, dateFormat, format);
+        // TODO: test validations
+    }
+
+    /**
+     * Return campaign group facebook ad extended report per organisation per account per campaign per ad group per day
+     *
+     * Campaign group facebook ad extended report per organisation per account per campaign per ad group per day
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void getCampaignGroupFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayTest() throws ApiException {
+        List<String> organisationUuids = null;
+        LocalDate fromDate = null;
+        String dateFormat = null;
+        String format = null;
+        String response = api.getCampaignGroupFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDay(organisationUuids, fromDate, dateFormat, format);
+        // TODO: test validations
+    }
+
+    /**
+     * Return campaign group facebook ad extended report per organisation per account per campaign per ad per day
+     *
+     * Campaign group facebook ad extended report per organisation per account per campaign per ad per day
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void getCampaignGroupFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdPerDayTest() throws ApiException {
+        List<String> organisationUuids = null;
+        LocalDate fromDate = null;
+        String dateFormat = null;
+        String format = null;
+        String response = api.getCampaignGroupFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdPerDay(organisationUuids, fromDate, dateFormat, format);
+        // TODO: test validations
+    }
+
+    /**
+     * Return campaign group facebook ad extended report per organisation per campaign per day
+     *
+     * Campaign group facebook ad extended report per organisation per campaign per day
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void getCampaignGroupFacebookAdExtendedReportPerOrganisationPerCampaignPerDayTest() throws ApiException {
+        List<String> organisationUuids = null;
+        LocalDate fromDate = null;
+        String dateFormat = null;
+        String format = null;
+        String response = api.getCampaignGroupFacebookAdExtendedReportPerOrganisationPerCampaignPerDay(organisationUuids, fromDate, dateFormat, format);
+        // TODO: test validations
+    }
+
+    /**
+     * Return campaign group facebook ad report per organisation per campaign per day
+     *
+     * Campaign group facebook ad report per organisation per campaign per day
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void getCampaignGroupFacebookAdReportPerOrganisationPerCampaignPerDayTest() throws ApiException {
+        List<String> organisationUuids = null;
+        LocalDate fromDate = null;
+        String dateFormat = null;
+        String format = null;
+        String response = api.getCampaignGroupFacebookAdReportPerOrganisationPerCampaignPerDay(organisationUuids, fromDate, dateFormat, format);
+        // TODO: test validations
+    }
+
+    /**
+     * Return campaign group goal report per organisation per day
+     *
+     * Campaign group goal report per organisation per day
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void getCampaignGroupGoalReportPerOrganisationPerDayTest() throws ApiException {
+        List<String> organisationUuids = null;
+        LocalDate fromDate = null;
+        String dateFormat = null;
+        String format = null;
+        String response = api.getCampaignGroupGoalReportPerOrganisationPerDay(organisationUuids, fromDate, dateFormat, format);
+        // TODO: test validations
+    }
+
+    /**
+     * Return campaign group google ads extended report per organisation per account per campaign per ad group per day
+     *
+     * Campaign group google ads extended report per organisation per account per campaign per ad group per day
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void getCampaignGroupGoogleAdsExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayTest() throws ApiException {
+        List<String> organisationUuids = null;
+        LocalDate fromDate = null;
+        String dateFormat = null;
+        String format = null;
+        String response = api.getCampaignGroupGoogleAdsExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDay(organisationUuids, fromDate, dateFormat, format);
+        // TODO: test validations
+    }
+
+    /**
+     * Return campaign group google ads report per organisation per campaign per day
+     *
+     * Campaign group google ads report per organisation per campaign per day
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void getCampaignGroupGoogleAdsReportPerOrganisationPerCampaignPerDayTest() throws ApiException {
+        List<String> organisationUuids = null;
+        LocalDate fromDate = null;
+        String dateFormat = null;
+        String format = null;
+        String response = api.getCampaignGroupGoogleAdsReportPerOrganisationPerCampaignPerDay(organisationUuids, fromDate, dateFormat, format);
+        // TODO: test validations
+    }
+
+    /**
+     * Return campaign group linkedin ads extended report per organisation per account per campaign per day
+     *
+     * Campaign group linkedin ads extended report per organisation per account per campaign per day
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void getCampaignGroupLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayTest() throws ApiException {
+        List<String> organisationUuids = null;
+        LocalDate fromDate = null;
+        String dateFormat = null;
+        String format = null;
+        String response = api.getCampaignGroupLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(organisationUuids, fromDate, dateFormat, format);
+        // TODO: test validations
+    }
+
+    /**
+     * Return campaign group pinterest ads extended report per organisation per account per campaign per day
+     *
+     * Campaign group pinterest ads extended report per organisation per account per campaign per day
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void getCampaignGroupPinterestAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayTest() throws ApiException {
+        List<String> organisationUuids = null;
+        LocalDate fromDate = null;
+        String dateFormat = null;
+        String format = null;
+        String response = api.getCampaignGroupPinterestAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(organisationUuids, fromDate, dateFormat, format);
+        // TODO: test validations
+    }
+
+    /**
+     * Return campaign group report per organisation per day
+     *
+     * Campaign group report per organisation per day
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void getCampaignGroupReportPerOrganisationPerDayTest() throws ApiException {
+        List<String> organisationUuids = null;
+        LocalDate fromDate = null;
+        String dateFormat = null;
+        String format = null;
+        String response = api.getCampaignGroupReportPerOrganisationPerDay(organisationUuids, fromDate, dateFormat, format);
+        // TODO: test validations
+    }
+
+    /**
+     * Return campaign group snapchat ads extended report per organisation per account per campaign per day
+     *
+     * Campaign group snapchat ads extended report per organisation per account per campaign per day
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void getCampaignGroupSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayTest() throws ApiException {
+        List<String> organisationUuids = null;
+        LocalDate fromDate = null;
+        String dateFormat = null;
+        String format = null;
+        String response = api.getCampaignGroupSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(organisationUuids, fromDate, dateFormat, format);
+        // TODO: test validations
+    }
+
+    /**
+     * Return campaign group tiktok ads extended report per organisation per account per campaign per day
+     *
+     * Campaign group tiktok ads extended report per organisation per account per campaign per day
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void getCampaignGroupTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayTest() throws ApiException {
+        List<String> organisationUuids = null;
+        LocalDate fromDate = null;
+        String dateFormat = null;
+        String format = null;
+        String response = api.getCampaignGroupTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(organisationUuids, fromDate, dateFormat, format);
+        // TODO: test validations
+    }
+
+    /**
+     * Return campaign group twitter ads extended report per organisation per account per campaign per day
+     *
+     * Campaign group twitter ads extended report per organisation per account per campaign per day
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void getCampaignGroupTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayTest() throws ApiException {
+        List<String> organisationUuids = null;
+        LocalDate fromDate = null;
+        String dateFormat = null;
+        String format = null;
+        String response = api.getCampaignGroupTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(organisationUuids, fromDate, dateFormat, format);
+        // TODO: test validations
+    }
+
+    /**
+     * Return campaign group video report per organisation per campaign per day
+     *
+     * Campaign group video report per organisation per campaign per day
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void getCampaignGroupVideoReportPerOrganisationPerCampaignPerDayTest() throws ApiException {
+        List<String> organisationUuids = null;
+        LocalDate fromDate = null;
+        String dateFormat = null;
+        String format = null;
+        String response = api.getCampaignGroupVideoReportPerOrganisationPerCampaignPerDay(organisationUuids, fromDate, dateFormat, format);
+        // TODO: test validations
+    }
+
+    /**
+     * Return campaign group video report per organisation per day
+     *
+     * Campaign group video report per organisation per day
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void getCampaignGroupVideoReportPerOrganisationPerDayTest() throws ApiException {
+        List<String> organisationUuids = null;
+        LocalDate fromDate = null;
+        String dateFormat = null;
+        String format = null;
+        String response = api.getCampaignGroupVideoReportPerOrganisationPerDay(organisationUuids, fromDate, dateFormat, format);
+        // TODO: test validations
+    }
+
 }
