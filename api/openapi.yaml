@@ -88,7 +88,9 @@ paths:
       summary: Return organisations
       tags:
       - generic data
-      x-accepts: application/json
+      x-accepts:
+      - application/json
+      - text/csv
   /data/campaign-groups:
     get:
       description: campaign groups
@@ -106,7 +108,8 @@ paths:
       summary: Return campaign groups
       tags:
       - generic data
-      x-accepts: application/json
+      x-accepts:
+      - application/json
   /data/ad-accounts/{organisationUuid}:
     get:
       description: Ad accounts by organisation
@@ -151,7 +154,9 @@ paths:
       summary: Return ad accounts by organisation
       tags:
       - advertising data
-      x-accepts: application/json
+      x-accepts:
+      - application/json
+      - text/csv
   /data/ad-campaigns/{organisationUuid}:
     get:
       description: Ad campaigns by organisation
@@ -205,7 +210,9 @@ paths:
       summary: Return ad campaigns by organisation
       tags:
       - advertising data
-      x-accepts: application/json
+      x-accepts:
+      - application/json
+      - text/csv
   /data/ad-groups/{organisationUuid}:
     get:
       description: Ad groups by organisation
@@ -259,7 +266,9 @@ paths:
       summary: Return ad groups by organisation
       tags:
       - advertising data
-      x-accepts: application/json
+      x-accepts:
+      - application/json
+      - text/csv
   /data/ad-campaign-report-per-day/{organisationUuid}:
     get:
       description: Ad campaign report per day by organisation
@@ -324,7 +333,9 @@ paths:
       summary: Return ad campaign report per day by organisation
       tags:
       - advertising data
-      x-accepts: application/json
+      x-accepts:
+      - application/json
+      - text/csv
   /data/ad-campaign-report-per-organisation-per-account-per-day/{organisationUuids}:
     get:
       description: Ad campaign report per organisation per account per day
@@ -391,7 +402,9 @@ paths:
       summary: Return ad campaign report per organisation per account per day
       tags:
       - advertising data
-      x-accepts: application/json
+      x-accepts:
+      - application/json
+      - text/csv
   /data/hashed-ad-campaign-report-per-organisation-per-account-per-day/{organisationUuids}:
     get:
       description: Hashed ad campaign report per organisation per account per day
@@ -458,7 +471,9 @@ paths:
       summary: Return hashed ad campaign report per organisation per account per day
       tags:
       - advertising data
-      x-accepts: application/json
+      x-accepts:
+      - application/json
+      - text/csv
   /data/ad-campaign-report-per-organisation-per-account-per-campaign-per-device-per-day/{organisationUuids}:
     get:
       description: Ad campaign report per organisation per account per campaign per
@@ -527,7 +542,9 @@ paths:
         per device per day
       tags:
       - advertising data
-      x-accepts: application/json
+      x-accepts:
+      - application/json
+      - text/csv
   /data/ad-account-report-per-organisation-per-day/{organisationUuids}:
     get:
       description: Ad account report per organisation per day
@@ -594,7 +611,9 @@ paths:
       summary: Return ad account report per organisation per day
       tags:
       - advertising data
-      x-accepts: application/json
+      x-accepts:
+      - application/json
+      - text/csv
   /data/views/{organisationUuid}:
     get:
       description: Views by organisation
@@ -639,7 +658,9 @@ paths:
       summary: Return views by organisation
       tags:
       - analytics data
-      x-accepts: application/json
+      x-accepts:
+      - application/json
+      - text/csv
   /data/analytics-report-per-campaign-per-day/{organisationUuid}:
     get:
       description: Analytics report per campaign per day by organisation
@@ -704,7 +725,9 @@ paths:
       summary: Return analytics report per campaign per day by organisation
       tags:
       - "analytics data, default metrics"
-      x-accepts: application/json
+      x-accepts:
+      - application/json
+      - text/csv
   /data/analytics-report-per-channel-group-per-day/{organisationUuid}:
     get:
       description: Analytics report per channel group per day by organisation
@@ -769,7 +792,9 @@ paths:
       summary: Return analytics report per channel group per day by organisation
       tags:
       - "analytics data, default metrics"
-      x-accepts: application/json
+      x-accepts:
+      - application/json
+      - text/csv
   /data/analytics-report-per-device-per-day/{organisationUuid}:
     get:
       description: Analytics report per device per day by organisation
@@ -834,7 +859,9 @@ paths:
       summary: Return analytics report per device per day by organisation
       tags:
       - "analytics data, default metrics"
-      x-accepts: application/json
+      x-accepts:
+      - application/json
+      - text/csv
   /data/analytics-report-per-source-medium-per-day/{organisationUuid}:
     get:
       description: Analytics report per source medium per day by organisation
@@ -899,7 +926,9 @@ paths:
       summary: Return analytics report per source medium per day by organisation
       tags:
       - "analytics data, default metrics"
-      x-accepts: application/json
+      x-accepts:
+      - application/json
+      - text/csv
   /data/analytics-report-per-device-per-channel-group-per-organisation-per-view-per-day/{organisationUuids}:
     get:
       description: Analytics report per device per channel group per organisation
@@ -968,7 +997,9 @@ paths:
         per view per day
       tags:
       - "analytics data, default metrics"
-      x-accepts: application/json
+      x-accepts:
+      - application/json
+      - text/csv
   /data/ga4-report-per-device-per-channel-group-per-organisation-per-property-per-day/{organisationUuids}:
     get:
       description: GA4 report per device per channel group per organisation per property
@@ -1037,7 +1068,9 @@ paths:
         property per day
       tags:
       - "analytics data, default metrics"
-      x-accepts: application/json
+      x-accepts:
+      - application/json
+      - text/csv
   /data/analytics-goal-report-per-campaign-per-day/{organisationUuid}:
     get:
       description: Analytics goal report per campaign per day by organisation
@@ -1102,7 +1135,9 @@ paths:
       summary: Return analytics goal report per campaign per day by organisation
       tags:
       - "analytics data, goals"
-      x-accepts: application/json
+      x-accepts:
+      - application/json
+      - text/csv
   /data/analytics-goal-report-per-channel-group-per-day/{organisationUuid}:
     get:
       description: Analytics goal report per channel group per day by organisation
@@ -1167,7 +1202,9 @@ paths:
       summary: Return analytics goal report per channel group per day by organisation
       tags:
       - "analytics data, goals"
-      x-accepts: application/json
+      x-accepts:
+      - application/json
+      - text/csv
   /data/analytics-goal-report-per-device-per-day/{organisationUuid}:
     get:
       description: Analytics goal report per device per day by organisation
@@ -1232,7 +1269,9 @@ paths:
       summary: Return analytics goal report per device per day by organisation
       tags:
       - "analytics data, goals"
-      x-accepts: application/json
+      x-accepts:
+      - application/json
+      - text/csv
   /data/analytics-goal-report-per-source-medium-per-day/{organisationUuid}:
     get:
       description: Analytics goal report per source medium per day by organisation
@@ -1297,7 +1336,9 @@ paths:
       summary: Return analytics goal report per source medium per day by organisation
       tags:
       - "analytics data, goals"
-      x-accepts: application/json
+      x-accepts:
+      - application/json
+      - text/csv
   /data/campaign-group-analytics-report-per-organisation-per-day/{organisationUuids}:
     get:
       description: Campaign group analytics report per organisation per day
@@ -1364,7 +1405,9 @@ paths:
       summary: Return campaign group analytics report per organisation per day
       tags:
       - campaign group
-      x-accepts: application/json
+      x-accepts:
+      - application/json
+      - text/csv
   /data/campaign-group-ad-report-per-organisation-per-day/{organisationUuids}:
     get:
       description: Campaign group ad report per organisation per day
@@ -1431,7 +1474,9 @@ paths:
       summary: Return campaign group ad report per organisation per day
       tags:
       - campaign group
-      x-accepts: application/json
+      x-accepts:
+      - application/json
+      - text/csv
   /data/campaign-group-report-per-organisation-per-day/{organisationUuids}:
     get:
       description: Campaign group report per organisation per day
@@ -1498,7 +1543,9 @@ paths:
       summary: Return campaign group report per organisation per day
       tags:
       - campaign group
-      x-accepts: application/json
+      x-accepts:
+      - application/json
+      - text/csv
   /data/campaign-group-goal-report-per-organisation-per-day/{organisationUuids}:
     get:
       description: Campaign group goal report per organisation per day
@@ -1565,7 +1612,9 @@ paths:
       summary: Return campaign group goal report per organisation per day
       tags:
       - campaign group
-      x-accepts: application/json
+      x-accepts:
+      - application/json
+      - text/csv
   /data/campaign-group-ad-report-per-organisation-per-campaign-per-day/{organisationUuids}:
     get:
       description: Campaign group ad report per organisation per campaign per day
@@ -1632,7 +1681,9 @@ paths:
       summary: Return campaign group ad report per organisation per campaign per day
       tags:
       - campaign group
-      x-accepts: application/json
+      x-accepts:
+      - application/json
+      - text/csv
   /data/campaign-group-ad-report-per-organisation-per-campaign-per-week/{organisationUuids}:
     get:
       description: Campaign group ad report per organisation per campaign per week
@@ -1699,7 +1750,9 @@ paths:
       summary: Return campaign group ad report per organisation per campaign per week
       tags:
       - campaign group
-      x-accepts: application/json
+      x-accepts:
+      - application/json
+      - text/csv
   /data/campaign-group-video-report-per-organisation-per-day/{organisationUuids}:
     get:
       description: Campaign group video report per organisation per day
@@ -1766,7 +1819,9 @@ paths:
       summary: Return campaign group video report per organisation per day
       tags:
       - campaign group
-      x-accepts: application/json
+      x-accepts:
+      - application/json
+      - text/csv
   /data/campaign-group-video-report-per-organisation-per-campaign-per-day/{organisationUuids}:
     get:
       description: Campaign group video report per organisation per campaign per day
@@ -1834,7 +1889,9 @@ paths:
         day
       tags:
       - campaign group
-      x-accepts: application/json
+      x-accepts:
+      - application/json
+      - text/csv
   /data/campaign-group-facebook-ad-report-per-organisation-per-campaign-per-day/{organisationUuids}:
     get:
       description: Campaign group facebook ad report per organisation per campaign
@@ -1903,7 +1960,9 @@ paths:
         per day
       tags:
       - campaign group
-      x-accepts: application/json
+      x-accepts:
+      - application/json
+      - text/csv
   /data/facebook-ad-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids}:
     get:
       description: Facebook ad extended report per organisation per account per campaign
@@ -1972,7 +2031,9 @@ paths:
         campaign per day
       tags:
       - advertising data
-      x-accepts: application/json
+      x-accepts:
+      - application/json
+      - text/csv
   /data/facebook-ad-extended-report-per-organisation-per-account-per-campaign-per-day-plus/{organisationUuids}:
     get:
       description: Facebook ad extended report per organisation per account per campaign
@@ -2041,7 +2102,9 @@ paths:
         campaign per day plus
       tags:
       - advertising data
-      x-accepts: application/json
+      x-accepts:
+      - application/json
+      - text/csv
   /data/facebook-ad-extended-report-per-organisation-per-account-per-campaign-per-ad-group-per-day/{organisationUuids}:
     get:
       description: Facebook ad extended report per organisation per account per campaign
@@ -2110,7 +2173,9 @@ paths:
         campaign per ad group per day
       tags:
       - advertising data
-      x-accepts: application/json
+      x-accepts:
+      - application/json
+      - text/csv
   /data/facebook-ad-extended-report-per-organisation-per-account-per-campaign-per-ad-group-per-day-plus/{organisationUuids}:
     get:
       description: Facebook ad extended report per organisation per account per campaign
@@ -2179,7 +2244,9 @@ paths:
         campaign per ad group per day plus
       tags:
       - advertising data
-      x-accepts: application/json
+      x-accepts:
+      - application/json
+      - text/csv
   /data/facebook-ad-extended-report-per-organisation-per-account-per-campaign-per-ad-per-day/{organisationUuids}:
     get:
       description: Facebook ad extended report per organisation per account per campaign
@@ -2248,7 +2315,9 @@ paths:
         campaign per ad per day
       tags:
       - advertising data
-      x-accepts: application/json
+      x-accepts:
+      - application/json
+      - text/csv
   /data/campaign-group-facebook-ad-extended-report-per-organisation-per-campaign-per-day/{organisationUuids}:
     get:
       description: Campaign group facebook ad extended report per organisation per
@@ -2317,7 +2386,9 @@ paths:
         per campaign per day
       tags:
       - campaign group
-      x-accepts: application/json
+      x-accepts:
+      - application/json
+      - text/csv
   /data/campaign-group-facebook-ad-custom-conversion-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids}:
     get:
       description: Campaign group facebook ad custom conversion report per organisation
@@ -2386,7 +2457,9 @@ paths:
         per account per campaign per day
       tags:
       - campaign group
-      x-accepts: application/json
+      x-accepts:
+      - application/json
+      - text/csv
   ? /data/campaign-group-facebook-ad-extended-report-per-organisation-per-account-per-campaign-per-ad-group-per-day/{organisationUuids}
   : get:
       description: Campaign group facebook ad extended report per organisation per
@@ -2455,7 +2528,9 @@ paths:
         per account per campaign per ad group per day
       tags:
       - campaign group
-      x-accepts: application/json
+      x-accepts:
+      - application/json
+      - text/csv
   /data/campaign-group-facebook-ad-extended-report-per-organisation-per-account-per-campaign-per-ad-per-day/{organisationUuids}:
     get:
       description: Campaign group facebook ad extended report per organisation per
@@ -2524,7 +2599,9 @@ paths:
         per account per campaign per ad per day
       tags:
       - campaign group
-      x-accepts: application/json
+      x-accepts:
+      - application/json
+      - text/csv
   /data/facebook-ad-custom-conversion-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids}:
     get:
       description: Facebook ad custom conversion report per organisation per account
@@ -2593,7 +2670,9 @@ paths:
         per campaign per day
       tags:
       - advertising data
-      x-accepts: application/json
+      x-accepts:
+      - application/json
+      - text/csv
   /data/campaign-group-linkedin-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids}:
     get:
       description: Campaign group linkedin ads extended report per organisation per
@@ -2662,7 +2741,9 @@ paths:
         per account per campaign per day
       tags:
       - campaign group
-      x-accepts: application/json
+      x-accepts:
+      - application/json
+      - text/csv
   /data/facebook-ad-extended-report-per-organisation-per-account-per-campaign-per-device-per-day/{organisationUuids}:
     get:
       description: Facebook ad extended report per organisation per account per campaign
@@ -2731,7 +2812,9 @@ paths:
         campaign per device per day
       tags:
       - advertising data
-      x-accepts: application/json
+      x-accepts:
+      - application/json
+      - text/csv
   /data/linkedin-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids}:
     get:
       description: Linkedin ads extended report per organisation per account per campaign
@@ -2800,7 +2883,9 @@ paths:
         campaign per day
       tags:
       - advertising data
-      x-accepts: application/json
+      x-accepts:
+      - application/json
+      - text/csv
   /data/adform-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids}:
     get:
       description: Adform extended report per organisation per account per campaign
@@ -2869,7 +2954,9 @@ paths:
         per day
       tags:
       - advertising data
-      x-accepts: application/json
+      x-accepts:
+      - application/json
+      - text/csv
   /data/adform-extended-report-per-organisation-per-account-per-campaign-per-line-item-per-day/{organisationUuids}:
     get:
       description: Adform extended report per organisation per account per campaign
@@ -2938,7 +3025,9 @@ paths:
         per line item per day
       tags:
       - advertising data
-      x-accepts: application/json
+      x-accepts:
+      - application/json
+      - text/csv
   /data/adform-extended-report-per-organisation-per-account-per-campaign-per-creative-per-day/{organisationUuids}:
     get:
       description: Adform extended report per organisation per account per campaign
@@ -3007,7 +3096,9 @@ paths:
         per creative per day
       tags:
       - advertising data
-      x-accepts: application/json
+      x-accepts:
+      - application/json
+      - text/csv
   /data/twitter-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids}:
     get:
       description: Twitter ads extended report per organisation per account per campaign
@@ -3076,7 +3167,9 @@ paths:
         campaign per day
       tags:
       - advertising data
-      x-accepts: application/json
+      x-accepts:
+      - application/json
+      - text/csv
   /data/campaign-group-twitter-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids}:
     get:
       description: Campaign group twitter ads extended report per organisation per
@@ -3145,7 +3238,9 @@ paths:
         per account per campaign per day
       tags:
       - campaign group
-      x-accepts: application/json
+      x-accepts:
+      - application/json
+      - text/csv
   /data/snapchat-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids}:
     get:
       description: Snapchat ads extended report per organisation per account per campaign
@@ -3214,7 +3309,9 @@ paths:
         campaign per day
       tags:
       - advertising data
-      x-accepts: application/json
+      x-accepts:
+      - application/json
+      - text/csv
   /data/campaign-group-snapchat-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids}:
     get:
       description: Campaign group snapchat ads extended report per organisation per
@@ -3283,7 +3380,9 @@ paths:
         per account per campaign per day
       tags:
       - campaign group
-      x-accepts: application/json
+      x-accepts:
+      - application/json
+      - text/csv
   /data/pinterest-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids}:
     get:
       description: Pinterest ads extended report per organisation per account per
@@ -3352,7 +3451,9 @@ paths:
         campaign per day
       tags:
       - advertising data
-      x-accepts: application/json
+      x-accepts:
+      - application/json
+      - text/csv
   /data/campaign-group-pinterest-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids}:
     get:
       description: Campaign group pinterest ads extended report per organisation per
@@ -3421,7 +3522,9 @@ paths:
         per account per campaign per day
       tags:
       - campaign group
-      x-accepts: application/json
+      x-accepts:
+      - application/json
+      - text/csv
   /data/tiktok-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids}:
     get:
       description: TikTok ads extended report per organisation per account per campaign
@@ -3490,7 +3593,9 @@ paths:
         campaign per day
       tags:
       - advertising data
-      x-accepts: application/json
+      x-accepts:
+      - application/json
+      - text/csv
   /data/campaign-group-tiktok-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids}:
     get:
       description: Campaign group tiktok ads extended report per organisation per
@@ -3559,7 +3664,9 @@ paths:
         account per campaign per day
       tags:
       - campaign group
-      x-accepts: application/json
+      x-accepts:
+      - application/json
+      - text/csv
   /data/campaign-group-doubleclick-bid-manager-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids}:
     get:
       description: Campaign group doubleclick bid manager report per organisation
@@ -3628,7 +3735,9 @@ paths:
         per account per campaign per day
       tags:
       - campaign group
-      x-accepts: application/json
+      x-accepts:
+      - application/json
+      - text/csv
   ? /data/campaign-group-doubleclick-bid-manager-report-per-organisation-per-account-per-campaign-per-creative-per-day/{organisationUuids}
   : get:
       description: Campaign group doubleclick bid manager report per organisation
@@ -3697,7 +3806,9 @@ paths:
         per account per campaign per creative per day
       tags:
       - campaign group
-      x-accepts: application/json
+      x-accepts:
+      - application/json
+      - text/csv
   /data/campaign-group-doubleclick-campaign-manager-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids}:
     get:
       description: Campaign group doubleclick campaign manager report per organisation
@@ -3766,7 +3877,9 @@ paths:
         per account per campaign per day
       tags:
       - campaign group
-      x-accepts: application/json
+      x-accepts:
+      - application/json
+      - text/csv
   /data/bing-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids}:
     get:
       description: Bing ads extended report per organisation per account per campaign
@@ -3835,7 +3948,9 @@ paths:
         per day
       tags:
       - advertising data
-      x-accepts: application/json
+      x-accepts:
+      - application/json
+      - text/csv
   /data/campaign-group-bing-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids}:
     get:
       description: Campaign group bing ads extended report per organisation per account
@@ -3904,7 +4019,9 @@ paths:
         account per campaign per day
       tags:
       - campaign group
-      x-accepts: application/json
+      x-accepts:
+      - application/json
+      - text/csv
   /data/google-ads-report-per-organisation-per-account-per-campaign-per-device-per-day/{organisationUuids}:
     get:
       description: Campaign group google ads report per organisation per account per
@@ -3973,7 +4090,9 @@ paths:
         per device per day
       tags:
       - advertising data
-      x-accepts: application/json
+      x-accepts:
+      - application/json
+      - text/csv
   /data/campaign-group-google-ads-report-per-organisation-per-campaign-per-day/{organisationUuids}:
     get:
       description: Campaign group google ads report per organisation per campaign
@@ -4042,7 +4161,9 @@ paths:
         per day
       tags:
       - campaign group
-      x-accepts: application/json
+      x-accepts:
+      - application/json
+      - text/csv
   ? /data/campaign-group-google-ads-extended-report-per-organisation-per-account-per-campaign-per-ad-group-per-day/{organisationUuids}
   : get:
       description: Campaign group google ads extended report per organisation per
@@ -4111,7 +4232,9 @@ paths:
         account per campaign per ad group per day
       tags:
       - campaign group
-      x-accepts: application/json
+      x-accepts:
+      - application/json
+      - text/csv
   /data/campaign-group-adform-report-per-organisation-per-campaign-per-day/{organisationUuids}:
     get:
       description: Campaign group adform report per organisation per campaign per
@@ -4180,7 +4303,9 @@ paths:
         day
       tags:
       - campaign group
-      x-accepts: application/json
+      x-accepts:
+      - application/json
+      - text/csv
   /data/campaign-group-adform-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids}:
     get:
       description: Campaign group adform extended report per organisation per account
@@ -4249,7 +4374,9 @@ paths:
         per campaign per day
       tags:
       - campaign group
-      x-accepts: application/json
+      x-accepts:
+      - application/json
+      - text/csv
   /data/campaign-group-adform-report-per-organisation-per-campaign-per-line-item-per-day/{organisationUuids}:
     get:
       description: Campaign group adform report per organisation per campaign per
@@ -4318,7 +4445,9 @@ paths:
         line-item per day
       tags:
       - campaign group
-      x-accepts: application/json
+      x-accepts:
+      - application/json
+      - text/csv
   /data/ga4-report-per-campaign-per-organisation-per-property/{organisationUuids}:
     get:
       description: GA4 report per campaign per organisation per property
@@ -4350,7 +4479,8 @@ paths:
       summary: Return GA4 report per campaign per organisation per property
       tags:
       - "analytics data, transaction metrics"
-      x-accepts: text/csv
+      x-accepts:
+      - text/csv
   /data/ga4-report-per-campaign-per-organisation-per-property-per-month/{organisationUuids}:
     get:
       description: GA4 report per campaign per organisation per property per month
@@ -4382,7 +4512,8 @@ paths:
       summary: Return GA4 report per campaign per organisation per property per month
       tags:
       - "analytics data, transaction metrics"
-      x-accepts: text/csv
+      x-accepts:
+      - text/csv
   /data/ga4-report-per-product-sku-per-organisation-per-property-per-week/{organisationUuids}:
     get:
       description: GA4 report per product sku per organisation per property per week
@@ -4415,7 +4546,8 @@ paths:
         week
       tags:
       - "analytics data, product metrics"
-      x-accepts: text/csv
+      x-accepts:
+      - text/csv
   /data/ga4-report-per-product-name-per-organisation-per-property-per-week/{organisationUuids}:
     get:
       description: GA4 report per product name per organisation per property per week
@@ -4448,7 +4580,8 @@ paths:
         week
       tags:
       - "analytics data, product metrics"
-      x-accepts: text/csv
+      x-accepts:
+      - text/csv
   /data/ga4-report-per-channel-group-per-organisation-per-property/{organisationUuids}:
     get:
       description: GA4 report per channel group per organisation per property
@@ -4480,7 +4613,8 @@ paths:
       summary: Return GA4 report per channel group per organisation per property
       tags:
       - analytics data
-      x-accepts: text/csv
+      x-accepts:
+      - text/csv
   /data/ga4-report-per-channel-group-per-organisation-per-property-per-month/{organisationUuids}:
     get:
       description: GA4 report per channel group per organisation per property per
@@ -4514,7 +4648,8 @@ paths:
         month
       tags:
       - analytics data
-      x-accepts: text/csv
+      x-accepts:
+      - text/csv
   /data/ga4-report-per-channel-group-per-source-medium-per-organisation-per-property-per-month/{organisationUuids}:
     get:
       description: GA4 report per channel group per source medium per organisation
@@ -4548,7 +4683,8 @@ paths:
         per property per month
       tags:
       - analytics data
-      x-accepts: text/csv
+      x-accepts:
+      - text/csv
   /data/ga4-report-per-channel-group-per-product-name-per-organisation-per-property-per-month/{organisationUuids}:
     get:
       description: GA4 report per channel group per product name per organisation
@@ -4583,7 +4719,8 @@ paths:
       tags:
       - analytics data
       - product data
-      x-accepts: text/csv
+      x-accepts:
+      - text/csv
 components:
   schemas: {}
   securitySchemes:

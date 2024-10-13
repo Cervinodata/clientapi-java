@@ -72,7 +72,7 @@ public class ProductDataApi {
     }
 
     /**
-     * Build call for getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth
+     * Build call for getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth_0
      * @param organisationUuids Organisation uuids (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
@@ -85,7 +85,7 @@ public class ProductDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonthCall(List<String> organisationUuids, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth_0Call(List<String> organisationUuids, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -131,13 +131,13 @@ public class ProductDataApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonthValidateBeforeCall(List<String> organisationUuids, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth_0ValidateBeforeCall(List<String> organisationUuids, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
-            throw new ApiException("Missing the required parameter 'organisationUuids' when calling getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth(Async)");
+            throw new ApiException("Missing the required parameter 'organisationUuids' when calling getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth_0(Async)");
         }
 
-        return getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonthCall(organisationUuids, _callback);
+        return getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth_0Call(organisationUuids, _callback);
 
     }
 
@@ -155,8 +155,8 @@ public class ProductDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public String getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth(List<String> organisationUuids) throws ApiException {
-        ApiResponse<String> localVarResp = getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonthWithHttpInfo(organisationUuids);
+    public String getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth_0(List<String> organisationUuids) throws ApiException {
+        ApiResponse<String> localVarResp = getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth_0WithHttpInfo(organisationUuids);
         return localVarResp.getData();
     }
 
@@ -174,8 +174,8 @@ public class ProductDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonthWithHttpInfo(List<String> organisationUuids) throws ApiException {
-        okhttp3.Call localVarCall = getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonthValidateBeforeCall(organisationUuids, null);
+    public ApiResponse<String> getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth_0WithHttpInfo(List<String> organisationUuids) throws ApiException {
+        okhttp3.Call localVarCall = getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth_0ValidateBeforeCall(organisationUuids, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -195,9 +195,9 @@ public class ProductDataApi {
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonthAsync(List<String> organisationUuids, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth_0Async(List<String> organisationUuids, final ApiCallback<String> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonthValidateBeforeCall(organisationUuids, _callback);
+        okhttp3.Call localVarCall = getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth_0ValidateBeforeCall(organisationUuids, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
