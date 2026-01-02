@@ -72,20 +72,21 @@ public class ProductDataApi {
     }
 
     /**
-     * Build call for getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth_0
+     * Build call for getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth
      * @param organisationUuids Organisation uuids (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth_0Call(List<String> organisationUuids, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonthCall(@javax.annotation.Nonnull List<String> organisationUuids, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -131,13 +132,13 @@ public class ProductDataApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth_0ValidateBeforeCall(List<String> organisationUuids, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonthValidateBeforeCall(@javax.annotation.Nonnull List<String> organisationUuids, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
-            throw new ApiException("Missing the required parameter 'organisationUuids' when calling getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth_0(Async)");
+            throw new ApiException("Missing the required parameter 'organisationUuids' when calling getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth(Async)");
         }
 
-        return getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth_0Call(organisationUuids, _callback);
+        return getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonthCall(organisationUuids, _callback);
 
     }
 
@@ -148,15 +149,16 @@ public class ProductDataApi {
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public String getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth_0(List<String> organisationUuids) throws ApiException {
-        ApiResponse<String> localVarResp = getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth_0WithHttpInfo(organisationUuids);
+    public String getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth(@javax.annotation.Nonnull List<String> organisationUuids) throws ApiException {
+        ApiResponse<String> localVarResp = getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonthWithHttpInfo(organisationUuids);
         return localVarResp.getData();
     }
 
@@ -167,15 +169,16 @@ public class ProductDataApi {
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth_0WithHttpInfo(List<String> organisationUuids) throws ApiException {
-        okhttp3.Call localVarCall = getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth_0ValidateBeforeCall(organisationUuids, null);
+    public ApiResponse<String> getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonthWithHttpInfo(@javax.annotation.Nonnull List<String> organisationUuids) throws ApiException {
+        okhttp3.Call localVarCall = getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonthValidateBeforeCall(organisationUuids, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -188,16 +191,17 @@ public class ProductDataApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth_0Async(List<String> organisationUuids, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonthAsync(@javax.annotation.Nonnull List<String> organisationUuids, final ApiCallback<String> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth_0ValidateBeforeCall(organisationUuids, _callback);
+        okhttp3.Call localVarCall = getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonthValidateBeforeCall(organisationUuids, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

@@ -82,14 +82,15 @@ public class AnalyticsDataGoalsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuid supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuid not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getAnalyticsGoalReportPerCampaignPerDayCall(String organisationUuid, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getAnalyticsGoalReportPerCampaignPerDayCall(@javax.annotation.Nonnull String organisationUuid, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -148,7 +149,7 @@ public class AnalyticsDataGoalsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getAnalyticsGoalReportPerCampaignPerDayValidateBeforeCall(String organisationUuid, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getAnalyticsGoalReportPerCampaignPerDayValidateBeforeCall(@javax.annotation.Nonnull String organisationUuid, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'organisationUuid' is set
         if (organisationUuid == null) {
             throw new ApiException("Missing the required parameter 'organisationUuid' when calling getAnalyticsGoalReportPerCampaignPerDay(Async)");
@@ -168,14 +169,15 @@ public class AnalyticsDataGoalsApi {
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuid supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuid not found </td><td>  -  </td></tr>
      </table>
      */
-    public String getAnalyticsGoalReportPerCampaignPerDay(String organisationUuid, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public String getAnalyticsGoalReportPerCampaignPerDay(@javax.annotation.Nonnull String organisationUuid, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format) throws ApiException {
         ApiResponse<String> localVarResp = getAnalyticsGoalReportPerCampaignPerDayWithHttpInfo(organisationUuid, fromDate, dateFormat, format);
         return localVarResp.getData();
     }
@@ -190,14 +192,15 @@ public class AnalyticsDataGoalsApi {
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuid supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuid not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> getAnalyticsGoalReportPerCampaignPerDayWithHttpInfo(String organisationUuid, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public ApiResponse<String> getAnalyticsGoalReportPerCampaignPerDayWithHttpInfo(@javax.annotation.Nonnull String organisationUuid, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format) throws ApiException {
         okhttp3.Call localVarCall = getAnalyticsGoalReportPerCampaignPerDayValidateBeforeCall(organisationUuid, fromDate, dateFormat, format, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -214,14 +217,15 @@ public class AnalyticsDataGoalsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuid supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuid not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getAnalyticsGoalReportPerCampaignPerDayAsync(String organisationUuid, LocalDate fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call getAnalyticsGoalReportPerCampaignPerDayAsync(@javax.annotation.Nonnull String organisationUuid, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getAnalyticsGoalReportPerCampaignPerDayValidateBeforeCall(organisationUuid, fromDate, dateFormat, format, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
@@ -238,14 +242,15 @@ public class AnalyticsDataGoalsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuid supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuid not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getAnalyticsGoalReportPerChannelGroupPerDayCall(String organisationUuid, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getAnalyticsGoalReportPerChannelGroupPerDayCall(@javax.annotation.Nonnull String organisationUuid, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -304,7 +309,7 @@ public class AnalyticsDataGoalsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getAnalyticsGoalReportPerChannelGroupPerDayValidateBeforeCall(String organisationUuid, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getAnalyticsGoalReportPerChannelGroupPerDayValidateBeforeCall(@javax.annotation.Nonnull String organisationUuid, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'organisationUuid' is set
         if (organisationUuid == null) {
             throw new ApiException("Missing the required parameter 'organisationUuid' when calling getAnalyticsGoalReportPerChannelGroupPerDay(Async)");
@@ -324,14 +329,15 @@ public class AnalyticsDataGoalsApi {
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuid supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuid not found </td><td>  -  </td></tr>
      </table>
      */
-    public String getAnalyticsGoalReportPerChannelGroupPerDay(String organisationUuid, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public String getAnalyticsGoalReportPerChannelGroupPerDay(@javax.annotation.Nonnull String organisationUuid, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format) throws ApiException {
         ApiResponse<String> localVarResp = getAnalyticsGoalReportPerChannelGroupPerDayWithHttpInfo(organisationUuid, fromDate, dateFormat, format);
         return localVarResp.getData();
     }
@@ -346,14 +352,15 @@ public class AnalyticsDataGoalsApi {
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuid supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuid not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> getAnalyticsGoalReportPerChannelGroupPerDayWithHttpInfo(String organisationUuid, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public ApiResponse<String> getAnalyticsGoalReportPerChannelGroupPerDayWithHttpInfo(@javax.annotation.Nonnull String organisationUuid, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format) throws ApiException {
         okhttp3.Call localVarCall = getAnalyticsGoalReportPerChannelGroupPerDayValidateBeforeCall(organisationUuid, fromDate, dateFormat, format, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -370,14 +377,15 @@ public class AnalyticsDataGoalsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuid supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuid not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getAnalyticsGoalReportPerChannelGroupPerDayAsync(String organisationUuid, LocalDate fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call getAnalyticsGoalReportPerChannelGroupPerDayAsync(@javax.annotation.Nonnull String organisationUuid, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getAnalyticsGoalReportPerChannelGroupPerDayValidateBeforeCall(organisationUuid, fromDate, dateFormat, format, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
@@ -394,14 +402,15 @@ public class AnalyticsDataGoalsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuid supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuid not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getAnalyticsGoalReportPerDevicePerDayCall(String organisationUuid, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getAnalyticsGoalReportPerDevicePerDayCall(@javax.annotation.Nonnull String organisationUuid, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -460,7 +469,7 @@ public class AnalyticsDataGoalsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getAnalyticsGoalReportPerDevicePerDayValidateBeforeCall(String organisationUuid, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getAnalyticsGoalReportPerDevicePerDayValidateBeforeCall(@javax.annotation.Nonnull String organisationUuid, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'organisationUuid' is set
         if (organisationUuid == null) {
             throw new ApiException("Missing the required parameter 'organisationUuid' when calling getAnalyticsGoalReportPerDevicePerDay(Async)");
@@ -480,14 +489,15 @@ public class AnalyticsDataGoalsApi {
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuid supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuid not found </td><td>  -  </td></tr>
      </table>
      */
-    public String getAnalyticsGoalReportPerDevicePerDay(String organisationUuid, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public String getAnalyticsGoalReportPerDevicePerDay(@javax.annotation.Nonnull String organisationUuid, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format) throws ApiException {
         ApiResponse<String> localVarResp = getAnalyticsGoalReportPerDevicePerDayWithHttpInfo(organisationUuid, fromDate, dateFormat, format);
         return localVarResp.getData();
     }
@@ -502,14 +512,15 @@ public class AnalyticsDataGoalsApi {
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuid supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuid not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> getAnalyticsGoalReportPerDevicePerDayWithHttpInfo(String organisationUuid, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public ApiResponse<String> getAnalyticsGoalReportPerDevicePerDayWithHttpInfo(@javax.annotation.Nonnull String organisationUuid, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format) throws ApiException {
         okhttp3.Call localVarCall = getAnalyticsGoalReportPerDevicePerDayValidateBeforeCall(organisationUuid, fromDate, dateFormat, format, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -526,14 +537,15 @@ public class AnalyticsDataGoalsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuid supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuid not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getAnalyticsGoalReportPerDevicePerDayAsync(String organisationUuid, LocalDate fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call getAnalyticsGoalReportPerDevicePerDayAsync(@javax.annotation.Nonnull String organisationUuid, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getAnalyticsGoalReportPerDevicePerDayValidateBeforeCall(organisationUuid, fromDate, dateFormat, format, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
@@ -550,14 +562,15 @@ public class AnalyticsDataGoalsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuid supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuid not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getAnalyticsGoalReportPerSourceMediumPerDayCall(String organisationUuid, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getAnalyticsGoalReportPerSourceMediumPerDayCall(@javax.annotation.Nonnull String organisationUuid, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -616,7 +629,7 @@ public class AnalyticsDataGoalsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getAnalyticsGoalReportPerSourceMediumPerDayValidateBeforeCall(String organisationUuid, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getAnalyticsGoalReportPerSourceMediumPerDayValidateBeforeCall(@javax.annotation.Nonnull String organisationUuid, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'organisationUuid' is set
         if (organisationUuid == null) {
             throw new ApiException("Missing the required parameter 'organisationUuid' when calling getAnalyticsGoalReportPerSourceMediumPerDay(Async)");
@@ -636,14 +649,15 @@ public class AnalyticsDataGoalsApi {
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuid supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuid not found </td><td>  -  </td></tr>
      </table>
      */
-    public String getAnalyticsGoalReportPerSourceMediumPerDay(String organisationUuid, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public String getAnalyticsGoalReportPerSourceMediumPerDay(@javax.annotation.Nonnull String organisationUuid, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format) throws ApiException {
         ApiResponse<String> localVarResp = getAnalyticsGoalReportPerSourceMediumPerDayWithHttpInfo(organisationUuid, fromDate, dateFormat, format);
         return localVarResp.getData();
     }
@@ -658,14 +672,15 @@ public class AnalyticsDataGoalsApi {
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuid supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuid not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> getAnalyticsGoalReportPerSourceMediumPerDayWithHttpInfo(String organisationUuid, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public ApiResponse<String> getAnalyticsGoalReportPerSourceMediumPerDayWithHttpInfo(@javax.annotation.Nonnull String organisationUuid, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format) throws ApiException {
         okhttp3.Call localVarCall = getAnalyticsGoalReportPerSourceMediumPerDayValidateBeforeCall(organisationUuid, fromDate, dateFormat, format, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -682,14 +697,15 @@ public class AnalyticsDataGoalsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuid supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuid not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getAnalyticsGoalReportPerSourceMediumPerDayAsync(String organisationUuid, LocalDate fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call getAnalyticsGoalReportPerSourceMediumPerDayAsync(@javax.annotation.Nonnull String organisationUuid, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getAnalyticsGoalReportPerSourceMediumPerDayValidateBeforeCall(organisationUuid, fromDate, dateFormat, format, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();

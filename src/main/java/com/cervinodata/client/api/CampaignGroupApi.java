@@ -82,14 +82,15 @@ public class CampaignGroupApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCampaignGroupAdReportPerOrganisationPerCampaignPerDayCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getCampaignGroupAdReportPerOrganisationPerCampaignPerDayCall(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -148,7 +149,7 @@ public class CampaignGroupApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getCampaignGroupAdReportPerOrganisationPerCampaignPerDayValidateBeforeCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getCampaignGroupAdReportPerOrganisationPerCampaignPerDayValidateBeforeCall(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getCampaignGroupAdReportPerOrganisationPerCampaignPerDay(Async)");
@@ -168,14 +169,15 @@ public class CampaignGroupApi {
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public String getCampaignGroupAdReportPerOrganisationPerCampaignPerDay(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public String getCampaignGroupAdReportPerOrganisationPerCampaignPerDay(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format) throws ApiException {
         ApiResponse<String> localVarResp = getCampaignGroupAdReportPerOrganisationPerCampaignPerDayWithHttpInfo(organisationUuids, fromDate, dateFormat, format);
         return localVarResp.getData();
     }
@@ -190,14 +192,15 @@ public class CampaignGroupApi {
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> getCampaignGroupAdReportPerOrganisationPerCampaignPerDayWithHttpInfo(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public ApiResponse<String> getCampaignGroupAdReportPerOrganisationPerCampaignPerDayWithHttpInfo(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format) throws ApiException {
         okhttp3.Call localVarCall = getCampaignGroupAdReportPerOrganisationPerCampaignPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -214,14 +217,15 @@ public class CampaignGroupApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCampaignGroupAdReportPerOrganisationPerCampaignPerDayAsync(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call getCampaignGroupAdReportPerOrganisationPerCampaignPerDayAsync(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getCampaignGroupAdReportPerOrganisationPerCampaignPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
@@ -238,14 +242,15 @@ public class CampaignGroupApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCampaignGroupAdReportPerOrganisationPerCampaignPerWeekCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getCampaignGroupAdReportPerOrganisationPerCampaignPerWeekCall(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -304,7 +309,7 @@ public class CampaignGroupApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getCampaignGroupAdReportPerOrganisationPerCampaignPerWeekValidateBeforeCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getCampaignGroupAdReportPerOrganisationPerCampaignPerWeekValidateBeforeCall(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getCampaignGroupAdReportPerOrganisationPerCampaignPerWeek(Async)");
@@ -324,14 +329,15 @@ public class CampaignGroupApi {
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public String getCampaignGroupAdReportPerOrganisationPerCampaignPerWeek(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public String getCampaignGroupAdReportPerOrganisationPerCampaignPerWeek(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format) throws ApiException {
         ApiResponse<String> localVarResp = getCampaignGroupAdReportPerOrganisationPerCampaignPerWeekWithHttpInfo(organisationUuids, fromDate, dateFormat, format);
         return localVarResp.getData();
     }
@@ -346,14 +352,15 @@ public class CampaignGroupApi {
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> getCampaignGroupAdReportPerOrganisationPerCampaignPerWeekWithHttpInfo(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public ApiResponse<String> getCampaignGroupAdReportPerOrganisationPerCampaignPerWeekWithHttpInfo(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format) throws ApiException {
         okhttp3.Call localVarCall = getCampaignGroupAdReportPerOrganisationPerCampaignPerWeekValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -370,14 +377,15 @@ public class CampaignGroupApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCampaignGroupAdReportPerOrganisationPerCampaignPerWeekAsync(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call getCampaignGroupAdReportPerOrganisationPerCampaignPerWeekAsync(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getCampaignGroupAdReportPerOrganisationPerCampaignPerWeekValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
@@ -394,14 +402,15 @@ public class CampaignGroupApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCampaignGroupAdReportPerOrganisationPerDayCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getCampaignGroupAdReportPerOrganisationPerDayCall(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -460,7 +469,7 @@ public class CampaignGroupApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getCampaignGroupAdReportPerOrganisationPerDayValidateBeforeCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getCampaignGroupAdReportPerOrganisationPerDayValidateBeforeCall(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getCampaignGroupAdReportPerOrganisationPerDay(Async)");
@@ -480,14 +489,15 @@ public class CampaignGroupApi {
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public String getCampaignGroupAdReportPerOrganisationPerDay(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public String getCampaignGroupAdReportPerOrganisationPerDay(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format) throws ApiException {
         ApiResponse<String> localVarResp = getCampaignGroupAdReportPerOrganisationPerDayWithHttpInfo(organisationUuids, fromDate, dateFormat, format);
         return localVarResp.getData();
     }
@@ -502,14 +512,15 @@ public class CampaignGroupApi {
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> getCampaignGroupAdReportPerOrganisationPerDayWithHttpInfo(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public ApiResponse<String> getCampaignGroupAdReportPerOrganisationPerDayWithHttpInfo(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format) throws ApiException {
         okhttp3.Call localVarCall = getCampaignGroupAdReportPerOrganisationPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -526,14 +537,15 @@ public class CampaignGroupApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCampaignGroupAdReportPerOrganisationPerDayAsync(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call getCampaignGroupAdReportPerOrganisationPerDayAsync(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getCampaignGroupAdReportPerOrganisationPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
@@ -550,14 +562,15 @@ public class CampaignGroupApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDayCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDayCall(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -616,7 +629,7 @@ public class CampaignGroupApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDay(Async)");
@@ -636,14 +649,15 @@ public class CampaignGroupApi {
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public String getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDay(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public String getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDay(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format) throws ApiException {
         ApiResponse<String> localVarResp = getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo(organisationUuids, fromDate, dateFormat, format);
         return localVarResp.getData();
     }
@@ -658,14 +672,15 @@ public class CampaignGroupApi {
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public ApiResponse<String> getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format) throws ApiException {
         okhttp3.Call localVarCall = getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -682,14 +697,15 @@ public class CampaignGroupApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDayAsync(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDayAsync(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
@@ -706,14 +722,15 @@ public class CampaignGroupApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCampaignGroupAdformReportPerOrganisationPerCampaignPerDayCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getCampaignGroupAdformReportPerOrganisationPerCampaignPerDayCall(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -772,7 +789,7 @@ public class CampaignGroupApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getCampaignGroupAdformReportPerOrganisationPerCampaignPerDayValidateBeforeCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getCampaignGroupAdformReportPerOrganisationPerCampaignPerDayValidateBeforeCall(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getCampaignGroupAdformReportPerOrganisationPerCampaignPerDay(Async)");
@@ -792,14 +809,15 @@ public class CampaignGroupApi {
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public String getCampaignGroupAdformReportPerOrganisationPerCampaignPerDay(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public String getCampaignGroupAdformReportPerOrganisationPerCampaignPerDay(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format) throws ApiException {
         ApiResponse<String> localVarResp = getCampaignGroupAdformReportPerOrganisationPerCampaignPerDayWithHttpInfo(organisationUuids, fromDate, dateFormat, format);
         return localVarResp.getData();
     }
@@ -814,14 +832,15 @@ public class CampaignGroupApi {
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> getCampaignGroupAdformReportPerOrganisationPerCampaignPerDayWithHttpInfo(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public ApiResponse<String> getCampaignGroupAdformReportPerOrganisationPerCampaignPerDayWithHttpInfo(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format) throws ApiException {
         okhttp3.Call localVarCall = getCampaignGroupAdformReportPerOrganisationPerCampaignPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -838,14 +857,15 @@ public class CampaignGroupApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCampaignGroupAdformReportPerOrganisationPerCampaignPerDayAsync(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call getCampaignGroupAdformReportPerOrganisationPerCampaignPerDayAsync(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getCampaignGroupAdformReportPerOrganisationPerCampaignPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
@@ -862,14 +882,15 @@ public class CampaignGroupApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCampaignGroupAdformReportPerOrganisationPerCampaignPerLineItemPerDayCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getCampaignGroupAdformReportPerOrganisationPerCampaignPerLineItemPerDayCall(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -928,7 +949,7 @@ public class CampaignGroupApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getCampaignGroupAdformReportPerOrganisationPerCampaignPerLineItemPerDayValidateBeforeCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getCampaignGroupAdformReportPerOrganisationPerCampaignPerLineItemPerDayValidateBeforeCall(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getCampaignGroupAdformReportPerOrganisationPerCampaignPerLineItemPerDay(Async)");
@@ -948,14 +969,15 @@ public class CampaignGroupApi {
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public String getCampaignGroupAdformReportPerOrganisationPerCampaignPerLineItemPerDay(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public String getCampaignGroupAdformReportPerOrganisationPerCampaignPerLineItemPerDay(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format) throws ApiException {
         ApiResponse<String> localVarResp = getCampaignGroupAdformReportPerOrganisationPerCampaignPerLineItemPerDayWithHttpInfo(organisationUuids, fromDate, dateFormat, format);
         return localVarResp.getData();
     }
@@ -970,14 +992,15 @@ public class CampaignGroupApi {
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> getCampaignGroupAdformReportPerOrganisationPerCampaignPerLineItemPerDayWithHttpInfo(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public ApiResponse<String> getCampaignGroupAdformReportPerOrganisationPerCampaignPerLineItemPerDayWithHttpInfo(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format) throws ApiException {
         okhttp3.Call localVarCall = getCampaignGroupAdformReportPerOrganisationPerCampaignPerLineItemPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -994,14 +1017,15 @@ public class CampaignGroupApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCampaignGroupAdformReportPerOrganisationPerCampaignPerLineItemPerDayAsync(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call getCampaignGroupAdformReportPerOrganisationPerCampaignPerLineItemPerDayAsync(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getCampaignGroupAdformReportPerOrganisationPerCampaignPerLineItemPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
@@ -1018,14 +1042,15 @@ public class CampaignGroupApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCampaignGroupAnalyticsReportPerOrganisationPerDayCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getCampaignGroupAnalyticsReportPerOrganisationPerDayCall(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1084,7 +1109,7 @@ public class CampaignGroupApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getCampaignGroupAnalyticsReportPerOrganisationPerDayValidateBeforeCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getCampaignGroupAnalyticsReportPerOrganisationPerDayValidateBeforeCall(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getCampaignGroupAnalyticsReportPerOrganisationPerDay(Async)");
@@ -1104,14 +1129,15 @@ public class CampaignGroupApi {
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public String getCampaignGroupAnalyticsReportPerOrganisationPerDay(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public String getCampaignGroupAnalyticsReportPerOrganisationPerDay(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format) throws ApiException {
         ApiResponse<String> localVarResp = getCampaignGroupAnalyticsReportPerOrganisationPerDayWithHttpInfo(organisationUuids, fromDate, dateFormat, format);
         return localVarResp.getData();
     }
@@ -1126,14 +1152,15 @@ public class CampaignGroupApi {
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> getCampaignGroupAnalyticsReportPerOrganisationPerDayWithHttpInfo(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public ApiResponse<String> getCampaignGroupAnalyticsReportPerOrganisationPerDayWithHttpInfo(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format) throws ApiException {
         okhttp3.Call localVarCall = getCampaignGroupAnalyticsReportPerOrganisationPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1150,14 +1177,15 @@ public class CampaignGroupApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCampaignGroupAnalyticsReportPerOrganisationPerDayAsync(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call getCampaignGroupAnalyticsReportPerOrganisationPerDayAsync(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getCampaignGroupAnalyticsReportPerOrganisationPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
@@ -1174,14 +1202,15 @@ public class CampaignGroupApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCampaignGroupBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getCampaignGroupBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayCall(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1240,7 +1269,7 @@ public class CampaignGroupApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getCampaignGroupBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getCampaignGroupBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getCampaignGroupBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(Async)");
@@ -1260,14 +1289,15 @@ public class CampaignGroupApi {
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public String getCampaignGroupBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public String getCampaignGroupBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format) throws ApiException {
         ApiResponse<String> localVarResp = getCampaignGroupBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo(organisationUuids, fromDate, dateFormat, format);
         return localVarResp.getData();
     }
@@ -1282,14 +1312,15 @@ public class CampaignGroupApi {
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> getCampaignGroupBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public ApiResponse<String> getCampaignGroupBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format) throws ApiException {
         okhttp3.Call localVarCall = getCampaignGroupBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1306,14 +1337,15 @@ public class CampaignGroupApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCampaignGroupBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayAsync(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call getCampaignGroupBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayAsync(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getCampaignGroupBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
@@ -1330,14 +1362,15 @@ public class CampaignGroupApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCampaignGroupDoubleClickBidManagerReportPerOrganisationPerAccountPerCampaignPerCreativePerDayCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getCampaignGroupDoubleClickBidManagerReportPerOrganisationPerAccountPerCampaignPerCreativePerDayCall(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1396,7 +1429,7 @@ public class CampaignGroupApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getCampaignGroupDoubleClickBidManagerReportPerOrganisationPerAccountPerCampaignPerCreativePerDayValidateBeforeCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getCampaignGroupDoubleClickBidManagerReportPerOrganisationPerAccountPerCampaignPerCreativePerDayValidateBeforeCall(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getCampaignGroupDoubleClickBidManagerReportPerOrganisationPerAccountPerCampaignPerCreativePerDay(Async)");
@@ -1416,14 +1449,15 @@ public class CampaignGroupApi {
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public String getCampaignGroupDoubleClickBidManagerReportPerOrganisationPerAccountPerCampaignPerCreativePerDay(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public String getCampaignGroupDoubleClickBidManagerReportPerOrganisationPerAccountPerCampaignPerCreativePerDay(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format) throws ApiException {
         ApiResponse<String> localVarResp = getCampaignGroupDoubleClickBidManagerReportPerOrganisationPerAccountPerCampaignPerCreativePerDayWithHttpInfo(organisationUuids, fromDate, dateFormat, format);
         return localVarResp.getData();
     }
@@ -1438,14 +1472,15 @@ public class CampaignGroupApi {
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> getCampaignGroupDoubleClickBidManagerReportPerOrganisationPerAccountPerCampaignPerCreativePerDayWithHttpInfo(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public ApiResponse<String> getCampaignGroupDoubleClickBidManagerReportPerOrganisationPerAccountPerCampaignPerCreativePerDayWithHttpInfo(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format) throws ApiException {
         okhttp3.Call localVarCall = getCampaignGroupDoubleClickBidManagerReportPerOrganisationPerAccountPerCampaignPerCreativePerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1462,14 +1497,15 @@ public class CampaignGroupApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCampaignGroupDoubleClickBidManagerReportPerOrganisationPerAccountPerCampaignPerCreativePerDayAsync(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call getCampaignGroupDoubleClickBidManagerReportPerOrganisationPerAccountPerCampaignPerCreativePerDayAsync(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getCampaignGroupDoubleClickBidManagerReportPerOrganisationPerAccountPerCampaignPerCreativePerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
@@ -1486,14 +1522,15 @@ public class CampaignGroupApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCampaignGroupDoubleClickBidManagerReportPerOrganisationPerAccountPerCampaignPerDayCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getCampaignGroupDoubleClickBidManagerReportPerOrganisationPerAccountPerCampaignPerDayCall(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1552,7 +1589,7 @@ public class CampaignGroupApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getCampaignGroupDoubleClickBidManagerReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getCampaignGroupDoubleClickBidManagerReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getCampaignGroupDoubleClickBidManagerReportPerOrganisationPerAccountPerCampaignPerDay(Async)");
@@ -1572,14 +1609,15 @@ public class CampaignGroupApi {
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public String getCampaignGroupDoubleClickBidManagerReportPerOrganisationPerAccountPerCampaignPerDay(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public String getCampaignGroupDoubleClickBidManagerReportPerOrganisationPerAccountPerCampaignPerDay(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format) throws ApiException {
         ApiResponse<String> localVarResp = getCampaignGroupDoubleClickBidManagerReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo(organisationUuids, fromDate, dateFormat, format);
         return localVarResp.getData();
     }
@@ -1594,14 +1632,15 @@ public class CampaignGroupApi {
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> getCampaignGroupDoubleClickBidManagerReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public ApiResponse<String> getCampaignGroupDoubleClickBidManagerReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format) throws ApiException {
         okhttp3.Call localVarCall = getCampaignGroupDoubleClickBidManagerReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1618,14 +1657,15 @@ public class CampaignGroupApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCampaignGroupDoubleClickBidManagerReportPerOrganisationPerAccountPerCampaignPerDayAsync(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call getCampaignGroupDoubleClickBidManagerReportPerOrganisationPerAccountPerCampaignPerDayAsync(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getCampaignGroupDoubleClickBidManagerReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
@@ -1642,14 +1682,15 @@ public class CampaignGroupApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCampaignGroupDoubleClickCampaignManagerReportPerOrganisationPerAccountPerCampaignPerDayCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getCampaignGroupDoubleClickCampaignManagerReportPerOrganisationPerAccountPerCampaignPerDayCall(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1708,7 +1749,7 @@ public class CampaignGroupApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getCampaignGroupDoubleClickCampaignManagerReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getCampaignGroupDoubleClickCampaignManagerReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getCampaignGroupDoubleClickCampaignManagerReportPerOrganisationPerAccountPerCampaignPerDay(Async)");
@@ -1728,14 +1769,15 @@ public class CampaignGroupApi {
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public String getCampaignGroupDoubleClickCampaignManagerReportPerOrganisationPerAccountPerCampaignPerDay(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public String getCampaignGroupDoubleClickCampaignManagerReportPerOrganisationPerAccountPerCampaignPerDay(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format) throws ApiException {
         ApiResponse<String> localVarResp = getCampaignGroupDoubleClickCampaignManagerReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo(organisationUuids, fromDate, dateFormat, format);
         return localVarResp.getData();
     }
@@ -1750,14 +1792,15 @@ public class CampaignGroupApi {
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> getCampaignGroupDoubleClickCampaignManagerReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public ApiResponse<String> getCampaignGroupDoubleClickCampaignManagerReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format) throws ApiException {
         okhttp3.Call localVarCall = getCampaignGroupDoubleClickCampaignManagerReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1774,14 +1817,15 @@ public class CampaignGroupApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCampaignGroupDoubleClickCampaignManagerReportPerOrganisationPerAccountPerCampaignPerDayAsync(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call getCampaignGroupDoubleClickCampaignManagerReportPerOrganisationPerAccountPerCampaignPerDayAsync(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getCampaignGroupDoubleClickCampaignManagerReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
@@ -1798,14 +1842,15 @@ public class CampaignGroupApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCampaignGroupFacebookAdCustomConversionReportPerOrganisationPerAccountPerCampaignPerDayCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getCampaignGroupFacebookAdCustomConversionReportPerOrganisationPerAccountPerCampaignPerDayCall(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1864,7 +1909,7 @@ public class CampaignGroupApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getCampaignGroupFacebookAdCustomConversionReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getCampaignGroupFacebookAdCustomConversionReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getCampaignGroupFacebookAdCustomConversionReportPerOrganisationPerAccountPerCampaignPerDay(Async)");
@@ -1884,14 +1929,15 @@ public class CampaignGroupApi {
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public String getCampaignGroupFacebookAdCustomConversionReportPerOrganisationPerAccountPerCampaignPerDay(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public String getCampaignGroupFacebookAdCustomConversionReportPerOrganisationPerAccountPerCampaignPerDay(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format) throws ApiException {
         ApiResponse<String> localVarResp = getCampaignGroupFacebookAdCustomConversionReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo(organisationUuids, fromDate, dateFormat, format);
         return localVarResp.getData();
     }
@@ -1906,14 +1952,15 @@ public class CampaignGroupApi {
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> getCampaignGroupFacebookAdCustomConversionReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public ApiResponse<String> getCampaignGroupFacebookAdCustomConversionReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format) throws ApiException {
         okhttp3.Call localVarCall = getCampaignGroupFacebookAdCustomConversionReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1930,14 +1977,15 @@ public class CampaignGroupApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCampaignGroupFacebookAdCustomConversionReportPerOrganisationPerAccountPerCampaignPerDayAsync(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call getCampaignGroupFacebookAdCustomConversionReportPerOrganisationPerAccountPerCampaignPerDayAsync(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getCampaignGroupFacebookAdCustomConversionReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
@@ -1954,14 +2002,15 @@ public class CampaignGroupApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCampaignGroupFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getCampaignGroupFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayCall(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2020,7 +2069,7 @@ public class CampaignGroupApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getCampaignGroupFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayValidateBeforeCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getCampaignGroupFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayValidateBeforeCall(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getCampaignGroupFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDay(Async)");
@@ -2040,14 +2089,15 @@ public class CampaignGroupApi {
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public String getCampaignGroupFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDay(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public String getCampaignGroupFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDay(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format) throws ApiException {
         ApiResponse<String> localVarResp = getCampaignGroupFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayWithHttpInfo(organisationUuids, fromDate, dateFormat, format);
         return localVarResp.getData();
     }
@@ -2062,14 +2112,15 @@ public class CampaignGroupApi {
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> getCampaignGroupFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayWithHttpInfo(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public ApiResponse<String> getCampaignGroupFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayWithHttpInfo(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format) throws ApiException {
         okhttp3.Call localVarCall = getCampaignGroupFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -2086,14 +2137,15 @@ public class CampaignGroupApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCampaignGroupFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayAsync(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call getCampaignGroupFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayAsync(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getCampaignGroupFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
@@ -2110,14 +2162,15 @@ public class CampaignGroupApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCampaignGroupFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdPerDayCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getCampaignGroupFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdPerDayCall(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2176,7 +2229,7 @@ public class CampaignGroupApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getCampaignGroupFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdPerDayValidateBeforeCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getCampaignGroupFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdPerDayValidateBeforeCall(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getCampaignGroupFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdPerDay(Async)");
@@ -2196,14 +2249,15 @@ public class CampaignGroupApi {
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public String getCampaignGroupFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdPerDay(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public String getCampaignGroupFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdPerDay(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format) throws ApiException {
         ApiResponse<String> localVarResp = getCampaignGroupFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdPerDayWithHttpInfo(organisationUuids, fromDate, dateFormat, format);
         return localVarResp.getData();
     }
@@ -2218,14 +2272,15 @@ public class CampaignGroupApi {
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> getCampaignGroupFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdPerDayWithHttpInfo(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public ApiResponse<String> getCampaignGroupFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdPerDayWithHttpInfo(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format) throws ApiException {
         okhttp3.Call localVarCall = getCampaignGroupFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -2242,14 +2297,15 @@ public class CampaignGroupApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCampaignGroupFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdPerDayAsync(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call getCampaignGroupFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdPerDayAsync(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getCampaignGroupFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
@@ -2266,14 +2322,15 @@ public class CampaignGroupApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCampaignGroupFacebookAdExtendedReportPerOrganisationPerCampaignPerDayCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getCampaignGroupFacebookAdExtendedReportPerOrganisationPerCampaignPerDayCall(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2332,7 +2389,7 @@ public class CampaignGroupApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getCampaignGroupFacebookAdExtendedReportPerOrganisationPerCampaignPerDayValidateBeforeCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getCampaignGroupFacebookAdExtendedReportPerOrganisationPerCampaignPerDayValidateBeforeCall(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getCampaignGroupFacebookAdExtendedReportPerOrganisationPerCampaignPerDay(Async)");
@@ -2352,14 +2409,15 @@ public class CampaignGroupApi {
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public String getCampaignGroupFacebookAdExtendedReportPerOrganisationPerCampaignPerDay(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public String getCampaignGroupFacebookAdExtendedReportPerOrganisationPerCampaignPerDay(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format) throws ApiException {
         ApiResponse<String> localVarResp = getCampaignGroupFacebookAdExtendedReportPerOrganisationPerCampaignPerDayWithHttpInfo(organisationUuids, fromDate, dateFormat, format);
         return localVarResp.getData();
     }
@@ -2374,14 +2432,15 @@ public class CampaignGroupApi {
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> getCampaignGroupFacebookAdExtendedReportPerOrganisationPerCampaignPerDayWithHttpInfo(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public ApiResponse<String> getCampaignGroupFacebookAdExtendedReportPerOrganisationPerCampaignPerDayWithHttpInfo(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format) throws ApiException {
         okhttp3.Call localVarCall = getCampaignGroupFacebookAdExtendedReportPerOrganisationPerCampaignPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -2398,14 +2457,15 @@ public class CampaignGroupApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCampaignGroupFacebookAdExtendedReportPerOrganisationPerCampaignPerDayAsync(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call getCampaignGroupFacebookAdExtendedReportPerOrganisationPerCampaignPerDayAsync(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getCampaignGroupFacebookAdExtendedReportPerOrganisationPerCampaignPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
@@ -2422,14 +2482,15 @@ public class CampaignGroupApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCampaignGroupFacebookAdReportPerOrganisationPerCampaignPerDayCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getCampaignGroupFacebookAdReportPerOrganisationPerCampaignPerDayCall(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2488,7 +2549,7 @@ public class CampaignGroupApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getCampaignGroupFacebookAdReportPerOrganisationPerCampaignPerDayValidateBeforeCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getCampaignGroupFacebookAdReportPerOrganisationPerCampaignPerDayValidateBeforeCall(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getCampaignGroupFacebookAdReportPerOrganisationPerCampaignPerDay(Async)");
@@ -2508,14 +2569,15 @@ public class CampaignGroupApi {
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public String getCampaignGroupFacebookAdReportPerOrganisationPerCampaignPerDay(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public String getCampaignGroupFacebookAdReportPerOrganisationPerCampaignPerDay(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format) throws ApiException {
         ApiResponse<String> localVarResp = getCampaignGroupFacebookAdReportPerOrganisationPerCampaignPerDayWithHttpInfo(organisationUuids, fromDate, dateFormat, format);
         return localVarResp.getData();
     }
@@ -2530,14 +2592,15 @@ public class CampaignGroupApi {
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> getCampaignGroupFacebookAdReportPerOrganisationPerCampaignPerDayWithHttpInfo(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public ApiResponse<String> getCampaignGroupFacebookAdReportPerOrganisationPerCampaignPerDayWithHttpInfo(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format) throws ApiException {
         okhttp3.Call localVarCall = getCampaignGroupFacebookAdReportPerOrganisationPerCampaignPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -2554,14 +2617,15 @@ public class CampaignGroupApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCampaignGroupFacebookAdReportPerOrganisationPerCampaignPerDayAsync(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call getCampaignGroupFacebookAdReportPerOrganisationPerCampaignPerDayAsync(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getCampaignGroupFacebookAdReportPerOrganisationPerCampaignPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
@@ -2578,14 +2642,15 @@ public class CampaignGroupApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCampaignGroupGoalReportPerOrganisationPerDayCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getCampaignGroupGoalReportPerOrganisationPerDayCall(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2644,7 +2709,7 @@ public class CampaignGroupApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getCampaignGroupGoalReportPerOrganisationPerDayValidateBeforeCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getCampaignGroupGoalReportPerOrganisationPerDayValidateBeforeCall(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getCampaignGroupGoalReportPerOrganisationPerDay(Async)");
@@ -2664,14 +2729,15 @@ public class CampaignGroupApi {
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public String getCampaignGroupGoalReportPerOrganisationPerDay(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public String getCampaignGroupGoalReportPerOrganisationPerDay(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format) throws ApiException {
         ApiResponse<String> localVarResp = getCampaignGroupGoalReportPerOrganisationPerDayWithHttpInfo(organisationUuids, fromDate, dateFormat, format);
         return localVarResp.getData();
     }
@@ -2686,14 +2752,15 @@ public class CampaignGroupApi {
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> getCampaignGroupGoalReportPerOrganisationPerDayWithHttpInfo(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public ApiResponse<String> getCampaignGroupGoalReportPerOrganisationPerDayWithHttpInfo(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format) throws ApiException {
         okhttp3.Call localVarCall = getCampaignGroupGoalReportPerOrganisationPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -2710,14 +2777,15 @@ public class CampaignGroupApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCampaignGroupGoalReportPerOrganisationPerDayAsync(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call getCampaignGroupGoalReportPerOrganisationPerDayAsync(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getCampaignGroupGoalReportPerOrganisationPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
@@ -2734,14 +2802,15 @@ public class CampaignGroupApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCampaignGroupGoogleAdsExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getCampaignGroupGoogleAdsExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayCall(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2800,7 +2869,7 @@ public class CampaignGroupApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getCampaignGroupGoogleAdsExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayValidateBeforeCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getCampaignGroupGoogleAdsExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayValidateBeforeCall(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getCampaignGroupGoogleAdsExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDay(Async)");
@@ -2820,14 +2889,15 @@ public class CampaignGroupApi {
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public String getCampaignGroupGoogleAdsExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDay(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public String getCampaignGroupGoogleAdsExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDay(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format) throws ApiException {
         ApiResponse<String> localVarResp = getCampaignGroupGoogleAdsExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayWithHttpInfo(organisationUuids, fromDate, dateFormat, format);
         return localVarResp.getData();
     }
@@ -2842,14 +2912,15 @@ public class CampaignGroupApi {
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> getCampaignGroupGoogleAdsExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayWithHttpInfo(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public ApiResponse<String> getCampaignGroupGoogleAdsExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayWithHttpInfo(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format) throws ApiException {
         okhttp3.Call localVarCall = getCampaignGroupGoogleAdsExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -2866,14 +2937,15 @@ public class CampaignGroupApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCampaignGroupGoogleAdsExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayAsync(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call getCampaignGroupGoogleAdsExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayAsync(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getCampaignGroupGoogleAdsExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
@@ -2890,14 +2962,15 @@ public class CampaignGroupApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCampaignGroupGoogleAdsReportPerOrganisationPerCampaignPerDayCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getCampaignGroupGoogleAdsReportPerOrganisationPerCampaignPerDayCall(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2956,7 +3029,7 @@ public class CampaignGroupApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getCampaignGroupGoogleAdsReportPerOrganisationPerCampaignPerDayValidateBeforeCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getCampaignGroupGoogleAdsReportPerOrganisationPerCampaignPerDayValidateBeforeCall(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getCampaignGroupGoogleAdsReportPerOrganisationPerCampaignPerDay(Async)");
@@ -2976,14 +3049,15 @@ public class CampaignGroupApi {
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public String getCampaignGroupGoogleAdsReportPerOrganisationPerCampaignPerDay(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public String getCampaignGroupGoogleAdsReportPerOrganisationPerCampaignPerDay(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format) throws ApiException {
         ApiResponse<String> localVarResp = getCampaignGroupGoogleAdsReportPerOrganisationPerCampaignPerDayWithHttpInfo(organisationUuids, fromDate, dateFormat, format);
         return localVarResp.getData();
     }
@@ -2998,14 +3072,15 @@ public class CampaignGroupApi {
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> getCampaignGroupGoogleAdsReportPerOrganisationPerCampaignPerDayWithHttpInfo(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public ApiResponse<String> getCampaignGroupGoogleAdsReportPerOrganisationPerCampaignPerDayWithHttpInfo(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format) throws ApiException {
         okhttp3.Call localVarCall = getCampaignGroupGoogleAdsReportPerOrganisationPerCampaignPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -3022,14 +3097,15 @@ public class CampaignGroupApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCampaignGroupGoogleAdsReportPerOrganisationPerCampaignPerDayAsync(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call getCampaignGroupGoogleAdsReportPerOrganisationPerCampaignPerDayAsync(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getCampaignGroupGoogleAdsReportPerOrganisationPerCampaignPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
@@ -3046,14 +3122,15 @@ public class CampaignGroupApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCampaignGroupLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getCampaignGroupLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayCall(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -3112,7 +3189,7 @@ public class CampaignGroupApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getCampaignGroupLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getCampaignGroupLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getCampaignGroupLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(Async)");
@@ -3132,14 +3209,15 @@ public class CampaignGroupApi {
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public String getCampaignGroupLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public String getCampaignGroupLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format) throws ApiException {
         ApiResponse<String> localVarResp = getCampaignGroupLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo(organisationUuids, fromDate, dateFormat, format);
         return localVarResp.getData();
     }
@@ -3154,14 +3232,15 @@ public class CampaignGroupApi {
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> getCampaignGroupLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public ApiResponse<String> getCampaignGroupLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format) throws ApiException {
         okhttp3.Call localVarCall = getCampaignGroupLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -3178,14 +3257,15 @@ public class CampaignGroupApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCampaignGroupLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayAsync(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call getCampaignGroupLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayAsync(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getCampaignGroupLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
@@ -3202,14 +3282,15 @@ public class CampaignGroupApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCampaignGroupPinterestAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getCampaignGroupPinterestAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayCall(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -3268,7 +3349,7 @@ public class CampaignGroupApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getCampaignGroupPinterestAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getCampaignGroupPinterestAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getCampaignGroupPinterestAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(Async)");
@@ -3288,14 +3369,15 @@ public class CampaignGroupApi {
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public String getCampaignGroupPinterestAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public String getCampaignGroupPinterestAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format) throws ApiException {
         ApiResponse<String> localVarResp = getCampaignGroupPinterestAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo(organisationUuids, fromDate, dateFormat, format);
         return localVarResp.getData();
     }
@@ -3310,14 +3392,15 @@ public class CampaignGroupApi {
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> getCampaignGroupPinterestAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public ApiResponse<String> getCampaignGroupPinterestAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format) throws ApiException {
         okhttp3.Call localVarCall = getCampaignGroupPinterestAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -3334,14 +3417,15 @@ public class CampaignGroupApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCampaignGroupPinterestAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayAsync(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call getCampaignGroupPinterestAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayAsync(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getCampaignGroupPinterestAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
@@ -3358,14 +3442,15 @@ public class CampaignGroupApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCampaignGroupReportPerOrganisationPerDayCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getCampaignGroupReportPerOrganisationPerDayCall(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -3424,7 +3509,7 @@ public class CampaignGroupApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getCampaignGroupReportPerOrganisationPerDayValidateBeforeCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getCampaignGroupReportPerOrganisationPerDayValidateBeforeCall(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getCampaignGroupReportPerOrganisationPerDay(Async)");
@@ -3444,14 +3529,15 @@ public class CampaignGroupApi {
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public String getCampaignGroupReportPerOrganisationPerDay(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public String getCampaignGroupReportPerOrganisationPerDay(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format) throws ApiException {
         ApiResponse<String> localVarResp = getCampaignGroupReportPerOrganisationPerDayWithHttpInfo(organisationUuids, fromDate, dateFormat, format);
         return localVarResp.getData();
     }
@@ -3466,14 +3552,15 @@ public class CampaignGroupApi {
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> getCampaignGroupReportPerOrganisationPerDayWithHttpInfo(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public ApiResponse<String> getCampaignGroupReportPerOrganisationPerDayWithHttpInfo(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format) throws ApiException {
         okhttp3.Call localVarCall = getCampaignGroupReportPerOrganisationPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -3490,14 +3577,15 @@ public class CampaignGroupApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCampaignGroupReportPerOrganisationPerDayAsync(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call getCampaignGroupReportPerOrganisationPerDayAsync(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getCampaignGroupReportPerOrganisationPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
@@ -3514,14 +3602,15 @@ public class CampaignGroupApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCampaignGroupSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getCampaignGroupSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayCall(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -3580,7 +3669,7 @@ public class CampaignGroupApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getCampaignGroupSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getCampaignGroupSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getCampaignGroupSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(Async)");
@@ -3600,14 +3689,15 @@ public class CampaignGroupApi {
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public String getCampaignGroupSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public String getCampaignGroupSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format) throws ApiException {
         ApiResponse<String> localVarResp = getCampaignGroupSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo(organisationUuids, fromDate, dateFormat, format);
         return localVarResp.getData();
     }
@@ -3622,14 +3712,15 @@ public class CampaignGroupApi {
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> getCampaignGroupSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public ApiResponse<String> getCampaignGroupSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format) throws ApiException {
         okhttp3.Call localVarCall = getCampaignGroupSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -3646,14 +3737,15 @@ public class CampaignGroupApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCampaignGroupSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayAsync(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call getCampaignGroupSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayAsync(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getCampaignGroupSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
@@ -3670,14 +3762,15 @@ public class CampaignGroupApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCampaignGroupTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getCampaignGroupTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayCall(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -3736,7 +3829,7 @@ public class CampaignGroupApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getCampaignGroupTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getCampaignGroupTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getCampaignGroupTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(Async)");
@@ -3756,14 +3849,15 @@ public class CampaignGroupApi {
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public String getCampaignGroupTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public String getCampaignGroupTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format) throws ApiException {
         ApiResponse<String> localVarResp = getCampaignGroupTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo(organisationUuids, fromDate, dateFormat, format);
         return localVarResp.getData();
     }
@@ -3778,14 +3872,15 @@ public class CampaignGroupApi {
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> getCampaignGroupTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public ApiResponse<String> getCampaignGroupTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format) throws ApiException {
         okhttp3.Call localVarCall = getCampaignGroupTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -3802,14 +3897,15 @@ public class CampaignGroupApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCampaignGroupTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayAsync(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call getCampaignGroupTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayAsync(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getCampaignGroupTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
@@ -3826,14 +3922,15 @@ public class CampaignGroupApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCampaignGroupTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getCampaignGroupTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayCall(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -3892,7 +3989,7 @@ public class CampaignGroupApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getCampaignGroupTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getCampaignGroupTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getCampaignGroupTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(Async)");
@@ -3912,14 +4009,15 @@ public class CampaignGroupApi {
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public String getCampaignGroupTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public String getCampaignGroupTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format) throws ApiException {
         ApiResponse<String> localVarResp = getCampaignGroupTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo(organisationUuids, fromDate, dateFormat, format);
         return localVarResp.getData();
     }
@@ -3934,14 +4032,15 @@ public class CampaignGroupApi {
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> getCampaignGroupTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public ApiResponse<String> getCampaignGroupTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format) throws ApiException {
         okhttp3.Call localVarCall = getCampaignGroupTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -3958,14 +4057,15 @@ public class CampaignGroupApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCampaignGroupTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayAsync(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call getCampaignGroupTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayAsync(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getCampaignGroupTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
@@ -3982,14 +4082,15 @@ public class CampaignGroupApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCampaignGroupVideoReportPerOrganisationPerCampaignPerDayCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getCampaignGroupVideoReportPerOrganisationPerCampaignPerDayCall(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -4048,7 +4149,7 @@ public class CampaignGroupApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getCampaignGroupVideoReportPerOrganisationPerCampaignPerDayValidateBeforeCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getCampaignGroupVideoReportPerOrganisationPerCampaignPerDayValidateBeforeCall(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getCampaignGroupVideoReportPerOrganisationPerCampaignPerDay(Async)");
@@ -4068,14 +4169,15 @@ public class CampaignGroupApi {
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public String getCampaignGroupVideoReportPerOrganisationPerCampaignPerDay(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public String getCampaignGroupVideoReportPerOrganisationPerCampaignPerDay(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format) throws ApiException {
         ApiResponse<String> localVarResp = getCampaignGroupVideoReportPerOrganisationPerCampaignPerDayWithHttpInfo(organisationUuids, fromDate, dateFormat, format);
         return localVarResp.getData();
     }
@@ -4090,14 +4192,15 @@ public class CampaignGroupApi {
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> getCampaignGroupVideoReportPerOrganisationPerCampaignPerDayWithHttpInfo(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public ApiResponse<String> getCampaignGroupVideoReportPerOrganisationPerCampaignPerDayWithHttpInfo(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format) throws ApiException {
         okhttp3.Call localVarCall = getCampaignGroupVideoReportPerOrganisationPerCampaignPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -4114,14 +4217,15 @@ public class CampaignGroupApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCampaignGroupVideoReportPerOrganisationPerCampaignPerDayAsync(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call getCampaignGroupVideoReportPerOrganisationPerCampaignPerDayAsync(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getCampaignGroupVideoReportPerOrganisationPerCampaignPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
@@ -4138,14 +4242,15 @@ public class CampaignGroupApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCampaignGroupVideoReportPerOrganisationPerDayCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getCampaignGroupVideoReportPerOrganisationPerDayCall(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -4204,7 +4309,7 @@ public class CampaignGroupApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getCampaignGroupVideoReportPerOrganisationPerDayValidateBeforeCall(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getCampaignGroupVideoReportPerOrganisationPerDayValidateBeforeCall(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'organisationUuids' is set
         if (organisationUuids == null) {
             throw new ApiException("Missing the required parameter 'organisationUuids' when calling getCampaignGroupVideoReportPerOrganisationPerDay(Async)");
@@ -4224,14 +4329,15 @@ public class CampaignGroupApi {
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public String getCampaignGroupVideoReportPerOrganisationPerDay(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public String getCampaignGroupVideoReportPerOrganisationPerDay(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format) throws ApiException {
         ApiResponse<String> localVarResp = getCampaignGroupVideoReportPerOrganisationPerDayWithHttpInfo(organisationUuids, fromDate, dateFormat, format);
         return localVarResp.getData();
     }
@@ -4246,14 +4352,15 @@ public class CampaignGroupApi {
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> getCampaignGroupVideoReportPerOrganisationPerDayWithHttpInfo(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format) throws ApiException {
+    public ApiResponse<String> getCampaignGroupVideoReportPerOrganisationPerDayWithHttpInfo(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format) throws ApiException {
         okhttp3.Call localVarCall = getCampaignGroupVideoReportPerOrganisationPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -4270,14 +4377,15 @@ public class CampaignGroupApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Invalid Organisation uuids supplied </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Organisation uuids not found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCampaignGroupVideoReportPerOrganisationPerDayAsync(List<String> organisationUuids, LocalDate fromDate, String dateFormat, String format, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call getCampaignGroupVideoReportPerOrganisationPerDayAsync(@javax.annotation.Nonnull List<String> organisationUuids, @javax.annotation.Nullable LocalDate fromDate, @javax.annotation.Nullable String dateFormat, @javax.annotation.Nullable String format, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getCampaignGroupVideoReportPerOrganisationPerDayValidateBeforeCall(organisationUuids, fromDate, dateFormat, format, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();

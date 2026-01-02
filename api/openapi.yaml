@@ -179,6 +179,14 @@ paths:
           format: date
           type: string
         style: form
+      - description: Include inactive campaigns
+        explode: true
+        in: query
+        name: include_inactive
+        required: false
+        schema:
+          type: boolean
+        style: form
       - description: Output format
         explode: true
         in: query
@@ -234,6 +242,14 @@ paths:
         schema:
           format: date
           type: string
+        style: form
+      - description: Include inactive ad groups
+        explode: true
+        in: query
+        name: include_inactive
+        required: false
+        schema:
+          type: boolean
         style: form
       - description: Output format
         explode: true

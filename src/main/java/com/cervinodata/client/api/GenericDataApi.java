@@ -77,7 +77,8 @@ public class GenericDataApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
@@ -138,7 +139,8 @@ public class GenericDataApi {
      * @return List&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
@@ -154,7 +156,8 @@ public class GenericDataApi {
      * @return ApiResponse&lt;List&lt;Object&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
@@ -172,7 +175,8 @@ public class GenericDataApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
@@ -191,12 +195,13 @@ public class GenericDataApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getOrganisationsCall(String format, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getOrganisationsCall(@javax.annotation.Nullable String format, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -246,7 +251,7 @@ public class GenericDataApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getOrganisationsValidateBeforeCall(String format, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getOrganisationsValidateBeforeCall(@javax.annotation.Nullable String format, final ApiCallback _callback) throws ApiException {
         return getOrganisationsCall(format, _callback);
 
     }
@@ -258,12 +263,13 @@ public class GenericDataApi {
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public String getOrganisations(String format) throws ApiException {
+    public String getOrganisations(@javax.annotation.Nullable String format) throws ApiException {
         ApiResponse<String> localVarResp = getOrganisationsWithHttpInfo(format);
         return localVarResp.getData();
     }
@@ -275,12 +281,13 @@ public class GenericDataApi {
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> getOrganisationsWithHttpInfo(String format) throws ApiException {
+    public ApiResponse<String> getOrganisationsWithHttpInfo(@javax.annotation.Nullable String format) throws ApiException {
         okhttp3.Call localVarCall = getOrganisationsValidateBeforeCall(format, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -294,12 +301,13 @@ public class GenericDataApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getOrganisationsAsync(String format, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call getOrganisationsAsync(@javax.annotation.Nullable String format, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getOrganisationsValidateBeforeCall(format, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();

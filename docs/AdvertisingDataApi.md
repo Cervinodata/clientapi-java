@@ -404,7 +404,7 @@ public class Example {
 
 <a id="getAdCampaigns"></a>
 # **getAdCampaigns**
-> String getAdCampaigns(organisationUuid, fromDate, format)
+> String getAdCampaigns(organisationUuid, fromDate, includeInactive, format)
 
 Return ad campaigns by organisation
 
@@ -432,9 +432,10 @@ public class Example {
     AdvertisingDataApi apiInstance = new AdvertisingDataApi(defaultClient);
     String organisationUuid = "organisationUuid_example"; // String | Organisation uuid
     LocalDate fromDate = LocalDate.now(); // LocalDate | From date
+    Boolean includeInactive = true; // Boolean | Include inactive campaigns
     String format = "csv"; // String | Output format
     try {
-      String result = apiInstance.getAdCampaigns(organisationUuid, fromDate, format);
+      String result = apiInstance.getAdCampaigns(organisationUuid, fromDate, includeInactive, format);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling AdvertisingDataApi#getAdCampaigns");
@@ -453,6 +454,7 @@ public class Example {
 |------------- | ------------- | ------------- | -------------|
 | **organisationUuid** | **String**| Organisation uuid | |
 | **fromDate** | **LocalDate**| From date | [optional] |
+| **includeInactive** | **Boolean**| Include inactive campaigns | [optional] |
 | **format** | **String**| Output format | [optional] [enum: csv, json] |
 
 ### Return type
@@ -477,7 +479,7 @@ public class Example {
 
 <a id="getAdGroups"></a>
 # **getAdGroups**
-> String getAdGroups(organisationUuid, fromDate, format)
+> String getAdGroups(organisationUuid, fromDate, includeInactive, format)
 
 Return ad groups by organisation
 
@@ -505,9 +507,10 @@ public class Example {
     AdvertisingDataApi apiInstance = new AdvertisingDataApi(defaultClient);
     String organisationUuid = "organisationUuid_example"; // String | Organisation uuid
     LocalDate fromDate = LocalDate.now(); // LocalDate | From date
+    Boolean includeInactive = true; // Boolean | Include inactive ad groups
     String format = "csv"; // String | Output format
     try {
-      String result = apiInstance.getAdGroups(organisationUuid, fromDate, format);
+      String result = apiInstance.getAdGroups(organisationUuid, fromDate, includeInactive, format);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling AdvertisingDataApi#getAdGroups");
@@ -526,6 +529,7 @@ public class Example {
 |------------- | ------------- | ------------- | -------------|
 | **organisationUuid** | **String**| Organisation uuid | |
 | **fromDate** | **LocalDate**| From date | [optional] |
+| **includeInactive** | **Boolean**| Include inactive ad groups | [optional] |
 | **format** | **String**| Output format | [optional] [enum: csv, json] |
 
 ### Return type

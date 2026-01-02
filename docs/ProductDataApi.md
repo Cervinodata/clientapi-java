@@ -4,12 +4,12 @@ All URIs are relative to *https://app.cervinodata.com/api/v1*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth_0**](ProductDataApi.md#getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth_0) | **GET** /data/ga4-report-per-channel-group-per-product-name-per-organisation-per-property-per-month/{organisationUuids} | Return GA4 report per channel group per product name per organisation per property per month |
+| [**getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth**](ProductDataApi.md#getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth) | **GET** /data/ga4-report-per-channel-group-per-product-name-per-organisation-per-property-per-month/{organisationUuids} | Return GA4 report per channel group per product name per organisation per property per month |
 
 
-<a id="getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth_0"></a>
-# **getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth_0**
-> String getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth_0(organisationUuids)
+<a id="getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth"></a>
+# **getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth**
+> String getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth(organisationUuids)
 
 Return GA4 report per channel group per product name per organisation per property per month
 
@@ -37,10 +37,10 @@ public class Example {
     ProductDataApi apiInstance = new ProductDataApi(defaultClient);
     List<String> organisationUuids = Arrays.asList(); // List<String> | Organisation uuids
     try {
-      String result = apiInstance.getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth_0(organisationUuids);
+      String result = apiInstance.getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth(organisationUuids);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling ProductDataApi#getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth_0");
+      System.err.println("Exception when calling ProductDataApi#getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
