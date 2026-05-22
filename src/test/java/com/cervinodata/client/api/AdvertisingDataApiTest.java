@@ -125,8 +125,9 @@ public class AdvertisingDataApiTest {
     public void getAdCampaignsTest() throws ApiException {
         String organisationUuid = null;
         LocalDate fromDate = null;
+        Boolean includeInactive = null;
         String format = null;
-        String response = api.getAdCampaigns(organisationUuid, fromDate, format);
+        String response = api.getAdCampaigns(organisationUuid, fromDate, includeInactive, format);
         // TODO: test validations
     }
 
@@ -141,8 +142,9 @@ public class AdvertisingDataApiTest {
     public void getAdGroupsTest() throws ApiException {
         String organisationUuid = null;
         LocalDate fromDate = null;
+        Boolean includeInactive = null;
         String format = null;
-        String response = api.getAdGroups(organisationUuid, fromDate, format);
+        String response = api.getAdGroups(organisationUuid, fromDate, includeInactive, format);
         // TODO: test validations
     }
 
