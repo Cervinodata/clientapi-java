@@ -55,6 +55,14 @@ tags:
 - description: "Operations to collect analytics data with goal metrics, i.e. a report\
     \ per campaign per day by organisation"
   name: "analytics data, goals"
+- description: campaign group
+  name: campaign group
+- description: "analytics data, transaction metrics"
+  name: "analytics data, transaction metrics"
+- description: "analytics data, product metrics"
+  name: "analytics data, product metrics"
+- description: product data
+  name: product data
 paths:
   /data/organisations:
     get:
