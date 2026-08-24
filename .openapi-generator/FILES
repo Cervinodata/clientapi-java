@@ -12,6 +12,7 @@ docs/AnalyticsDataGoalsApi.md
 docs/AnalyticsDataProductMetricsApi.md
 docs/AnalyticsDataTransactionMetricsApi.md
 docs/CampaignGroupApi.md
+docs/CreateOrganisationRequest.md
 docs/GenericDataApi.md
 docs/ProductDataApi.md
 git_push.sh
@@ -50,3 +51,5 @@ src/main/java/com/cervinodata/client/auth/Authentication.java
 src/main/java/com/cervinodata/client/auth/HttpBasicAuth.java
 src/main/java/com/cervinodata/client/auth/HttpBearerAuth.java
 src/main/java/com/cervinodata/client/model/AbstractOpenApiSchema.java
+src/main/java/com/cervinodata/client/model/CreateOrganisationRequest.java
+src/test/java/com/cervinodata/client/model/CreateOrganisationRequestTest.java

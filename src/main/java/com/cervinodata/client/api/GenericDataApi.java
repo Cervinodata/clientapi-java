@@ -27,6 +27,7 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
+import com.cervinodata.client.model.CreateOrganisationRequest;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -71,6 +72,271 @@ public class GenericDataApi {
         this.localCustomBaseUrl = customBaseUrl;
     }
 
+    /**
+     * Build call for createOrganisation
+     * @param createOrganisationRequest  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> Validation error </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call createOrganisationCall(@javax.annotation.Nonnull CreateOrganisationRequest createOrganisationRequest, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = createOrganisationRequest;
+
+        // create path and map variables
+        String localVarPath = "/data/organisations";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "bearerAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call createOrganisationValidateBeforeCall(@javax.annotation.Nonnull CreateOrganisationRequest createOrganisationRequest, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'createOrganisationRequest' is set
+        if (createOrganisationRequest == null) {
+            throw new ApiException("Missing the required parameter 'createOrganisationRequest' when calling createOrganisation(Async)");
+        }
+
+        return createOrganisationCall(createOrganisationRequest, _callback);
+
+    }
+
+    /**
+     * Create an organisation
+     * Create a new organisation
+     * @param createOrganisationRequest  (required)
+     * @return Object
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> Validation error </td><td>  -  </td></tr>
+     </table>
+     */
+    public Object createOrganisation(@javax.annotation.Nonnull CreateOrganisationRequest createOrganisationRequest) throws ApiException {
+        ApiResponse<Object> localVarResp = createOrganisationWithHttpInfo(createOrganisationRequest);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Create an organisation
+     * Create a new organisation
+     * @param createOrganisationRequest  (required)
+     * @return ApiResponse&lt;Object&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> Validation error </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Object> createOrganisationWithHttpInfo(@javax.annotation.Nonnull CreateOrganisationRequest createOrganisationRequest) throws ApiException {
+        okhttp3.Call localVarCall = createOrganisationValidateBeforeCall(createOrganisationRequest, null);
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Create an organisation (asynchronously)
+     * Create a new organisation
+     * @param createOrganisationRequest  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> Validation error </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call createOrganisationAsync(@javax.annotation.Nonnull CreateOrganisationRequest createOrganisationRequest, final ApiCallback<Object> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = createOrganisationValidateBeforeCall(createOrganisationRequest, _callback);
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for deleteOrganisation
+     * @param organisationUuid Organisation uuid (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+        <tr><td> 403 </td><td> No access </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Organisation uuid not found </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> Default organisation cannot be deleted </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call deleteOrganisationCall(@javax.annotation.Nonnull String organisationUuid, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/data/organisations/{organisationUuid}"
+            .replace("{" + "organisationUuid" + "}", localVarApiClient.escapeString(organisationUuid.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "bearerAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call deleteOrganisationValidateBeforeCall(@javax.annotation.Nonnull String organisationUuid, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'organisationUuid' is set
+        if (organisationUuid == null) {
+            throw new ApiException("Missing the required parameter 'organisationUuid' when calling deleteOrganisation(Async)");
+        }
+
+        return deleteOrganisationCall(organisationUuid, _callback);
+
+    }
+
+    /**
+     * Delete an organisation
+     * Delete an organisation. Accounts belonging to the organisation are reassigned to the default organisation. The default organisation itself cannot be deleted.
+     * @param organisationUuid Organisation uuid (required)
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+        <tr><td> 403 </td><td> No access </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Organisation uuid not found </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> Default organisation cannot be deleted </td><td>  -  </td></tr>
+     </table>
+     */
+    public void deleteOrganisation(@javax.annotation.Nonnull String organisationUuid) throws ApiException {
+        deleteOrganisationWithHttpInfo(organisationUuid);
+    }
+
+    /**
+     * Delete an organisation
+     * Delete an organisation. Accounts belonging to the organisation are reassigned to the default organisation. The default organisation itself cannot be deleted.
+     * @param organisationUuid Organisation uuid (required)
+     * @return ApiResponse&lt;Void&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+        <tr><td> 403 </td><td> No access </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Organisation uuid not found </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> Default organisation cannot be deleted </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Void> deleteOrganisationWithHttpInfo(@javax.annotation.Nonnull String organisationUuid) throws ApiException {
+        okhttp3.Call localVarCall = deleteOrganisationValidateBeforeCall(organisationUuid, null);
+        return localVarApiClient.execute(localVarCall);
+    }
+
+    /**
+     * Delete an organisation (asynchronously)
+     * Delete an organisation. Accounts belonging to the organisation are reassigned to the default organisation. The default organisation itself cannot be deleted.
+     * @param organisationUuid Organisation uuid (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+        <tr><td> 403 </td><td> No access </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Organisation uuid not found </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> Default organisation cannot be deleted </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call deleteOrganisationAsync(@javax.annotation.Nonnull String organisationUuid, final ApiCallback<Void> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = deleteOrganisationValidateBeforeCall(organisationUuid, _callback);
+        localVarApiClient.executeAsync(localVarCall, _callback);
+        return localVarCall;
+    }
     /**
      * Build call for getCampaignGroups
      * @param _callback Callback for upload/download progress
@@ -311,6 +577,151 @@ public class GenericDataApi {
 
         okhttp3.Call localVarCall = getOrganisationsValidateBeforeCall(format, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for updateOrganisation
+     * @param organisationUuid Organisation uuid (required)
+     * @param createOrganisationRequest  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+        <tr><td> 403 </td><td> No access </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Organisation uuid not found </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call updateOrganisationCall(@javax.annotation.Nonnull String organisationUuid, @javax.annotation.Nonnull CreateOrganisationRequest createOrganisationRequest, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = createOrganisationRequest;
+
+        // create path and map variables
+        String localVarPath = "/data/organisations/{organisationUuid}"
+            .replace("{" + "organisationUuid" + "}", localVarApiClient.escapeString(organisationUuid.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "bearerAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call updateOrganisationValidateBeforeCall(@javax.annotation.Nonnull String organisationUuid, @javax.annotation.Nonnull CreateOrganisationRequest createOrganisationRequest, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'organisationUuid' is set
+        if (organisationUuid == null) {
+            throw new ApiException("Missing the required parameter 'organisationUuid' when calling updateOrganisation(Async)");
+        }
+
+        // verify the required parameter 'createOrganisationRequest' is set
+        if (createOrganisationRequest == null) {
+            throw new ApiException("Missing the required parameter 'createOrganisationRequest' when calling updateOrganisation(Async)");
+        }
+
+        return updateOrganisationCall(organisationUuid, createOrganisationRequest, _callback);
+
+    }
+
+    /**
+     * Update an organisation
+     * Update an existing organisation
+     * @param organisationUuid Organisation uuid (required)
+     * @param createOrganisationRequest  (required)
+     * @return Object
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+        <tr><td> 403 </td><td> No access </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Organisation uuid not found </td><td>  -  </td></tr>
+     </table>
+     */
+    public Object updateOrganisation(@javax.annotation.Nonnull String organisationUuid, @javax.annotation.Nonnull CreateOrganisationRequest createOrganisationRequest) throws ApiException {
+        ApiResponse<Object> localVarResp = updateOrganisationWithHttpInfo(organisationUuid, createOrganisationRequest);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Update an organisation
+     * Update an existing organisation
+     * @param organisationUuid Organisation uuid (required)
+     * @param createOrganisationRequest  (required)
+     * @return ApiResponse&lt;Object&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+        <tr><td> 403 </td><td> No access </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Organisation uuid not found </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Object> updateOrganisationWithHttpInfo(@javax.annotation.Nonnull String organisationUuid, @javax.annotation.Nonnull CreateOrganisationRequest createOrganisationRequest) throws ApiException {
+        okhttp3.Call localVarCall = updateOrganisationValidateBeforeCall(organisationUuid, createOrganisationRequest, null);
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Update an organisation (asynchronously)
+     * Update an existing organisation
+     * @param organisationUuid Organisation uuid (required)
+     * @param createOrganisationRequest  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+        <tr><td> 403 </td><td> No access </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Organisation uuid not found </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call updateOrganisationAsync(@javax.annotation.Nonnull String organisationUuid, @javax.annotation.Nonnull CreateOrganisationRequest createOrganisationRequest, final ApiCallback<Object> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = updateOrganisationValidateBeforeCall(organisationUuid, createOrganisationRequest, _callback);
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

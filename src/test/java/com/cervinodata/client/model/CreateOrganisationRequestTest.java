@@ -11,27 +11,38 @@
  */
 
 
-package com.cervinodata.client;
+package com.cervinodata.client.model;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-08-24T09:50:08.587848922Z[Etc/UTC]", comments = "Generator version: 7.19.0-SNAPSHOT")
-public class Pair {
-  private final String name;
-  private final String value;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
+import java.util.Arrays;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
-  public Pair(String name, String value) {
-    this.name = isValidString(name) ? name : "";
-    this.value = isValidString(value) ? value : "";
-  }
+/**
+ * Model tests for CreateOrganisationRequest
+ */
+public class CreateOrganisationRequestTest {
+    private final CreateOrganisationRequest model = new CreateOrganisationRequest();
 
-  public String getName() {
-    return this.name;
-  }
+    /**
+     * Model tests for CreateOrganisationRequest
+     */
+    @Test
+    public void testCreateOrganisationRequest() {
+        // TODO: test CreateOrganisationRequest
+    }
 
-  public String getValue() {
-    return this.value;
-  }
+    /**
+     * Test the property 'name'
+     */
+    @Test
+    public void nameTest() {
+        // TODO: test name
+    }
 
-  private static boolean isValidString(String arg) {
-    return arg != null;
-  }
 }

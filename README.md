@@ -2,7 +2,7 @@
 
 Cervinodata API documentation
 - API version: 1.0.0
-  - Build date: 2026-05-22T14:04:28.120581174Z[Etc/UTC]
+  - Build date: 2026-08-24T09:50:08.587848922Z[Etc/UTC]
   - Generator version: 7.19.0-SNAPSHOT
 
 <div style='margin: 2em 0;'>
@@ -214,13 +214,17 @@ Class | Method | HTTP request | Description
 *CampaignGroupApi* | [**getCampaignGroupTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay**](docs/CampaignGroupApi.md#getCampaignGroupTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/campaign-group-twitter-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return campaign group twitter ads extended report per organisation per account per campaign per day
 *CampaignGroupApi* | [**getCampaignGroupVideoReportPerOrganisationPerCampaignPerDay**](docs/CampaignGroupApi.md#getCampaignGroupVideoReportPerOrganisationPerCampaignPerDay) | **GET** /data/campaign-group-video-report-per-organisation-per-campaign-per-day/{organisationUuids} | Return campaign group video report per organisation per campaign per day
 *CampaignGroupApi* | [**getCampaignGroupVideoReportPerOrganisationPerDay**](docs/CampaignGroupApi.md#getCampaignGroupVideoReportPerOrganisationPerDay) | **GET** /data/campaign-group-video-report-per-organisation-per-day/{organisationUuids} | Return campaign group video report per organisation per day
+*GenericDataApi* | [**createOrganisation**](docs/GenericDataApi.md#createOrganisation) | **POST** /data/organisations | Create an organisation
+*GenericDataApi* | [**deleteOrganisation**](docs/GenericDataApi.md#deleteOrganisation) | **DELETE** /data/organisations/{organisationUuid} | Delete an organisation
 *GenericDataApi* | [**getCampaignGroups**](docs/GenericDataApi.md#getCampaignGroups) | **GET** /data/campaign-groups | Return campaign groups
 *GenericDataApi* | [**getOrganisations**](docs/GenericDataApi.md#getOrganisations) | **GET** /data/organisations | Return organisations
+*GenericDataApi* | [**updateOrganisation**](docs/GenericDataApi.md#updateOrganisation) | **PUT** /data/organisations/{organisationUuid} | Update an organisation
 *ProductDataApi* | [**getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth**](docs/ProductDataApi.md#getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth) | **GET** /data/ga4-report-per-channel-group-per-product-name-per-organisation-per-property-per-month/{organisationUuids} | Return GA4 report per channel group per product name per organisation per property per month
 
 
 ## Documentation for Models
 
+ - [CreateOrganisationRequest](docs/CreateOrganisationRequest.md)
 
 
 <a id="documentation-for-authorization"></a>

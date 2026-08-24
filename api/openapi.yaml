@@ -99,6 +99,98 @@ paths:
       x-accepts:
       - application/json
       - text/csv
+    post:
+      description: Create a new organisation
+      operationId: createOrganisation
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/createOrganisation_request"
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: {}
+          description: successful operation
+        "422":
+          description: Validation error
+      security:
+      - bearerAuth: []
+      summary: Create an organisation
+      tags:
+      - generic data
+      x-content-type: application/json
+      x-accepts:
+      - application/json
+  /data/organisations/{organisationUuid}:
+    delete:
+      description: Delete an organisation. Accounts belonging to the organisation
+        are reassigned to the default organisation. The default organisation itself
+        cannot be deleted.
+      operationId: deleteOrganisation
+      parameters:
+      - description: Organisation uuid
+        explode: false
+        in: path
+        name: organisationUuid
+        required: true
+        schema:
+          type: string
+        style: simple
+      responses:
+        "200":
+          description: successful operation
+        "403":
+          description: No access
+        "404":
+          description: Organisation uuid not found
+        "422":
+          description: Default organisation cannot be deleted
+      security:
+      - bearerAuth: []
+      summary: Delete an organisation
+      tags:
+      - generic data
+      x-accepts:
+      - application/json
+    put:
+      description: Update an existing organisation
+      operationId: updateOrganisation
+      parameters:
+      - description: Organisation uuid
+        explode: false
+        in: path
+        name: organisationUuid
+        required: true
+        schema:
+          type: string
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/createOrganisation_request"
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: {}
+          description: successful operation
+        "403":
+          description: No access
+        "404":
+          description: Organisation uuid not found
+      security:
+      - bearerAuth: []
+      summary: Update an organisation
+      tags:
+      - generic data
+      x-content-type: application/json
+      x-accepts:
+      - application/json
   /data/campaign-groups:
     get:
       description: campaign groups
@@ -4746,7 +4838,14 @@ paths:
       x-accepts:
       - text/csv
 components:
-  schemas: {}
+  schemas:
+    createOrganisation_request:
+      properties:
+        name:
+          type: string
+      required:
+      - name
+      type: object
   securitySchemes:
     bearerAuth:
       scheme: bearer
