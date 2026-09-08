@@ -2,7 +2,7 @@
 
 Cervinodata API documentation
 - API version: 1.0.0
-  - Build date: 2026-08-24T09:50:08.587848922Z[Etc/UTC]
+  - Build date: 2026-09-08T07:17:00.805992880Z[Etc/UTC]
   - Generator version: 7.19.0-SNAPSHOT
 
 <div style='margin: 2em 0;'>
